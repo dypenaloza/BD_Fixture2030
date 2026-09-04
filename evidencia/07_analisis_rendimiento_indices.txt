@@ -1,0 +1,34 @@
+Colección 'jugadores': 1537 documentos totales
+Consulta crítica analizada: {'equipoId': 'BRA', 'posicion': 'Delantero'}
+
+== PASO 1: eliminar índices relevantes para simular escenario 'ANTES' ==
+Índice 'idx_equipoId' eliminado temporalmente.
+Índice 'idx_equipoId_posicion' eliminado temporalmente.
+
+--- ANTES de crear los índices (esperado: COLLSCAN) ---
+  planStages: COLLSCAN
+  totalDocsExamined: 1537
+  totalKeysExamined: 0
+  nReturned: 5
+  executionTimeMillis: 1
+
+== PASO 2: recrear los índices para el escenario 'DESPUÉS' ==
+Índice 'idx_equipoId' recreado.
+Índice 'idx_equipoId_posicion' recreado.
+
+--- DESPUÉS de crear los índices (esperado: IXSCAN) ---
+  planStages: FETCH -> IXSCAN
+  totalDocsExamined: 5
+  totalKeysExamined: 5
+  nReturned: 5
+  executionTimeMillis: 1
+
+== Comparación ==
+Métrica                  Antes               Después             
+planStages               COLLSCAN            FETCH -> IXSCAN     
+totalDocsExamined        1537                5                   
+totalKeysExamined        0                   5                   
+nReturned                5                   5                   
+executionTimeMillis      1                   1                   
+
+El índice reduce los documentos examinados de 1537 a 5 (-1532 documentos), pasando de un recorrido completo de la colección (COLLSCAN) a un acceso directo por índice (IXSCAN).

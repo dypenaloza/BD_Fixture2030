@@ -1,0 +1,22 @@
+Conectado a base de datos: fixture2030
+
+== Validaciones documentales (RF7) ==
+  [actualizada] Validador de 'selecciones' aplicado (collMod).
+  [creada] Colección 'jugadores' con validador $jsonSchema.
+
+== Índices (RF12) ==
+  [selecciones] índices asegurados: idx_grupo, idx_confederacion
+  [jugadores] índices asegurados: idx_equipoId, idx_equipoId_posicion, idx_apellido
+
+  Nota: no se indexa 'anfitrion' en selecciones ni 'club' en jugadores: son campos de baja selectividad / bajo uso en consultas críticas, y cada índice adicional implica costo de escritura y almacenamiento sin beneficio claro (ver Documento de Decisiones, sección 'Índices principales').
+
+== Listado final de índices ==
+-- selecciones --
+   _id_: SON([('_id', 1)])
+   idx_grupo: SON([('grupo', 1)])
+   idx_confederacion: SON([('confederacion', 1)])
+-- jugadores --
+   _id_: SON([('_id', 1)])
+   idx_equipoId: SON([('equipoId', 1)])
+   idx_equipoId_posicion: SON([('equipoId', 1), ('posicion', 1)])
+   idx_apellido: SON([('apellido', 1)])

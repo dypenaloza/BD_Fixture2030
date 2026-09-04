@@ -1,0 +1,100 @@
+
+==========================================================================================
+Agregación 1: Plantel consolidado por selección ($lookup)
+Objetivo: Aunque el modelo usa REFERENCIA (equipoId) y no embebe a los jugadores dentro de la selección, un $lookup permite construir bajo demanda una vista consolidada 'equipo + plantel completo' sin necesidad de desnormalizar en la escritura. Se muestra para Argentina.
+------------------------------------------------------------------------------------------
+{ '_id': 'ARG',
+  'cantidadJugadores': 24,
+  'capitan': { '_id': 'ARG-24',
+               'altura': 171,
+               'apellido': 'Arellano',
+               'capitan': True,
+               'club': 'Madrid FC',
+               'createdAt': datetime.datetime(2026, 9, 4, 4, 56, 26, 388000),
+               'dorsal': 24,
+               'equipoId': 'ARG',
+               'fechaNacimiento': datetime.datetime(1990, 10, 16, 0, 0),
+               'nombre': 'Édgar',
+               'peso': 71.4,
+               'posicion': 'Mediocampista',
+               'updatedAt': datetime.datetime(2026, 9, 4, 4, 56, 26, 388000)},
+  'entrenador': 'Guadalupe Gilberto Valle Abellán',
+  'pais': 'Argentina'}
+
+==========================================================================================
+Agregación 2: Distribución global de jugadores por posición
+Objetivo: Obtener, para todo el torneo, la cantidad de jugadores por posición y el promedio de altura y peso de cada una. Útil para validar la composición de planteles cargados (control de calidad del dataset).
+------------------------------------------------------------------------------------------
+{'_id': 'Defensor', 'alturaPromedio': 186.3, 'cantidad': 512, 'pesoPromedio': 78.1}
+{'_id': 'Mediocampista', 'alturaPromedio': 178.9, 'cantidad': 512, 'pesoPromedio': 71.9}
+{'_id': 'Delantero', 'alturaPromedio': 178.9, 'cantidad': 320, 'pesoPromedio': 72.3}
+{'_id': 'Arquero', 'alturaPromedio': 192.9, 'cantidad': 192, 'pesoPromedio': 83.6}
+
+==========================================================================================
+Agregación 3: Ranking FIFA promedio y cantidad de jugadores por grupo
+Objetivo: Combinar selecciones y jugadores ($lookup + $unwind + $group) para obtener, por cada grupo de fase inicial, el ranking promedio de sus 4 selecciones y el total de jugadores convocados.
+------------------------------------------------------------------------------------------
+{ '_id': 'A',
+  'equipos': ['Argentina', 'Paraguay', 'Uruguay', 'España'],
+  'rankingPromedio': 15.8,
+  'totalJugadores': 96}
+{ '_id': 'B',
+  'equipos': ['Portugal', 'Marruecos', 'Brasil', 'Francia'],
+  'rankingPromedio': 6.2,
+  'totalJugadores': 96}
+{ '_id': 'C',
+  'equipos': ['Inglaterra', 'Alemania', 'Italia', 'Países Bajos'],
+  'rankingPromedio': 7.0,
+  'totalJugadores': 96}
+{ '_id': 'D',
+  'equipos': ['Bélgica', 'Croacia', 'Colombia', 'Estados Unidos'],
+  'rankingPromedio': 12.2,
+  'totalJugadores': 96}
+{ '_id': 'E',
+  'equipos': ['México', 'Japón', 'Corea del Sur', 'Senegal'],
+  'rankingPromedio': 17.5,
+  'totalJugadores': 96}
+{ '_id': 'F',
+  'equipos': ['Suiza', 'Dinamarca', 'Austria', 'Polonia'],
+  'rankingPromedio': 21.5,
+  'totalJugadores': 96}
+{ '_id': 'G',
+  'equipos': ['Serbia', 'Chile', 'Perú', 'Ecuador'],
+  'rankingPromedio': 25.5,
+  'totalJugadores': 96}
+{ '_id': 'H',
+  'equipos': ['Canadá', 'Costa Rica', 'Jamaica', 'Panamá'],
+  'rankingPromedio': 29.5,
+  'totalJugadores': 96}
+{ '_id': 'I',
+  'equipos': ['Nigeria', 'Ghana', 'Egipto', 'Túnez'],
+  'rankingPromedio': 33.5,
+  'totalJugadores': 96}
+{ '_id': 'J',
+  'equipos': ['Camerún', 'Costa de Marfil', 'Argelia', 'Sudáfrica'],
+  'rankingPromedio': 37.5,
+  'totalJugadores': 96}
+{ '_id': 'K',
+  'equipos': ['Arabia Saudita', 'Irán', 'Australia', 'Catar'],
+  'rankingPromedio': 41.5,
+  'totalJugadores': 96}
+{ '_id': 'L',
+  'equipos': ['Irak', 'Uzbekistán', 'China', 'Nueva Zelanda'],
+  'rankingPromedio': 46.2,
+  'totalJugadores': 96}
+{ '_id': 'M',
+  'equipos': ['Suecia', 'Noruega', 'Ucrania', 'Chequia'],
+  'rankingPromedio': 50.5,
+  'totalJugadores': 96}
+{ '_id': 'N',
+  'equipos': ['Escocia', 'Gales', 'Hungría', 'Rumania'],
+  'rankingPromedio': 54.5,
+  'totalJugadores': 96}
+{ '_id': 'O',
+  'equipos': ['Turquía', 'Venezuela', 'Bolivia', 'Honduras'],
+  'rankingPromedio': 58.5,
+  'totalJugadores': 96}
+{ '_id': 'P',
+  'equipos': ['Haití', 'Curazao', 'India', 'Vietnam'],
+  'rankingPromedio': 62.5,
+  'totalJugadores': 96}

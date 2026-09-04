@@ -1,0 +1,31 @@
+########## PRIMERA EJECUCIÓN (carga inicial) ##########
+Conectado a base de datos: fixture2030
+
+== Carga idempotente (RF8) ==
+[selecciones] leídos: 64 | insertados: 64 | actualizados: 0 | sin cambios: 0
+[jugadores] leídos: 1536 | insertados: 1536 | actualizados: 0 | sin cambios: 0
+
+== Verificación de volumen (RF4, RF5, RNF2) ==
+Documentos en 'selecciones': 64 (esperado: 64)
+Documentos en 'jugadores'  : 1536 (esperado >= 1000, archivo: 1536)
+
+== Verificación de integridad referencial (RNF3) ==
+Jugadores con equipoId inválido/huérfano: 0 (esperado: 0)
+
+Carga finalizada sin duplicados ni inconsistencias.
+
+########## SEGUNDA EJECUCIÓN (debe ser idempotente, sin duplicados) ##########
+Conectado a base de datos: fixture2030
+
+== Carga idempotente (RF8) ==
+[selecciones] leídos: 64 | insertados: 0 | actualizados: 0 | sin cambios: 64
+[jugadores] leídos: 1536 | insertados: 0 | actualizados: 0 | sin cambios: 1536
+
+== Verificación de volumen (RF4, RF5, RNF2) ==
+Documentos en 'selecciones': 64 (esperado: 64)
+Documentos en 'jugadores'  : 1536 (esperado >= 1000, archivo: 1536)
+
+== Verificación de integridad referencial (RNF3) ==
+Jugadores con equipoId inválido/huérfano: 0 (esperado: 0)
+
+Carga finalizada sin duplicados ni inconsistencias.

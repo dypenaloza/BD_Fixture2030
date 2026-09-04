@@ -1,0 +1,19 @@
+== Conteo de documentos ANTES de detener el contenedor ==
+selecciones: 64
+jugadores: 1537
+
+== docker compose stop (detiene contenedor, conserva volumen) ==
+ Container fixture2030-mongodb Stopping 
+ Container fixture2030-mongodb Stopped 
+
+== docker compose ps (contenedor detenido) ==
+NAME                  IMAGE                           COMMAND                  SERVICE   CREATED              STATUS                              PORTS
+fixture2030-mongodb   mirror.gcr.io/library/mongo:7   "docker-entrypoint.s…"   mongodb   About a minute ago   Exited (0) Less than a second ago   
+
+== docker compose start (vuelve a iniciar sobre el mismo volumen) ==
+ Container fixture2030-mongodb Starting 
+ Container fixture2030-mongodb Started 
+
+== Conteo de documentos DESPUÉS de reiniciar el contenedor ==
+selecciones: 64
+jugadores: 1537

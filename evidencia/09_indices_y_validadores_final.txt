@@ -1,0 +1,13 @@
+--- Índices selecciones ---
+{"_id":1} -> _id_
+{"grupo":1} -> idx_grupo
+{"confederacion":1} -> idx_confederacion
+--- Índices jugadores ---
+{"_id":1} -> _id_
+{"apellido":1} -> idx_apellido
+{"equipoId":1} -> idx_equipoId
+{"equipoId":1,"posicion":1} -> idx_equipoId_posicion
+--- Validador selecciones (resumen) ---
+["_id","pais","nombre","confederacion","grupo","ranking","entrenador","anfitrion"]
+--- Validador jugadores (resumen) ---
+["_id","nombre","apellido","equipoId","posicion","dorsal","altura","peso"]

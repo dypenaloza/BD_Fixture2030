@@ -1,0 +1,203 @@
+
+==========================================================================================
+Consulta 1: Recuperación por identificador — Selección
+Objetivo: Obtener una selección puntual a partir de su código FIFA (_id).
+------------------------------------------------------------------------------------------
+{ '_id': 'ARG',
+  'anfitrion': True,
+  'confederacion': 'CONMEBOL',
+  'createdAt': datetime.datetime(2026, 9, 4, 4, 56, 26, 387000),
+  'entrenador': 'Guadalupe Gilberto Valle Abellán',
+  'escudo': 'https://fixture2030.example.com/escudos/arg.png',
+  'grupo': 'A',
+  'nombre': 'Selección de Argentina',
+  'pais': 'Argentina',
+  'ranking': 1,
+  'updatedAt': datetime.datetime(2026, 9, 4, 4, 56, 26, 387000)}
+
+==========================================================================================
+Consulta 2: Recuperación por identificador — Jugador
+Objetivo: Obtener un jugador puntual a partir de su identificador '{equipo}-{dorsal}' (_id).
+------------------------------------------------------------------------------------------
+{ '_id': 'ARG-10',
+  'altura': 189,
+  'apellido': 'Vaquero',
+  'capitan': False,
+  'club': 'Girona SC',
+  'createdAt': datetime.datetime(2026, 9, 4, 4, 56, 26, 388000),
+  'dorsal': 10,
+  'equipoId': 'ARG',
+  'fechaNacimiento': datetime.datetime(2003, 6, 25, 0, 0),
+  'nombre': 'Jose Manuel',
+  'peso': 84.2,
+  'posicion': 'Delantero',
+  'updatedAt': datetime.datetime(2026, 9, 4, 4, 56, 26, 388000)}
+
+==========================================================================================
+Consulta 3: Recuperación filtrada — Selecciones de un grupo
+Objetivo: Listar las selecciones del Grupo A (condición de negocio: fase de grupos).
+------------------------------------------------------------------------------------------
+{'_id': 'ARG', 'grupo': 'A', 'pais': 'Argentina', 'ranking': 1}
+{'_id': 'PAR', 'grupo': 'A', 'pais': 'Paraguay', 'ranking': 45}
+{'_id': 'URU', 'grupo': 'A', 'pais': 'Uruguay', 'ranking': 14}
+{'_id': 'ESP', 'grupo': 'A', 'pais': 'España', 'ranking': 3}
+
+==========================================================================================
+Consulta 4: Recuperación filtrada — Delanteros de un equipo
+Objetivo: Listar jugadores de Brasil (equipoId='BRA') con posicion='Delantero'.
+------------------------------------------------------------------------------------------
+{'_id': 'BRA-06', 'apellido': 'Estévez', 'dorsal': 6, 'nombre': 'Rico', 'posicion': 'Delantero'}
+{'_id': 'BRA-18', 'apellido': 'Granados', 'dorsal': 18, 'nombre': 'Martín', 'posicion': 'Delantero'}
+{'_id': 'BRA-11', 'apellido': 'Neira', 'dorsal': 11, 'nombre': 'Teófilo', 'posicion': 'Delantero'}
+{'_id': 'BRA-07', 'apellido': 'Boix', 'dorsal': 7, 'nombre': 'Pablo', 'posicion': 'Delantero'}
+{'_id': 'BRA-19', 'apellido': 'Alcalde', 'dorsal': 19, 'nombre': 'Ramiro', 'posicion': 'Delantero'}
+
+==========================================================================================
+Consulta 5: Recuperación filtrada — Selecciones anfitrionas
+Objetivo: Listar los 6 países sede del Mundial 2030, ordenados por ranking FIFA.
+------------------------------------------------------------------------------------------
+{'grupo': 'A', 'pais': 'Argentina', 'ranking': 1}
+{'grupo': 'A', 'pais': 'España', 'ranking': 3}
+{'grupo': 'B', 'pais': 'Portugal', 'ranking': 6}
+{'grupo': 'B', 'pais': 'Marruecos', 'ranking': 12}
+{'grupo': 'A', 'pais': 'Uruguay', 'ranking': 14}
+{'grupo': 'A', 'pais': 'Paraguay', 'ranking': 45}
+
+==========================================================================================
+Consulta 6: Recuperación filtrada — Rango de altura
+Objetivo: Listar arqueros con altura entre 195 y 200 cm (operador $gte/$lte).
+------------------------------------------------------------------------------------------
+{'_id': 'PAR-21', 'altura': 198, 'apellido': 'Villalobos', 'equipoId': 'PAR', 'nombre': 'Augusto'}
+{'_id': 'PAR-13', 'altura': 196, 'apellido': 'Belda', 'equipoId': 'PAR', 'nombre': 'Amancio'}
+{'_id': 'URU-20', 'altura': 200, 'apellido': 'Sanmartín', 'equipoId': 'URU', 'nombre': 'Pastor'}
+{'_id': 'ESP-04', 'altura': 199, 'apellido': 'Jordán', 'equipoId': 'ESP', 'nombre': 'Bruno'}
+{'_id': 'POR-19', 'altura': 195, 'apellido': 'Mulet', 'equipoId': 'POR', 'nombre': 'Alonso'}
+{'_id': 'POR-10', 'altura': 199, 'apellido': 'Carranza', 'equipoId': 'POR', 'nombre': 'Calixto'}
+{'_id': 'MAR-24', 'altura': 198, 'apellido': 'Boada', 'equipoId': 'MAR', 'nombre': 'David'}
+{ '_id': 'BRA-20',
+  'altura': 200,
+  'apellido': 'Hernando',
+  'equipoId': 'BRA',
+  'nombre': 'Juan Francisco'}
+{'_id': 'BRA-12', 'altura': 195, 'apellido': 'Marco', 'equipoId': 'BRA', 'nombre': 'Toribio'}
+{'_id': 'FRA-01', 'altura': 200, 'apellido': 'Antón', 'equipoId': 'FRA', 'nombre': 'Leonel'}
+{'_id': 'GER-15', 'altura': 195, 'apellido': 'Segura', 'equipoId': 'GER', 'nombre': 'Álvaro'}
+{'_id': 'NED-15', 'altura': 200, 'apellido': 'Marin', 'equipoId': 'NED', 'nombre': 'Alfredo'}
+{'_id': 'NED-20', 'altura': 196, 'apellido': 'Almagro', 'equipoId': 'NED', 'nombre': 'Poncio'}
+{'_id': 'BEL-10', 'altura': 195, 'apellido': 'Martí', 'equipoId': 'BEL', 'nombre': 'Hermenegildo'}
+{'_id': 'COL-24', 'altura': 197, 'apellido': 'Mora', 'equipoId': 'COL', 'nombre': 'Fidel'}
+{'_id': 'MEX-04', 'altura': 198, 'apellido': 'Beltran', 'equipoId': 'MEX', 'nombre': 'Sandalio'}
+{'_id': 'JPN-01', 'altura': 196, 'apellido': 'Ureña', 'equipoId': 'JPN', 'nombre': 'César'}
+{'_id': 'KOR-07', 'altura': 198, 'apellido': 'Pont', 'equipoId': 'KOR', 'nombre': 'Jose Miguel'}
+{'_id': 'KOR-16', 'altura': 199, 'apellido': 'Botella', 'equipoId': 'KOR', 'nombre': 'Telmo'}
+{ '_id': 'KOR-02',
+  'altura': 195,
+  'apellido': 'Sobrino',
+  'equipoId': 'KOR',
+  'nombre': 'Francisco Javier'}
+{'_id': 'SEN-17', 'altura': 197, 'apellido': 'Hurtado', 'equipoId': 'SEN', 'nombre': 'Pío'}
+{'_id': 'SEN-24', 'altura': 196, 'apellido': 'Guerrero', 'equipoId': 'SEN', 'nombre': 'Antonio'}
+{'_id': 'SUI-17', 'altura': 197, 'apellido': 'Nieto', 'equipoId': 'SUI', 'nombre': 'Tomás'}
+{'_id': 'AUT-15', 'altura': 198, 'apellido': 'Barón', 'equipoId': 'AUT', 'nombre': 'Amado'}
+{'_id': 'AUT-09', 'altura': 199, 'apellido': 'Arana', 'equipoId': 'AUT', 'nombre': 'Juan'}
+{'_id': 'POL-07', 'altura': 197, 'apellido': 'Salom', 'equipoId': 'POL', 'nombre': 'Gonzalo'}
+{'_id': 'SRB-13', 'altura': 197, 'apellido': 'Cabeza', 'equipoId': 'SRB', 'nombre': 'José María'}
+{'_id': 'SRB-19', 'altura': 197, 'apellido': 'Ribera', 'equipoId': 'SRB', 'nombre': 'Donato'}
+{'_id': 'CHL-20', 'altura': 195, 'apellido': 'Mena', 'equipoId': 'CHL', 'nombre': 'Bartolomé'}
+{'_id': 'CHL-23', 'altura': 200, 'apellido': 'Roig', 'equipoId': 'CHL', 'nombre': 'Roberto'}
+{'_id': 'PER-07', 'altura': 200, 'apellido': 'Ramírez', 'equipoId': 'PER', 'nombre': 'Tristán'}
+{'_id': 'PER-18', 'altura': 195, 'apellido': 'Roca', 'equipoId': 'PER', 'nombre': 'Jacinto'}
+{'_id': 'ECU-13', 'altura': 199, 'apellido': 'Colom', 'equipoId': 'ECU', 'nombre': 'Luis Miguel'}
+{'_id': 'ECU-12', 'altura': 195, 'apellido': 'Gimeno', 'equipoId': 'ECU', 'nombre': 'Ciriaco'}
+{'_id': 'CAN-17', 'altura': 199, 'apellido': 'Luján', 'equipoId': 'CAN', 'nombre': 'Norberto'}
+{'_id': 'CRC-17', 'altura': 199, 'apellido': 'Castilla', 'equipoId': 'CRC', 'nombre': 'Glauco'}
+{'_id': 'JAM-22', 'altura': 200, 'apellido': 'Gomez', 'equipoId': 'JAM', 'nombre': 'Amando'}
+{'_id': 'JAM-24', 'altura': 197, 'apellido': 'Roldan', 'equipoId': 'JAM', 'nombre': 'Asdrubal'}
+{'_id': 'NGA-16', 'altura': 198, 'apellido': 'Cruz', 'equipoId': 'NGA', 'nombre': 'Albino'}
+{'_id': 'NGA-18', 'altura': 199, 'apellido': 'Zaragoza', 'equipoId': 'NGA', 'nombre': 'Diego'}
+{'_id': 'EGY-14', 'altura': 195, 'apellido': 'Sarmiento', 'equipoId': 'EGY', 'nombre': 'Iván'}
+{'_id': 'EGY-06', 'altura': 198, 'apellido': 'Gonzalo', 'equipoId': 'EGY', 'nombre': 'Sandalio'}
+{'_id': 'EGY-19', 'altura': 197, 'apellido': 'Andrade', 'equipoId': 'EGY', 'nombre': 'Martin'}
+{'_id': 'TUN-06', 'altura': 197, 'apellido': 'Toledo', 'equipoId': 'TUN', 'nombre': 'David'}
+{'_id': 'CMR-09', 'altura': 196, 'apellido': 'Bosch', 'equipoId': 'CMR', 'nombre': 'Tito'}
+{'_id': 'CIV-21', 'altura': 195, 'apellido': 'Cantero', 'equipoId': 'CIV', 'nombre': 'Horacio'}
+{'_id': 'CIV-15', 'altura': 196, 'apellido': 'Ocaña', 'equipoId': 'CIV', 'nombre': 'Teófilo'}
+{'_id': 'RSA-22', 'altura': 197, 'apellido': 'Calvo', 'equipoId': 'RSA', 'nombre': 'Plinio'}
+{'_id': 'KSA-08', 'altura': 195, 'apellido': 'Pablo', 'equipoId': 'KSA', 'nombre': 'Pascual'}
+{'_id': 'IRN-06', 'altura': 198, 'apellido': 'Almagro', 'equipoId': 'IRN', 'nombre': 'Bautista'}
+{'_id': 'QAT-16', 'altura': 199, 'apellido': 'Martín', 'equipoId': 'QAT', 'nombre': 'Gil'}
+{ '_id': 'IRQ-21',
+  'altura': 197,
+  'apellido': 'Casanovas',
+  'equipoId': 'IRQ',
+  'nombre': 'Juan Bautista'}
+{'_id': 'UZB-17', 'altura': 195, 'apellido': 'Estrada', 'equipoId': 'UZB', 'nombre': 'Alex'}
+{'_id': 'NZL-21', 'altura': 200, 'apellido': 'Alcalá', 'equipoId': 'NZL', 'nombre': 'Cipriano'}
+{'_id': 'NZL-20', 'altura': 198, 'apellido': 'Barreda', 'equipoId': 'NZL', 'nombre': 'Alfonso'}
+{'_id': 'SWE-17', 'altura': 199, 'apellido': 'Prats', 'equipoId': 'SWE', 'nombre': 'Haroldo'}
+{'_id': 'SWE-04', 'altura': 197, 'apellido': 'Roman', 'equipoId': 'SWE', 'nombre': 'Reyes'}
+{'_id': 'NOR-13', 'altura': 200, 'apellido': 'Sureda', 'equipoId': 'NOR', 'nombre': 'Balduino'}
+{'_id': 'NOR-05', 'altura': 200, 'apellido': 'Taboada', 'equipoId': 'NOR', 'nombre': 'Ariel'}
+{'_id': 'CZE-20', 'altura': 197, 'apellido': 'Puig', 'equipoId': 'CZE', 'nombre': 'Gervasio'}
+{'_id': 'SCO-05', 'altura': 199, 'apellido': 'Quintanilla', 'equipoId': 'SCO', 'nombre': 'Leonel'}
+{'_id': 'WAL-17', 'altura': 197, 'apellido': 'Sierra', 'equipoId': 'WAL', 'nombre': 'Venceslás'}
+{'_id': 'WAL-03', 'altura': 197, 'apellido': 'Ferrer', 'equipoId': 'WAL', 'nombre': 'Anselmo'}
+{'_id': 'HUN-10', 'altura': 199, 'apellido': 'Barroso', 'equipoId': 'HUN', 'nombre': 'Jose Antonio'}
+{'_id': 'ROU-02', 'altura': 200, 'apellido': 'Ortiz', 'equipoId': 'ROU', 'nombre': 'Nicodemo'}
+{'_id': 'TUR-09', 'altura': 198, 'apellido': 'Nogués', 'equipoId': 'TUR', 'nombre': 'Armando'}
+{'_id': 'VEN-22', 'altura': 197, 'apellido': 'Maestre', 'equipoId': 'VEN', 'nombre': 'Apolinar'}
+{'_id': 'VEN-08', 'altura': 196, 'apellido': 'Ribera', 'equipoId': 'VEN', 'nombre': 'Josué'}
+{'_id': 'BOL-12', 'altura': 198, 'apellido': 'Amor', 'equipoId': 'BOL', 'nombre': 'Angelino'}
+{'_id': 'BOL-03', 'altura': 195, 'apellido': 'Arce', 'equipoId': 'BOL', 'nombre': 'Teobaldo'}
+{'_id': 'BOL-17', 'altura': 200, 'apellido': 'Martínez', 'equipoId': 'BOL', 'nombre': 'Abilio'}
+{'_id': 'HON-01', 'altura': 195, 'apellido': 'Bernal', 'equipoId': 'HON', 'nombre': 'Baltasar'}
+{'_id': 'HON-23', 'altura': 199, 'apellido': 'Mulet', 'equipoId': 'HON', 'nombre': 'Javi'}
+{'_id': 'CIW-20', 'altura': 198, 'apellido': 'Fábregas', 'equipoId': 'CIW', 'nombre': 'Gonzalo'}
+{'_id': 'CIW-22', 'altura': 199, 'apellido': 'Soria', 'equipoId': 'CIW', 'nombre': 'Lucio'}
+{'_id': 'IND-12', 'altura': 198, 'apellido': 'Iriarte', 'equipoId': 'IND', 'nombre': 'Leoncio'}
+{'_id': 'IND-24', 'altura': 198, 'apellido': 'Juliá', 'equipoId': 'IND', 'nombre': 'Custodio'}
+{'_id': 'VIE-21', 'altura': 195, 'apellido': 'Patiño', 'equipoId': 'VIE', 'nombre': 'Desiderio'}
+
+==========================================================================================
+Consulta 7: Proyección
+Objetivo: Devolver solo nombre, apellido y posición del plantel de España, excluyendo el resto de los atributos y el _id.
+------------------------------------------------------------------------------------------
+{'apellido': 'Jordán', 'nombre': 'Bruno', 'posicion': 'Arquero'}
+{'apellido': 'Quesada', 'nombre': 'Camilo', 'posicion': 'Arquero'}
+{'apellido': 'Galvez', 'nombre': 'Lope', 'posicion': 'Arquero'}
+{'apellido': 'Nicolás', 'nombre': 'Loreto', 'posicion': 'Defensor'}
+{'apellido': 'Cabanillas', 'nombre': 'Ciríaco', 'posicion': 'Defensor'}
+{'apellido': 'Alvarez', 'nombre': 'Ildefonso', 'posicion': 'Defensor'}
+{'apellido': 'Ramis', 'nombre': 'Santos', 'posicion': 'Defensor'}
+{'apellido': 'Huertas', 'nombre': 'Carmelo', 'posicion': 'Defensor'}
+{'apellido': 'Alcalá', 'nombre': 'Osvaldo', 'posicion': 'Defensor'}
+{'apellido': 'Ferrando', 'nombre': 'Javier', 'posicion': 'Defensor'}
+{'apellido': 'Palma', 'nombre': 'Iker', 'posicion': 'Defensor'}
+{'apellido': 'Morata', 'nombre': 'Goyo', 'posicion': 'Mediocampista'}
+{'apellido': 'Arteaga', 'nombre': 'Eugenio', 'posicion': 'Mediocampista'}
+{'apellido': 'Andrés', 'nombre': 'Wilfredo', 'posicion': 'Mediocampista'}
+{'apellido': 'Mendizábal', 'nombre': 'Lázaro', 'posicion': 'Mediocampista'}
+{'apellido': 'Pedrosa', 'nombre': 'Lorenzo', 'posicion': 'Mediocampista'}
+{'apellido': 'Barragán', 'nombre': 'Victor', 'posicion': 'Mediocampista'}
+{'apellido': 'Duque', 'nombre': 'Ariel', 'posicion': 'Mediocampista'}
+{'apellido': 'Oliveras', 'nombre': 'Pánfilo', 'posicion': 'Mediocampista'}
+{'apellido': 'Lerma', 'nombre': 'Martin', 'posicion': 'Delantero'}
+{'apellido': 'Malo', 'nombre': 'Albino', 'posicion': 'Delantero'}
+{'apellido': 'Almeida', 'nombre': 'Evaristo', 'posicion': 'Delantero'}
+{'apellido': 'Agudo', 'nombre': 'Juan Carlos', 'posicion': 'Delantero'}
+{'apellido': 'Santamaría', 'nombre': 'Lucas', 'posicion': 'Delantero'}
+
+==========================================================================================
+Consulta 8: Ordenamiento y paginación
+Objetivo: Listar jugadores ordenados alfabéticamente por apellido, página 3 con 10 resultados por página (skip=20, limit=10). Útil para una interfaz de consulta tipo tabla/listado con scroll o paginado, evitando traer los 1500+ jugadores de una sola vez.
+------------------------------------------------------------------------------------------
+{'_id': 'DEN-20', 'apellido': 'Aguiló', 'equipoId': 'DEN', 'nombre': 'Víctor'}
+{'_id': 'AUT-16', 'apellido': 'Aguiló', 'equipoId': 'AUT', 'nombre': 'Nicodemo'}
+{'_id': 'ECU-06', 'apellido': 'Aguiló', 'equipoId': 'ECU', 'nombre': 'Luís'}
+{'_id': 'UZB-24', 'apellido': 'Aguiló', 'equipoId': 'UZB', 'nombre': 'Iker'}
+{'_id': 'HUN-20', 'apellido': 'Aguirre', 'equipoId': 'HUN', 'nombre': 'Poncio'}
+{'_id': 'NGA-19', 'apellido': 'Agustí', 'equipoId': 'NGA', 'nombre': 'Hector'}
+{'_id': 'CZE-01', 'apellido': 'Agustí', 'equipoId': 'CZE', 'nombre': 'Casemiro'}
+{'_id': 'USA-23', 'apellido': 'Agustín', 'equipoId': 'USA', 'nombre': 'Tiburcio'}
+{'_id': 'KOR-05', 'apellido': 'Agustín', 'equipoId': 'KOR', 'nombre': 'Federico'}
+{'_id': 'AUT-12', 'apellido': 'Agustín', 'equipoId': 'AUT', 'nombre': 'Celso'}

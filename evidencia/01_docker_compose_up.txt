@@ -1,0 +1,19 @@
+ Network bd_fixture2030_mongodb-network Creating 
+ Network bd_fixture2030_mongodb-network Created 
+ Volume fixture2030_mongodb_data Creating 
+ Volume fixture2030_mongodb_data Created 
+ Container fixture2030-mongodb Creating 
+ Container fixture2030-mongodb Created 
+ Container fixture2030-mongodb Starting 
+ Container fixture2030-mongodb Started 
+NAME                  IMAGE                           COMMAND                  SERVICE   CREATED          STATUS                    PORTS
+fixture2030-mongodb   mirror.gcr.io/library/mongo:7   "docker-entrypoint.s…"   mongodb   16 seconds ago   Up 15 seconds (healthy)   0.0.0.0:27017->27017/tcp
+== docker compose ps ==
+NAME                  IMAGE                           COMMAND                  SERVICE   CREATED          STATUS                    PORTS
+fixture2030-mongodb   mirror.gcr.io/library/mongo:7   "docker-entrypoint.s…"   mongodb   21 seconds ago   Up 20 seconds (healthy)   0.0.0.0:27017->27017/tcp
+
+== mongosh ping ==
+{ ok: 1 }
+
+== mongosh serverStatus (version/uptime) ==
+version: 7.0.40

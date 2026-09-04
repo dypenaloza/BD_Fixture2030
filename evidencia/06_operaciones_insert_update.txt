@@ -1,0 +1,34 @@
+
+==========================================================================================
+Operación 1: Insertar un nuevo jugador (convocatoria adicional)
+------------------------------------------------------------------------------------------
+Insertado correctamente: URU-99
+
+Operación 2: Actualizar información del jugador insertado
+------------------------------------------------------------------------------------------
+matched=1 modified=1
+{'_id': 'URU-99', 'nombre': 'Bruno', 'apellido': 'Delgado', 'equipoId': 'URU', 'posicion': 'Delantero', 'dorsal': 99, 'fechaNacimiento': datetime.datetime(2001, 3, 14, 0, 0), 'altura': 181, 'peso': 77.0, 'club': 'Peñarol', 'capitan': False, 'createdAt': datetime.datetime(2026, 9, 4, 4, 59, 49, 844000), 'updatedAt': datetime.datetime(2026, 9, 4, 4, 59, 49, 866000)}
+
+==========================================================================================
+Operación 3: Insertar un equipo de prueba (valida el esquema)
+------------------------------------------------------------------------------------------
+Insertado correctamente: ZZZ
+
+Operación 4: Actualizar información del equipo de prueba
+------------------------------------------------------------------------------------------
+matched=1 modified=1
+{'_id': 'ZZZ', 'pais': 'País de Prueba', 'nombre': 'Selección de Prueba', 'confederacion': 'UEFA', 'grupo': 'A', 'ranking': 500, 'entrenador': 'DT de Prueba', 'anfitrion': False, 'createdAt': datetime.datetime(2026, 9, 4, 4, 59, 49, 868000), 'updatedAt': datetime.datetime(2026, 9, 4, 4, 59, 49, 868000)}
+
+Operación 5: Intento de inserción inválida (violación de validador)
+------------------------------------------------------------------------------------------
+Rechazado correctamente por $jsonSchema (esperado). Detalle:
+{'index': 0, 'code': 121, 'errmsg': 'Document failed validation', 'errInfo': {'failingDocumentId': 'zz', 'details': {'operatorName': '$jsonSchema', 'title': 'Validación de documento Selección', 'schemaRulesNotSatisfied': [{'operatorName': 'properties', 'propertiesNotSatisfied': [{'propertyName': '_id', 'description': 'Código FIFA de 3 letras. Requerido, identificador natural.', 'details': [{'operatorName': 'pattern', 'specifiedAs': {'pattern': '^[A-Z]{3}$'}, 'reason': 'regular expression did not match', 'consideredValue': 'zz'}]}]}, {'operatorName': 'required', 'specifiedAs': {'required': ['_id', 'pais', 'nombre', 'confederacion', 'grupo', 'ranking', 'entrenador', 'anfitrion']}, 'missingProperties': ['anfitrion', 'confederacion', 'entrenador', 'grupo', 'nombre', 'ranking']}]}}}
+
+Limpieza: se elimina el equipo de prueba para preservar RF4 (64 equipos exactos)
+------------------------------------------------------------------------------------------
+deleted_count=1
+
+==========================================================================================
+Estado final de conteos tras las operaciones de demostración:
+  selecciones: 64
+  jugadores  : 1537
