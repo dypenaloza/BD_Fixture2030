@@ -1,0 +1,31 @@
+Evidencia RNF2 — Persistencia tras un ciclo docker compose stop / start
+Fecha de verificación: 2026-09-11
+
+$ docker compose stop
+ Container bd-fixture2030-neo4j-hito5 Stopping
+ Container bd-fixture2030-neo4j-hito5 Stopped
+
+$ docker compose start
+ Container bd-fixture2030-neo4j-hito5 Starting
+ Container bd-fixture2030-neo4j-hito5 Started
+(healthy tras ~15s, dentro del start_period del healthcheck)
+
+$ cypher-shell "MATCH (n) RETURN labels(n) AS etiqueta, count(*) AS cantidad ORDER BY etiqueta"
+etiqueta, cantidad
+["Estadio"], 16
+["Evento"], 591
+["Jugador"], 1536
+["Partido"], 128
+["Seleccion"], 64
+
+$ cypher-shell "SHOW CONSTRAINTS YIELD name RETURN count(name) AS constraints"
+constraints
+5
+
+Conclusión: los 2335 nodos y las 5 restricciones sobreviven intactos a un
+ciclo stop/start, gracias a los volúmenes nombrados neo4j_data/neo4j_logs
+(RNF2). Este mismo comportamiento se validó también end-to-end reconstruyendo
+el ambiente desde cero (docker compose down -v && up -d) y repitiendo los
+pasos de carga del README, con resultados idénticos (mismos conteos, mismo
+camino más corto en el análisis RF9), lo que confirma además la
+reproducibilidad exigida por RNF3.

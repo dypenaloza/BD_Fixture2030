@@ -1,0 +1,26 @@
+Evidencia RF11 — Subgrafo completo cargado (conteo de nodos y relaciones)
+Fecha de verificación: 2026-09-11
+
+MATCH (n) RETURN labels(n) AS etiqueta, count(*) AS cantidad ORDER BY etiqueta
+etiqueta, cantidad
+["Estadio"], 16
+["Evento"], 591
+["Jugador"], 1536
+["Partido"], 128
+["Seleccion"], 64
+
+Total de nodos: 2335
+
+MATCH ()-[r]->() RETURN type(r) AS relacion, count(r) AS cantidad ORDER BY relacion
+relacion, cantidad
+"OCURRE_EN", 591
+"PARTICIPA_EN", 256
+"PERTENECE_A", 1536
+"PROTAGONIZADO_POR", 591
+"SE_JUEGA_EN", 128
+
+Total de relaciones: 3102
+
+Para una captura visual del subgrafo desde Neo4j Browser (RF11), ejecutar:
+  MATCH (n) RETURN n LIMIT 300
+y usar la vista "Graph" con los estilos de color por etiqueta.

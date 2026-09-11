@@ -1,0 +1,44 @@
+Evidencia RF9 — Análisis relacional (queries/analisis.cypher)
+Fecha de verificación: 2026-09-11
+
+1. shortestPath entre Argentina (ARG) y Japón (JPN):
+recorrido, saltos
+["Argentina", "P-A-3", "Argentina", "P-R16-3", "Japón"], 4
+
+Interpretación: Argentina y Japón no comparten grupo (A vs E), pero el
+camino más corto entre ambas selecciones tiene 4 saltos porque terminaron
+enfrentándose directamente en Octavos de Final (P-R16-3) según el sorteo de
+eliminatorias generado a partir de las posiciones de grupo. El primer tramo
+(Argentina -> P-A-3) es un salto "administrativo" porque shortestPath
+recorre la relación PARTICIPA_EN sin dirección para llegar al partido común.
+
+2. Centralidad de grado de estadios (partidos alojados):
+estadio, ciudad, pais, cantidadPartidos
+"Camp Nou", "Barcelona", "España", 9
+"Estadio Centenario", "Montevideo", "Uruguay", 8
+"Estadio Ciudad de La Plata", "La Plata", "Argentina", 8
+"Estadio Defensores del Chaco", "Asunción", "Paraguay", 8
+"Estadio Gigante de Arroyito", "Rosario", "Argentina", 8
+"Estadio La Cartuja", "Sevilla", "España", 8
+"Estadio Mario Alberto Kempes", "Córdoba", "Argentina", 8
+"Estadio Mohammed V", "Casablanca", "Marruecos", 8
+"Estadio Monumental", "Buenos Aires", "Argentina", 8
+"Estádio José Alvalade", "Lisboa", "Portugal", 8
+"Estádio da Luz", "Lisboa", "Portugal", 8
+"Estádio do Dragão", "Oporto", "Portugal", 8
+"Grand Stade de Tanger", "Tánger", "Marruecos", 8
+"San Mamés", "Bilbao", "España", 8
+"Santiago Bernabéu", "Madrid", "España", 8
+"Grand Stade de Marrakech", "Marrakech", "Marruecos", 7
+
+Interpretación: la carga está balanceada entre las 16 sedes (7-9 partidos
+cada una), con Camp Nou levemente por encima por ser la sede elegida para
+la Final (mayor capacidad). Esto sirve para dimensionar logística/seguridad
+por sede sin tener que contar partidos manualmente sede por sede.
+
+3. (complementaria) Centralidad de grado de jugadores por eventos protagonizados:
+jugador, nombre, apellido, cantidadEventos
+"USA-19", "Aristides", "Barrios", 5
+"URU-02", "Che", "Abellán", 4
+"PAN-04", "Martín", "Jordá", 4
+...

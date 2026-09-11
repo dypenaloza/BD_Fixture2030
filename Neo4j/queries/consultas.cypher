@@ -97,3 +97,43 @@ RETURN
     j2.apellido AS compañeroApellido,
     j2.posicion AS posicion
 ORDER BY j2.dorsal;
+
+// =============================================================================
+// RF8 — Consultas de 2 o más relaciones consecutivas (recorridos multi-salto)
+// =============================================================================
+
+// Consulta 9 (3 saltos):
+// Jugador -> Seleccion -> Partido -> Estadio.
+// Para un jugador puntual, en qué sedes jugó su selección durante el torneo.
+// Útil para reconstruir la agenda de viajes/sedes de un jugador o su equipo
+// sin tener que cruzar manualmente tres colecciones distintas.
+
+MATCH (j:Jugador {jugadorId: "ARG-01"})-[:PERTENECE_A]->(s:Seleccion)
+      -[:PARTICIPA_EN]->(p:Partido)-[:SE_JUEGA_EN]->(e:Estadio)
+RETURN
+    j.nombre AS jugador,
+    j.apellido AS apellido,
+    s.pais AS seleccion,
+    p.partidoId AS partido,
+    p.fecha AS fecha,
+    p.fase AS fase,
+    e.nombre AS estadio,
+    e.ciudad AS ciudad
+ORDER BY p.fecha;
+
+// Consulta 10 (2 saltos, convergentes):
+// Seleccion -> Partido <- Evento.
+// Todos los eventos (goles y tarjetas) ocurridos en los partidos de una
+// selección determinada, sin necesidad de conocer de antemano los IDs de
+// esos partidos: el patrón conecta la selección con los eventos a través
+// del partido que ambos comparten.
+
+MATCH (s:Seleccion {seleccionId: "ARG"})-[:PARTICIPA_EN]->(p:Partido)<-[:OCURRE_EN]-(ev:Evento)
+RETURN
+    s.pais AS seleccion,
+    p.partidoId AS partido,
+    p.fase AS fase,
+    ev.tipo AS evento,
+    ev.minuto AS minuto,
+    ev.descripcion AS descripcion
+ORDER BY p.fecha, ev.minuto;
