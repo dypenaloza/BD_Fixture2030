@@ -1,0 +1,8 @@
+codigo,nombre,orden
+GRUPOS,Fase de grupos,1
+DIECISEIS,Dieciseisavos de final,2
+OCTAVOS,Octavos de final,3
+CUARTOS,Cuartos de final,4
+SEMIS,Semifinales,5
+TERCERO,Partido por el tercer puesto,6
+FINAL,Final,7

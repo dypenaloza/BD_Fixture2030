@@ -1,0 +1,1537 @@
+jugadorId,nombre,apellido,seleccionId,posicion,dorsal,fechaNacimiento,altura,peso,club,capitan
+ARG-08,Cristóbal,Carpio,ARG,Arquero,8,2001-05-05,192,90.0,Málaga AC,false
+ARG-06,Amancio,Sebastián,ARG,Arquero,6,2006-07-25,189,84.9,Córdoba AC,false
+ARG-18,Noé,Valle,ARG,Arquero,18,1997-03-23,193,77.9,Albacete CF,false
+ARG-04,Leocadio,Llorens,ARG,Defensor,4,2007-04-06,193,90.1,Melilla SC,false
+ARG-19,Victorino,Zabaleta,ARG,Defensor,19,2008-04-06,188,82.8,Santa Cruz de Tenerife SC,false
+ARG-11,Albert,Laguna,ARG,Defensor,11,2006-03-08,193,88.2,Granada CF,false
+ARG-09,Benito,Falcó,ARG,Defensor,9,1991-10-11,184,74.0,Zaragoza CF,false
+ARG-20,Ruben,Piña,ARG,Defensor,20,1994-03-19,185,71.7,Navarra SC,false
+ARG-07,Andrés,Castejón,ARG,Defensor,7,2004-06-19,179,76.5,Sevilla CF,false
+ARG-02,Joaquín,Arana,ARG,Defensor,2,2005-11-05,184,72.5,Lugo CF,false
+ARG-05,Cipriano,Perez,ARG,Defensor,5,2005-11-22,185,83.4,Cantabria FC,false
+ARG-24,Édgar,Arellano,ARG,Mediocampista,24,1990-10-16,171,71.4,Madrid FC,true
+ARG-22,Gregorio,Antón,ARG,Mediocampista,22,1990-01-18,173,61.8,Salamanca AC,false
+ARG-03,Óscar,Alarcón,ARG,Mediocampista,3,2005-05-19,185,78.6,Ceuta AC,false
+ARG-21,Atilio,Carballo,ARG,Mediocampista,21,1998-08-18,170,69.5,Salamanca AC,false
+ARG-23,Baudelio,Romeu,ARG,Mediocampista,23,2006-04-22,181,79.9,Murcia SC,false
+ARG-14,Espiridión,Larrea,ARG,Mediocampista,14,2006-11-01,176,72.4,Guadalajara AC,false
+ARG-15,Ramiro,Corral,ARG,Mediocampista,15,1998-03-30,183,81.3,Cádiz FC,false
+ARG-16,Eliseo,Maldonado,ARG,Mediocampista,16,2003-07-30,183,73.3,Valencia CF,false
+ARG-01,Victoriano,Gaya,ARG,Delantero,1,2008-06-27,177,72.5,León AC,false
+ARG-17,Carlos,Castejón,ARG,Delantero,17,1994-02-25,176,66.9,Lugo AC,false
+ARG-12,Lucas,Bartolomé,ARG,Delantero,12,1994-04-17,169,59.9,Teruel AC,false
+ARG-13,Albano,Busquets,ARG,Delantero,13,1999-03-10,178,76.3,Cuenca AC,false
+ARG-10,Jose Manuel,Vaquero,ARG,Delantero,10,2003-06-25,189,84.2,Girona SC,false
+PAR-07,Cristóbal,Pino,PAR,Arquero,7,1998-07-26,192,87.5,Lleida CF,false
+PAR-21,Augusto,Villalobos,PAR,Arquero,21,1998-08-05,198,88.0,Guadalajara AC,false
+PAR-13,Amancio,Belda,PAR,Arquero,13,2007-05-13,196,84.1,Burgos FC,false
+PAR-23,Maximino,Manzanares,PAR,Defensor,23,1990-12-02,189,87.0,La Rioja AC,false
+PAR-12,Amílcar,Redondo,PAR,Defensor,12,2006-04-07,180,67.7,Cádiz FC,false
+PAR-17,Cosme,Baquero,PAR,Defensor,17,2000-11-15,189,81.7,Ávila AC,true
+PAR-09,Fausto,Cobo,PAR,Defensor,9,1998-09-06,194,86.7,Santa Cruz de Tenerife SC,false
+PAR-05,Anselmo,Alcalde,PAR,Defensor,5,1992-01-13,179,76.0,Ciudad AC,false
+PAR-16,Alcides,Sastre,PAR,Defensor,16,2001-05-04,187,73.5,Girona CF,false
+PAR-02,Cristian,Fonseca,PAR,Defensor,2,1991-10-01,187,79.9,Albacete SC,false
+PAR-01,Loreto,Saldaña,PAR,Defensor,1,2008-03-01,184,76.1,Málaga FC,false
+PAR-03,Benjamín,Pellicer,PAR,Mediocampista,3,1991-10-27,177,74.5,Lugo FC,false
+PAR-08,Nazario,Cuadrado,PAR,Mediocampista,8,1991-12-17,178,67.3,Huesca FC,false
+PAR-06,Heliodoro,Abascal,PAR,Mediocampista,6,2002-10-26,183,69.6,Ceuta CF,false
+PAR-22,Óscar,Priego,PAR,Mediocampista,22,2008-01-25,173,64.7,Baleares SC,false
+PAR-18,Benjamín,Carreño,PAR,Mediocampista,18,1997-08-22,176,67.6,Valladolid AC,false
+PAR-14,Jerónimo,Paredes,PAR,Mediocampista,14,2007-08-06,170,62.3,Zaragoza CF,false
+PAR-20,Aníbal,Neira,PAR,Mediocampista,20,1997-03-05,182,68.7,Ceuta SC,false
+PAR-24,Juan Carlos,Rebollo,PAR,Mediocampista,24,1998-05-18,174,69.8,Melilla FC,false
+PAR-15,Gervasio,Soriano,PAR,Delantero,15,1999-11-30,190,77.9,Guadalajara SC,false
+PAR-10,Cristian,Vara,PAR,Delantero,10,1999-03-23,175,63.3,Cáceres AC,false
+PAR-19,Vinicio,Arrieta,PAR,Delantero,19,2000-01-14,169,62.6,Guipúzcoa SC,false
+PAR-04,Celestino,Escobar,PAR,Delantero,4,1991-12-22,175,68.3,Madrid FC,false
+PAR-11,Román,Piquer,PAR,Delantero,11,1991-06-09,179,74.5,Palencia CF,false
+URU-13,Ignacio,Márquez,URU,Arquero,13,2006-07-17,192,78.0,Palencia SC,false
+URU-20,Pastor,Sanmartín,URU,Arquero,20,1997-08-06,200,90.3,Tarragona SC,false
+URU-19,Emiliano,Cerdá,URU,Arquero,19,2005-06-23,191,89.2,Asturias CF,false
+URU-23,Casemiro,Gilabert,URU,Defensor,23,1999-10-12,194,90.5,Barcelona FC,false
+URU-17,Emigdio,Gimeno,URU,Defensor,17,1993-08-09,192,80.9,Segovia AC,false
+URU-10,Calisto,Jove,URU,Defensor,10,1994-10-21,180,75.2,Baleares FC,false
+URU-12,Ciro,Antúnez,URU,Defensor,12,1994-09-07,178,76.7,Lugo SC,false
+URU-21,Sebastian,Hurtado,URU,Defensor,21,2007-10-12,191,87.4,Girona AC,false
+URU-09,Benjamín,Nevado,URU,Defensor,9,1993-05-07,194,90.6,Cáceres FC,false
+URU-05,Máximo,Perales,URU,Defensor,5,1991-01-08,186,81.6,Castellón SC,false
+URU-04,Víctor,Ortuño,URU,Defensor,4,1998-09-29,181,70.9,Burgos CF,false
+URU-07,Calisto,Ariza,URU,Mediocampista,7,2000-03-10,178,75.1,Segovia FC,false
+URU-22,Severiano,Lucena,URU,Mediocampista,22,1993-04-07,182,78.6,Burgos FC,false
+URU-06,Mateo,Oliveras,URU,Mediocampista,6,2002-02-01,187,82.6,Valencia FC,false
+URU-02,Che,Abellán,URU,Mediocampista,2,2005-04-05,174,71.1,Ávila FC,false
+URU-08,Emiliano,Avilés,URU,Mediocampista,8,2006-06-23,184,69.9,Burgos AC,true
+URU-11,Enrique,Benavides,URU,Mediocampista,11,2005-04-11,178,67.2,Cádiz CF,false
+URU-14,Sancho,Benito,URU,Mediocampista,14,1990-04-25,176,64.2,Girona FC,false
+URU-18,Goyo,Araujo,URU,Mediocampista,18,1992-11-25,187,72.7,Guipúzcoa FC,false
+URU-15,Marcelo,Badía,URU,Delantero,15,2005-03-01,186,76.2,Jaén FC,false
+URU-03,Salomón,Pérez,URU,Delantero,3,2007-05-24,187,83.2,Ciudad FC,false
+URU-16,Nico,Moreno,URU,Delantero,16,2007-01-07,184,78.3,Ciudad FC,false
+URU-01,Wilfredo,Zabala,URU,Delantero,1,1993-06-15,175,68.6,Ceuta FC,false
+URU-24,Jonatan,Alberdi,URU,Delantero,24,2007-03-06,171,67.1,Valencia FC,false
+ESP-04,Bruno,Jordán,ESP,Arquero,4,2002-04-29,199,84.9,Cuenca CF,false
+ESP-01,Camilo,Quesada,ESP,Arquero,1,1996-08-29,189,76.1,Málaga CF,false
+ESP-07,Lope,Galvez,ESP,Arquero,7,2008-05-12,189,81.4,Navarra FC,false
+ESP-02,Loreto,Nicolás,ESP,Defensor,2,1992-10-28,185,79.8,Tarragona CF,false
+ESP-06,Ciríaco,Cabanillas,ESP,Defensor,6,2001-02-27,178,73.8,Asturias SC,false
+ESP-15,Ildefonso,Alvarez,ESP,Defensor,15,1992-01-20,186,81.0,Cáceres AC,false
+ESP-21,Santos,Ramis,ESP,Defensor,21,2002-12-23,194,77.2,Cantabria AC,true
+ESP-05,Carmelo,Huertas,ESP,Defensor,5,1989-10-16,179,68.4,La Coruña SC,false
+ESP-19,Osvaldo,Alcalá,ESP,Defensor,19,2004-08-01,192,82.5,Toledo FC,false
+ESP-13,Javier,Ferrando,ESP,Defensor,13,1998-10-21,194,87.1,Valencia FC,false
+ESP-23,Iker,Palma,ESP,Defensor,23,1996-03-29,188,85.6,Lleida FC,false
+ESP-16,Goyo,Morata,ESP,Mediocampista,16,2003-08-22,172,64.8,Valladolid FC,false
+ESP-12,Eugenio,Arteaga,ESP,Mediocampista,12,2001-09-26,187,81.6,La Rioja CF,false
+ESP-17,Wilfredo,Andrés,ESP,Mediocampista,17,1992-07-13,183,80.3,Ourense FC,false
+ESP-20,Lázaro,Mendizábal,ESP,Mediocampista,20,1995-04-23,183,72.7,Tarragona SC,false
+ESP-11,Lorenzo,Pedrosa,ESP,Mediocampista,11,1995-07-23,176,64.2,Vizcaya AC,false
+ESP-22,Victor,Barragán,ESP,Mediocampista,22,1999-01-11,172,66.3,Guadalajara SC,false
+ESP-09,Ariel,Duque,ESP,Mediocampista,9,2001-11-24,174,69.0,Murcia AC,false
+ESP-10,Pánfilo,Oliveras,ESP,Mediocampista,10,1994-11-11,173,62.5,Baleares FC,false
+ESP-08,Martin,Lerma,ESP,Delantero,8,2004-09-26,177,67.2,Guipúzcoa CF,false
+ESP-18,Albino,Malo,ESP,Delantero,18,1991-08-12,169,63.8,Segovia FC,false
+ESP-03,Evaristo,Almeida,ESP,Delantero,3,2003-10-28,177,65.6,Zaragoza CF,false
+ESP-14,Juan Carlos,Agudo,ESP,Delantero,14,1993-04-08,174,70.9,Badajoz SC,false
+ESP-24,Lucas,Santamaría,ESP,Delantero,24,1992-03-12,168,68.8,Alicante AC,false
+POR-19,Alonso,Mulet,POR,Arquero,19,1996-09-16,195,79.8,Las Palmas FC,false
+POR-05,Telmo,Tormo,POR,Arquero,5,1996-06-27,192,86.8,Valencia CF,false
+POR-10,Calixto,Carranza,POR,Arquero,10,2003-09-19,199,91.5,Cádiz SC,false
+POR-09,Fernando,Mármol,POR,Defensor,9,1998-11-09,194,78.1,Lugo AC,false
+POR-08,Pastor,Bravo,POR,Defensor,8,1991-11-05,193,77.5,Melilla SC,false
+POR-13,Baltasar,Berenguer,POR,Defensor,13,2001-06-19,194,84.3,Albacete CF,false
+POR-20,Marc,Baquero,POR,Defensor,20,2004-11-27,192,84.5,Burgos AC,false
+POR-01,Felipe,Flor,POR,Defensor,1,1994-03-06,181,78.8,La Coruña CF,false
+POR-07,Modesto,Lara,POR,Defensor,7,2005-04-27,189,79.9,Teruel AC,false
+POR-06,Damián,Pozo,POR,Defensor,6,1993-12-17,188,79.6,Málaga CF,false
+POR-14,Eligio,Gutiérrez,POR,Defensor,14,1991-05-25,195,91.6,Álava CF,false
+POR-03,Bartolomé,Morata,POR,Mediocampista,3,1993-04-07,175,69.5,Albacete FC,false
+POR-18,Dionisio,Llanos,POR,Mediocampista,18,1990-05-21,183,73.2,Castellón SC,false
+POR-15,Severo,Pujol,POR,Mediocampista,15,1989-11-03,175,65.0,Valladolid AC,true
+POR-02,Jenaro,Aragonés,POR,Mediocampista,2,1995-07-01,172,61.1,Santa Cruz de Tenerife AC,false
+POR-16,Carlito,Figuerola,POR,Mediocampista,16,2002-03-09,183,76.4,La Coruña CF,false
+POR-24,Pastor,Blazquez,POR,Mediocampista,24,2008-06-05,183,77.0,Soria AC,false
+POR-23,Florentino,Arias,POR,Mediocampista,23,1998-11-04,188,78.3,Álava AC,false
+POR-12,Paulino,Cases,POR,Mediocampista,12,1990-06-06,183,77.9,Salamanca FC,false
+POR-22,Virgilio,Armas,POR,Delantero,22,1990-04-20,176,65.2,Cádiz SC,false
+POR-21,Lucas,Zabala,POR,Delantero,21,1991-02-20,170,65.4,Badajoz CF,false
+POR-04,Hector,Gabaldón,POR,Delantero,4,1993-08-05,175,65.6,Alicante CF,false
+POR-17,Faustino,Gallardo,POR,Delantero,17,1998-03-30,174,62.3,Santa Cruz de Tenerife SC,false
+POR-11,Duilio,Aller,POR,Delantero,11,1989-12-10,186,74.0,Toledo SC,false
+MAR-11,Baldomero,Feijoo,MAR,Arquero,11,1994-09-04,187,83.1,Guipúzcoa SC,false
+MAR-10,Federico,Galan,MAR,Arquero,10,1992-03-14,191,88.1,Cuenca AC,false
+MAR-24,David,Boada,MAR,Arquero,24,1991-06-29,198,95.9,Salamanca SC,false
+MAR-12,Cándido,Raya,MAR,Defensor,12,1998-10-04,181,69.1,Ciudad CF,false
+MAR-02,Alejandro,Bernad,MAR,Defensor,2,1992-03-17,179,72.7,Valladolid CF,false
+MAR-16,Bernabé,Viña,MAR,Defensor,16,1991-12-10,184,79.0,Segovia SC,true
+MAR-07,Ernesto,Pedro,MAR,Defensor,7,1994-12-01,183,70.7,Cantabria SC,false
+MAR-06,José Antonio,Villaverde,MAR,Defensor,6,1990-09-02,179,76.4,La Coruña CF,false
+MAR-18,Marcelino,Azorin,MAR,Defensor,18,1991-02-27,178,66.7,Badajoz SC,false
+MAR-22,Roldán,Moya,MAR,Defensor,22,1993-02-15,186,71.6,Granada CF,false
+MAR-08,Alex,Moles,MAR,Defensor,8,2001-05-29,186,78.6,Salamanca SC,false
+MAR-14,Anselmo,Campillo,MAR,Mediocampista,14,1995-07-02,175,63.2,Guadalajara FC,false
+MAR-13,Reyes,Cañete,MAR,Mediocampista,13,1995-05-16,181,78.8,Ávila CF,false
+MAR-19,Cebrián,Jove,MAR,Mediocampista,19,2004-08-19,174,66.7,Melilla AC,false
+MAR-03,Wálter,Larrañaga,MAR,Mediocampista,3,1998-09-17,180,77.0,Soria FC,false
+MAR-15,Abel,Toro,MAR,Mediocampista,15,2002-09-01,178,69.9,Guadalajara AC,false
+MAR-20,Diego,Ramos,MAR,Mediocampista,20,2002-10-14,171,62.8,Madrid AC,false
+MAR-04,Cleto,Álamo,MAR,Mediocampista,4,2007-10-06,180,69.9,Soria CF,false
+MAR-01,Zacarías,Cuadrado,MAR,Mediocampista,1,1989-09-15,186,72.6,Ciudad SC,false
+MAR-23,Marcelino,Lillo,MAR,Delantero,23,1991-04-24,183,68.8,Toledo CF,false
+MAR-05,Onofre,Cabeza,MAR,Delantero,5,2007-12-14,190,83.5,Pontevedra SC,false
+MAR-17,Clemente,Caballero,MAR,Delantero,17,1995-10-09,181,78.0,Guipúzcoa SC,false
+MAR-09,Javier,Codina,MAR,Delantero,9,1989-09-14,179,78.0,Murcia AC,false
+MAR-21,Bonifacio,Girona,MAR,Delantero,21,2002-03-20,174,73.2,Santa Cruz de Tenerife AC,false
+BRA-05,Alfonso,Nicolau,BRA,Arquero,5,1998-02-23,185,79.7,Lugo CF,false
+BRA-20,Juan Francisco,Hernando,BRA,Arquero,20,2007-03-27,200,95.1,Santa Cruz de Tenerife AC,false
+BRA-12,Toribio,Marco,BRA,Arquero,12,2006-02-13,195,88.5,Valladolid AC,false
+BRA-04,Basilio,Carbonell,BRA,Defensor,4,2001-11-25,193,89.4,Baleares CF,false
+BRA-09,Cesar,Ramírez,BRA,Defensor,9,1993-08-16,184,79.4,Córdoba AC,false
+BRA-08,Gilberto,Diaz,BRA,Defensor,8,2005-12-25,189,80.9,Segovia AC,false
+BRA-10,Omar,Linares,BRA,Defensor,10,2001-09-18,190,84.2,Almería SC,true
+BRA-13,Pascual,Colomer,BRA,Defensor,13,1996-10-12,190,87.1,Pontevedra SC,false
+BRA-14,Bautista,Márquez,BRA,Defensor,14,2005-12-02,179,72.5,Ceuta SC,false
+BRA-16,Chucho,Pera,BRA,Defensor,16,2002-12-23,191,77.0,Málaga FC,false
+BRA-21,Donato,Palmer,BRA,Defensor,21,1995-09-27,180,77.1,Teruel SC,false
+BRA-03,Sebastian,Segovia,BRA,Mediocampista,3,2005-01-13,178,72.4,Valladolid SC,false
+BRA-15,Roberto,Sebastián,BRA,Mediocampista,15,2004-12-23,174,70.5,Cuenca SC,false
+BRA-01,Juanito,Simó,BRA,Mediocampista,1,2000-11-09,183,78.9,Alicante FC,false
+BRA-02,José María,Roda,BRA,Mediocampista,2,2006-02-28,178,69.0,Asturias FC,false
+BRA-17,Alonso,Caparrós,BRA,Mediocampista,17,2000-11-30,175,70.6,Burgos SC,false
+BRA-23,Santos,Ávila,BRA,Mediocampista,23,1998-12-30,186,81.0,Huesca CF,false
+BRA-22,Alejandro,Exposito,BRA,Mediocampista,22,1998-12-30,173,70.8,Ceuta SC,false
+BRA-24,Bernardo,Maestre,BRA,Mediocampista,24,2005-02-19,186,73.0,Cádiz FC,false
+BRA-06,Rico,Estévez,BRA,Delantero,6,1995-06-06,170,59.6,Ceuta SC,false
+BRA-18,Martín,Granados,BRA,Delantero,18,1993-08-03,181,75.6,Álava CF,false
+BRA-11,Teófilo,Neira,BRA,Delantero,11,2004-08-19,177,64.5,Valencia CF,false
+BRA-07,Pablo,Boix,BRA,Delantero,7,2002-11-23,188,79.8,Ourense CF,false
+BRA-19,Ramiro,Alcalde,BRA,Delantero,19,1993-03-27,171,61.5,Granada AC,false
+FRA-01,Leonel,Antón,FRA,Arquero,1,2003-12-06,200,83.8,Cuenca FC,false
+FRA-13,Dani,Boada,FRA,Arquero,13,1994-03-26,186,78.2,La Rioja FC,false
+FRA-19,Ibán,Moles,FRA,Arquero,19,2004-10-02,187,84.5,Granada FC,true
+FRA-15,Teo,Canals,FRA,Defensor,15,2004-08-01,179,75.5,Zaragoza SC,false
+FRA-07,Tadeo,Narváez,FRA,Defensor,7,1999-07-30,182,71.0,Barcelona SC,false
+FRA-04,Víctor,Pomares,FRA,Defensor,4,2000-10-06,184,72.9,Las Palmas SC,false
+FRA-09,Fulgencio,Villena,FRA,Defensor,9,2003-08-18,188,82.6,Segovia CF,false
+FRA-18,Arturo,Herrero,FRA,Defensor,18,1994-11-16,185,79.2,Valladolid SC,false
+FRA-20,Reinaldo,Teruel,FRA,Defensor,20,1992-05-06,194,78.5,Málaga SC,false
+FRA-03,Cosme,Marti,FRA,Defensor,3,2008-07-10,185,83.7,Almería FC,false
+FRA-06,Tito,Leal,FRA,Defensor,6,1994-03-28,184,75.8,Toledo SC,false
+FRA-08,Felix,Viana,FRA,Mediocampista,8,1997-05-15,186,79.4,Navarra FC,false
+FRA-16,Adán,Llanos,FRA,Mediocampista,16,1991-08-09,171,70.2,Murcia CF,false
+FRA-17,Bonifacio,Enríquez,FRA,Mediocampista,17,2002-10-23,178,69.9,Toledo FC,false
+FRA-10,Matías,Ferrán,FRA,Mediocampista,10,2008-04-14,172,70.5,Soria AC,false
+FRA-22,Quirino,Trujillo,FRA,Mediocampista,22,1999-11-09,176,72.9,Ciudad AC,false
+FRA-21,Asdrubal,Nieto,FRA,Mediocampista,21,2002-02-16,171,71.2,Soria AC,false
+FRA-05,Tito,Otero,FRA,Mediocampista,5,2000-06-16,174,64.5,Huelva SC,false
+FRA-11,Alfredo,Galindo,FRA,Mediocampista,11,1999-06-26,182,81.0,Alicante FC,false
+FRA-23,Wilfredo,Calvet,FRA,Delantero,23,1992-05-14,169,68.2,Pontevedra AC,false
+FRA-24,Donato,Valenzuela,FRA,Delantero,24,2002-07-19,188,77.2,Cantabria FC,false
+FRA-12,Cristóbal,Blanes,FRA,Delantero,12,2006-06-20,186,84.0,Valencia CF,false
+FRA-02,Nazaret,Marquez,FRA,Delantero,2,1995-10-25,168,58.3,Madrid CF,false
+FRA-14,Bonifacio,Donaire,FRA,Delantero,14,2006-06-22,169,65.5,Granada FC,false
+ENG-24,Emigdio,Ojeda,ENG,Arquero,24,1993-11-19,193,76.8,Lugo CF,false
+ENG-22,Juan José,Casares,ENG,Arquero,22,1998-02-05,188,77.2,Málaga SC,false
+ENG-21,Juan Pablo,Jerez,ENG,Arquero,21,2008-07-29,191,81.6,Cantabria FC,false
+ENG-02,Andrés,Bayona,ENG,Defensor,2,1999-04-25,186,74.1,Vizcaya SC,false
+ENG-14,Luís,Viñas,ENG,Defensor,14,1997-06-19,193,80.9,Albacete AC,false
+ENG-09,Anacleto,Bermejo,ENG,Defensor,9,1993-02-22,188,85.9,Soria CF,false
+ENG-11,Berto,Miró,ENG,Defensor,11,1990-09-27,179,66.7,Alicante FC,false
+ENG-15,Haroldo,Barceló,ENG,Defensor,15,2004-09-17,183,70.3,Almería FC,false
+ENG-23,Gerónimo,Casares,ENG,Defensor,23,2001-01-23,186,79.4,León SC,false
+ENG-08,Augusto,Anaya,ENG,Defensor,8,2000-06-23,191,77.5,Tarragona FC,false
+ENG-01,Salvador,Coll,ENG,Defensor,1,2007-11-18,190,75.1,Alicante FC,false
+ENG-13,Valentín,Morera,ENG,Mediocampista,13,1992-03-02,174,73.7,Ceuta CF,false
+ENG-20,Lázaro,Castell,ENG,Mediocampista,20,2005-06-25,181,77.3,Huelva SC,false
+ENG-16,Virgilio,Medina,ENG,Mediocampista,16,1990-05-28,181,71.1,Málaga FC,true
+ENG-18,Kike,Dalmau,ENG,Mediocampista,18,2005-08-05,180,74.1,Ávila SC,false
+ENG-07,Salomón,Montes,ENG,Mediocampista,7,1991-02-06,172,68.3,Navarra AC,false
+ENG-04,Andrés Felipe,Bilbao,ENG,Mediocampista,4,1993-10-24,180,70.3,Castellón CF,false
+ENG-12,Eligio,Barroso,ENG,Mediocampista,12,2004-03-04,183,69.8,Ourense CF,false
+ENG-17,Hugo,Barrio,ENG,Mediocampista,17,2003-12-11,178,76.8,Ávila AC,false
+ENG-19,Anselmo,Macias,ENG,Delantero,19,2001-01-14,180,78.2,Jaén CF,false
+ENG-05,Horacio,Guijarro,ENG,Delantero,5,1993-04-12,189,83.0,Huesca FC,false
+ENG-03,Onofre,Escamilla,ENG,Delantero,3,2003-11-13,186,82.8,Álava FC,false
+ENG-06,Juan Manuel,Cuevas,ENG,Delantero,6,2006-12-27,178,73.7,Barcelona CF,false
+ENG-10,Epifanio,Calvet,ENG,Delantero,10,2000-04-27,188,78.2,Barcelona AC,false
+GER-15,Álvaro,Segura,GER,Arquero,15,1992-09-30,195,78.0,Ourense AC,false
+GER-19,Patricio,Madrid,GER,Arquero,19,1998-02-18,189,81.5,Guipúzcoa FC,false
+GER-12,Silvestre,Huguet,GER,Arquero,12,1990-08-11,189,82.6,Segovia CF,false
+GER-09,Néstor,Jiménez,GER,Defensor,9,2001-01-11,190,87.2,Málaga AC,false
+GER-21,Pancho,Peiró,GER,Defensor,21,2008-06-22,179,70.0,Zamora AC,false
+GER-03,Iván,Nevado,GER,Defensor,3,2008-02-09,181,74.0,Asturias CF,false
+GER-08,Isaac,Campos,GER,Defensor,8,1994-11-28,181,79.2,Alicante SC,false
+GER-11,Victor Manuel,Velasco,GER,Defensor,11,2006-06-24,193,87.8,Álava AC,false
+GER-18,Rosario,Pelayo,GER,Defensor,18,1994-01-12,181,75.4,Madrid FC,false
+GER-22,Toribio,García,GER,Defensor,22,1991-12-04,188,74.2,La Rioja FC,false
+GER-20,Custodio,Manso,GER,Defensor,20,1998-02-17,183,74.1,Navarra SC,false
+GER-23,Natalio,Vicens,GER,Mediocampista,23,1990-01-24,181,72.0,Cáceres AC,false
+GER-05,Buenaventura,Rojas,GER,Mediocampista,5,2006-02-28,187,81.3,Álava SC,false
+GER-02,Leandro,Mena,GER,Mediocampista,2,1999-06-30,177,65.0,Ceuta FC,true
+GER-04,Juan Luis,Jerez,GER,Mediocampista,4,1994-05-22,174,62.4,Girona SC,false
+GER-10,Yago,Orozco,GER,Mediocampista,10,2002-08-17,173,72.3,La Coruña FC,false
+GER-06,Moreno,Bertrán,GER,Mediocampista,6,1998-11-01,177,73.0,Guipúzcoa CF,false
+GER-14,Régulo,Acuña,GER,Mediocampista,14,2005-04-03,181,73.5,Lugo SC,false
+GER-01,Gaspar,Sabater,GER,Mediocampista,1,1993-10-24,177,76.0,Tarragona SC,false
+GER-13,Severo,Morante,GER,Delantero,13,1999-01-27,184,70.5,Soria AC,false
+GER-17,Quirino,Martinez,GER,Delantero,17,1993-10-27,182,76.1,Badajoz AC,false
+GER-07,Remigio,Salgado,GER,Delantero,7,2007-05-24,175,66.1,Huelva AC,false
+GER-24,Graciano,Viana,GER,Delantero,24,2004-06-18,188,76.3,Almería FC,false
+GER-16,Victorino,Franch,GER,Delantero,16,2002-02-04,189,80.5,Lleida AC,false
+ITA-24,Leonardo,Pablo,ITA,Arquero,24,1996-07-07,189,77.3,Girona CF,false
+ITA-15,Reynaldo,León,ITA,Arquero,15,1993-11-14,194,80.8,Melilla CF,false
+ITA-23,Toño,Torrents,ITA,Arquero,23,2008-05-17,190,77.3,Cádiz SC,false
+ITA-21,Ernesto,Frías,ITA,Defensor,21,1997-08-30,185,71.0,Lleida FC,false
+ITA-14,Gustavo,Palacio,ITA,Defensor,14,2004-11-20,180,77.5,Murcia SC,false
+ITA-11,Marciano,Córdoba,ITA,Defensor,11,2004-11-05,182,77.8,Cuenca FC,false
+ITA-18,Roldán,Marqués,ITA,Defensor,18,1999-05-05,180,73.1,Cuenca CF,false
+ITA-06,Cristóbal,Miranda,ITA,Defensor,6,1995-01-24,179,75.2,Granada FC,false
+ITA-16,Demetrio,Infante,ITA,Defensor,16,2008-05-05,179,69.7,Madrid SC,false
+ITA-13,Fortunato,Sotelo,ITA,Defensor,13,1995-02-04,195,78.4,Lugo SC,false
+ITA-12,Teodosio,Sainz,ITA,Defensor,12,2003-09-12,185,78.4,Burgos FC,false
+ITA-09,Osvaldo,Merino,ITA,Mediocampista,9,2005-05-12,173,66.3,Castellón AC,false
+ITA-17,Emigdio,Seguí,ITA,Mediocampista,17,1999-05-13,180,68.8,Málaga SC,false
+ITA-01,Paulino,Sedano,ITA,Mediocampista,1,1992-10-30,187,83.5,Palencia SC,false
+ITA-08,Erasmo,Folch,ITA,Mediocampista,8,1993-12-03,186,73.1,Málaga SC,false
+ITA-05,Nico,Gomez,ITA,Mediocampista,5,2002-02-04,173,71.9,Badajoz FC,false
+ITA-10,Abilio,Solera,ITA,Mediocampista,10,1996-09-01,182,68.5,Asturias SC,false
+ITA-04,José María,Trillo,ITA,Mediocampista,4,2005-07-27,181,74.0,Melilla SC,false
+ITA-20,Moreno,Jara,ITA,Mediocampista,20,2004-05-11,178,76.7,Ceuta CF,false
+ITA-02,Toribio,Puente,ITA,Delantero,2,2000-03-13,170,69.1,Cáceres CF,false
+ITA-19,Modesto,Sáenz,ITA,Delantero,19,1997-09-03,169,67.1,Murcia AC,true
+ITA-03,Martín,Marti,ITA,Delantero,3,2001-02-01,184,82.8,Álava CF,false
+ITA-07,Humberto,Riera,ITA,Delantero,7,2003-10-28,188,76.6,Málaga FC,false
+ITA-22,Máximo,Sevillano,ITA,Delantero,22,1990-06-15,175,66.1,Santa Cruz de Tenerife SC,false
+NED-15,Alfredo,Marin,NED,Arquero,15,2006-04-14,200,90.1,Pontevedra CF,false
+NED-14,Mario,Ramis,NED,Arquero,14,1998-05-04,188,80.6,Alicante SC,false
+NED-20,Poncio,Almagro,NED,Arquero,20,1989-09-23,196,78.9,Baleares FC,false
+NED-08,Luís,Pedro,NED,Defensor,8,1996-09-30,184,71.4,León CF,false
+NED-12,Arturo,Ponce,NED,Defensor,12,2002-08-07,181,69.2,Barcelona AC,false
+NED-06,David,Ferrer,NED,Defensor,6,1994-04-30,185,83.6,Lleida CF,false
+NED-07,Aitor,Yuste,NED,Defensor,7,2006-08-29,184,81.4,Girona CF,false
+NED-21,Mohamed,Fortuny,NED,Defensor,21,2003-02-02,180,73.2,Ávila CF,false
+NED-23,Nicanor,Báez,NED,Defensor,23,2006-05-29,188,76.7,Cáceres SC,false
+NED-19,Ambrosio,Mayo,NED,Defensor,19,2004-06-21,180,72.8,Lleida CF,false
+NED-09,Jafet,Manuel,NED,Defensor,9,1992-10-31,183,77.9,Santa Cruz de Tenerife FC,false
+NED-02,Abilio,Piquer,NED,Mediocampista,2,2002-10-03,179,68.5,Ciudad SC,false
+NED-10,Jose Antonio,Mayoral,NED,Mediocampista,10,1990-11-05,181,67.6,Huelva AC,false
+NED-24,Teodosio,Cáceres,NED,Mediocampista,24,2005-03-15,184,75.7,Córdoba CF,false
+NED-01,Victorino,Álvarez,NED,Mediocampista,1,2008-07-23,171,65.8,Valladolid SC,false
+NED-03,Olegario,Fernández,NED,Mediocampista,3,2000-12-04,182,70.6,Cantabria AC,false
+NED-04,Rodolfo,Palau,NED,Mediocampista,4,1999-01-20,172,61.5,Alicante AC,false
+NED-22,Fausto,Mesa,NED,Mediocampista,22,1998-11-23,188,80.4,Madrid SC,false
+NED-16,Herminio,Barranco,NED,Mediocampista,16,1994-11-07,170,61.4,Murcia FC,false
+NED-17,Leoncio,Muñoz,NED,Delantero,17,2002-01-07,170,64.7,La Coruña FC,false
+NED-11,Rodolfo,Sales,NED,Delantero,11,2006-07-16,174,63.6,León SC,false
+NED-18,Jose Carlos,Gonzalez,NED,Delantero,18,2002-01-27,171,60.4,Asturias AC,false
+NED-13,Hugo,Conesa,NED,Delantero,13,1991-12-28,185,70.9,Pontevedra FC,false
+NED-05,Lucio,Gallart,NED,Delantero,5,2000-11-11,187,77.9,Teruel CF,true
+BEL-16,Buenaventura,Aragón,BEL,Arquero,16,1991-05-15,190,81.8,Ceuta CF,false
+BEL-24,Efraín,Escobar,BEL,Arquero,24,1992-05-06,186,72.0,Segovia FC,false
+BEL-10,Hermenegildo,Martí,BEL,Arquero,10,1993-01-24,195,85.4,Navarra CF,false
+BEL-02,Feliciano,Berrocal,BEL,Defensor,2,1993-03-07,180,67.4,Segovia FC,false
+BEL-07,Amando,Casanovas,BEL,Defensor,7,2005-10-29,184,79.7,Zamora SC,false
+BEL-11,Lupe,Ferrero,BEL,Defensor,11,2006-11-27,180,74.1,Cáceres AC,false
+BEL-14,Timoteo,Vicens,BEL,Defensor,14,1990-09-08,179,77.3,Girona FC,false
+BEL-13,Iván,Rivero,BEL,Defensor,13,2004-08-10,180,70.1,Salamanca AC,false
+BEL-12,Calisto,Alfaro,BEL,Defensor,12,2000-02-12,184,80.2,Girona AC,false
+BEL-20,Benigno,Corbacho,BEL,Defensor,20,2007-05-13,185,73.3,Álava CF,false
+BEL-08,Ismael,Barrena,BEL,Defensor,8,2004-04-10,194,88.1,Huesca FC,false
+BEL-23,Carmelo,Donaire,BEL,Mediocampista,23,2001-03-12,170,69.8,Ciudad CF,false
+BEL-17,Haroldo,Valenciano,BEL,Mediocampista,17,1990-02-08,173,62.9,Huelva SC,false
+BEL-22,Eliseo,Quintero,BEL,Mediocampista,22,1994-06-12,173,69.1,Alicante SC,false
+BEL-06,Erasmo,Velázquez,BEL,Mediocampista,6,2005-07-04,174,64.0,Badajoz AC,false
+BEL-05,Miguel Ángel,Boada,BEL,Mediocampista,5,1991-10-14,181,74.6,Girona SC,false
+BEL-03,César,Barba,BEL,Mediocampista,3,2004-02-06,173,65.4,Baleares FC,true
+BEL-01,Aarón,Sanmiguel,BEL,Mediocampista,1,1992-04-24,177,73.1,León SC,false
+BEL-18,Hilario,Recio,BEL,Mediocampista,18,1993-09-17,178,73.1,Granada SC,false
+BEL-21,Felix,Luís,BEL,Delantero,21,1995-11-22,168,66.8,Lleida CF,false
+BEL-04,Pelayo,Barral,BEL,Delantero,4,2001-09-22,182,76.9,Toledo SC,false
+BEL-19,Benigno,Leiva,BEL,Delantero,19,1997-03-05,177,75.6,La Coruña SC,false
+BEL-15,Angelino,Fortuny,BEL,Delantero,15,1997-05-06,176,68.9,Burgos SC,false
+BEL-09,Flavio,Bustamante,BEL,Delantero,9,1994-09-26,169,68.7,León FC,false
+CRO-22,Ciro,Montoya,CRO,Arquero,22,1999-09-12,194,77.3,Lugo AC,false
+CRO-09,Poncio,Pablo,CRO,Arquero,9,2006-08-12,194,90.3,Teruel CF,false
+CRO-06,Jonatan,Chacón,CRO,Arquero,6,2004-01-18,192,79.2,Cáceres SC,false
+CRO-17,Berto,Barberá,CRO,Defensor,17,2006-12-01,182,71.7,Pontevedra FC,false
+CRO-24,Chuy,Zurita,CRO,Defensor,24,2008-02-18,189,79.7,Ávila AC,false
+CRO-20,Graciano,Amo,CRO,Defensor,20,1999-07-09,179,74.0,Ourense FC,false
+CRO-02,Macario,Gomila,CRO,Defensor,2,1999-01-07,178,69.3,La Coruña CF,false
+CRO-05,León,Luján,CRO,Defensor,5,1998-07-30,178,75.7,Soria AC,false
+CRO-10,Vasco,Simó,CRO,Defensor,10,1995-01-21,193,79.6,Huesca SC,false
+CRO-18,Poncio,Castell,CRO,Defensor,18,2002-12-04,195,89.1,Cáceres AC,false
+CRO-23,Edgardo,Cadenas,CRO,Defensor,23,1991-10-01,183,78.0,Málaga SC,false
+CRO-13,Quique,Ordóñez,CRO,Mediocampista,13,2007-12-20,178,73.5,Zamora FC,false
+CRO-19,Remigio,Trujillo,CRO,Mediocampista,19,1994-04-15,179,71.3,Pontevedra AC,false
+CRO-14,Victor,Alba,CRO,Mediocampista,14,2002-06-23,184,70.3,Castellón AC,true
+CRO-21,Evaristo,Garzón,CRO,Mediocampista,21,1992-08-04,186,77.8,Sevilla CF,false
+CRO-07,Loreto,Godoy,CRO,Mediocampista,7,2001-12-02,176,74.2,Granada SC,false
+CRO-03,Abel,Corbacho,CRO,Mediocampista,3,2002-06-27,176,70.3,Cuenca SC,false
+CRO-04,Rodolfo,Barco,CRO,Mediocampista,4,1996-04-16,178,75.3,Huesca CF,false
+CRO-16,Marino,Lastra,CRO,Mediocampista,16,1994-11-21,180,76.3,Jaén SC,false
+CRO-11,Cebrián,Borrás,CRO,Delantero,11,1992-12-12,177,70.8,Las Palmas AC,false
+CRO-12,Rico,Chaves,CRO,Delantero,12,2001-06-01,177,66.5,Barcelona SC,false
+CRO-15,Ruy,Martín,CRO,Delantero,15,1998-07-26,190,77.0,Almería FC,false
+CRO-08,Ernesto,Pina,CRO,Delantero,8,1994-07-07,182,78.5,Soria AC,false
+CRO-01,Cristian,Román,CRO,Delantero,1,1990-10-16,179,67.9,Lleida CF,false
+COL-24,Fidel,Mora,COL,Arquero,24,1994-05-29,197,92.8,Vizcaya CF,false
+COL-19,Poncio,Pablo,COL,Arquero,19,2005-03-17,189,85.0,Ciudad SC,false
+COL-02,Vito,Millán,COL,Arquero,2,1991-11-04,189,76.3,Granada SC,false
+COL-11,Adolfo,Peláez,COL,Defensor,11,1994-02-28,192,85.2,Baleares CF,false
+COL-03,Gabriel,Ropero,COL,Defensor,3,2000-01-11,192,75.8,Ourense CF,false
+COL-22,Rodrigo,Galán,COL,Defensor,22,2002-09-06,193,80.6,Ourense AC,false
+COL-07,Ale,Ramírez,COL,Defensor,7,1998-12-11,194,87.0,Tarragona CF,false
+COL-01,Benito,Llanos,COL,Defensor,1,2005-08-26,195,89.9,Girona CF,false
+COL-21,Glauco,Narváez,COL,Defensor,21,2007-11-10,181,72.0,Toledo FC,false
+COL-13,Ramón,Riera,COL,Defensor,13,1998-01-19,192,88.3,Santa Cruz de Tenerife FC,false
+COL-18,Godofredo,Chaves,COL,Defensor,18,2005-07-07,188,79.7,Navarra AC,false
+COL-05,Rodolfo,Rocha,COL,Mediocampista,5,1995-06-29,176,70.0,Albacete AC,false
+COL-15,Ramón,Martí,COL,Mediocampista,15,1999-01-07,178,66.3,Palencia AC,false
+COL-06,Bautista,Alcalá,COL,Mediocampista,6,2006-10-13,188,82.8,Valladolid AC,false
+COL-04,Baudelio,Roman,COL,Mediocampista,4,1993-08-04,175,67.9,Guadalajara AC,false
+COL-12,Guiomar,Godoy,COL,Mediocampista,12,2008-02-18,182,79.3,Ceuta AC,true
+COL-20,Bernabé,Romeu,COL,Mediocampista,20,1990-11-19,179,73.2,Ourense FC,false
+COL-23,Jordán,Cazorla,COL,Mediocampista,23,2002-07-24,184,75.1,Almería CF,false
+COL-14,León,Llabrés,COL,Mediocampista,14,1999-09-28,186,71.5,Pontevedra AC,false
+COL-10,Eustaquio,Porcel,COL,Delantero,10,2007-03-08,181,75.5,Pontevedra CF,false
+COL-16,Jesús,Lucas,COL,Delantero,16,2002-06-15,169,61.9,Huelva AC,false
+COL-17,Hermenegildo,Bravo,COL,Delantero,17,1993-04-19,180,74.4,Guadalajara CF,false
+COL-09,Celso,Pinedo,COL,Delantero,9,2008-02-16,169,58.6,Salamanca FC,false
+COL-08,Ignacio,Carnero,COL,Delantero,8,2002-03-24,186,75.0,Valladolid SC,false
+USA-16,Iker,Segovia,USA,Arquero,16,1991-11-29,193,78.8,Murcia FC,false
+USA-07,Guillermo,Cortes,USA,Arquero,7,2006-08-03,194,85.5,Guadalajara AC,false
+USA-09,Tomás,Escudero,USA,Arquero,9,1993-05-23,190,80.7,Lugo SC,false
+USA-24,Wilfredo,Barrena,USA,Defensor,24,1989-12-01,187,80.4,Ávila FC,false
+USA-21,Gregorio,Zaragoza,USA,Defensor,21,2006-06-02,190,78.9,Cantabria FC,false
+USA-10,Celestino,Hernández,USA,Defensor,10,2005-06-21,193,85.0,Córdoba SC,false
+USA-23,Tiburcio,Agustín,USA,Defensor,23,1994-01-15,186,83.7,Córdoba CF,false
+USA-06,Lalo,Mateu,USA,Defensor,6,1995-06-11,183,69.2,Huelva SC,false
+USA-17,Marcial,Olivera,USA,Defensor,17,1993-08-11,191,87.8,Toledo AC,false
+USA-08,Nazaret,Bonet,USA,Defensor,8,2003-10-06,178,73.6,Baleares AC,false
+USA-22,Ildefonso,Coello,USA,Defensor,22,1993-12-20,184,76.1,La Coruña SC,false
+USA-18,Artemio,Solé,USA,Mediocampista,18,2005-11-19,171,70.6,Jaén AC,false
+USA-14,Celso,Sans,USA,Mediocampista,14,2002-10-23,180,70.5,Burgos CF,false
+USA-20,Isidoro,Requena,USA,Mediocampista,20,1994-12-21,185,73.9,Córdoba AC,false
+USA-04,Cristian,Bonet,USA,Mediocampista,4,1994-08-07,188,73.3,Ávila CF,false
+USA-05,Custodio,Arnal,USA,Mediocampista,5,2004-07-24,187,80.8,Cantabria SC,false
+USA-01,Cebrián,Salgado,USA,Mediocampista,1,1994-02-17,175,67.6,Valencia CF,false
+USA-13,Severiano,Carbó,USA,Mediocampista,13,1991-06-01,184,76.9,Castellón AC,false
+USA-03,Hugo,Torrecilla,USA,Mediocampista,3,2004-02-28,179,71.9,Lugo CF,false
+USA-15,Reynaldo,Ferrán,USA,Delantero,15,2008-06-18,169,59.4,Ciudad AC,false
+USA-02,Nacho,Nogueira,USA,Delantero,2,1992-10-13,185,72.2,Baleares FC,false
+USA-12,Rosendo,Chacón,USA,Delantero,12,1998-04-13,187,79.9,Baleares CF,true
+USA-19,Aristides,Barrios,USA,Delantero,19,2004-06-24,174,73.4,Valencia FC,false
+USA-11,Gregorio,Carnero,USA,Delantero,11,2002-01-12,184,71.3,Baleares FC,false
+MEX-17,Julián,Grau,MEX,Arquero,17,2002-10-13,190,74.8,Lugo SC,true
+MEX-10,Apolinar,Anaya,MEX,Arquero,10,2002-02-08,194,89.0,Ávila AC,false
+MEX-04,Sandalio,Beltran,MEX,Arquero,4,1999-10-02,198,81.1,Guipúzcoa CF,false
+MEX-12,Jose Ramón,Cadenas,MEX,Defensor,12,1993-05-26,182,68.1,Ceuta SC,false
+MEX-07,Agapito,Carnero,MEX,Defensor,7,1994-01-29,187,84.7,Alicante FC,false
+MEX-01,Wilfredo,Ibáñez,MEX,Defensor,1,1995-06-01,182,70.9,Barcelona AC,false
+MEX-11,Maximiliano,Vergara,MEX,Defensor,11,1994-04-18,179,74.5,Salamanca SC,false
+MEX-02,Marino,Terrón,MEX,Defensor,2,1997-02-20,189,81.9,Cádiz CF,false
+MEX-18,Florencio,Maestre,MEX,Defensor,18,1990-05-29,195,80.5,Navarra CF,false
+MEX-03,Reynaldo,Bayona,MEX,Defensor,3,1991-10-04,178,70.4,Álava AC,false
+MEX-14,Yago,Escolano,MEX,Defensor,14,1993-01-15,194,87.0,Ciudad SC,false
+MEX-16,Eliseo,Priego,MEX,Mediocampista,16,2003-08-27,178,67.2,Huelva AC,false
+MEX-22,Celso,Barrio,MEX,Mediocampista,22,1992-01-24,171,60.4,Valencia CF,false
+MEX-21,Paco,Villena,MEX,Mediocampista,21,2002-04-12,179,72.2,Salamanca AC,false
+MEX-15,Macario,Parra,MEX,Mediocampista,15,2003-12-07,173,62.7,Castellón FC,false
+MEX-19,Victor,Juárez,MEX,Mediocampista,19,1993-06-29,178,68.7,Navarra AC,false
+MEX-23,Alcides,Salvà,MEX,Mediocampista,23,2003-04-02,176,74.4,Córdoba FC,false
+MEX-20,Efraín,Fernández,MEX,Mediocampista,20,1991-04-20,172,62.1,Huelva FC,false
+MEX-24,Amancio,Cárdenas,MEX,Mediocampista,24,1998-09-07,184,82.3,Pontevedra AC,false
+MEX-06,Jose Manuel,Hernandez,MEX,Delantero,6,2008-04-17,174,73.4,Valencia AC,false
+MEX-09,Gabino,Solé,MEX,Delantero,9,2008-09-03,173,65.0,Baleares SC,false
+MEX-05,Graciano,Diéguez,MEX,Delantero,5,2002-04-01,177,65.2,Jaén AC,false
+MEX-08,Alberto,Quintana,MEX,Delantero,8,2004-05-13,188,80.3,Zaragoza FC,false
+MEX-13,Mariano,Clemente,MEX,Delantero,13,1996-01-01,175,71.6,Zaragoza FC,false
+JPN-01,César,Ureña,JPN,Arquero,1,2007-11-21,196,86.3,Zaragoza AC,false
+JPN-04,Primitivo,Borrás,JPN,Arquero,4,1990-03-29,189,87.2,La Coruña CF,false
+JPN-18,Victor Manuel,Rivas,JPN,Arquero,18,1992-11-29,189,85.8,Zaragoza SC,false
+JPN-20,Jordi,Francisco,JPN,Defensor,20,2000-04-09,184,71.8,Córdoba CF,false
+JPN-24,Luis,Bustos,JPN,Defensor,24,2006-07-27,180,73.1,Barcelona AC,false
+JPN-15,Ángel,Palmer,JPN,Defensor,15,2001-05-12,178,69.9,Palencia AC,false
+JPN-11,Arturo,Pereira,JPN,Defensor,11,2000-04-21,180,74.0,Vizcaya FC,false
+JPN-19,Rubén,Ricart,JPN,Defensor,19,1999-06-27,190,80.8,Salamanca SC,false
+JPN-08,David,Gil,JPN,Defensor,8,2004-02-18,182,77.0,Albacete AC,false
+JPN-21,Ramón,Escamilla,JPN,Defensor,21,1991-12-24,189,78.5,Albacete FC,false
+JPN-02,Humberto,Taboada,JPN,Defensor,2,1995-05-26,182,78.4,Madrid CF,false
+JPN-14,Hipólito,Ribas,JPN,Mediocampista,14,1993-07-10,173,63.5,Huesca FC,false
+JPN-06,Modesto,Romero,JPN,Mediocampista,6,2008-04-16,174,72.4,Cantabria SC,false
+JPN-10,Eloy,Bolaños,JPN,Mediocampista,10,2005-09-08,181,80.0,Girona CF,false
+JPN-16,Blas,Caballero,JPN,Mediocampista,16,1995-02-03,182,77.8,Teruel AC,false
+JPN-05,Leoncio,Verdugo,JPN,Mediocampista,5,2005-08-24,181,75.1,Madrid FC,false
+JPN-23,Ambrosio,Perea,JPN,Mediocampista,23,2005-04-10,180,69.2,Málaga CF,false
+JPN-07,Rolando,Torrent,JPN,Mediocampista,7,1998-10-15,179,76.1,Barcelona SC,false
+JPN-03,Álvaro,Orozco,JPN,Mediocampista,3,2006-01-06,185,77.9,Baleares CF,false
+JPN-17,Glauco,Uribe,JPN,Delantero,17,1998-04-17,171,70.6,Huesca CF,false
+JPN-22,Heliodoro,Fuentes,JPN,Delantero,22,1995-11-06,168,65.9,Lleida FC,false
+JPN-13,Joan,Ángel,JPN,Delantero,13,2004-07-21,176,67.8,Guipúzcoa FC,false
+JPN-12,Silvestre,Sánchez,JPN,Delantero,12,1995-06-04,187,72.2,Navarra SC,false
+JPN-09,Matías,Tejedor,JPN,Delantero,9,2002-08-03,187,80.8,Burgos SC,true
+KOR-07,Jose Miguel,Pont,KOR,Arquero,7,1997-02-28,198,93.8,Cádiz SC,false
+KOR-16,Telmo,Botella,KOR,Arquero,16,2003-02-04,199,85.1,Burgos SC,false
+KOR-02,Francisco Javier,Sobrino,KOR,Arquero,2,1994-10-18,195,89.7,Tarragona CF,false
+KOR-19,Íñigo,Reig,KOR,Defensor,19,1992-01-16,189,86.7,Guadalajara AC,false
+KOR-10,Isidoro,Granados,KOR,Defensor,10,1995-06-19,185,71.7,Ávila SC,false
+KOR-04,Juan Francisco,Lamas,KOR,Defensor,4,1995-09-21,179,77.0,Alicante CF,false
+KOR-15,Lino,Cervera,KOR,Defensor,15,1990-01-10,189,73.4,Murcia SC,false
+KOR-11,Lucas,Pujadas,KOR,Defensor,11,1998-08-21,181,74.3,Badajoz SC,false
+KOR-12,Leopoldo,Batlle,KOR,Defensor,12,2000-07-24,191,80.4,Alicante SC,false
+KOR-22,Heriberto,Nuñez,KOR,Defensor,22,1995-08-14,184,72.9,León AC,false
+KOR-21,Rafa,Montaña,KOR,Defensor,21,1996-01-30,179,70.9,Ciudad AC,false
+KOR-17,Emilio,Velasco,KOR,Mediocampista,17,2004-11-14,173,73.0,Las Palmas SC,false
+KOR-24,Florencio,Urrutia,KOR,Mediocampista,24,1994-09-29,187,83.0,Girona SC,false
+KOR-08,Pedro,Rodríguez,KOR,Mediocampista,8,2002-04-26,187,76.9,Santa Cruz de Tenerife SC,false
+KOR-20,Ariel,Cabeza,KOR,Mediocampista,20,2005-11-08,173,71.7,Toledo AC,false
+KOR-18,Jose Angel,Bonet,KOR,Mediocampista,18,1996-04-25,183,75.0,Guipúzcoa AC,false
+KOR-05,Federico,Agustín,KOR,Mediocampista,5,2003-07-02,174,69.7,Pontevedra SC,false
+KOR-14,Felipe,Olmo,KOR,Mediocampista,14,2003-03-13,187,76.0,Lugo AC,false
+KOR-09,Ariel,Llorente,KOR,Mediocampista,9,1990-06-21,183,69.1,Almería SC,false
+KOR-03,Cipriano,Mendizábal,KOR,Delantero,3,2004-02-27,186,82.7,Ciudad FC,false
+KOR-23,Amado,Royo,KOR,Delantero,23,2003-03-31,186,83.4,La Coruña FC,false
+KOR-01,Marcial,Roma,KOR,Delantero,1,1990-10-21,190,85.7,Madrid AC,false
+KOR-06,Roberto,Márquez,KOR,Delantero,6,1996-07-23,174,64.7,Lleida AC,false
+KOR-13,Joaquín,Lillo,KOR,Delantero,13,1996-08-12,173,65.2,Salamanca SC,true
+SEN-17,Pío,Hurtado,SEN,Arquero,17,1991-10-19,197,94.1,Cáceres AC,false
+SEN-02,Marcio,Vicens,SEN,Arquero,2,1992-06-21,193,86.9,Santa Cruz de Tenerife CF,false
+SEN-24,Antonio,Guerrero,SEN,Arquero,24,1996-07-06,196,81.7,Asturias AC,false
+SEN-18,Vidal,Pizarro,SEN,Defensor,18,1999-11-18,180,67.4,Lleida SC,false
+SEN-06,Prudencio,Tejada,SEN,Defensor,6,1994-01-13,194,79.7,Sevilla FC,false
+SEN-05,Fabricio,Manuel,SEN,Defensor,5,1996-03-01,191,83.4,Pontevedra FC,false
+SEN-21,Alejo,Esteban,SEN,Defensor,21,1994-05-22,180,76.1,Granada AC,false
+SEN-09,Jose Antonio,Polo,SEN,Defensor,9,1997-09-25,192,78.7,Las Palmas AC,false
+SEN-19,Renato,Lledó,SEN,Defensor,19,1999-11-10,182,68.5,Asturias CF,false
+SEN-22,Miguel,Villaverde,SEN,Defensor,22,1995-03-01,190,86.5,Toledo CF,false
+SEN-11,Noé,Mendoza,SEN,Defensor,11,2002-05-27,195,92.6,Zaragoza AC,false
+SEN-10,Lucio,Domínguez,SEN,Mediocampista,10,2000-08-19,170,60.7,Ávila FC,false
+SEN-07,Natalio,Rivas,SEN,Mediocampista,7,2000-05-29,176,64.6,Castellón AC,true
+SEN-12,Íñigo,Linares,SEN,Mediocampista,12,1997-09-11,182,74.9,La Rioja CF,false
+SEN-15,Fulgencio,Múñiz,SEN,Mediocampista,15,2008-04-05,175,72.9,Zaragoza CF,false
+SEN-14,Bruno,Girona,SEN,Mediocampista,14,1999-01-31,178,67.9,Sevilla FC,false
+SEN-04,Aureliano,Estevez,SEN,Mediocampista,4,2004-11-13,181,70.5,Ceuta SC,false
+SEN-16,Javier,Espejo,SEN,Mediocampista,16,1995-08-30,182,72.6,Huelva AC,false
+SEN-03,Guiomar,Mascaró,SEN,Mediocampista,3,1999-07-21,181,70.7,Málaga FC,false
+SEN-23,Jesús,Boada,SEN,Delantero,23,1996-10-02,174,73.8,Navarra FC,false
+SEN-01,Remigio,Francisco,SEN,Delantero,1,1990-05-03,175,70.1,Navarra CF,false
+SEN-20,Victor,Carbonell,SEN,Delantero,20,2008-05-17,173,66.1,Soria FC,false
+SEN-08,Pancho,Alcaraz,SEN,Delantero,8,1998-01-17,182,77.7,Málaga AC,false
+SEN-13,Herberto,Diez,SEN,Delantero,13,2003-07-09,190,77.5,Badajoz AC,false
+SUI-11,Lorenzo,Solé,SUI,Arquero,11,2000-05-31,185,80.4,Lleida CF,false
+SUI-08,Eliseo,Barrios,SUI,Arquero,8,2002-01-05,188,81.2,Vizcaya CF,false
+SUI-17,Tomás,Nieto,SUI,Arquero,17,1994-02-27,197,86.1,Salamanca CF,false
+SUI-19,Jonatan,Teruel,SUI,Defensor,19,1996-07-04,193,91.1,Baleares CF,false
+SUI-23,Lázaro,Reig,SUI,Defensor,23,1990-09-07,181,70.4,Álava SC,false
+SUI-10,Marcelino,Olmo,SUI,Defensor,10,1999-12-21,193,78.1,Baleares FC,false
+SUI-07,Nazario,Montalbán,SUI,Defensor,7,1991-07-07,182,70.6,Segovia FC,false
+SUI-01,Plácido,Vigil,SUI,Defensor,1,2006-04-27,179,66.1,Huelva AC,false
+SUI-18,Víctor,Cuevas,SUI,Defensor,18,2007-07-19,181,74.2,Granada FC,false
+SUI-12,Adrián,Calzada,SUI,Defensor,12,2000-05-31,178,71.8,Vizcaya CF,false
+SUI-03,Kike,Marco,SUI,Defensor,3,1991-01-21,182,80.5,Ávila FC,false
+SUI-02,Chema,Amo,SUI,Mediocampista,2,2004-02-24,170,59.6,Huelva FC,false
+SUI-13,Chuy,Lerma,SUI,Mediocampista,13,2001-09-16,185,74.7,Cantabria FC,false
+SUI-04,Domingo,Cuesta,SUI,Mediocampista,4,2001-10-13,185,79.7,Murcia FC,false
+SUI-22,Benigno,Chamorro,SUI,Mediocampista,22,1995-10-22,184,72.4,León FC,true
+SUI-24,Amancio,Ibáñez,SUI,Mediocampista,24,2004-07-30,173,71.6,Ceuta SC,false
+SUI-16,Bernardino,Boada,SUI,Mediocampista,16,2002-08-24,171,63.5,Asturias SC,false
+SUI-14,Epifanio,Calzada,SUI,Mediocampista,14,2007-04-18,183,70.4,Madrid FC,false
+SUI-15,Albano,Peinado,SUI,Mediocampista,15,2006-09-11,182,73.9,Guipúzcoa AC,false
+SUI-20,Rafa,Alcalde,SUI,Delantero,20,1998-02-26,182,70.2,Tarragona CF,false
+SUI-09,Lisandro,Niño,SUI,Delantero,9,1991-08-28,178,75.0,Jaén SC,false
+SUI-05,Aníbal,Abascal,SUI,Delantero,5,2008-02-11,185,71.7,Madrid FC,false
+SUI-06,Natalio,Campo,SUI,Delantero,6,1996-04-02,188,86.3,Madrid FC,false
+SUI-21,Marco,Soler,SUI,Delantero,21,1989-09-24,173,69.2,Huelva CF,false
+DEN-04,Simón,Bermudez,DEN,Arquero,4,1999-08-28,193,81.3,Cáceres SC,false
+DEN-23,Eleuterio,Moraleda,DEN,Arquero,23,2000-07-06,186,77.1,Cantabria AC,false
+DEN-02,Pascual,Alegria,DEN,Arquero,2,2000-10-12,193,77.6,Valladolid SC,false
+DEN-15,Alfonso,Diego,DEN,Defensor,15,2000-07-16,184,80.3,Baleares CF,false
+DEN-07,Natanael,Esteban,DEN,Defensor,7,2005-06-25,189,80.0,Madrid FC,false
+DEN-24,Pío,Delgado,DEN,Defensor,24,2005-04-06,183,78.5,Barcelona SC,false
+DEN-17,Gilberto,Cornejo,DEN,Defensor,17,2005-01-31,193,90.6,Huelva CF,true
+DEN-06,Rodolfo,Exposito,DEN,Defensor,6,2000-01-14,186,82.6,Santa Cruz de Tenerife SC,false
+DEN-21,Gerónimo,Sales,DEN,Defensor,21,2003-12-30,192,78.9,La Coruña SC,false
+DEN-22,Leoncio,Poza,DEN,Defensor,22,1999-06-25,190,76.4,Ourense AC,false
+DEN-16,Ángel,Talavera,DEN,Defensor,16,2002-12-30,178,70.1,Barcelona SC,false
+DEN-11,José Ángel,Sevilla,DEN,Mediocampista,11,2001-11-17,180,74.2,Sevilla CF,false
+DEN-18,Pepe,Estevez,DEN,Mediocampista,18,1993-11-03,170,68.5,Soria FC,false
+DEN-03,Alonso,Lozano,DEN,Mediocampista,3,1992-03-06,176,69.6,Guipúzcoa CF,false
+DEN-14,Fito,Bou,DEN,Mediocampista,14,1998-06-23,170,60.0,Soria FC,false
+DEN-05,Eloy,Palomar,DEN,Mediocampista,5,1999-07-07,185,75.5,Cuenca CF,false
+DEN-12,Felix,Frutos,DEN,Mediocampista,12,2006-12-19,183,81.5,Pontevedra AC,false
+DEN-01,Timoteo,Llobet,DEN,Mediocampista,1,1992-06-23,185,72.9,Sevilla SC,false
+DEN-19,Nicodemo,Sarabia,DEN,Mediocampista,19,1999-09-30,188,73.8,Baleares CF,false
+DEN-13,Saturnino,Ribas,DEN,Delantero,13,1995-10-04,172,67.9,Burgos SC,false
+DEN-09,Curro,Aroca,DEN,Delantero,9,2003-01-31,184,76.3,Asturias AC,false
+DEN-08,Jaime,Grande,DEN,Delantero,8,2003-08-21,186,78.7,León FC,false
+DEN-10,Román,Llano,DEN,Delantero,10,1989-10-28,179,67.1,Barcelona SC,false
+DEN-20,Víctor,Aguiló,DEN,Delantero,20,2007-01-18,181,70.2,Badajoz FC,false
+AUT-15,Amado,Barón,AUT,Arquero,15,2008-04-22,198,84.6,Toledo CF,false
+AUT-09,Juan,Arana,AUT,Arquero,9,1994-05-03,199,85.4,León FC,false
+AUT-12,Celso,Agustín,AUT,Arquero,12,2000-02-24,194,81.4,Zamora CF,false
+AUT-14,Chuy,Yuste,AUT,Defensor,14,1998-06-12,181,78.5,Cantabria FC,false
+AUT-13,Marc,Ruiz,AUT,Defensor,13,2000-08-17,182,75.2,Cantabria FC,false
+AUT-19,Marcelino,Huertas,AUT,Defensor,19,2000-12-07,193,88.6,Las Palmas FC,false
+AUT-02,Melchor,Pereira,AUT,Defensor,2,2005-08-20,189,83.0,Almería FC,false
+AUT-16,Nicodemo,Aguiló,AUT,Defensor,16,1994-10-08,194,84.4,Burgos AC,false
+AUT-23,Jordi,Narváez,AUT,Defensor,23,2007-05-14,189,75.1,Granada FC,false
+AUT-24,Tiburcio,Marín,AUT,Defensor,24,1993-07-31,189,76.9,Zaragoza AC,false
+AUT-11,Raimundo,Ferrán,AUT,Defensor,11,1990-05-23,190,79.4,Cádiz AC,false
+AUT-22,Emiliano,Falcó,AUT,Mediocampista,22,2006-04-09,184,82.5,Alicante SC,false
+AUT-17,Rosendo,Lumbreras,AUT,Mediocampista,17,1992-11-16,185,75.6,Cádiz CF,true
+AUT-05,Hernando,Arco,AUT,Mediocampista,5,1990-11-06,184,75.6,Granada AC,false
+AUT-18,Augusto,Villalba,AUT,Mediocampista,18,1990-12-15,186,78.9,Huelva SC,false
+AUT-10,Federico,López,AUT,Mediocampista,10,1991-03-28,179,78.0,La Coruña AC,false
+AUT-06,Omar,Peñas,AUT,Mediocampista,6,1996-03-09,180,73.5,Pontevedra FC,false
+AUT-20,Ezequiel,Echeverría,AUT,Mediocampista,20,2003-07-20,187,85.0,Alicante AC,false
+AUT-04,Julio,Tejedor,AUT,Mediocampista,4,1994-04-19,174,66.8,Valladolid AC,false
+AUT-01,Víctor,Avilés,AUT,Delantero,1,2007-12-04,190,83.8,Vizcaya AC,false
+AUT-03,Isaías,Osuna,AUT,Delantero,3,2000-09-22,169,60.7,Las Palmas FC,false
+AUT-07,Erasmo,Fábregas,AUT,Delantero,7,2004-10-17,172,62.4,Álava SC,false
+AUT-21,Nicodemo,Leiva,AUT,Delantero,21,2002-03-19,182,68.1,Cuenca FC,false
+AUT-08,Patricio,Colomer,AUT,Delantero,8,2001-04-03,172,71.6,Lleida AC,false
+POL-07,Gonzalo,Salom,POL,Arquero,7,2007-12-17,197,88.3,Burgos FC,false
+POL-06,Sandalio,Carrión,POL,Arquero,6,2008-07-14,187,80.3,Guipúzcoa AC,false
+POL-17,Ceferino,Gisbert,POL,Arquero,17,2000-11-06,186,75.2,Córdoba AC,false
+POL-22,Edmundo,Ferrán,POL,Defensor,22,1997-04-09,188,82.2,Soria CF,false
+POL-21,Rafael,Casado,POL,Defensor,21,2007-02-12,192,80.5,Tarragona SC,false
+POL-12,Angelino,Lamas,POL,Defensor,12,1991-01-15,181,79.0,Castellón SC,false
+POL-18,Pelayo,Ros,POL,Defensor,18,2005-06-21,194,89.8,Almería FC,false
+POL-14,Cruz,Abella,POL,Defensor,14,1990-12-16,191,78.7,Álava SC,false
+POL-01,Pascual,Baquero,POL,Defensor,1,2007-03-14,193,79.1,Castellón AC,false
+POL-20,Vasco,Romero,POL,Defensor,20,2001-11-30,178,72.9,Sevilla FC,false
+POL-05,Pedro,Guillen,POL,Defensor,5,1994-04-08,181,71.3,Segovia SC,false
+POL-13,Pedro,Vall,POL,Mediocampista,13,2001-12-08,185,71.4,Palencia SC,false
+POL-16,Amador,Castelló,POL,Mediocampista,16,2007-07-26,178,69.0,Melilla FC,false
+POL-09,Joan,Sevillano,POL,Mediocampista,9,1994-09-29,186,73.9,Zamora SC,false
+POL-04,Goyo,Tormo,POL,Mediocampista,4,2008-02-09,181,75.0,Córdoba AC,false
+POL-23,Sabas,Villalba,POL,Mediocampista,23,1998-09-24,171,61.2,Castellón FC,false
+POL-03,Jorge,Pozuelo,POL,Mediocampista,3,2001-03-08,178,72.5,Tarragona FC,false
+POL-19,Matías,Báez,POL,Mediocampista,19,2004-06-28,171,68.9,Pontevedra CF,false
+POL-24,Ramón,Zamora,POL,Mediocampista,24,1989-10-29,179,76.2,Jaén CF,true
+POL-15,Marcio,Pelayo,POL,Delantero,15,1992-10-25,190,79.7,Tarragona AC,false
+POL-02,Anacleto,Arranz,POL,Delantero,2,1997-06-09,170,63.8,Jaén SC,false
+POL-10,Guillermo,Simó,POL,Delantero,10,2007-05-05,187,77.7,Ourense FC,false
+POL-11,Hernando,Herrera,POL,Delantero,11,1997-06-01,183,73.5,Girona SC,false
+POL-08,Calixto,Ferrer,POL,Delantero,8,2008-08-09,186,84.4,Alicante FC,false
+SRB-13,José María,Cabeza,SRB,Arquero,13,2004-09-14,197,86.3,Valladolid CF,false
+SRB-05,Cleto,Tenorio,SRB,Arquero,5,2007-06-05,185,80.1,Ciudad AC,false
+SRB-19,Donato,Ribera,SRB,Arquero,19,2005-04-24,197,93.0,Ourense SC,false
+SRB-23,Sergio,Jordá,SRB,Defensor,23,1994-04-24,182,72.0,Toledo CF,false
+SRB-02,Cleto,Delgado,SRB,Defensor,2,1990-11-22,185,70.6,Vizcaya CF,false
+SRB-16,Leoncio,Escalona,SRB,Defensor,16,1996-10-14,192,80.1,Cantabria AC,false
+SRB-07,Germán,Barrera,SRB,Defensor,7,1994-09-27,190,80.7,Cáceres SC,false
+SRB-06,Jordi,Infante,SRB,Defensor,6,1989-11-10,186,80.6,Barcelona CF,false
+SRB-17,Candelario,Ballester,SRB,Defensor,17,2000-09-17,180,70.2,Lugo AC,false
+SRB-21,Matías,Coca,SRB,Defensor,21,1996-06-24,187,82.0,Jaén SC,false
+SRB-20,Pánfilo,Bárcena,SRB,Defensor,20,2006-08-26,183,77.6,Lleida FC,false
+SRB-11,Jacobo,Roca,SRB,Mediocampista,11,2008-06-15,188,79.2,Melilla AC,false
+SRB-22,David,Tudela,SRB,Mediocampista,22,1994-03-04,184,72.2,Santa Cruz de Tenerife SC,false
+SRB-03,Francisco,Vizcaíno,SRB,Mediocampista,3,1999-02-05,187,75.3,Ourense SC,false
+SRB-14,Erasmo,Codina,SRB,Mediocampista,14,1991-07-06,180,68.1,Segovia AC,false
+SRB-18,Roque,Oliva,SRB,Mediocampista,18,1989-10-11,174,63.7,Almería CF,false
+SRB-08,Amador,Mateos,SRB,Mediocampista,8,1992-01-25,172,68.4,Lugo FC,false
+SRB-01,Nazario,Moles,SRB,Mediocampista,1,1990-06-07,175,71.6,Cuenca AC,false
+SRB-04,Juan Antonio,Espejo,SRB,Mediocampista,4,2000-12-24,177,68.2,Asturias AC,false
+SRB-10,Desiderio,Madrigal,SRB,Delantero,10,1995-10-08,173,67.9,Madrid SC,false
+SRB-09,Eliseo,Ledesma,SRB,Delantero,9,1990-01-10,179,72.3,Valladolid AC,false
+SRB-24,Toño,Luna,SRB,Delantero,24,1995-03-20,177,66.8,Guadalajara SC,true
+SRB-12,Mateo,Tello,SRB,Delantero,12,1993-06-11,182,78.2,Guadalajara CF,false
+SRB-15,Cipriano,Criado,SRB,Delantero,15,1994-05-16,185,70.6,Zaragoza CF,false
+CHL-08,Emigdio,Castro,CHL,Arquero,8,1997-06-03,186,81.1,La Rioja CF,false
+CHL-20,Bartolomé,Mena,CHL,Arquero,20,2005-07-21,195,92.2,Ceuta SC,false
+CHL-23,Roberto,Roig,CHL,Arquero,23,1990-11-20,200,93.3,La Rioja FC,false
+CHL-14,Modesto,Cabrera,CHL,Defensor,14,1992-01-13,181,67.9,Barcelona AC,false
+CHL-21,Julio,Hernandez,CHL,Defensor,21,2004-03-28,194,88.8,Tarragona FC,false
+CHL-06,Cristóbal,Malo,CHL,Defensor,6,1995-06-03,195,84.7,Córdoba SC,false
+CHL-24,Isidro,Jerez,CHL,Defensor,24,1994-03-22,189,74.8,Cádiz CF,false
+CHL-17,Lázaro,Santamaría,CHL,Defensor,17,1991-03-12,188,85.9,Vizcaya FC,false
+CHL-22,Amando,Alemán,CHL,Defensor,22,2003-08-08,194,91.8,Baleares CF,false
+CHL-02,Jorge,Figueras,CHL,Defensor,2,1996-07-17,189,86.7,Lleida CF,false
+CHL-13,Albert,Gámez,CHL,Defensor,13,1996-03-31,179,69.7,Melilla FC,false
+CHL-07,Plácido,Corral,CHL,Mediocampista,7,1993-01-07,173,71.5,Córdoba SC,false
+CHL-03,Salomón,Osorio,CHL,Mediocampista,3,2006-11-03,172,63.3,Asturias SC,false
+CHL-12,Sigfrido,Pagès,CHL,Mediocampista,12,2001-08-21,182,69.1,Guadalajara CF,false
+CHL-16,Fidel,Alberdi,CHL,Mediocampista,16,2008-05-17,170,66.7,Badajoz FC,false
+CHL-09,Vito,Rodriguez,CHL,Mediocampista,9,1993-06-29,181,75.5,Cádiz CF,false
+CHL-01,Cecilio,Carranza,CHL,Mediocampista,1,1992-06-24,178,73.0,Valladolid CF,false
+CHL-15,Cleto,Saura,CHL,Mediocampista,15,2001-03-06,176,71.4,Navarra CF,false
+CHL-11,Jose Francisco,Iriarte,CHL,Mediocampista,11,2007-09-15,175,68.1,Lugo SC,false
+CHL-19,Poncio,Figuerola,CHL,Delantero,19,2007-12-22,176,65.0,Baleares SC,false
+CHL-04,Feliciano,Araujo,CHL,Delantero,4,2007-09-24,182,78.3,Córdoba FC,false
+CHL-10,Balduino,Machado,CHL,Delantero,10,1995-05-01,176,68.7,Cáceres SC,false
+CHL-18,Danilo,Heredia,CHL,Delantero,18,2004-12-29,172,61.7,Castellón SC,true
+CHL-05,Maximiliano,Barberá,CHL,Delantero,5,2001-04-19,170,70.0,Cuenca SC,false
+PER-17,René,Barberá,PER,Arquero,17,1995-12-30,185,77.5,Córdoba AC,false
+PER-07,Tristán,Ramírez,PER,Arquero,7,1998-01-27,200,87.5,Zaragoza FC,false
+PER-18,Jacinto,Roca,PER,Arquero,18,1995-03-01,195,85.5,Badajoz AC,false
+PER-21,Amor,Rebollo,PER,Defensor,21,1991-04-24,184,82.9,Tarragona CF,false
+PER-13,Aureliano,Villalonga,PER,Defensor,13,2007-04-29,180,67.3,Almería CF,false
+PER-05,Noé,Caballero,PER,Defensor,5,1994-05-22,186,82.7,Barcelona SC,false
+PER-08,Ignacio,Gonzalo,PER,Defensor,8,2005-02-17,194,88.8,Ceuta AC,false
+PER-06,Claudio,Barberá,PER,Defensor,6,2000-11-02,184,77.3,Teruel FC,false
+PER-09,Efraín,Daza,PER,Defensor,9,1990-05-30,181,79.3,Huelva AC,false
+PER-23,Salomón,Hoz,PER,Defensor,23,2006-05-10,179,76.4,Valladolid CF,false
+PER-14,Eutimio,Arranz,PER,Defensor,14,2008-01-15,186,72.6,Ceuta CF,false
+PER-22,Lino,Gibert,PER,Mediocampista,22,2000-02-11,180,72.8,Lleida CF,false
+PER-20,Yago,Ropero,PER,Mediocampista,20,2001-12-29,175,67.4,Sevilla SC,false
+PER-19,Heriberto,Cabo,PER,Mediocampista,19,1996-01-16,181,79.2,Huesca CF,false
+PER-02,Jose Ignacio,Peiró,PER,Mediocampista,2,2004-02-12,175,73.2,Guipúzcoa FC,false
+PER-15,Venceslás,Peña,PER,Mediocampista,15,1996-07-26,175,72.1,Ávila FC,false
+PER-11,Lalo,Viñas,PER,Mediocampista,11,2003-10-17,181,79.0,Girona CF,false
+PER-03,Gil,Bastida,PER,Mediocampista,3,2001-10-24,182,74.7,Ávila AC,false
+PER-12,Roldán,Herrero,PER,Mediocampista,12,1996-06-21,170,65.8,Teruel AC,false
+PER-01,Marc,Chaves,PER,Delantero,1,1993-02-28,189,84.9,Zaragoza AC,false
+PER-10,Albert,Giménez,PER,Delantero,10,1992-07-14,186,82.5,Cádiz AC,false
+PER-16,Juan,Nogueira,PER,Delantero,16,2007-05-28,172,68.2,Tarragona AC,false
+PER-24,Pío,Olmo,PER,Delantero,24,1993-06-06,188,80.6,Valencia CF,true
+PER-04,Lino,Anglada,PER,Delantero,4,2003-06-15,189,76.4,Toledo CF,false
+ECU-10,Fabricio,Leal,ECU,Arquero,10,2007-05-20,193,80.7,Burgos AC,false
+ECU-13,Luis Miguel,Colom,ECU,Arquero,13,1997-02-16,199,96.9,Cantabria FC,false
+ECU-12,Ciriaco,Gimeno,ECU,Arquero,12,2002-09-08,195,81.6,Asturias AC,false
+ECU-17,Aitor,Reguera,ECU,Defensor,17,1995-03-05,191,77.0,Ceuta AC,false
+ECU-07,Bernabé,Briones,ECU,Defensor,7,2004-11-06,184,78.3,Asturias FC,false
+ECU-04,Ricardo,Calleja,ECU,Defensor,4,2001-09-05,192,76.5,Cáceres AC,false
+ECU-08,Kike,Luna,ECU,Defensor,8,2006-10-27,192,88.3,Girona AC,false
+ECU-03,Nilo,Olmo,ECU,Defensor,3,1991-10-06,192,75.7,Las Palmas SC,false
+ECU-06,Luís,Aguiló,ECU,Defensor,6,1992-10-21,194,86.5,Lugo CF,false
+ECU-19,Cebrián,Lopez,ECU,Defensor,19,1999-01-05,178,74.8,Granada FC,false
+ECU-20,Leopoldo,Diaz,ECU,Defensor,20,1993-07-10,195,78.7,Cádiz FC,false
+ECU-16,Mariano,Paniagua,ECU,Mediocampista,16,1999-06-25,175,71.7,Navarra FC,false
+ECU-01,Graciano,Tudela,ECU,Mediocampista,1,2001-10-28,174,67.5,Vizcaya SC,false
+ECU-21,Luis Ángel,Gargallo,ECU,Mediocampista,21,1992-01-09,175,74.1,Girona CF,false
+ECU-14,Lope,Aroca,ECU,Mediocampista,14,1993-11-10,184,70.0,La Coruña CF,false
+ECU-18,Baldomero,Huertas,ECU,Mediocampista,18,2002-02-14,186,79.9,Madrid CF,false
+ECU-15,Alonso,Pozuelo,ECU,Mediocampista,15,1991-11-08,188,85.9,Granada AC,false
+ECU-11,Adelardo,Losada,ECU,Mediocampista,11,2003-10-14,186,84.4,Barcelona CF,false
+ECU-23,Maximino,Llamas,ECU,Mediocampista,23,1990-08-13,176,70.8,Pontevedra CF,false
+ECU-24,Pepito,Poza,ECU,Delantero,24,1998-04-29,179,71.3,Castellón SC,false
+ECU-02,Claudio,Niño,ECU,Delantero,2,2000-10-21,185,73.4,La Coruña FC,true
+ECU-05,Baudelio,Riquelme,ECU,Delantero,5,2005-08-31,176,72.2,Badajoz FC,false
+ECU-22,Alex,Planas,ECU,Delantero,22,2004-02-17,190,79.5,Cantabria AC,false
+ECU-09,Marcos,Núñez,ECU,Delantero,9,1996-10-06,189,86.8,Huelva SC,false
+CAN-21,Cristian,Esparza,CAN,Arquero,21,1990-08-11,186,76.2,Barcelona FC,false
+CAN-17,Norberto,Luján,CAN,Arquero,17,1996-06-16,199,86.1,Palencia FC,false
+CAN-13,Apolinar,Mendizábal,CAN,Arquero,13,1991-05-22,188,79.7,Vizcaya SC,false
+CAN-14,Arsenio,Gracia,CAN,Defensor,14,2003-06-18,180,78.1,Guadalajara SC,false
+CAN-20,Tomás,Álvaro,CAN,Defensor,20,1999-09-03,194,80.6,Madrid AC,false
+CAN-08,Aarón,Nieto,CAN,Defensor,8,2003-09-17,188,75.9,Girona AC,true
+CAN-01,Anastasio,Alfaro,CAN,Defensor,1,2004-05-01,179,73.4,Huelva SC,false
+CAN-18,Humberto,Marco,CAN,Defensor,18,1995-01-07,183,72.7,Valencia CF,false
+CAN-09,Leocadio,Peralta,CAN,Defensor,9,1996-02-26,195,92.6,Toledo AC,false
+CAN-04,Herminio,Ricart,CAN,Defensor,4,2005-02-19,179,75.3,La Coruña CF,false
+CAN-11,Aurelio,Carpio,CAN,Defensor,11,1991-11-18,179,65.8,Guipúzcoa AC,false
+CAN-05,José Mari,Sastre,CAN,Mediocampista,5,2001-07-04,181,79.9,Cádiz AC,false
+CAN-16,Jose,Beltran,CAN,Mediocampista,16,2006-01-26,183,79.3,Lleida SC,false
+CAN-24,Lupe,Julián,CAN,Mediocampista,24,2005-01-11,176,71.6,Madrid FC,false
+CAN-15,Onofre,Zamorano,CAN,Mediocampista,15,2002-04-18,183,77.7,Palencia SC,false
+CAN-12,Eutimio,Tudela,CAN,Mediocampista,12,2004-07-12,183,72.3,Badajoz SC,false
+CAN-22,Ciro,Jáuregui,CAN,Mediocampista,22,2006-03-16,174,70.1,Huelva SC,false
+CAN-19,Josué,Cañizares,CAN,Mediocampista,19,2008-04-06,184,82.4,Asturias AC,false
+CAN-02,Segismundo,Carbonell,CAN,Mediocampista,2,1997-06-22,184,75.8,Cáceres FC,false
+CAN-23,Martín,Monreal,CAN,Delantero,23,2005-10-15,176,67.6,Murcia CF,false
+CAN-06,Pastor,Carrión,CAN,Delantero,6,1989-09-16,175,72.2,Burgos SC,false
+CAN-07,Renato,Calvet,CAN,Delantero,7,1994-04-06,180,66.8,Tarragona CF,false
+CAN-10,Amor,Priego,CAN,Delantero,10,2004-05-30,174,72.7,Cáceres FC,false
+CAN-03,Valerio,Pujadas,CAN,Delantero,3,1990-12-19,179,77.1,Toledo FC,false
+CRC-17,Glauco,Castilla,CRC,Arquero,17,1996-06-09,199,91.6,Guipúzcoa SC,false
+CRC-23,Fabián,Narváez,CRC,Arquero,23,2000-02-08,192,80.2,Álava SC,false
+CRC-06,Abraham,Amat,CRC,Arquero,6,1998-10-13,186,81.6,Girona CF,false
+CRC-12,Geraldo,Bravo,CRC,Defensor,12,1997-03-02,194,81.2,Asturias AC,false
+CRC-13,Fortunato,Campos,CRC,Defensor,13,1994-04-05,192,88.1,Murcia CF,false
+CRC-08,Luis Ángel,Luján,CRC,Defensor,8,2004-06-04,186,76.2,Santa Cruz de Tenerife FC,false
+CRC-10,Baldomero,Jordán,CRC,Defensor,10,1997-12-22,186,77.5,Castellón AC,false
+CRC-18,Lope,Martinez,CRC,Defensor,18,2007-03-16,184,77.6,Barcelona AC,false
+CRC-11,Feliciano,Cabo,CRC,Defensor,11,2006-07-22,190,78.8,Segovia FC,false
+CRC-15,Silvestre,Arregui,CRC,Defensor,15,1995-01-22,181,68.7,Asturias FC,false
+CRC-21,Martín,Armengol,CRC,Defensor,21,1999-04-08,195,92.8,Zamora SC,false
+CRC-16,Simón,Amores,CRC,Mediocampista,16,2002-09-14,182,70.1,Tarragona SC,false
+CRC-19,Heliodoro,Martí,CRC,Mediocampista,19,2002-02-09,183,79.7,Huesca AC,false
+CRC-02,Ruperto,Criado,CRC,Mediocampista,2,2004-09-27,175,63.6,Huesca FC,true
+CRC-24,Fortunato,Rico,CRC,Mediocampista,24,1998-05-17,174,66.7,Navarra AC,false
+CRC-04,Antonio,Mateo,CRC,Mediocampista,4,1995-01-27,182,74.1,Toledo AC,false
+CRC-14,Íñigo,Gascón,CRC,Mediocampista,14,2002-11-22,188,78.2,Valladolid AC,false
+CRC-20,Simón,Olivé,CRC,Mediocampista,20,2006-01-05,177,66.1,Cantabria AC,false
+CRC-07,Luis Ángel,Escobar,CRC,Mediocampista,7,2003-08-24,174,64.4,Lleida CF,false
+CRC-05,Asdrubal,Castells,CRC,Delantero,5,2002-06-24,169,67.6,Tarragona FC,false
+CRC-09,Chus,Huerta,CRC,Delantero,9,1991-07-17,172,69.5,Álava FC,false
+CRC-22,Hernán,Salamanca,CRC,Delantero,22,2005-08-16,174,70.9,Valencia AC,false
+CRC-03,Severo,Badía,CRC,Delantero,3,1995-09-07,175,72.9,Baleares CF,false
+CRC-01,Roldán,Prieto,CRC,Delantero,1,2002-02-18,181,68.8,Baleares CF,false
+JAM-23,Leopoldo,Quesada,JAM,Arquero,23,1991-08-05,189,83.6,Tarragona FC,false
+JAM-22,Amando,Gomez,JAM,Arquero,22,2001-12-20,200,87.7,Málaga CF,false
+JAM-24,Asdrubal,Roldan,JAM,Arquero,24,1993-03-01,197,85.4,Tarragona FC,false
+JAM-17,León,Rosselló,JAM,Defensor,17,1994-09-23,190,80.8,Sevilla AC,false
+JAM-21,René,Ríos,JAM,Defensor,21,1995-12-22,191,82.5,Cáceres CF,true
+JAM-02,Ciro,Alsina,JAM,Defensor,2,2003-08-04,185,76.9,Vizcaya AC,false
+JAM-20,Emigdio,Barrera,JAM,Defensor,20,1992-12-07,191,79.8,Ourense AC,false
+JAM-15,Alberto,Cazorla,JAM,Defensor,15,1998-07-18,181,80.2,Santa Cruz de Tenerife SC,false
+JAM-16,Simón,Manuel,JAM,Defensor,16,2000-10-01,182,75.8,Cantabria FC,false
+JAM-08,Segismundo,Carpio,JAM,Defensor,8,2003-12-20,189,84.4,Salamanca SC,false
+JAM-05,Máximo,Ortiz,JAM,Defensor,5,2008-04-15,195,85.0,Cáceres FC,false
+JAM-04,Toni,Serna,JAM,Mediocampista,4,1994-04-05,174,73.3,Barcelona SC,false
+JAM-01,Mariano,Lobo,JAM,Mediocampista,1,1998-08-02,176,69.3,Valencia SC,false
+JAM-11,Gabino,Cisneros,JAM,Mediocampista,11,1994-04-07,172,63.9,Melilla CF,false
+JAM-13,Pedro,Ramirez,JAM,Mediocampista,13,1996-01-30,179,66.6,Santa Cruz de Tenerife CF,false
+JAM-19,Nilo,Perelló,JAM,Mediocampista,19,1992-02-26,179,72.9,Ourense CF,false
+JAM-12,Isidoro,Moya,JAM,Mediocampista,12,2003-05-13,185,70.4,Alicante SC,false
+JAM-10,Duilio,Gras,JAM,Mediocampista,10,1999-09-06,178,70.3,La Coruña SC,false
+JAM-06,Amando,Beltrán,JAM,Mediocampista,6,2003-03-12,187,84.8,Cádiz AC,false
+JAM-18,Gabriel,Costa,JAM,Delantero,18,2005-12-30,178,67.5,Jaén AC,false
+JAM-07,Basilio,Torrijos,JAM,Delantero,7,1994-05-15,171,63.7,Guadalajara CF,false
+JAM-03,Reyes,Quintana,JAM,Delantero,3,2007-07-05,189,82.6,Sevilla CF,false
+JAM-14,Calisto,Garcés,JAM,Delantero,14,1991-07-29,173,71.0,Jaén CF,false
+JAM-09,Ibán,Benavente,JAM,Delantero,9,2004-01-02,176,75.7,Valladolid CF,false
+PAN-11,Augusto,Valencia,PAN,Arquero,11,2001-01-26,194,90.7,Ciudad CF,false
+PAN-01,León,Solsona,PAN,Arquero,1,1996-07-15,194,87.8,Álava SC,false
+PAN-23,Adrián,Hoz,PAN,Arquero,23,1992-03-02,192,87.1,Toledo SC,false
+PAN-17,Maximiliano,Chacón,PAN,Defensor,17,1992-02-15,186,73.4,Tarragona CF,false
+PAN-05,Hector,Redondo,PAN,Defensor,5,2005-04-13,192,80.3,Zamora FC,false
+PAN-18,Lucho,Baena,PAN,Defensor,18,1997-12-12,195,90.7,Madrid CF,false
+PAN-16,Cecilio,Codina,PAN,Defensor,16,1992-03-20,181,71.9,Ciudad AC,false
+PAN-09,Lupe,Aguado,PAN,Defensor,9,2007-11-20,184,73.4,Sevilla SC,false
+PAN-15,Heraclio,Capdevila,PAN,Defensor,15,1992-12-30,178,65.3,Ciudad CF,false
+PAN-12,Eladio,Peña,PAN,Defensor,12,1992-06-21,178,71.5,Zaragoza CF,false
+PAN-20,Salvador,Corral,PAN,Defensor,20,1990-11-29,187,75.3,Palencia CF,false
+PAN-07,Mauricio,Ripoll,PAN,Mediocampista,7,2006-09-15,181,69.3,Álava FC,false
+PAN-22,Félix,Moraleda,PAN,Mediocampista,22,2006-12-06,180,77.2,Asturias AC,false
+PAN-21,Graciano,Olivera,PAN,Mediocampista,21,2007-07-27,180,79.2,Lleida SC,false
+PAN-02,Raúl,Alemán,PAN,Mediocampista,2,1999-10-18,170,66.7,Pontevedra FC,false
+PAN-08,Lázaro,Abad,PAN,Mediocampista,8,1997-11-15,176,68.2,Valencia AC,false
+PAN-06,Heliodoro,Badía,PAN,Mediocampista,6,2004-06-17,170,61.2,Badajoz CF,false
+PAN-10,Vasco,Ferrera,PAN,Mediocampista,10,2000-12-12,173,71.3,La Rioja CF,false
+PAN-19,Jeremías,Diez,PAN,Mediocampista,19,1996-12-05,176,69.2,Ceuta SC,false
+PAN-04,Martín,Jordá,PAN,Delantero,4,1996-06-08,185,83.2,Madrid AC,false
+PAN-13,Leandro,Cañellas,PAN,Delantero,13,1991-07-08,176,70.3,Girona AC,false
+PAN-14,Basilio,Viña,PAN,Delantero,14,1997-03-02,171,68.4,Santa Cruz de Tenerife AC,false
+PAN-03,Eugenio,Jiménez,PAN,Delantero,3,1990-05-27,171,71.1,Vizcaya SC,true
+PAN-24,Edmundo,Carro,PAN,Delantero,24,1990-03-01,169,61.0,Salamanca SC,false
+NGA-16,Albino,Cruz,NGA,Arquero,16,2002-06-01,198,83.5,Lugo SC,false
+NGA-18,Diego,Zaragoza,NGA,Arquero,18,2008-03-20,199,87.9,Cáceres FC,false
+NGA-02,Cebrián,Oller,NGA,Arquero,2,1990-01-05,188,73.7,Navarra FC,false
+NGA-14,Cleto,Raya,NGA,Defensor,14,1992-06-07,191,79.1,Alicante FC,false
+NGA-24,Jose Angel,Fuentes,NGA,Defensor,24,2005-02-13,181,79.9,Huesca FC,false
+NGA-09,Juan Bautista,Casares,NGA,Defensor,9,1993-01-07,179,68.9,Zamora FC,false
+NGA-03,René,Real,NGA,Defensor,3,2003-02-12,181,68.8,La Coruña AC,false
+NGA-05,Adolfo,Rodrigo,NGA,Defensor,5,1991-03-17,185,78.3,Álava CF,false
+NGA-13,Ruben,Morata,NGA,Defensor,13,2006-07-07,185,72.8,La Coruña FC,false
+NGA-01,Goyo,Uribe,NGA,Defensor,1,1991-01-04,195,83.9,Ávila FC,false
+NGA-11,Eliseo,Gelabert,NGA,Defensor,11,1996-01-19,185,73.7,Girona AC,false
+NGA-20,Lázaro,Berrocal,NGA,Mediocampista,20,1992-05-01,181,78.7,Salamanca CF,false
+NGA-15,Fulgencio,Salvà,NGA,Mediocampista,15,2002-04-02,177,73.8,Ceuta SC,false
+NGA-17,Paulino,Montenegro,NGA,Mediocampista,17,2000-12-19,179,66.2,Santa Cruz de Tenerife CF,false
+NGA-19,Hector,Agustí,NGA,Mediocampista,19,1998-12-19,187,77.1,Cáceres CF,false
+NGA-08,Quique,Vera,NGA,Mediocampista,8,2001-04-27,182,74.0,Albacete AC,false
+NGA-07,Abel,Madrid,NGA,Mediocampista,7,2008-01-30,179,74.3,Guipúzcoa AC,false
+NGA-06,Sergio,Aragón,NGA,Mediocampista,6,1993-02-11,182,69.2,Barcelona SC,false
+NGA-23,Reyes,Campos,NGA,Mediocampista,23,1991-03-29,177,70.4,La Coruña SC,false
+NGA-10,Gilberto,Valverde,NGA,Delantero,10,2008-05-07,178,69.5,Córdoba AC,false
+NGA-21,Luis Ángel,Córdoba,NGA,Delantero,21,2001-11-26,175,74.7,La Rioja SC,false
+NGA-22,Eric,Arteaga,NGA,Delantero,22,2001-06-16,185,77.3,Toledo CF,true
+NGA-04,Alcides,Serrano,NGA,Delantero,4,1999-09-01,177,72.2,La Coruña SC,false
+NGA-12,Benjamín,Alemán,NGA,Delantero,12,1996-02-12,170,63.9,Melilla FC,false
+GHA-19,Marcial,Sabater,GHA,Arquero,19,1994-05-20,185,82.2,Baleares SC,true
+GHA-17,Sandalio,Álamo,GHA,Arquero,17,1996-03-13,194,81.2,Cáceres CF,false
+GHA-21,Bruno,Priego,GHA,Arquero,21,2000-11-01,189,78.8,Vizcaya CF,false
+GHA-13,Primitivo,Almazán,GHA,Defensor,13,2007-04-06,188,75.3,Badajoz AC,false
+GHA-15,Alfonso,Barco,GHA,Defensor,15,2006-12-05,183,71.6,Segovia FC,false
+GHA-22,Quirino,Rosell,GHA,Defensor,22,1996-11-25,187,81.2,Palencia AC,false
+GHA-24,Pepito,Barroso,GHA,Defensor,24,2003-03-27,179,68.5,Jaén FC,false
+GHA-20,David,Sosa,GHA,Defensor,20,1995-12-08,180,78.4,Asturias FC,false
+GHA-11,Carlito,Burgos,GHA,Defensor,11,1993-08-04,181,70.4,Asturias FC,false
+GHA-23,Lino,Galiano,GHA,Defensor,23,1990-11-03,195,89.8,Cádiz SC,false
+GHA-16,Teobaldo,Valbuena,GHA,Defensor,16,2005-01-19,183,72.4,Tarragona FC,false
+GHA-10,Renato,Hierro,GHA,Mediocampista,10,1997-02-15,181,77.6,Pontevedra AC,false
+GHA-04,Patricio,Sáenz,GHA,Mediocampista,4,1998-04-05,175,67.5,Baleares FC,false
+GHA-01,Cosme,Pastor,GHA,Mediocampista,1,1999-07-21,187,82.3,Las Palmas AC,false
+GHA-02,Lucho,Olivares,GHA,Mediocampista,2,1995-08-16,185,78.5,Castellón SC,false
+GHA-18,José María,Miranda,GHA,Mediocampista,18,2000-11-06,170,62.7,Salamanca SC,false
+GHA-09,Gabino,Peiró,GHA,Mediocampista,9,1993-01-16,187,74.0,Barcelona CF,false
+GHA-05,Raimundo,Godoy,GHA,Mediocampista,5,1992-07-18,186,71.4,Lleida SC,false
+GHA-14,Eric,Aznar,GHA,Mediocampista,14,1997-02-11,171,66.5,Guipúzcoa AC,false
+GHA-06,Cándido,Gisbert,GHA,Delantero,6,1999-07-20,183,78.4,Tarragona AC,false
+GHA-07,Benigno,Galan,GHA,Delantero,7,1999-09-12,171,63.9,Cádiz CF,false
+GHA-08,Roldán,Mesa,GHA,Delantero,8,1995-03-23,181,70.9,Badajoz FC,false
+GHA-03,Florentino,Lamas,GHA,Delantero,3,1997-08-15,181,72.4,Badajoz FC,false
+GHA-12,Luis Miguel,Pastor,GHA,Delantero,12,1998-07-17,175,64.9,Huesca FC,false
+EGY-14,Iván,Sarmiento,EGY,Arquero,14,1999-10-20,195,84.1,Cádiz FC,false
+EGY-06,Sandalio,Gonzalo,EGY,Arquero,6,2007-12-22,198,88.2,Barcelona FC,false
+EGY-19,Martin,Andrade,EGY,Arquero,19,2001-10-17,197,89.3,Cuenca CF,false
+EGY-16,Arsenio,Fábregas,EGY,Defensor,16,2003-06-28,189,77.0,Lleida SC,false
+EGY-12,Flavio,Palmer,EGY,Defensor,12,1999-03-14,188,77.5,Teruel CF,false
+EGY-23,Narciso,Gelabert,EGY,Defensor,23,2002-12-21,183,81.7,Navarra CF,false
+EGY-21,Artemio,Marqués,EGY,Defensor,21,1997-05-07,189,84.8,Cáceres SC,false
+EGY-07,José,Carbó,EGY,Defensor,7,1991-01-19,185,82.8,Las Palmas FC,false
+EGY-08,Gerónimo,Ramón,EGY,Defensor,8,2007-06-05,180,70.4,Tarragona AC,false
+EGY-04,Fernando,Fortuny,EGY,Defensor,4,1999-12-04,178,66.1,Toledo CF,false
+EGY-24,Juan Francisco,Nicolás,EGY,Defensor,24,1994-10-31,188,79.9,Vizcaya AC,false
+EGY-11,Rodolfo,Ayala,EGY,Mediocampista,11,1993-10-16,185,80.3,Valencia FC,false
+EGY-17,Aristides,Iglesias,EGY,Mediocampista,17,2008-01-28,180,75.3,Salamanca AC,false
+EGY-20,Rogelio,Frutos,EGY,Mediocampista,20,2003-05-18,179,75.6,Asturias FC,false
+EGY-03,Gerónimo,Niño,EGY,Mediocampista,3,1996-06-05,170,69.7,Santa Cruz de Tenerife AC,false
+EGY-09,Armando,Sala,EGY,Mediocampista,9,2001-03-12,181,70.8,Zaragoza AC,false
+EGY-22,Eleuterio,Rocha,EGY,Mediocampista,22,2007-10-18,179,68.4,Barcelona SC,false
+EGY-01,Martin,Miró,EGY,Mediocampista,1,1999-01-20,173,67.9,Cáceres CF,true
+EGY-10,Baltasar,Gilabert,EGY,Mediocampista,10,1998-01-10,183,78.5,Valencia FC,false
+EGY-15,Guadalupe,Fernández,EGY,Delantero,15,2008-06-02,180,67.9,Almería FC,false
+EGY-13,Eleuterio,Gelabert,EGY,Delantero,13,2002-04-28,171,65.1,Granada SC,false
+EGY-18,Jeremías,Llorente,EGY,Delantero,18,1996-03-17,184,77.4,Segovia AC,false
+EGY-02,Luis,Peral,EGY,Delantero,2,1998-09-03,183,71.0,Lleida CF,false
+EGY-05,Fidel,Salvà,EGY,Delantero,5,2005-02-16,183,78.9,Cáceres FC,false
+TUN-22,Gerardo,Falcó,TUN,Arquero,22,1993-09-14,193,81.7,Teruel CF,false
+TUN-19,Heraclio,Guzman,TUN,Arquero,19,2008-07-07,192,76.6,Cantabria FC,false
+TUN-06,David,Toledo,TUN,Arquero,6,2004-04-06,197,82.0,León SC,false
+TUN-01,Gerardo,Esteban,TUN,Defensor,1,1994-04-25,183,75.8,Santa Cruz de Tenerife FC,false
+TUN-02,Maxi,Bilbao,TUN,Defensor,2,1990-03-17,192,89.3,Baleares CF,false
+TUN-14,Basilio,Mateos,TUN,Defensor,14,1998-02-06,181,68.5,Madrid FC,false
+TUN-04,Sebastián,Roldán,TUN,Defensor,4,1992-08-04,190,80.5,Zaragoza FC,false
+TUN-05,Telmo,Piquer,TUN,Defensor,5,2000-09-24,190,81.3,Álava SC,false
+TUN-07,Adán,Peñalver,TUN,Defensor,7,2002-08-05,189,74.5,Huelva CF,true
+TUN-10,Manolo,Carpio,TUN,Defensor,10,1990-10-12,194,78.5,La Rioja SC,false
+TUN-21,Ismael,Cepeda,TUN,Defensor,21,1996-01-06,187,76.4,Valencia CF,false
+TUN-23,Valero,Amat,TUN,Mediocampista,23,2003-08-22,170,64.8,Segovia FC,false
+TUN-12,Leonel,Hoz,TUN,Mediocampista,12,1993-01-01,187,72.0,Cáceres SC,false
+TUN-08,Abilio,Lumbreras,TUN,Mediocampista,8,2006-03-29,179,70.7,Cantabria SC,false
+TUN-17,Arturo,Ayuso,TUN,Mediocampista,17,1997-01-13,172,64.8,Málaga CF,false
+TUN-16,Buenaventura,Chaves,TUN,Mediocampista,16,1998-03-17,180,67.8,La Rioja CF,false
+TUN-11,Poncio,Porta,TUN,Mediocampista,11,1991-06-28,187,82.5,Madrid SC,false
+TUN-09,Guillermo,Falcón,TUN,Mediocampista,9,1991-10-07,172,68.1,Alicante FC,false
+TUN-13,Venceslás,Morales,TUN,Mediocampista,13,2002-07-15,173,64.4,Valencia SC,false
+TUN-15,Narciso,Morillo,TUN,Delantero,15,2000-09-07,174,73.2,Segovia SC,false
+TUN-03,Marc,Lago,TUN,Delantero,3,1997-03-22,171,61.4,Jaén SC,false
+TUN-24,Cornelio,Valero,TUN,Delantero,24,1991-10-11,171,67.3,Zaragoza FC,false
+TUN-18,Hernán,Granados,TUN,Delantero,18,1996-01-19,188,76.5,Pontevedra FC,false
+TUN-20,Teófilo,Lladó,TUN,Delantero,20,1999-10-15,174,63.0,Almería FC,false
+CMR-20,Lorenzo,Canals,CMR,Arquero,20,2002-12-13,187,75.9,Huelva CF,false
+CMR-24,Felipe,Casares,CMR,Arquero,24,2001-02-14,191,89.2,Granada AC,false
+CMR-09,Tito,Bosch,CMR,Arquero,9,2004-10-07,196,83.2,Vizcaya CF,false
+CMR-02,Sebastian,Mesa,CMR,Defensor,2,1998-06-25,186,77.4,Girona CF,false
+CMR-14,Eleuterio,Cantón,CMR,Defensor,14,2001-09-17,181,68.8,Soria SC,false
+CMR-11,Guillermo,Estrada,CMR,Defensor,11,2004-03-14,181,67.5,Barcelona CF,false
+CMR-16,Alfredo,Caro,CMR,Defensor,16,1993-05-19,180,66.5,Soria AC,false
+CMR-18,Pedro,Amat,CMR,Defensor,18,2004-10-16,195,84.7,León FC,false
+CMR-15,Germán,Dominguez,CMR,Defensor,15,1989-09-05,188,83.3,Guipúzcoa FC,false
+CMR-05,Héctor,Anguita,CMR,Defensor,5,1989-11-21,192,77.4,Córdoba CF,false
+CMR-03,Custodio,Luna,CMR,Defensor,3,1995-10-22,190,77.9,Cuenca FC,false
+CMR-07,Adán,Palau,CMR,Mediocampista,7,1995-02-22,187,83.6,Santa Cruz de Tenerife FC,true
+CMR-22,Leonardo,Hurtado,CMR,Mediocampista,22,2006-06-07,181,67.9,León CF,false
+CMR-04,Juan,Almansa,CMR,Mediocampista,4,1993-08-31,182,74.7,Vizcaya FC,false
+CMR-23,Aurelio,Espejo,CMR,Mediocampista,23,2001-08-16,187,77.7,Alicante CF,false
+CMR-10,Jose Miguel,Pedrero,CMR,Mediocampista,10,2005-10-05,178,71.5,Valladolid AC,false
+CMR-13,Manolo,Castañeda,CMR,Mediocampista,13,1995-06-06,174,70.1,Las Palmas AC,false
+CMR-08,Pío,Salas,CMR,Mediocampista,8,1993-05-01,184,76.4,Valladolid SC,false
+CMR-12,Noé,Almansa,CMR,Mediocampista,12,1994-04-26,175,71.8,La Rioja CF,false
+CMR-01,Julián,Alcalá,CMR,Delantero,1,2003-01-30,168,66.9,Ourense CF,false
+CMR-17,Valentín,Barceló,CMR,Delantero,17,2000-02-06,174,65.4,Murcia CF,false
+CMR-06,Borja,Merino,CMR,Delantero,6,2001-03-14,186,77.4,Asturias FC,false
+CMR-21,Jaime,Manrique,CMR,Delantero,21,2004-02-29,188,82.2,Alicante CF,false
+CMR-19,Berto,Ramos,CMR,Delantero,19,2007-10-19,189,86.3,Valladolid FC,false
+CIV-21,Horacio,Cantero,CIV,Arquero,21,1991-10-07,195,83.3,Salamanca AC,false
+CIV-01,Heliodoro,Ruiz,CIV,Arquero,1,1990-09-07,186,83.5,Badajoz CF,false
+CIV-15,Teófilo,Ocaña,CIV,Arquero,15,1990-01-07,196,83.9,Huesca CF,false
+CIV-24,Timoteo,Montoya,CIV,Defensor,24,1995-02-06,192,84.3,Tarragona SC,false
+CIV-17,Juan Pablo,Cerdán,CIV,Defensor,17,1996-05-21,193,77.0,Castellón AC,false
+CIV-19,Samuel,Bárcena,CIV,Defensor,19,1996-07-01,185,73.3,Zaragoza AC,false
+CIV-16,Ricardo,Carrasco,CIV,Defensor,16,1995-09-23,178,65.6,Ciudad FC,false
+CIV-09,Heliodoro,Donoso,CIV,Defensor,9,1994-10-02,194,88.1,Melilla SC,false
+CIV-14,Silvio,Garzón,CIV,Defensor,14,2003-12-30,183,80.2,Asturias SC,false
+CIV-18,Flavio,Redondo,CIV,Defensor,18,1999-11-09,182,68.1,Huelva CF,false
+CIV-03,David,Heredia,CIV,Defensor,3,2006-02-08,181,74.9,Valladolid FC,false
+CIV-13,Eustaquio,Franco,CIV,Mediocampista,13,1997-12-24,180,78.6,León AC,true
+CIV-08,Cornelio,Sedano,CIV,Mediocampista,8,1996-08-23,185,79.3,Badajoz FC,false
+CIV-05,Santos,Arce,CIV,Mediocampista,5,2005-05-05,174,64.6,Navarra AC,false
+CIV-20,Mohamed,Ariza,CIV,Mediocampista,20,2000-01-10,183,69.6,Cáceres AC,false
+CIV-06,Dimas,Garzón,CIV,Mediocampista,6,2007-01-15,173,67.3,Barcelona CF,false
+CIV-11,Chema,Melero,CIV,Mediocampista,11,1990-04-17,181,67.6,Lugo AC,false
+CIV-12,Alejo,Cerezo,CIV,Mediocampista,12,2003-11-28,188,81.7,Sevilla FC,false
+CIV-23,Eladio,Reina,CIV,Mediocampista,23,1992-12-03,170,60.8,Vizcaya FC,false
+CIV-04,Cristian,Hoyos,CIV,Delantero,4,2004-05-10,175,64.7,Cuenca CF,false
+CIV-22,Adán,Tapia,CIV,Delantero,22,1996-08-17,188,82.8,Ávila CF,false
+CIV-07,Roque,Mascaró,CIV,Delantero,7,1990-10-08,171,68.0,Vizcaya SC,false
+CIV-02,Alejo,Tejada,CIV,Delantero,2,1991-12-05,180,71.7,Lugo AC,false
+CIV-10,Elpidio,Crespo,CIV,Delantero,10,2008-07-07,186,71.7,Granada AC,false
+ALG-22,Jeremías,Criado,ALG,Arquero,22,1995-08-06,190,85.6,Melilla CF,false
+ALG-21,Jose Ignacio,Marín,ALG,Arquero,21,2006-06-04,189,84.3,Zamora SC,false
+ALG-14,Guiomar,Rosales,ALG,Arquero,14,1991-05-20,194,86.6,Cuenca AC,false
+ALG-09,Jose Ignacio,Amorós,ALG,Defensor,9,1999-05-25,188,84.4,Cuenca SC,false
+ALG-15,Felipe,Gras,ALG,Defensor,15,1992-10-16,188,84.0,Burgos AC,false
+ALG-24,Telmo,Girón,ALG,Defensor,24,1992-02-15,180,78.6,La Coruña AC,false
+ALG-20,Eutimio,Quintero,ALG,Defensor,20,1995-01-21,189,83.1,Lleida CF,false
+ALG-13,Dan,Bertrán,ALG,Defensor,13,2005-02-25,192,83.4,Salamanca FC,false
+ALG-07,Borja,Aliaga,ALG,Defensor,7,1997-03-18,181,75.1,Salamanca AC,false
+ALG-17,Martín,Montero,ALG,Defensor,17,1990-12-09,178,74.5,Teruel SC,false
+ALG-03,Ruperto,Bru,ALG,Defensor,3,1992-03-14,190,84.7,León FC,false
+ALG-11,Amador,Vizcaíno,ALG,Mediocampista,11,1992-11-23,173,68.5,Zamora CF,false
+ALG-02,Heraclio,Palacios,ALG,Mediocampista,2,1994-11-06,184,75.0,Cáceres AC,true
+ALG-18,Eloy,Menéndez,ALG,Mediocampista,18,2005-05-26,175,63.9,Castellón SC,false
+ALG-10,Nazaret,Abad,ALG,Mediocampista,10,1990-05-02,178,65.7,Ciudad FC,false
+ALG-04,Apolinar,Hernando,ALG,Mediocampista,4,1990-07-25,174,68.7,Madrid CF,false
+ALG-08,Hector,Sobrino,ALG,Mediocampista,8,1998-09-01,173,71.2,Valencia AC,false
+ALG-01,Félix,Pons,ALG,Mediocampista,1,1998-08-28,174,63.4,Soria FC,false
+ALG-23,Ismael,Calvo,ALG,Mediocampista,23,2007-06-18,171,62.2,Sevilla SC,false
+ALG-19,Mauricio,Pazos,ALG,Delantero,19,1992-05-23,179,75.7,Navarra SC,false
+ALG-06,Cesar,Oliva,ALG,Delantero,6,1995-10-20,171,61.1,Baleares FC,false
+ALG-12,Bruno,Escolano,ALG,Delantero,12,1991-04-11,187,73.9,Madrid AC,false
+ALG-05,Emiliano,Ibáñez,ALG,Delantero,5,1990-05-15,183,81.7,Palencia CF,false
+ALG-16,Baltasar,Vicens,ALG,Delantero,16,2008-05-10,184,72.9,Segovia FC,false
+RSA-22,Plinio,Calvo,RSA,Arquero,22,2004-04-20,197,91.3,Castellón AC,false
+RSA-13,Joel,Mariscal,RSA,Arquero,13,2008-07-07,185,75.7,Ceuta AC,false
+RSA-11,Onofre,Montalbán,RSA,Arquero,11,1997-06-12,185,76.0,Toledo CF,false
+RSA-17,Renato,Montes,RSA,Defensor,17,1995-04-14,178,76.2,Cádiz SC,false
+RSA-23,Leandro,Badía,RSA,Defensor,23,1999-09-03,187,77.3,Soria AC,false
+RSA-03,Segismundo,Feliu,RSA,Defensor,3,1990-09-20,193,84.6,Ciudad SC,false
+RSA-02,Valero,Aznar,RSA,Defensor,2,2007-11-01,180,70.8,Tarragona SC,false
+RSA-24,Modesto,Miranda,RSA,Defensor,24,2001-05-05,184,71.7,Huelva CF,false
+RSA-21,Cirino,Pont,RSA,Defensor,21,2006-07-08,180,69.0,Almería AC,false
+RSA-15,Florencio,Yáñez,RSA,Defensor,15,2006-06-28,189,85.2,Melilla AC,false
+RSA-08,Chuy,Amador,RSA,Defensor,8,1999-04-03,185,78.3,Castellón SC,false
+RSA-19,Cecilio,Pino,RSA,Mediocampista,19,2007-02-23,174,69.8,Burgos CF,false
+RSA-01,Miguel,Cuervo,RSA,Mediocampista,1,2007-10-10,182,68.0,Alicante FC,false
+RSA-16,Ariel,Jaén,RSA,Mediocampista,16,1999-12-20,175,70.3,Badajoz AC,false
+RSA-04,Raimundo,Viña,RSA,Mediocampista,4,1997-12-21,170,70.4,Cáceres FC,false
+RSA-14,Ambrosio,Miró,RSA,Mediocampista,14,1996-11-03,179,67.7,Ávila CF,false
+RSA-07,Leonel,Rincón,RSA,Mediocampista,7,1997-03-13,173,71.2,Ourense FC,false
+RSA-09,Evaristo,Pellicer,RSA,Mediocampista,9,1990-05-13,172,70.7,Asturias FC,false
+RSA-05,Lisandro,Valencia,RSA,Mediocampista,5,2001-07-03,178,74.5,Ávila FC,false
+RSA-18,Albano,Ramirez,RSA,Delantero,18,2006-02-14,190,82.3,Las Palmas FC,false
+RSA-10,Borja,Alemán,RSA,Delantero,10,1997-11-12,180,79.2,Santa Cruz de Tenerife SC,false
+RSA-20,Toni,Ricart,RSA,Delantero,20,2005-02-11,186,77.9,Badajoz AC,false
+RSA-12,José Mari,Canals,RSA,Delantero,12,1993-01-20,176,71.5,Ourense CF,true
+RSA-06,Samuel,Aguado,RSA,Delantero,6,1995-07-21,185,71.4,Ourense SC,false
+KSA-03,Samu,Sanjuan,KSA,Arquero,3,1996-01-23,189,75.2,La Coruña AC,false
+KSA-08,Pascual,Pablo,KSA,Arquero,8,1992-06-09,195,89.7,Ávila FC,false
+KSA-07,Edmundo,Vendrell,KSA,Arquero,7,2004-12-06,185,79.3,Ciudad FC,false
+KSA-12,Javi,Moreno,KSA,Defensor,12,2001-01-04,180,67.0,Las Palmas FC,false
+KSA-16,Joel,Quiroga,KSA,Defensor,16,2008-08-10,182,79.0,Badajoz AC,false
+KSA-10,Ruperto,Meléndez,KSA,Defensor,10,2001-01-15,181,76.8,Ceuta AC,true
+KSA-14,Marcos,Plana,KSA,Defensor,14,1994-10-31,182,75.6,León FC,false
+KSA-19,Ale,Murillo,KSA,Defensor,19,2004-07-20,193,82.1,Guadalajara CF,false
+KSA-04,Sigfrido,Gimenez,KSA,Defensor,4,2005-10-16,193,77.1,Ceuta CF,false
+KSA-21,Gilberto,Figueras,KSA,Defensor,21,1991-06-24,191,77.0,Alicante AC,false
+KSA-05,Alejo,Alegria,KSA,Defensor,5,1992-03-09,180,67.2,Granada CF,false
+KSA-01,Gerardo,Doménech,KSA,Mediocampista,1,1995-05-07,183,71.1,León AC,false
+KSA-20,Abilio,Núñez,KSA,Mediocampista,20,1991-12-25,183,81.2,Salamanca AC,false
+KSA-11,Eladio,Iriarte,KSA,Mediocampista,11,1997-03-03,170,68.0,Baleares AC,false
+KSA-06,Xavier,Marín,KSA,Mediocampista,6,2002-11-09,184,78.7,Melilla AC,false
+KSA-13,Segismundo,Pavón,KSA,Mediocampista,13,1989-10-02,170,69.5,Castellón FC,false
+KSA-09,Ramiro,Abad,KSA,Mediocampista,9,2003-07-27,186,80.8,León SC,false
+KSA-22,Gastón,Pinedo,KSA,Mediocampista,22,2004-10-25,174,67.3,Burgos SC,false
+KSA-18,Patricio,Urrutia,KSA,Mediocampista,18,1998-05-21,177,74.6,Madrid CF,false
+KSA-24,Fausto,Coello,KSA,Delantero,24,1994-01-12,186,73.2,Palencia SC,false
+KSA-17,Olegario,Morales,KSA,Delantero,17,2006-11-04,187,85.2,Salamanca SC,false
+KSA-15,Mateo,Colom,KSA,Delantero,15,1991-10-15,187,74.2,Santa Cruz de Tenerife SC,false
+KSA-02,Sebastián,Alberola,KSA,Delantero,2,2006-11-21,187,76.9,Teruel AC,false
+KSA-23,Gonzalo,Ferrer,KSA,Delantero,23,1998-09-13,172,62.4,Sevilla CF,false
+IRN-01,Horacio,Serrano,IRN,Arquero,1,1996-11-30,191,88.9,Baleares FC,false
+IRN-06,Bautista,Almagro,IRN,Arquero,6,1996-05-06,198,80.5,Ceuta SC,false
+IRN-08,Hipólito,Palomar,IRN,Arquero,8,2005-05-10,189,74.6,Burgos SC,false
+IRN-21,Albino,Benavent,IRN,Defensor,21,2008-08-09,181,72.0,Segovia AC,false
+IRN-24,Lalo,Carreras,IRN,Defensor,24,1995-01-10,192,85.3,Lleida AC,false
+IRN-18,Joaquín,Solano,IRN,Defensor,18,2002-03-27,183,81.6,Segovia CF,false
+IRN-03,Cruz,Águila,IRN,Defensor,3,1998-08-18,185,71.9,Tarragona FC,false
+IRN-14,Marcelo,Solé,IRN,Defensor,14,1999-01-11,178,68.5,Sevilla SC,false
+IRN-22,Porfirio,Iñiguez,IRN,Defensor,22,2002-09-24,180,69.1,Pontevedra FC,false
+IRN-19,Pedro,Mendizábal,IRN,Defensor,19,1997-11-30,192,83.0,Córdoba SC,false
+IRN-09,Bruno,Benet,IRN,Defensor,9,2007-12-24,189,81.7,Cádiz FC,false
+IRN-12,Daniel,Cerezo,IRN,Mediocampista,12,1997-06-04,180,75.0,Soria CF,false
+IRN-20,Virgilio,Prats,IRN,Mediocampista,20,1990-07-14,187,77.3,Cádiz FC,false
+IRN-23,Guillermo,Águila,IRN,Mediocampista,23,1997-08-10,187,75.8,Segovia CF,false
+IRN-16,Eustaquio,Leon,IRN,Mediocampista,16,1997-04-23,172,69.6,Cádiz FC,false
+IRN-04,Plinio,Barrio,IRN,Mediocampista,4,2005-12-27,173,71.3,Vizcaya SC,false
+IRN-17,Jesús,Sacristán,IRN,Mediocampista,17,1994-05-04,183,78.1,Salamanca SC,false
+IRN-11,Seve,Alcolea,IRN,Mediocampista,11,1997-05-02,180,69.0,La Coruña SC,true
+IRN-05,Sigfrido,Alemany,IRN,Mediocampista,5,2005-11-09,186,75.6,Almería CF,false
+IRN-02,Marcial,Iborra,IRN,Delantero,2,2001-02-28,187,72.4,Ávila CF,false
+IRN-10,Joan,Carballo,IRN,Delantero,10,2008-07-10,187,72.9,Ciudad FC,false
+IRN-13,Elpidio,Donaire,IRN,Delantero,13,2001-12-16,187,81.8,Sevilla CF,false
+IRN-15,Jesús,Maestre,IRN,Delantero,15,2007-01-27,187,84.1,Ceuta CF,false
+IRN-07,Pablo,Gallart,IRN,Delantero,7,2002-07-09,170,63.4,Ceuta SC,false
+AUS-06,Fabio,Galan,AUS,Arquero,6,1996-10-03,188,75.6,Ávila AC,false
+AUS-10,Alejo,Cañellas,AUS,Arquero,10,2006-04-18,191,77.2,Guipúzcoa SC,false
+AUS-01,Fabián,Zamora,AUS,Arquero,1,2002-06-17,191,85.9,Zamora SC,false
+AUS-23,Adán,Flores,AUS,Defensor,23,1994-03-03,187,76.5,Vizcaya AC,false
+AUS-09,Duilio,Villena,AUS,Defensor,9,1993-06-17,186,73.0,Las Palmas AC,false
+AUS-17,Galo,Llorente,AUS,Defensor,17,2005-01-24,189,85.1,Jaén AC,false
+AUS-02,Wálter,Gonzalez,AUS,Defensor,2,2005-09-19,192,87.6,Madrid SC,false
+AUS-08,Melchor,Granados,AUS,Defensor,8,1991-12-13,192,81.4,Albacete CF,false
+AUS-18,Fabricio,Giralt,AUS,Defensor,18,1993-05-13,195,83.4,Valladolid CF,false
+AUS-04,Ibán,Reguera,AUS,Defensor,4,1991-03-02,188,78.1,Soria AC,false
+AUS-16,Tristán,Barceló,AUS,Defensor,16,2008-07-02,184,79.8,Málaga CF,false
+AUS-14,Conrado,Cabañas,AUS,Mediocampista,14,2007-11-29,185,73.5,Vizcaya AC,false
+AUS-05,Juanito,Rozas,AUS,Mediocampista,5,2006-08-26,177,70.1,Palencia SC,false
+AUS-19,Nilo,Iriarte,AUS,Mediocampista,19,2008-06-13,188,84.6,Cáceres CF,false
+AUS-13,Heraclio,Jaume,AUS,Mediocampista,13,1991-10-02,177,75.9,Las Palmas FC,false
+AUS-22,Leoncio,Almeida,AUS,Mediocampista,22,1993-09-20,182,76.2,Almería FC,false
+AUS-15,Jose Miguel,Galan,AUS,Mediocampista,15,2008-04-23,171,61.4,Cuenca FC,false
+AUS-03,Agapito,Villalonga,AUS,Mediocampista,3,1993-09-08,179,71.1,Jaén AC,true
+AUS-12,Cipriano,Galán,AUS,Mediocampista,12,1990-07-21,174,66.4,Cuenca AC,false
+AUS-20,Adrián,Piña,AUS,Delantero,20,1995-01-28,174,71.9,Ciudad AC,false
+AUS-24,Ovidio,Correa,AUS,Delantero,24,1994-12-10,177,64.2,Burgos AC,false
+AUS-07,Cirino,Miguel,AUS,Delantero,7,2001-05-12,168,62.1,Lugo SC,false
+AUS-11,Reyes,Colom,AUS,Delantero,11,1992-05-08,169,62.1,Teruel FC,false
+AUS-21,Sosimo,Quevedo,AUS,Delantero,21,1997-06-01,184,80.4,Barcelona SC,false
+QAT-21,Glauco,Guerra,QAT,Arquero,21,1991-03-18,187,81.8,Granada FC,false
+QAT-16,Gil,Martín,QAT,Arquero,16,2007-10-12,199,90.2,Guipúzcoa CF,false
+QAT-06,Seve,Pelayo,QAT,Arquero,6,2006-12-25,189,86.7,Ávila FC,false
+QAT-12,Rufino,Domínguez,QAT,Defensor,12,1996-03-18,184,79.2,Cáceres SC,false
+QAT-08,Ciríaco,Fonseca,QAT,Defensor,8,2006-10-12,193,78.0,Cáceres AC,false
+QAT-17,Juan,Aragonés,QAT,Defensor,17,2001-02-15,184,73.9,Asturias SC,false
+QAT-07,Alejo,Gallo,QAT,Defensor,7,1992-04-14,195,85.7,Almería AC,false
+QAT-24,Joan,Ponce,QAT,Defensor,24,1997-05-09,185,79.2,Valladolid AC,false
+QAT-19,César,Galan,QAT,Defensor,19,2003-01-07,190,77.4,Álava SC,false
+QAT-04,Aitor,Cañas,QAT,Defensor,4,2001-04-17,194,87.0,Jaén CF,true
+QAT-10,Gil,Guillen,QAT,Defensor,10,1998-07-08,190,75.6,Asturias CF,false
+QAT-13,David,Valle,QAT,Mediocampista,13,1989-09-17,185,78.6,La Coruña SC,false
+QAT-09,Valero,Uría,QAT,Mediocampista,9,1994-10-27,185,75.8,Almería CF,false
+QAT-03,Fortunato,Ortuño,QAT,Mediocampista,3,1997-10-13,187,84.2,Cuenca CF,false
+QAT-22,Felipe,Checa,QAT,Mediocampista,22,1996-12-24,187,79.4,Girona SC,false
+QAT-18,Anastasio,Carmona,QAT,Mediocampista,18,2000-06-19,176,74.6,Guipúzcoa FC,false
+QAT-01,Norberto,Diaz,QAT,Mediocampista,1,2000-11-13,188,74.0,Alicante CF,false
+QAT-02,Jose Francisco,Fajardo,QAT,Mediocampista,2,1999-12-09,181,75.1,Álava SC,false
+QAT-05,Cecilio,Huerta,QAT,Mediocampista,5,2005-01-25,174,65.0,Valladolid CF,false
+QAT-20,Amado,Quero,QAT,Delantero,20,1990-01-22,170,68.7,Melilla SC,false
+QAT-15,Guadalupe,Arévalo,QAT,Delantero,15,2007-06-13,182,77.3,Cuenca SC,false
+QAT-23,Alonso,Mayo,QAT,Delantero,23,1997-02-12,177,67.8,Jaén SC,false
+QAT-11,Leopoldo,Sotelo,QAT,Delantero,11,2006-06-21,176,74.6,Baleares FC,false
+QAT-14,Román,Soto,QAT,Delantero,14,1997-05-29,183,77.8,Navarra AC,false
+IRQ-21,Juan Bautista,Casanovas,IRQ,Arquero,21,1997-08-25,197,83.6,Guipúzcoa SC,true
+IRQ-15,Dionisio,Mateo,IRQ,Arquero,15,1992-03-14,191,85.8,Zamora AC,false
+IRQ-09,Leonardo,Lopez,IRQ,Arquero,9,1994-06-13,193,80.6,Córdoba FC,false
+IRQ-20,Adolfo,Galindo,IRQ,Defensor,20,2004-10-21,189,84.8,Murcia CF,false
+IRQ-17,Samu,Alonso,IRQ,Defensor,17,2006-05-12,189,86.5,Zamora CF,false
+IRQ-18,Sebastián,Arnal,IRQ,Defensor,18,2003-04-19,194,87.0,Barcelona SC,false
+IRQ-10,Néstor,Quintana,IRQ,Defensor,10,1992-12-13,181,74.3,Murcia AC,false
+IRQ-24,Haroldo,Ribes,IRQ,Defensor,24,1993-12-07,179,76.5,Palencia AC,false
+IRQ-14,Carlos,Posada,IRQ,Defensor,14,1991-07-31,189,78.4,Navarra SC,false
+IRQ-08,Bruno,Bustamante,IRQ,Defensor,8,1995-10-27,186,79.1,Teruel CF,false
+IRQ-23,Lope,Carbó,IRQ,Defensor,23,1998-06-27,195,85.5,León CF,false
+IRQ-01,Francisco Jose,Barriga,IRQ,Mediocampista,1,1994-07-30,184,77.6,La Rioja CF,false
+IRQ-16,Lucas,Velasco,IRQ,Mediocampista,16,2004-10-14,170,60.2,Navarra CF,false
+IRQ-13,Teobaldo,Fernández,IRQ,Mediocampista,13,2000-07-17,187,71.9,Ceuta FC,false
+IRQ-11,Remigio,Malo,IRQ,Mediocampista,11,1996-04-24,188,80.2,Jaén FC,false
+IRQ-12,Maxi,Montaña,IRQ,Mediocampista,12,2007-05-20,183,79.9,Santa Cruz de Tenerife CF,false
+IRQ-04,Emilio,Rivas,IRQ,Mediocampista,4,2003-12-04,174,71.4,Jaén AC,false
+IRQ-02,Sancho,Hernandez,IRQ,Mediocampista,2,1997-07-23,172,69.7,Huelva AC,false
+IRQ-19,Berto,Arévalo,IRQ,Mediocampista,19,2000-07-10,179,70.3,Málaga FC,false
+IRQ-07,Emiliano,Manjón,IRQ,Delantero,7,2005-05-23,175,64.4,Badajoz SC,false
+IRQ-05,Raúl,Alba,IRQ,Delantero,5,2005-12-29,171,66.8,Cuenca FC,false
+IRQ-03,Gonzalo,Zurita,IRQ,Delantero,3,1994-04-18,178,77.6,Melilla FC,false
+IRQ-06,Alberto,Leiva,IRQ,Delantero,6,2000-12-14,180,73.6,Ciudad AC,false
+IRQ-22,Ramiro,Cáceres,IRQ,Delantero,22,1995-12-27,168,59.0,Tarragona SC,false
+UZB-16,Aureliano,Galiano,UZB,Arquero,16,1998-09-25,187,79.1,Las Palmas CF,false
+UZB-07,Raimundo,Echevarría,UZB,Arquero,7,1996-08-13,185,71.0,Guadalajara SC,false
+UZB-17,Alex,Estrada,UZB,Arquero,17,2007-07-22,195,90.5,Santa Cruz de Tenerife FC,false
+UZB-18,Victor Manuel,Castillo,UZB,Defensor,18,1994-08-12,189,85.6,Ourense CF,false
+UZB-14,Manu,Blanch,UZB,Defensor,14,2008-04-02,185,80.9,Ceuta AC,false
+UZB-24,Iker,Aguiló,UZB,Defensor,24,1992-08-26,187,84.7,Almería CF,true
+UZB-09,Chus,Guerrero,UZB,Defensor,9,1999-08-02,184,75.4,Toledo CF,false
+UZB-13,Joan,Carrera,UZB,Defensor,13,2000-03-09,192,82.0,Córdoba CF,false
+UZB-03,Marcos,Teruel,UZB,Defensor,3,2006-03-12,179,70.0,Burgos FC,false
+UZB-02,Clímaco,Blazquez,UZB,Defensor,2,1999-11-25,184,71.7,Soria CF,false
+UZB-20,Gerónimo,Escrivá,UZB,Defensor,20,1992-12-20,185,81.3,Teruel CF,false
+UZB-22,Osvaldo,Capdevila,UZB,Mediocampista,22,1993-06-15,174,62.5,La Coruña CF,false
+UZB-21,Víctor,Jerez,UZB,Mediocampista,21,1999-03-09,179,66.4,Girona SC,false
+UZB-19,Julián,Ariño,UZB,Mediocampista,19,1995-01-29,171,71.6,León AC,false
+UZB-15,Leonardo,Elías,UZB,Mediocampista,15,1991-05-16,175,68.0,Lleida SC,false
+UZB-08,Heraclio,Cerro,UZB,Mediocampista,8,1999-03-09,183,78.9,Álava AC,false
+UZB-05,Sigfrido,Valls,UZB,Mediocampista,5,1993-05-26,176,66.5,León FC,false
+UZB-23,Marco,Carbajo,UZB,Mediocampista,23,1996-04-24,178,69.6,Asturias FC,false
+UZB-04,Marcio,Posada,UZB,Mediocampista,4,2007-02-04,185,76.9,Albacete FC,false
+UZB-11,Amílcar,Goñi,UZB,Delantero,11,1993-01-22,182,78.2,Barcelona AC,false
+UZB-06,Felipe,Tejedor,UZB,Delantero,6,2008-02-29,171,68.2,Santa Cruz de Tenerife AC,false
+UZB-10,Telmo,Luz,UZB,Delantero,10,2000-01-30,173,67.0,Huesca SC,false
+UZB-12,Manuel,Tomas,UZB,Delantero,12,1993-10-09,176,72.8,Castellón CF,false
+UZB-01,Lorenzo,Yuste,UZB,Delantero,1,2006-09-06,186,74.8,Álava SC,false
+CHN-22,Ildefonso,Llobet,CHN,Arquero,22,1991-08-31,190,81.0,León CF,false
+CHN-14,Chucho,Arroyo,CHN,Arquero,14,1995-03-28,187,85.3,Melilla CF,false
+CHN-03,José,Pascual,CHN,Arquero,3,1991-04-23,192,87.2,Huelva SC,false
+CHN-01,Lorenzo,Mínguez,CHN,Defensor,1,1996-08-04,190,78.1,Cantabria SC,false
+CHN-20,Nilo,Castillo,CHN,Defensor,20,2000-04-26,190,74.9,Ceuta AC,false
+CHN-04,Trinidad,Herranz,CHN,Defensor,4,2003-01-28,180,69.3,Cáceres CF,false
+CHN-24,Natalio,Montesinos,CHN,Defensor,24,1996-10-02,190,77.2,Cádiz FC,false
+CHN-21,José Antonio,Rincón,CHN,Defensor,21,2001-10-01,186,79.4,Toledo SC,false
+CHN-05,Pepe,Baños,CHN,Defensor,5,1992-08-09,183,78.2,Cáceres FC,true
+CHN-23,Cebrián,Dávila,CHN,Defensor,23,1999-02-05,188,78.8,León FC,false
+CHN-19,Gregorio,Galvez,CHN,Defensor,19,2001-06-22,194,90.9,Tarragona SC,false
+CHN-07,Roberto,Ruano,CHN,Mediocampista,7,1992-12-18,182,73.2,Jaén SC,false
+CHN-12,Felix,Pinedo,CHN,Mediocampista,12,1991-05-04,177,66.2,Cantabria CF,false
+CHN-02,Marcelo,Chaparro,CHN,Mediocampista,2,2006-05-18,178,68.9,Granada FC,false
+CHN-18,Nicolás,Arteaga,CHN,Mediocampista,18,1991-05-31,176,63.9,Huelva FC,false
+CHN-13,Guillermo,Mariño,CHN,Mediocampista,13,1996-09-25,175,65.8,La Rioja SC,false
+CHN-10,Juan,Bueno,CHN,Mediocampista,10,1997-03-23,172,63.5,Santa Cruz de Tenerife AC,false
+CHN-16,Silvio,Díaz,CHN,Mediocampista,16,2002-01-10,185,76.6,Murcia AC,false
+CHN-09,Yago,Oliver,CHN,Mediocampista,9,1993-12-09,184,77.9,Santa Cruz de Tenerife AC,false
+CHN-17,Cleto,Beltrán,CHN,Delantero,17,1996-04-30,183,73.3,Baleares CF,false
+CHN-11,César,Nuñez,CHN,Delantero,11,1996-09-24,189,86.6,Sevilla AC,false
+CHN-06,Eusebio,Sáez,CHN,Delantero,6,1992-04-23,171,69.7,Segovia CF,false
+CHN-15,Cecilio,Rius,CHN,Delantero,15,1997-04-11,182,76.2,Zamora SC,false
+CHN-08,Ricardo,Acero,CHN,Delantero,8,1991-05-29,184,72.7,Melilla SC,false
+NZL-02,Asdrubal,Marco,NZL,Arquero,2,1990-07-25,192,78.7,La Coruña FC,false
+NZL-21,Cipriano,Alcalá,NZL,Arquero,21,1998-06-15,200,86.7,Lleida CF,false
+NZL-20,Alfonso,Barreda,NZL,Arquero,20,1993-09-16,198,92.4,Palencia SC,false
+NZL-09,Édgar,Solé,NZL,Defensor,9,1997-12-24,182,77.5,Castellón SC,false
+NZL-10,Emigdio,Juliá,NZL,Defensor,10,1997-09-24,192,88.2,Cáceres FC,false
+NZL-14,Javier,Manjón,NZL,Defensor,14,2003-03-11,179,74.5,Navarra AC,false
+NZL-13,Félix,Mir,NZL,Defensor,13,1998-11-19,184,70.9,Palencia FC,false
+NZL-18,Arturo,Quintero,NZL,Defensor,18,1997-09-07,195,89.4,Guadalajara AC,false
+NZL-19,Armando,Bernal,NZL,Defensor,19,2005-10-23,190,83.3,Badajoz CF,false
+NZL-11,Raúl,Sánchez,NZL,Defensor,11,1993-09-30,189,85.9,Granada CF,false
+NZL-15,Abraham,Terrón,NZL,Defensor,15,1996-09-21,190,74.3,Zaragoza FC,false
+NZL-07,Adelardo,Goñi,NZL,Mediocampista,7,1998-03-10,180,74.4,Cantabria SC,false
+NZL-24,Raúl,Pina,NZL,Mediocampista,24,2006-02-13,186,77.9,Toledo CF,false
+NZL-08,Ismael,Farré,NZL,Mediocampista,8,1991-08-06,170,64.6,Salamanca FC,false
+NZL-17,Gerónimo,Rosales,NZL,Mediocampista,17,1989-10-01,175,67.4,Almería CF,false
+NZL-23,Celso,Bernal,NZL,Mediocampista,23,1993-08-15,183,77.2,La Rioja CF,false
+NZL-05,Gabino,Abascal,NZL,Mediocampista,5,2006-06-02,174,73.6,Pontevedra FC,false
+NZL-16,Lisandro,Quintana,NZL,Mediocampista,16,1990-09-27,172,63.7,Huelva FC,false
+NZL-03,José Antonio,Milla,NZL,Mediocampista,3,1993-12-11,183,79.0,Ceuta SC,true
+NZL-04,Edmundo,Jáuregui,NZL,Delantero,4,1996-04-27,173,65.9,Salamanca FC,false
+NZL-22,Alonso,Acero,NZL,Delantero,22,2002-08-09,185,83.7,Badajoz SC,false
+NZL-12,Severiano,Leiva,NZL,Delantero,12,1991-09-27,178,77.0,Asturias FC,false
+NZL-06,Sancho,Tamarit,NZL,Delantero,6,1989-10-06,180,76.5,Zaragoza AC,false
+NZL-01,Nazario,Cuervo,NZL,Delantero,1,1995-11-02,173,68.2,Jaén CF,false
+SWE-17,Haroldo,Prats,SWE,Arquero,17,2006-02-25,199,97.0,Barcelona CF,false
+SWE-05,Juan Luis,Perea,SWE,Arquero,5,1999-11-30,188,77.0,Cáceres SC,false
+SWE-04,Reyes,Roman,SWE,Arquero,4,2005-02-22,197,94.5,Baleares FC,false
+SWE-21,Anastasio,Gisbert,SWE,Defensor,21,2003-11-05,183,76.3,Zamora AC,false
+SWE-19,Gabriel,Lumbreras,SWE,Defensor,19,1992-08-02,192,87.9,Salamanca CF,false
+SWE-15,Francisco Javier,Castells,SWE,Defensor,15,1997-11-16,195,90.2,Soria SC,false
+SWE-08,Marcelino,Costa,SWE,Defensor,8,1994-06-25,185,82.5,Sevilla SC,false
+SWE-09,José Antonio,Alberto,SWE,Defensor,9,2002-09-23,186,77.9,Baleares FC,false
+SWE-11,Bernardo,Alcántara,SWE,Defensor,11,2002-06-25,185,78.3,Burgos AC,false
+SWE-06,Lorenzo,González,SWE,Defensor,6,1994-07-13,188,79.6,Guadalajara CF,false
+SWE-07,Amado,Rueda,SWE,Defensor,7,1996-12-18,191,89.3,Córdoba AC,false
+SWE-13,Isidoro,Rocamora,SWE,Mediocampista,13,1998-04-28,182,77.4,Baleares FC,false
+SWE-01,Cesar,Expósito,SWE,Mediocampista,1,1999-02-12,173,68.5,Huelva SC,false
+SWE-14,Leocadio,Blanca,SWE,Mediocampista,14,1997-12-10,173,64.0,Burgos AC,true
+SWE-02,Leandro,Olivera,SWE,Mediocampista,2,1996-05-16,182,72.5,Almería CF,false
+SWE-24,Cristian,Acuña,SWE,Mediocampista,24,2001-01-19,171,63.8,Palencia SC,false
+SWE-22,Graciano,Peral,SWE,Mediocampista,22,2003-06-16,172,70.5,La Coruña SC,false
+SWE-18,Miguel,Riera,SWE,Mediocampista,18,1994-06-22,177,65.4,Salamanca SC,false
+SWE-23,César,Roselló,SWE,Mediocampista,23,1994-04-15,176,66.2,Melilla CF,false
+SWE-20,Marcelino,Bejarano,SWE,Delantero,20,2000-01-10,169,58.7,Valencia SC,false
+SWE-03,Armando,Bermejo,SWE,Delantero,3,1995-05-30,177,76.1,Cantabria CF,false
+SWE-16,Clímaco,Polo,SWE,Delantero,16,2002-11-01,186,80.9,La Coruña AC,false
+SWE-12,Gerardo,Porcel,SWE,Delantero,12,1993-12-15,171,66.3,Alicante SC,false
+SWE-10,Alejo,Quintero,SWE,Delantero,10,1993-07-20,168,67.2,Málaga AC,false
+NOR-13,Balduino,Sureda,NOR,Arquero,13,1995-12-05,200,94.3,Huesca FC,false
+NOR-05,Ariel,Taboada,NOR,Arquero,5,1997-01-07,200,85.7,Alicante SC,false
+NOR-22,Mauricio,Mesa,NOR,Arquero,22,2002-11-02,189,78.2,Madrid SC,false
+NOR-24,Jose Angel,Serra,NOR,Defensor,24,1990-10-20,188,83.8,Zaragoza SC,false
+NOR-03,Régulo,Vila,NOR,Defensor,3,1990-02-09,181,75.9,Girona CF,false
+NOR-02,Candelario,Barceló,NOR,Defensor,2,2000-01-18,182,76.3,Castellón FC,false
+NOR-18,Faustino,Oliveras,NOR,Defensor,18,1998-09-05,181,76.5,Murcia AC,false
+NOR-15,Felix,Mendizábal,NOR,Defensor,15,1998-09-09,184,72.7,Soria AC,false
+NOR-16,Javi,Márquez,NOR,Defensor,16,1994-11-30,191,87.5,Álava AC,false
+NOR-20,Édgar,Anguita,NOR,Defensor,20,1994-02-27,193,78.0,León FC,false
+NOR-07,Atilio,Sarabia,NOR,Defensor,7,1994-10-16,178,73.8,Girona CF,false
+NOR-17,Eliseo,Diaz,NOR,Mediocampista,17,1993-03-01,183,80.4,León AC,false
+NOR-12,Guillermo,Adán,NOR,Mediocampista,12,1990-11-07,174,74.1,Vizcaya FC,false
+NOR-21,Teobaldo,Pozuelo,NOR,Mediocampista,21,1999-05-31,172,66.8,La Rioja AC,false
+NOR-08,Atilio,Angulo,NOR,Mediocampista,8,2005-09-02,179,68.8,Girona FC,true
+NOR-01,Luis Miguel,Diaz,NOR,Mediocampista,1,2000-11-14,172,66.1,Vizcaya AC,false
+NOR-19,Celestino,Mariscal,NOR,Mediocampista,19,1998-07-25,184,71.1,Palencia AC,false
+NOR-10,Nico,Riera,NOR,Mediocampista,10,1990-11-20,176,73.3,Cuenca CF,false
+NOR-06,Heriberto,Salazar,NOR,Mediocampista,6,1998-03-24,185,73.8,Segovia AC,false
+NOR-04,Amado,Gonzalo,NOR,Delantero,4,2006-05-14,170,69.5,Navarra SC,false
+NOR-14,Gastón,Arnaiz,NOR,Delantero,14,1993-08-23,186,75.7,Cantabria AC,false
+NOR-23,Calisto,Hurtado,NOR,Delantero,23,1990-09-16,190,78.5,Granada CF,false
+NOR-09,Silvestre,Baeza,NOR,Delantero,9,1995-04-03,176,75.4,Santa Cruz de Tenerife CF,false
+NOR-11,Cebrián,Amigó,NOR,Delantero,11,2000-09-09,170,63.7,Baleares AC,false
+UKR-17,Salvador,Bou,UKR,Arquero,17,2004-09-20,192,79.0,La Rioja AC,false
+UKR-24,Santos,Uribe,UKR,Arquero,24,2006-06-29,192,84.8,Girona SC,false
+UKR-01,Nacho,Sarabia,UKR,Arquero,1,1997-12-20,185,79.0,Cáceres AC,false
+UKR-20,Iván,Gomila,UKR,Defensor,20,2002-10-16,178,75.5,Ourense FC,false
+UKR-04,Aníbal,Cuadrado,UKR,Defensor,4,1991-05-16,181,67.8,Valladolid CF,false
+UKR-14,Pablo,Porta,UKR,Defensor,14,1997-02-24,192,76.8,Castellón AC,false
+UKR-03,Remigio,Ortiz,UKR,Defensor,3,1997-08-17,181,75.4,Huesca CF,false
+UKR-16,Natalio,Goicoechea,UKR,Defensor,16,2006-02-11,194,81.2,Álava FC,false
+UKR-18,Emigdio,Cornejo,UKR,Defensor,18,2008-06-24,192,79.8,Santa Cruz de Tenerife CF,false
+UKR-19,Hermenegildo,Lillo,UKR,Defensor,19,1996-10-24,185,79.4,Ávila CF,false
+UKR-11,Geraldo,Baró,UKR,Defensor,11,2005-01-14,185,73.2,León FC,false
+UKR-09,Hilario,Echeverría,UKR,Mediocampista,9,2002-05-12,179,68.3,Cáceres FC,true
+UKR-15,Raúl,Leal,UKR,Mediocampista,15,2003-10-01,171,61.5,Asturias CF,false
+UKR-12,Tiburcio,Pablo,UKR,Mediocampista,12,1999-04-20,180,75.1,Tarragona SC,false
+UKR-07,Chuy,Acero,UKR,Mediocampista,7,1999-03-09,186,75.9,Alicante CF,false
+UKR-06,Albano,Olivera,UKR,Mediocampista,6,1995-06-17,176,63.7,Zaragoza CF,false
+UKR-22,Ramiro,Yuste,UKR,Mediocampista,22,1991-09-28,176,73.0,Teruel FC,false
+UKR-21,María,Izquierdo,UKR,Mediocampista,21,2008-01-26,183,79.5,Guipúzcoa SC,false
+UKR-23,Iker,Sancho,UKR,Mediocampista,23,1990-06-01,187,80.3,Santa Cruz de Tenerife SC,false
+UKR-02,Martin,Carbó,UKR,Delantero,2,2007-04-26,183,73.8,Sevilla FC,false
+UKR-13,Teo,Toledo,UKR,Delantero,13,2007-05-13,175,68.8,Badajoz FC,false
+UKR-05,Rogelio,Bayo,UKR,Delantero,5,2004-01-27,184,78.0,Salamanca AC,false
+UKR-08,Eutropio,Echevarría,UKR,Delantero,8,2004-11-12,168,60.1,Girona SC,false
+UKR-10,José Antonio,Gisbert,UKR,Delantero,10,1990-03-16,175,71.8,La Coruña AC,false
+CZE-20,Gervasio,Puig,CZE,Arquero,20,1992-08-29,197,83.5,Álava AC,false
+CZE-15,Clímaco,Carbajo,CZE,Arquero,15,2001-12-27,191,77.3,Cantabria FC,false
+CZE-01,Casemiro,Agustí,CZE,Arquero,1,1998-02-03,186,84.0,Castellón AC,false
+CZE-21,Nazario,Urrutia,CZE,Defensor,21,1990-03-20,184,75.6,Guipúzcoa CF,true
+CZE-06,Francisco Jose,Méndez,CZE,Defensor,6,1989-09-10,187,71.9,Soria CF,false
+CZE-13,Anselmo,Vergara,CZE,Defensor,13,1995-04-01,190,74.7,Lleida CF,false
+CZE-05,Julián,Guzmán,CZE,Defensor,5,1991-06-04,184,73.6,Madrid SC,false
+CZE-24,Victor Manuel,Luján,CZE,Defensor,24,1991-01-06,190,74.2,Las Palmas FC,false
+CZE-16,Jose Francisco,Boada,CZE,Defensor,16,1998-09-23,185,74.0,Jaén CF,false
+CZE-18,Moreno,Cornejo,CZE,Defensor,18,1992-03-26,190,76.2,Salamanca CF,false
+CZE-10,Jose Antonio,Medina,CZE,Defensor,10,2006-02-11,187,81.4,La Coruña CF,false
+CZE-12,Maximiliano,Asensio,CZE,Mediocampista,12,1999-01-19,185,72.1,Girona CF,false
+CZE-04,Onofre,Boix,CZE,Mediocampista,4,1996-03-06,186,78.2,Pontevedra CF,false
+CZE-08,Gerónimo,Ferrández,CZE,Mediocampista,8,1991-09-13,183,79.9,Lugo AC,false
+CZE-09,Francisco Javier,Cabezas,CZE,Mediocampista,9,1996-01-03,187,83.8,Jaén SC,false
+CZE-07,Albert,Pina,CZE,Mediocampista,7,2007-01-28,174,63.0,Santa Cruz de Tenerife SC,false
+CZE-17,Josué,Carmona,CZE,Mediocampista,17,1995-12-30,177,72.5,Navarra SC,false
+CZE-02,Lino,Carbajo,CZE,Mediocampista,2,2002-03-04,179,70.4,Jaén SC,false
+CZE-19,Teo,Pareja,CZE,Mediocampista,19,1995-03-26,174,74.1,Baleares SC,false
+CZE-23,Herminio,Gárate,CZE,Delantero,23,2003-09-26,190,86.9,Córdoba SC,false
+CZE-22,Plinio,Cañete,CZE,Delantero,22,1997-11-18,189,77.8,Pontevedra FC,false
+CZE-14,Ruben,Amat,CZE,Delantero,14,1996-03-10,179,72.3,Ávila CF,false
+CZE-11,Sandalio,Suarez,CZE,Delantero,11,2007-12-15,186,80.1,Pontevedra SC,false
+CZE-03,Reynaldo,Puga,CZE,Delantero,3,2004-08-16,173,72.1,Córdoba CF,false
+SCO-18,Eutimio,Paniagua,SCO,Arquero,18,2007-12-27,185,78.5,Madrid FC,false
+SCO-15,Régulo,Barrio,SCO,Arquero,15,2004-01-15,189,78.1,Toledo AC,false
+SCO-05,Leonel,Quintanilla,SCO,Arquero,5,1991-08-23,199,82.1,Valencia CF,false
+SCO-10,Josep,Quintanilla,SCO,Defensor,10,1997-05-08,183,80.1,León FC,false
+SCO-11,Abraham,Quiroga,SCO,Defensor,11,2004-11-29,185,81.7,Barcelona CF,false
+SCO-09,Jafet,Lobato,SCO,Defensor,9,1994-04-23,190,77.9,Asturias AC,false
+SCO-23,Kike,Menéndez,SCO,Defensor,23,1999-07-13,195,78.4,Ávila AC,false
+SCO-08,Luis Miguel,Oliva,SCO,Defensor,8,2007-12-10,188,80.7,Melilla CF,false
+SCO-24,Cristian,Gutierrez,SCO,Defensor,24,1993-06-06,186,76.2,Valencia SC,false
+SCO-13,Marcelino,Armas,SCO,Defensor,13,2006-09-20,182,75.3,Sevilla SC,false
+SCO-22,Roldán,Bermúdez,SCO,Defensor,22,1998-03-04,180,75.6,Lleida FC,true
+SCO-04,Julián,Sevilla,SCO,Mediocampista,4,2001-09-24,177,68.4,Salamanca CF,false
+SCO-19,Juan Carlos,Barbero,SCO,Mediocampista,19,1997-11-24,183,69.2,Salamanca AC,false
+SCO-12,Javier,Nicolás,SCO,Mediocampista,12,1998-12-11,185,72.8,Huelva SC,false
+SCO-16,Dani,Orozco,SCO,Mediocampista,16,1990-07-31,170,68.6,León CF,false
+SCO-03,Gil,Ortiz,SCO,Mediocampista,3,1994-01-06,177,71.8,Palencia FC,false
+SCO-01,Chema,Castillo,SCO,Mediocampista,1,2004-06-23,170,61.4,Barcelona AC,false
+SCO-02,Valentín,Porcel,SCO,Mediocampista,2,1996-11-08,184,76.5,Valladolid AC,false
+SCO-17,Bernabé,Cepeda,SCO,Mediocampista,17,2000-03-07,171,63.3,Burgos AC,false
+SCO-06,Lucho,Fernandez,SCO,Delantero,6,1998-01-04,169,66.7,Valencia SC,false
+SCO-14,Teo,Barros,SCO,Delantero,14,1999-11-13,184,70.0,La Coruña AC,false
+SCO-20,Duilio,Heredia,SCO,Delantero,20,2004-09-25,180,68.0,Badajoz AC,false
+SCO-21,Alejandro,Becerra,SCO,Delantero,21,1997-10-26,172,70.5,Cuenca AC,false
+SCO-07,Salvador,Oller,SCO,Delantero,7,1993-04-21,184,71.1,Ceuta SC,false
+WAL-17,Venceslás,Sierra,WAL,Arquero,17,2001-03-19,197,84.4,Ourense CF,false
+WAL-03,Anselmo,Ferrer,WAL,Arquero,3,1991-05-09,197,86.0,Navarra FC,false
+WAL-12,Renato,Cabello,WAL,Arquero,12,1991-11-06,189,78.8,Palencia FC,true
+WAL-14,Cornelio,Tomé,WAL,Defensor,14,1994-07-08,195,82.9,Lugo CF,false
+WAL-23,Nacio,Calderón,WAL,Defensor,23,2001-03-30,195,86.7,Soria AC,false
+WAL-06,Nicodemo,Martí,WAL,Defensor,6,1995-09-13,192,76.8,Murcia FC,false
+WAL-07,Lino,Hierro,WAL,Defensor,7,1989-12-16,181,72.9,Huesca AC,false
+WAL-22,Rosendo,Sala,WAL,Defensor,22,2007-03-05,189,74.1,Ourense CF,false
+WAL-11,Fulgencio,Olivera,WAL,Defensor,11,2005-03-06,191,86.4,Cádiz AC,false
+WAL-16,Eric,Otero,WAL,Defensor,16,1994-08-03,195,86.7,Albacete CF,false
+WAL-15,Benigno,Cobo,WAL,Defensor,15,2006-12-04,178,67.8,Melilla SC,false
+WAL-04,Sebastian,Hoz,WAL,Mediocampista,4,1990-02-05,188,83.0,León AC,false
+WAL-01,Iker,Pacheco,WAL,Mediocampista,1,1995-06-14,170,66.5,Sevilla SC,false
+WAL-24,Roldán,Ribes,WAL,Mediocampista,24,1999-01-21,180,74.5,Madrid SC,false
+WAL-13,Daniel,Girón,WAL,Mediocampista,13,1995-08-09,178,70.3,Valencia FC,false
+WAL-19,Guadalupe,Gálvez,WAL,Mediocampista,19,2007-11-10,182,73.4,Melilla CF,false
+WAL-02,Teófilo,Quintanilla,WAL,Mediocampista,2,2003-02-14,182,72.6,Castellón FC,false
+WAL-20,Jeremías,Domínguez,WAL,Mediocampista,20,1997-06-07,174,69.4,Salamanca FC,false
+WAL-18,Iker,Alcázar,WAL,Mediocampista,18,1996-08-13,186,82.4,Sevilla SC,false
+WAL-21,Pepe,Cañellas,WAL,Delantero,21,2006-04-19,185,77.9,Palencia FC,false
+WAL-09,Humberto,Linares,WAL,Delantero,9,1997-12-03,171,70.0,Valladolid FC,false
+WAL-10,Ciro,Durán,WAL,Delantero,10,2006-03-21,182,71.4,Teruel CF,false
+WAL-08,Gastón,Cervera,WAL,Delantero,8,2008-07-23,180,78.2,Granada CF,false
+WAL-05,Santiago,Gutierrez,WAL,Delantero,5,2007-11-17,184,77.4,Almería FC,false
+HUN-14,Geraldo,Almazán,HUN,Arquero,14,1990-03-04,193,82.0,Málaga CF,false
+HUN-24,Salvador,Girona,HUN,Arquero,24,2000-01-29,191,83.2,Barcelona FC,false
+HUN-10,Jose Antonio,Barroso,HUN,Arquero,10,1993-02-05,199,84.7,Valencia FC,false
+HUN-01,Tito,Salmerón,HUN,Defensor,1,2004-05-26,191,86.1,Zamora FC,false
+HUN-12,Eliseo,Barrio,HUN,Defensor,12,1995-09-07,186,71.6,Alicante CF,false
+HUN-13,Eliseo,Jódar,HUN,Defensor,13,1995-02-10,185,70.6,Guadalajara SC,true
+HUN-05,Angelino,Francisco,HUN,Defensor,5,2004-07-09,192,85.9,Guadalajara FC,false
+HUN-03,Espiridión,Milla,HUN,Defensor,3,1996-05-28,195,92.7,Toledo SC,false
+HUN-18,Leoncio,Arce,HUN,Defensor,18,2004-01-17,193,77.5,Ávila CF,false
+HUN-07,Jose Miguel,Carro,HUN,Defensor,7,1992-03-12,184,70.6,Albacete FC,false
+HUN-21,Baltasar,Moliner,HUN,Defensor,21,1997-09-04,183,69.2,Segovia CF,false
+HUN-19,Amancio,Quintanilla,HUN,Mediocampista,19,2000-09-09,174,72.2,Valladolid CF,false
+HUN-15,Silvio,Llorente,HUN,Mediocampista,15,2002-10-31,181,76.2,Madrid FC,false
+HUN-17,Amando,Soto,HUN,Mediocampista,17,2003-03-04,182,74.5,Navarra SC,false
+HUN-04,Anastasio,Morell,HUN,Mediocampista,4,2000-02-14,185,74.1,Sevilla FC,false
+HUN-22,Flavio,Macías,HUN,Mediocampista,22,2004-01-23,185,76.3,Valladolid SC,false
+HUN-02,Alcides,Gálvez,HUN,Mediocampista,2,1998-06-04,187,74.2,Huelva SC,false
+HUN-06,Rodolfo,Alberdi,HUN,Mediocampista,6,2000-01-17,184,76.2,Ciudad AC,false
+HUN-20,Poncio,Aguirre,HUN,Mediocampista,20,1999-03-31,174,73.9,Zamora FC,false
+HUN-11,Isaías,Santamaria,HUN,Delantero,11,1993-12-03,174,73.3,Madrid CF,false
+HUN-08,Asdrubal,Reguera,HUN,Delantero,8,1999-10-26,182,72.5,Málaga FC,false
+HUN-16,Pelayo,Almeida,HUN,Delantero,16,2000-08-25,172,61.5,Lugo SC,false
+HUN-23,Dani,Martin,HUN,Delantero,23,2003-06-09,187,77.2,Toledo FC,false
+HUN-09,Javier,Sainz,HUN,Delantero,9,1998-12-18,173,65.2,Valencia CF,false
+ROU-15,Julio,Bermúdez,ROU,Arquero,15,2008-05-06,193,76.9,Santa Cruz de Tenerife SC,false
+ROU-02,Nicodemo,Ortiz,ROU,Arquero,2,1991-02-21,200,84.8,León SC,false
+ROU-09,Régulo,Gordillo,ROU,Arquero,9,2006-10-13,187,72.0,Salamanca SC,false
+ROU-13,Martin,Figuerola,ROU,Defensor,13,1997-07-04,192,80.6,Cáceres SC,false
+ROU-03,Feliciano,Jurado,ROU,Defensor,3,2005-09-12,185,82.0,Valencia CF,false
+ROU-22,Ruperto,Arcos,ROU,Defensor,22,1995-12-04,195,91.7,La Coruña CF,false
+ROU-23,Custodio,Romero,ROU,Defensor,23,2008-08-21,182,70.9,Burgos FC,false
+ROU-19,Renato,Bello,ROU,Defensor,19,2004-01-06,185,83.5,Zaragoza CF,false
+ROU-12,Goyo,Borja,ROU,Defensor,12,1991-06-11,189,86.8,Badajoz SC,false
+ROU-14,Edgardo,Aguilar,ROU,Defensor,14,2000-10-03,195,88.3,Baleares CF,false
+ROU-20,Omar,Roselló,ROU,Defensor,20,2002-09-25,183,77.2,Álava AC,false
+ROU-17,Baudelio,Cañellas,ROU,Mediocampista,17,1999-01-19,184,79.2,Vizcaya FC,false
+ROU-01,Poncio,Perera,ROU,Mediocampista,1,1999-12-02,178,66.9,Granada CF,false
+ROU-21,Francisco Jose,Lloret,ROU,Mediocampista,21,1991-07-27,175,67.2,Cáceres AC,false
+ROU-06,Heliodoro,Blanco,ROU,Mediocampista,6,2006-10-14,175,67.5,Cuenca CF,false
+ROU-04,Natanael,Roselló,ROU,Mediocampista,4,2004-03-10,180,75.4,Murcia AC,false
+ROU-10,Custodio,Carvajal,ROU,Mediocampista,10,2007-03-18,170,68.8,Vizcaya FC,false
+ROU-07,Ceferino,Calderon,ROU,Mediocampista,7,2000-04-04,180,71.3,Cáceres CF,false
+ROU-18,Calisto,Tejedor,ROU,Mediocampista,18,1996-02-21,176,74.4,Huesca CF,false
+ROU-08,Nicanor,Gil,ROU,Delantero,8,2001-06-10,184,78.3,Ourense SC,false
+ROU-16,Cándido,Noguera,ROU,Delantero,16,1998-02-27,170,69.7,Ceuta FC,false
+ROU-11,Samuel,Arnaiz,ROU,Delantero,11,2006-03-15,171,64.1,Girona AC,true
+ROU-24,Gabriel,Sevillano,ROU,Delantero,24,1993-06-17,177,76.1,Cáceres AC,false
+ROU-05,Ramón,Llanos,ROU,Delantero,5,1996-08-19,180,71.7,Toledo FC,false
+TUR-05,Fito,Castelló,TUR,Arquero,5,1995-07-23,189,85.7,Granada AC,false
+TUR-17,Américo,Boix,TUR,Arquero,17,1996-11-19,187,80.7,Valladolid CF,false
+TUR-09,Armando,Nogués,TUR,Arquero,9,2006-01-24,198,85.5,Zamora FC,true
+TUR-13,Vicente,Peña,TUR,Defensor,13,2002-03-24,178,66.9,Navarra FC,false
+TUR-03,Paulino,Montaña,TUR,Defensor,3,1999-09-04,181,74.6,Lugo SC,false
+TUR-07,Marcelino,Malo,TUR,Defensor,7,2001-09-25,178,70.0,Granada CF,false
+TUR-01,Sosimo,Villaverde,TUR,Defensor,1,1997-09-05,178,77.2,Cantabria SC,false
+TUR-02,Alcides,Quintero,TUR,Defensor,2,1999-08-26,192,78.7,Jaén FC,false
+TUR-24,Marcos,Ibañez,TUR,Defensor,24,2004-03-19,179,77.5,Girona AC,false
+TUR-11,Edu,Flor,TUR,Defensor,11,1991-01-08,184,82.2,Girona AC,false
+TUR-20,Venceslás,Cantero,TUR,Defensor,20,2006-09-22,181,69.8,Cuenca SC,false
+TUR-16,Ruy,Farré,TUR,Mediocampista,16,2001-01-16,178,75.9,Zamora FC,false
+TUR-14,Ángel,Ferrero,TUR,Mediocampista,14,2004-04-14,175,71.5,Melilla AC,false
+TUR-10,Sergio,Larrea,TUR,Mediocampista,10,1991-02-13,179,72.1,Salamanca SC,false
+TUR-15,Eustaquio,Vicens,TUR,Mediocampista,15,2005-08-29,187,78.5,Álava SC,false
+TUR-22,Rómulo,Fiol,TUR,Mediocampista,22,1994-07-12,180,70.2,Pontevedra AC,false
+TUR-08,Isidro,Oller,TUR,Mediocampista,8,1995-07-28,172,65.4,Granada SC,false
+TUR-18,Alonso,Pizarro,TUR,Mediocampista,18,2002-12-12,172,67.2,Melilla FC,false
+TUR-12,Demetrio,Lucena,TUR,Mediocampista,12,2004-01-12,178,66.1,Álava FC,false
+TUR-19,Maximino,Bello,TUR,Delantero,19,2001-09-27,190,87.0,Almería AC,false
+TUR-06,Emiliano,Blanco,TUR,Delantero,6,2006-05-21,185,71.8,Huesca SC,false
+TUR-23,Cesar,Tejero,TUR,Delantero,23,1989-12-14,179,76.4,Salamanca AC,false
+TUR-21,Teófilo,Leal,TUR,Delantero,21,2006-09-17,183,79.5,Almería FC,false
+TUR-04,Julio,Suárez,TUR,Delantero,4,2002-05-23,175,72.3,Pontevedra CF,false
+VEN-23,Basilio,Clavero,VEN,Arquero,23,2000-09-11,187,80.0,Cáceres CF,true
+VEN-22,Apolinar,Maestre,VEN,Arquero,22,1993-04-04,197,91.0,Ávila AC,false
+VEN-08,Josué,Ribera,VEN,Arquero,8,2004-09-14,196,82.2,Valencia SC,false
+VEN-05,Rafa,Ledesma,VEN,Defensor,5,2006-01-21,187,74.8,Tarragona AC,false
+VEN-19,Ignacio,Font,VEN,Defensor,19,2001-06-10,186,83.8,Sevilla CF,false
+VEN-14,Conrado,Gordillo,VEN,Defensor,14,1995-03-22,179,65.7,Sevilla FC,false
+VEN-10,Santiago,Camacho,VEN,Defensor,10,2005-12-18,181,67.8,Huelva SC,false
+VEN-03,Íñigo,Feijoo,VEN,Defensor,3,2004-07-11,182,68.9,Asturias SC,false
+VEN-11,Moreno,Correa,VEN,Defensor,11,2003-03-16,193,81.7,Salamanca SC,false
+VEN-16,Simón,Gallart,VEN,Defensor,16,2008-05-31,179,74.2,Badajoz CF,false
+VEN-21,Victor,Barbero,VEN,Defensor,21,2008-08-24,184,74.5,Huesca AC,false
+VEN-18,Edgardo,Requena,VEN,Mediocampista,18,2000-06-14,188,81.5,Cáceres SC,false
+VEN-12,Roldán,Macias,VEN,Mediocampista,12,2005-03-29,174,68.6,Tarragona SC,false
+VEN-06,Aarón,Porta,VEN,Mediocampista,6,2002-07-03,179,67.8,Jaén AC,false
+VEN-17,Gerónimo,Martorell,VEN,Mediocampista,17,2000-10-22,182,69.5,Madrid SC,false
+VEN-01,Amaro,Maza,VEN,Mediocampista,1,2005-08-05,172,69.6,León FC,false
+VEN-09,Edu,Barreda,VEN,Mediocampista,9,2001-02-19,174,63.1,Burgos SC,false
+VEN-07,David,Tormo,VEN,Mediocampista,7,2006-07-03,178,72.8,Cuenca SC,false
+VEN-20,Edgardo,Giner,VEN,Mediocampista,20,1991-01-28,174,71.2,Ciudad SC,false
+VEN-15,Moisés,Márquez,VEN,Delantero,15,2008-03-09,183,76.7,Albacete CF,false
+VEN-04,Jordán,Lobo,VEN,Delantero,4,1998-02-26,189,76.6,Ávila FC,false
+VEN-02,Marcelino,Vendrell,VEN,Delantero,2,2005-05-12,184,81.1,Santa Cruz de Tenerife AC,false
+VEN-24,Amaro,Gibert,VEN,Delantero,24,1994-06-14,171,67.8,La Rioja CF,false
+VEN-13,Santiago,Alcaraz,VEN,Delantero,13,2008-04-18,168,62.6,Girona CF,false
+BOL-12,Angelino,Amor,BOL,Arquero,12,1998-02-03,198,80.7,Huelva FC,false
+BOL-03,Teobaldo,Arce,BOL,Arquero,3,1996-06-29,195,80.3,Guipúzcoa SC,false
+BOL-17,Abilio,Martínez,BOL,Arquero,17,2003-01-09,200,95.3,Sevilla CF,false
+BOL-16,Enrique,Llano,BOL,Defensor,16,2006-01-30,184,69.5,Ávila CF,false
+BOL-24,Antonio,Otero,BOL,Defensor,24,1992-07-27,189,78.7,Cantabria CF,false
+BOL-01,Juan José,Belmonte,BOL,Defensor,1,2000-03-15,190,77.7,Valencia AC,false
+BOL-10,Celso,Dueñas,BOL,Defensor,10,1995-05-08,186,79.6,Tarragona FC,false
+BOL-15,Pedro,Segarra,BOL,Defensor,15,2001-09-03,184,75.3,Tarragona FC,false
+BOL-18,Alex,Mancebo,BOL,Defensor,18,1992-04-05,194,85.4,Zaragoza FC,false
+BOL-04,José María,Luís,BOL,Defensor,4,2006-03-30,178,76.1,La Coruña SC,false
+BOL-20,Loreto,Pelayo,BOL,Defensor,20,1992-02-10,180,67.4,Albacete CF,false
+BOL-05,Conrado,Peinado,BOL,Mediocampista,5,1992-07-20,184,72.1,La Coruña AC,true
+BOL-06,Jeremías,Marin,BOL,Mediocampista,6,1995-06-05,186,84.3,Alicante AC,false
+BOL-07,Fidel,Ropero,BOL,Mediocampista,7,1992-11-14,177,67.7,Teruel AC,false
+BOL-14,Cristian,Durán,BOL,Mediocampista,14,1998-04-28,178,65.4,Ceuta SC,false
+BOL-21,Jerónimo,Arce,BOL,Mediocampista,21,1994-06-12,171,71.5,Toledo AC,false
+BOL-23,Ruben,Cámara,BOL,Mediocampista,23,1994-10-05,186,75.5,Burgos FC,false
+BOL-11,Yago,Solsona,BOL,Mediocampista,11,1992-06-28,185,77.8,La Rioja CF,false
+BOL-02,Andrés Felipe,Duque,BOL,Mediocampista,2,2003-07-26,181,72.2,Soria FC,false
+BOL-08,Candelario,Alfonso,BOL,Delantero,8,2002-05-02,190,80.9,Burgos CF,false
+BOL-22,Patricio,Saez,BOL,Delantero,22,2006-11-04,169,66.5,Murcia SC,false
+BOL-19,Vasco,Castellanos,BOL,Delantero,19,1999-12-30,179,72.0,La Coruña SC,false
+BOL-13,Jorge,Melero,BOL,Delantero,13,1996-08-15,183,78.7,Toledo AC,false
+BOL-09,Leocadio,Uriarte,BOL,Delantero,9,1998-01-22,177,74.2,Córdoba SC,false
+HON-01,Baltasar,Bernal,HON,Arquero,1,1990-03-06,195,92.3,Palencia CF,false
+HON-04,Fermín,Hierro,HON,Arquero,4,1991-05-13,193,90.1,Soria SC,false
+HON-23,Javi,Mulet,HON,Arquero,23,1994-03-25,199,85.4,La Rioja FC,false
+HON-21,Erasmo,Feijoo,HON,Defensor,21,1996-06-08,192,79.4,Salamanca CF,false
+HON-24,Teófilo,Villar,HON,Defensor,24,1992-03-18,186,79.8,Segovia CF,false
+HON-16,Porfirio,Arias,HON,Defensor,16,1992-08-13,180,72.3,Soria AC,false
+HON-17,Rafa,Revilla,HON,Defensor,17,1992-03-01,178,67.1,Lleida AC,false
+HON-12,Artemio,Benitez,HON,Defensor,12,1994-12-24,195,78.9,Badajoz FC,false
+HON-11,Bautista,Arranz,HON,Defensor,11,2002-11-08,179,70.5,Álava CF,false
+HON-13,Maximino,Pina,HON,Defensor,13,1992-06-13,182,78.2,Álava CF,false
+HON-15,Victoriano,Villalobos,HON,Defensor,15,2007-03-15,187,84.1,Castellón FC,true
+HON-14,Américo,Hervás,HON,Mediocampista,14,1989-11-09,188,73.4,Guipúzcoa AC,false
+HON-09,Elpidio,Cueto,HON,Mediocampista,9,1997-05-01,176,66.9,Ourense CF,false
+HON-06,Abel,Céspedes,HON,Mediocampista,6,2002-09-21,182,73.8,Baleares FC,false
+HON-08,Jonatan,Almagro,HON,Mediocampista,8,1992-09-07,177,76.2,Palencia SC,false
+HON-07,Hermenegildo,Figueroa,HON,Mediocampista,7,2003-05-11,187,74.6,Cádiz SC,false
+HON-03,Sigfrido,Nadal,HON,Mediocampista,3,1997-04-23,171,64.2,Vizcaya FC,false
+HON-02,Vasco,Carbonell,HON,Mediocampista,2,2005-12-12,174,65.1,Baleares SC,false
+HON-22,Prudencio,Colomer,HON,Mediocampista,22,2002-01-11,179,72.9,Cáceres FC,false
+HON-19,Joaquín,Tena,HON,Delantero,19,2006-05-24,178,73.0,Badajoz CF,false
+HON-05,Toño,Arnal,HON,Delantero,5,2007-08-17,189,86.0,Huelva FC,false
+HON-20,Agustín,Torrent,HON,Delantero,20,2002-07-13,175,64.2,Almería SC,false
+HON-18,Cebrián,Criado,HON,Delantero,18,2001-11-15,170,60.0,Cádiz AC,false
+HON-10,Sergio,Vega,HON,Delantero,10,2005-09-22,183,80.6,Las Palmas CF,false
+HAI-11,Narciso,Villa,HAI,Arquero,11,1994-03-25,185,75.1,Granada CF,false
+HAI-12,Ciro,Fortuny,HAI,Arquero,12,1999-07-06,191,75.0,Huelva CF,false
+HAI-09,Jose Angel,Rivas,HAI,Arquero,9,1993-03-18,193,88.5,Ourense CF,false
+HAI-23,Benjamín,Morillo,HAI,Defensor,23,1993-05-25,190,74.1,Almería SC,false
+HAI-05,Espiridión,Pérez,HAI,Defensor,5,1992-01-13,179,66.9,La Rioja FC,false
+HAI-04,Sandalio,Mancebo,HAI,Defensor,4,1995-09-17,189,82.3,Las Palmas SC,false
+HAI-18,Ariel,Salcedo,HAI,Defensor,18,2008-06-12,192,85.4,Ourense AC,false
+HAI-17,Aureliano,Avilés,HAI,Defensor,17,1995-03-13,183,68.9,Toledo FC,false
+HAI-07,Gregorio,Olivares,HAI,Defensor,7,2007-08-17,186,79.8,Navarra CF,false
+HAI-01,Albino,Mate,HAI,Defensor,1,1997-11-27,180,73.0,Badajoz SC,false
+HAI-03,Daniel,Barrena,HAI,Defensor,3,1996-03-04,179,74.7,Soria CF,false
+HAI-13,Darío,Folch,HAI,Mediocampista,13,1998-06-21,175,62.8,Segovia SC,true
+HAI-02,Jose Francisco,Cerezo,HAI,Mediocampista,2,1995-03-26,171,63.5,Madrid FC,false
+HAI-22,Artemio,Morante,HAI,Mediocampista,22,2003-02-23,181,71.9,Cáceres FC,false
+HAI-16,Ignacio,Aguilar,HAI,Mediocampista,16,2007-01-11,186,74.8,Palencia SC,false
+HAI-08,Ramiro,Gonzalo,HAI,Mediocampista,8,1995-10-08,187,82.7,Málaga SC,false
+HAI-20,Quirino,Mariño,HAI,Mediocampista,20,1998-06-16,171,65.4,Zaragoza AC,false
+HAI-19,Amando,Colomer,HAI,Mediocampista,19,2006-12-08,188,77.1,Lleida SC,false
+HAI-06,Herminio,Machado,HAI,Mediocampista,6,1998-06-17,188,74.1,Melilla SC,false
+HAI-15,Marco,Vergara,HAI,Delantero,15,2006-06-15,189,86.5,La Rioja AC,false
+HAI-21,Marcos,Patiño,HAI,Delantero,21,1991-12-04,174,63.3,Burgos FC,false
+HAI-24,Eutropio,Bauzà,HAI,Delantero,24,1997-07-27,177,72.1,Córdoba AC,false
+HAI-14,José Antonio,Fuente,HAI,Delantero,14,1993-04-03,177,66.4,Málaga SC,false
+HAI-10,José Manuel,Feijoo,HAI,Delantero,10,1997-07-18,168,65.9,Soria CF,false
+CIW-20,Gonzalo,Fábregas,CIW,Arquero,20,1997-03-27,198,85.8,La Rioja CF,true
+CIW-17,Carlos,Malo,CIW,Arquero,17,1996-05-13,194,83.6,Almería AC,false
+CIW-22,Lucio,Soria,CIW,Arquero,22,1996-07-01,199,82.6,Lleida CF,false
+CIW-21,Luís,Gil,CIW,Defensor,21,1994-09-09,194,91.2,Guadalajara AC,false
+CIW-09,Desiderio,Pascual,CIW,Defensor,9,1992-01-11,193,77.4,Ciudad SC,false
+CIW-14,Maxi,Río,CIW,Defensor,14,2003-07-26,187,77.6,Cáceres CF,false
+CIW-11,Victorino,Paz,CIW,Defensor,11,1991-09-02,193,84.3,Navarra SC,false
+CIW-16,José,Vives,CIW,Defensor,16,2006-11-10,190,76.0,La Coruña CF,false
+CIW-18,Ramiro,Román,CIW,Defensor,18,2005-03-13,188,85.6,Burgos AC,false
+CIW-03,Candelario,Lillo,CIW,Defensor,3,1992-10-29,195,82.6,Lugo AC,false
+CIW-08,Rufino,Pol,CIW,Defensor,8,2000-07-22,190,81.1,Cuenca FC,false
+CIW-19,Che,Gonzalez,CIW,Mediocampista,19,1999-11-17,175,66.3,Cádiz FC,false
+CIW-05,David,Lillo,CIW,Mediocampista,5,1991-11-18,174,69.3,Córdoba CF,false
+CIW-02,Aureliano,Roldán,CIW,Mediocampista,2,1995-07-01,181,75.2,Castellón SC,false
+CIW-15,Renato,Coronado,CIW,Mediocampista,15,2004-08-17,185,74.7,Guadalajara SC,false
+CIW-07,Lucas,Naranjo,CIW,Mediocampista,7,1990-11-08,173,61.8,Ávila FC,false
+CIW-10,Donato,Coca,CIW,Mediocampista,10,1997-11-06,182,75.3,Palencia SC,false
+CIW-01,Bartolomé,Vara,CIW,Mediocampista,1,1990-06-20,180,70.3,Teruel FC,false
+CIW-04,Vasco,Perez,CIW,Mediocampista,4,1989-11-09,183,76.0,Cuenca AC,false
+CIW-23,Nazario,Ariza,CIW,Delantero,23,2001-08-13,185,77.5,Guadalajara AC,false
+CIW-24,Nazario,Llanos,CIW,Delantero,24,1999-07-19,180,70.2,Cádiz SC,false
+CIW-06,Primitivo,Boada,CIW,Delantero,6,2007-08-02,190,87.4,Madrid FC,false
+CIW-13,Anacleto,Pera,CIW,Delantero,13,1993-03-31,182,73.3,Salamanca AC,false
+CIW-12,Paulino,Viñas,CIW,Delantero,12,2004-02-13,176,68.9,Badajoz CF,false
+IND-17,Ambrosio,Castrillo,IND,Arquero,17,2004-10-12,188,75.5,La Rioja AC,false
+IND-12,Leoncio,Iriarte,IND,Arquero,12,1990-09-05,198,94.9,Alicante AC,false
+IND-24,Custodio,Juliá,IND,Arquero,24,2003-09-02,198,88.2,La Coruña AC,false
+IND-14,Martin,Mendizábal,IND,Defensor,14,1994-09-20,191,81.2,Palencia FC,false
+IND-18,Amado,Andrade,IND,Defensor,18,1994-10-31,190,78.6,Lleida CF,true
+IND-19,Eusebio,Vallés,IND,Defensor,19,1993-05-19,179,71.5,Jaén CF,false
+IND-09,Fausto,Robledo,IND,Defensor,9,1999-12-16,180,73.1,Cádiz SC,false
+IND-06,Eugenio,Cervera,IND,Defensor,6,2002-11-12,194,84.1,Madrid SC,false
+IND-15,Amado,Piña,IND,Defensor,15,1992-04-19,189,81.3,Tarragona CF,false
+IND-05,José María,Andres,IND,Defensor,5,2007-05-01,181,69.8,Córdoba CF,false
+IND-02,Abel,Escudero,IND,Defensor,2,1995-12-02,185,83.1,La Coruña AC,false
+IND-07,Nazaret,Sobrino,IND,Mediocampista,7,1999-11-16,171,67.0,Valencia SC,false
+IND-21,Cayetano,Barrera,IND,Mediocampista,21,1990-09-13,184,71.3,Huesca FC,false
+IND-13,Eugenio,Riquelme,IND,Mediocampista,13,1989-12-13,185,76.5,Barcelona AC,false
+IND-10,Feliciano,Hervás,IND,Mediocampista,10,2005-03-13,188,81.6,Córdoba AC,false
+IND-22,Félix,Montoya,IND,Mediocampista,22,2000-07-17,176,70.0,Teruel FC,false
+IND-16,Nico,Corbacho,IND,Mediocampista,16,2002-03-01,186,73.1,Huesca AC,false
+IND-04,Lucio,Blanch,IND,Mediocampista,4,2003-11-25,184,79.0,Guipúzcoa SC,false
+IND-23,Leonel,Burgos,IND,Mediocampista,23,1998-04-16,171,64.1,Alicante CF,false
+IND-03,Albino,Vaquero,IND,Delantero,3,1993-12-25,175,67.1,Cantabria AC,false
+IND-01,Isidoro,Castells,IND,Delantero,1,2003-03-18,175,74.5,Huelva SC,false
+IND-11,Jose Antonio,Jaume,IND,Delantero,11,2006-02-02,184,75.3,Valencia CF,false
+IND-20,Benito,España,IND,Delantero,20,2001-05-07,186,72.7,Teruel SC,false
+IND-08,Victor,Mateos,IND,Delantero,8,1992-03-19,172,65.1,Alicante AC,false
+VIE-21,Desiderio,Patiño,VIE,Arquero,21,1996-08-02,195,78.5,Jaén SC,false
+VIE-03,Aníbal,Alberdi,VIE,Arquero,3,1994-07-03,193,79.2,Jaén SC,false
+VIE-06,Jorge,Caro,VIE,Arquero,6,1991-09-13,193,88.8,León FC,false
+VIE-23,Josué,Iglesias,VIE,Defensor,23,1995-08-08,192,80.3,Palencia FC,false
+VIE-10,Leoncio,Valls,VIE,Defensor,10,2002-08-04,180,78.7,Segovia FC,false
+VIE-01,Emigdio,Almansa,VIE,Defensor,1,2000-01-21,195,79.7,Guipúzcoa FC,false
+VIE-11,Goyo,Rosselló,VIE,Defensor,11,2006-10-27,178,72.4,Girona AC,false
+VIE-13,Ricardo,Estévez,VIE,Defensor,13,2002-02-27,184,79.7,Lugo FC,false
+VIE-17,Gustavo,Fiol,VIE,Defensor,17,1999-12-23,193,85.4,Valencia FC,false
+VIE-02,Javier,Piña,VIE,Defensor,2,1991-08-20,183,77.8,Murcia SC,false
+VIE-08,Pastor,Andres,VIE,Defensor,8,1990-03-05,178,71.8,Jaén CF,false
+VIE-09,Cecilio,Salinas,VIE,Mediocampista,9,1989-11-25,172,65.1,Melilla AC,false
+VIE-24,Natanael,Ureña,VIE,Mediocampista,24,1997-12-31,174,69.1,Teruel SC,false
+VIE-16,Amancio,Acevedo,VIE,Mediocampista,16,2000-03-09,181,79.0,Ciudad CF,true
+VIE-14,Onofre,Belmonte,VIE,Mediocampista,14,1995-12-12,178,65.9,Lugo SC,false
+VIE-22,Osvaldo,Ávila,VIE,Mediocampista,22,1993-06-28,172,71.3,Zaragoza FC,false
+VIE-15,Maximino,Moll,VIE,Mediocampista,15,2005-02-18,188,74.5,Toledo FC,false
+VIE-19,David,Gracia,VIE,Mediocampista,19,1998-11-11,184,80.5,Albacete FC,false
+VIE-20,Amaro,Torrijos,VIE,Mediocampista,20,1995-04-15,184,73.5,Huesca AC,false
+VIE-05,Octavio,Morata,VIE,Delantero,5,2003-10-06,179,77.5,Palencia AC,false
+VIE-04,Juanito,Calleja,VIE,Delantero,4,2004-12-29,189,80.3,León AC,false
+VIE-07,Gaspar,Vidal,VIE,Delantero,7,1997-11-14,177,70.4,Soria AC,false
+VIE-18,Haroldo,Casanova,VIE,Delantero,18,2006-03-19,175,65.5,Santa Cruz de Tenerife AC,false
+VIE-12,Buenaventura,Linares,VIE,Delantero,12,1992-06-02,180,69.5,Las Palmas SC,false

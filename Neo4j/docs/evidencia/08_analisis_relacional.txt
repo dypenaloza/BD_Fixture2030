@@ -1,0 +1,85 @@
+===============================================================================
+EVIDENCIA 08 — Análisis relacional: camino, conectividad y centralidad (RF9)
+Fixture 2030 — Hito 5 (Grupo 12) | Módulo de grafos en Neo4j
+Capturado: 2026-09-11 13:45:38    
+===============================================================================
+
+cadenaDeSelecciones, partidosIntermedios, gradosDeSeparacion
+["Uruguay", "Costa de Marfil", "Nueva Zelanda"], ["F2030-126", "F2030-122"], 2
+campeon, gradosDeSeparacion, cantidadDeSelecciones
+"Uruguay", 1, 8
+"Uruguay", 2, 23
+"Uruguay", 3, 24
+"Uruguay", 4, 8
+seleccion, confederacion, rankingFifa, pj, gradoEnLaRed
+"Alemania", "UEFA", 8, 8, 8
+"Uruguay", "CONMEBOL", 14, 8, 8
+"Suiza", "UEFA", 20, 8, 7
+"Costa de Marfil", "CAF", 37, 8, 7
+"España", "UEFA", 3, 6, 6
+"Jamaica", "CONCACAF", 30, 6, 6
+"Nueva Zelanda", "OFC", 48, 6, 6
+"Suecia", "UEFA", 49, 6, 6
+"Marruecos", "CAF", 12, 5, 5
+"Japón", "AFC", 17, 5, 5
+"Nigeria", "CAF", 32, 5, 5
+"Noruega", "UEFA", 50, 5, 5
+conf1, conf2, cruces, tipo
+"UEFA", "UEFA", 32, "intra-confederación"
+"CONMEBOL", "UEFA", 15, "inter-confederación"
+"CAF", "CAF", 14, "intra-confederación"
+"AFC", "AFC", 11, "intra-confederación"
+"CONMEBOL", "CONMEBOL", 8, "intra-confederación"
+"CONCACAF", "UEFA", 8, "inter-confederación"
+"CONCACAF", "CONCACAF", 7, "intra-confederación"
+"AFC", "CONCACAF", 6, "inter-confederación"
+"CAF", "UEFA", 5, "inter-confederación"
+"CONCACAF", "CONMEBOL", 4, "inter-confederación"
+"AFC", "OFC", 4, "inter-confederación"
+"AFC", "CAF", 3, "inter-confederación"
+"CAF", "CONCACAF", 3, "inter-confederación"
+"AFC", "CONMEBOL", 2, "inter-confederación"
+"CAF", "CONMEBOL", 2, "inter-confederación"
+"AFC", "UEFA", 2, "inter-confederación"
+"CAF", "OFC", 1, "inter-confederación"
+"OFC", "UEFA", 1, "inter-confederación"
+proyeccion, selecciones, enlacesDeRivalidad
+"rivalidades", 64, 256
+seleccion, confederacion, partidosJugados, intermediacion
+"Uruguay", "CONMEBOL", 8, 876.97
+"Costa de Marfil", "CAF", 8, 754.07
+"Alemania", "UEFA", 8, 686.35
+"Suiza", "UEFA", 8, 666.2
+"Suecia", "UEFA", 6, 353.8
+"Nueva Zelanda", "OFC", 6, 292.08
+"Jamaica", "CONCACAF", 6, 230.45
+"España", "UEFA", 6, 219.93
+"Bolivia", "CONMEBOL", 5, 169.0
+"Japón", "AFC", 5, 146.41
+"Bélgica", "UEFA", 4, 138.5
+"Túnez", "CAF", 4, 137.55
+seleccion, rankingFifa, pageRank
+"Alemania", 8, 1.7106
+"Suiza", 20, 1.6875
+"Uruguay", 14, 1.6858
+"Costa de Marfil", 37, 1.6807
+"Jamaica", 30, 1.3714
+"Nueva Zelanda", 48, 1.3626
+"Suecia", 49, 1.3514
+"España", 3, 1.3079
+"Nigeria", 32, 1.1825
+"Japón", 17, 1.1823
+"Honduras", 60, 1.1767
+"Marruecos", 12, 1.1657
+comunidad, selecciones, gruposDeOrigen, cantidadDeGruposMezclados, ejemplos
+6, 12, ["A", "B", "C"], 3, ["Argentina", "Paraguay", "Uruguay", "España", "Portugal"]
+18, 8, ["D", "E"], 2, ["Bélgica", "Croacia", "Colombia", "Estados Unidos", "México"]
+31, 8, ["H", "I"], 2, ["Canadá", "Costa Rica", "Jamaica", "Panamá", "Nigeria"]
+37, 8, ["J", "K"], 2, ["Camerún", "Costa de Marfil", "Argelia", "Sudáfrica", "Arabia Saudita"]
+46, 8, ["L", "M"], 2, ["Irak", "Uzbekistán", "China", "Nueva Zelanda", "Suecia"]
+57, 8, ["N", "O"], 2, ["Escocia", "Gales", "Hungría", "Rumania", "Turquía"]
+23, 4, ["F"], 1, ["Suiza", "Dinamarca", "Austria", "Polonia"]
+26, 4, ["G"], 1, ["Serbia", "Chile", "Perú", "Ecuador"]
+62, 4, ["P"], 1, ["Haití", "Curazao", "India", "Vietnam"]
+limpieza
+"Proyeccion liberada: rivalidades"

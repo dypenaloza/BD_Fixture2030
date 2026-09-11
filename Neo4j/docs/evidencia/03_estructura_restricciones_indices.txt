@@ -1,0 +1,34 @@
+===============================================================================
+EVIDENCIA 03 — Restricciones de unicidad e índices (RF10)
+Fixture 2030 — Hito 5 (Grupo 12) | Módulo de grafos en Neo4j
+Capturado: 2026-09-11 13:45:03    
+===============================================================================
+
+name, type, labelsOrTypes, properties
+"confederacion_codigo_unico", "NODE_PROPERTY_UNIQUENESS", ["Confederacion"], ["codigo"]
+"equipo_id_unico", "NODE_PROPERTY_UNIQUENESS", ["Seleccion"], ["seleccionId"]
+"evento_id_unico", "NODE_PROPERTY_UNIQUENESS", ["Evento"], ["eventoId"]
+"fase_codigo_unico", "NODE_PROPERTY_UNIQUENESS", ["Fase"], ["codigo"]
+"grupo_codigo_unico", "NODE_PROPERTY_UNIQUENESS", ["Grupo"], ["codigo"]
+"jugador_id_unico", "NODE_PROPERTY_UNIQUENESS", ["Jugador"], ["jugadorId"]
+"partido_id_unico", "NODE_PROPERTY_UNIQUENESS", ["Partido"], ["partidoId"]
+"sede_id_unico", "NODE_PROPERTY_UNIQUENESS", ["Estadio"], ["estadioId"]
+name, type, labelsOrTypes, properties
+"confederacion_codigo_unico", "RANGE", ["Confederacion"], ["codigo"]
+"equipo_id_unico", "RANGE", ["Seleccion"], ["seleccionId"]
+"equipo_ranking", "RANGE", ["Seleccion"], ["ranking"]
+"equipos_por_nombre", "FULLTEXT", ["Seleccion"], ["pais", "nombre"]
+"evento_id_unico", "RANGE", ["Evento"], ["eventoId"]
+"evento_tipo", "RANGE", ["Evento"], ["tipo"]
+"fase_codigo_unico", "RANGE", ["Fase"], ["codigo"]
+"fase_orden", "RANGE", ["Fase"], ["orden"]
+"grupo_codigo_unico", "RANGE", ["Grupo"], ["codigo"]
+"index_1b9dcc97", "LOOKUP", NULL, NULL
+"index_460996c0", "LOOKUP", NULL, NULL
+"jugador_id_unico", "RANGE", ["Jugador"], ["jugadorId"]
+"jugador_posicion", "RANGE", ["Jugador"], ["posicion"]
+"jugadores_por_nombre", "FULLTEXT", ["Jugador"], ["nombre", "apellido", "club"]
+"partido_fecha", "RANGE", ["Partido"], ["fecha"]
+"partido_fecha_hora", "RANGE", ["Partido"], ["fecha", "hora"]
+"partido_id_unico", "RANGE", ["Partido"], ["partidoId"]
+"sede_id_unico", "RANGE", ["Estadio"], ["estadioId"]

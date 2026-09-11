@@ -1,0 +1,46 @@
+===============================================================================
+EVIDENCIA 05 — Verificación de coherencia del subgrafo (RNF6, RNF7)
+Fixture 2030 — Hito 5 (Grupo 12) | Módulo de grafos en Neo4j
+Capturado: 2026-09-11 13:45:21    
+===============================================================================
+
+NOTA: los controles cuyo valor esperado es "0 filas" no imprimen salida
+cuando pasan. Ver los valores esperados en queries/verificacion.cypher.
+
+etiqueta, nodos
+"Confederacion", 6
+"Estadio", 18
+"Evento", 753
+"Fase", 7
+"Grupo", 16
+"Jugador", 1536
+"Partido", 128
+"Seleccion", 64
+relacion, relaciones
+"AFILIADO_A", 64
+"CORRESPONDE_A", 128
+"EN_PAIS_DE", 18
+"INTEGRA", 64
+"OCURRE_EN", 753
+"PARTICIPA_EN", 256
+"PERTENECE_A", 1536
+"PROTAGONIZADO_POR", 753
+"SE_JUEGA_EN", 128
+equipos, conFormatoValido, conFormatoInvalido
+64, 64, 0
+jugadores, prefijoCoincide, prefijoNoCoincide
+1536, 1536, 0
+orden, fase, partidos
+1, "Fase de grupos", 96
+2, "Dieciseisavos de final", 16
+3, "Octavos de final", 8
+4, "Cuartos de final", 4
+5, "Semifinales", 2
+6, "Partido por el tercer puesto", 1
+7, "Final", 1
+restricciones
+8
+indicesDeclarados
+16
+nodosTotales, relacionesTotales
+2528, 3700

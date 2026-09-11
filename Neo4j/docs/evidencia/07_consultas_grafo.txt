@@ -1,0 +1,165 @@
+===============================================================================
+EVIDENCIA 07 — Consultas con patrones de grafo (RF8)
+Fixture 2030 — Hito 5 (Grupo 12) | Módulo de grafos en Neo4j
+Capturado: 2026-09-11 13:45:30    
+===============================================================================
+
+dorsal, jugador, posicion, club, capitan
+1, "Wilfredo Zabala", "Delantero", "Ceuta FC", FALSE
+2, "Che Abellán", "Mediocampista", "Ávila FC", FALSE
+3, "Salomón Pérez", "Delantero", "Ciudad FC", FALSE
+4, "Víctor Ortuño", "Defensor", "Burgos CF", FALSE
+5, "Máximo Perales", "Defensor", "Castellón SC", FALSE
+6, "Mateo Oliveras", "Mediocampista", "Valencia FC", FALSE
+7, "Calisto Ariza", "Mediocampista", "Segovia FC", FALSE
+8, "Emiliano Avilés", "Mediocampista", "Burgos AC", TRUE
+9, "Benjamín Nevado", "Defensor", "Cáceres FC", FALSE
+10, "Calisto Jove", "Defensor", "Baleares FC", FALSE
+11, "Enrique Benavides", "Mediocampista", "Cádiz CF", FALSE
+12, "Ciro Antúnez", "Defensor", "Lugo SC", FALSE
+13, "Ignacio Márquez", "Arquero", "Palencia SC", FALSE
+14, "Sancho Benito", "Mediocampista", "Girona FC", FALSE
+15, "Marcelo Badía", "Delantero", "Jaén FC", FALSE
+16, "Nico Moreno", "Delantero", "Ciudad FC", FALSE
+17, "Emigdio Gimeno", "Defensor", "Segovia AC", FALSE
+18, "Goyo Araujo", "Mediocampista", "Guipúzcoa FC", FALSE
+19, "Emiliano Cerdá", "Arquero", "Asturias CF", FALSE
+20, "Pastor Sanmartín", "Arquero", "Tarragona SC", FALSE
+21, "Sebastian Hurtado", "Defensor", "Girona AC", FALSE
+22, "Severiano Lucena", "Mediocampista", "Burgos FC", FALSE
+23, "Casemiro Gilabert", "Defensor", "Barcelona FC", FALSE
+24, "Jonatan Alberdi", "Delantero", "Valencia FC", FALSE
+partido, hora, local, marcador, visitante, sede, ciudad
+"F2030-001", "13:00", "Argentina", "1-2", "España", "Estadio Monumental", "Buenos Aires"
+"F2030-002", "19:00", "Uruguay", "3-0", "Paraguay", "Estadio Defensores del Chaco", "Asunción"
+fecha, fase, rival, marcador, resultado
+2030-06-13, "Fase de grupos", "España", "1-2", "derrota"
+2030-06-19, "Fase de grupos", "Uruguay", "1-1", "empate"
+2030-06-24, "Fase de grupos", "Paraguay", "1-2", "derrota"
+rival, partidosCruzados, algunosDelanteros
+"Alemania", 1, ["Quirino Martinez", "Graciano Viana", "Victorino Franch"]
+"Argentina", 1, ["Albano Busquets", "Carlos Castejón", "Jose Manuel Vaquero"]
+"Bolivia", 1, ["Candelario Alfonso", "Leocadio Uriarte", "Patricio Saez"]
+"Costa de Marfil", 1, ["Adán Tapia", "Elpidio Crespo", "Alejo Tejada"]
+"Curazao", 1, ["Anacleto Pera", "Nazario Llanos", "Paulino Viñas"]
+"España", 1, ["Albino Malo", "Juan Carlos Agudo", "Martin Lerma"]
+"Paraguay", 1, ["Gervasio Soriano", "Román Piquer", "Cristian Vara"]
+"Suecia", 1, ["Alejo Quintero", "Gerardo Porcel", "Armando Bermejo"]
+goleador, seleccion, posicion, goles, fases
+"Aníbal Abascal", "Suiza", "Delantero", 3, ["Fase de grupos", "Dieciseisavos de final"]
+"Armando Bermejo", "Suecia", "Delantero", 3, ["Fase de grupos", "Octavos de final", "Cuartos de final"]
+"Buenaventura Rojas", "Alemania", "Mediocampista", 3, ["Fase de grupos", "Octavos de final", "Semifinales"]
+"Goyo Araujo", "Uruguay", "Mediocampista", 3, ["Fase de grupos", "Dieciseisavos de final", "Cuartos de final"]
+"Javier Ferrando", "España", "Defensor", 3, ["Fase de grupos"]
+"Jose Carlos Gonzalez", "Países Bajos", "Delantero", 3, ["Fase de grupos"]
+"Adrián Piña", "Australia", "Delantero", 2, ["Fase de grupos", "Dieciseisavos de final"]
+"Alcides Salvà", "México", "Mediocampista", 2, ["Fase de grupos"]
+"Amado Gonzalo", "Noruega", "Delantero", 2, ["Fase de grupos"]
+"Angelino Fortuny", "Bélgica", "Delantero", 2, ["Fase de grupos"]
+"Bartolomé Morata", "Portugal", "Mediocampista", 2, ["Fase de grupos"]
+"Benigno Leiva", "Bélgica", "Delantero", 2, ["Fase de grupos", "Dieciseisavos de final"]
+"Borja Alemán", "Sudáfrica", "Delantero", 2, ["Fase de grupos"]
+"Candelario Alfonso", "Bolivia", "Delantero", 2, ["Fase de grupos", "Dieciseisavos de final"]
+"Custodio Manso", "Alemania", "Defensor", 2, ["Dieciseisavos de final", "Cuartos de final"]
+seleccion, partidosEnCasa, estadios, golesConvertidos, resultados
+"España", 4, ["Estadio Santiago Bernabéu", "Estadio Santiago Bernabéu", "Estadio Metropolitano", "Spotify Camp Nou"], 11, ["victoria", "victoria", "victoria", "victoria"]
+"Argentina", 1, ["Estadio Monumental"], 1, ["derrota"]
+"Paraguay", 1, ["Estadio Defensores del Chaco"], 0, ["derrota"]
+"Uruguay", 1, ["Estadio Centenario"], 1, ["empate"]
+seleccion, pj, pg, pe, pp, gf, gc, dg, puntos
+"España", 3, 3, 0, 0, 9, 4, 5, 9
+"Uruguay", 3, 1, 1, 1, 6, 4, 2, 4
+"Paraguay", 3, 1, 0, 2, 3, 8, -5, 3
+"Argentina", 3, 0, 1, 2, 3, 5, -2, 1
+etapa, fase, fecha, campeon, rival, marcador, resultado, sede
+1, "Fase de grupos", 2030-06-13, "Uruguay", "Paraguay", "3-0", "victoria", "Estadio Defensores del Chaco"
+1, "Fase de grupos", 2030-06-19, "Uruguay", "Argentina", "1-1", "empate", "Estadio Centenario"
+1, "Fase de grupos", 2030-06-24, "Uruguay", "España", "2-3", "derrota", "Spotify Camp Nou"
+2, "Dieciseisavos de final", 2030-07-02, "Uruguay", "Curazao", "2-0", "victoria", "Estadio Santiago Bernabéu"
+3, "Octavos de final", 2030-07-05, "Uruguay", "Bolivia", "2-0", "victoria", "Estadio de Fez"
+4, "Cuartos de final", 2030-07-09, "Uruguay", "Suecia", "5-2", "victoria", "Estádio da Luz"
+5, "Semifinales", 2030-07-13, "Uruguay", "Costa de Marfil", "1-0", "victoria", "Estádio da Luz"
+7, "Final", 2030-07-17, "Uruguay", "Alemania", "2-0", "victoria", "Estadio Santiago Bernabéu"
+seleccionASegundoGrado, ranking, rivalesEnComun, atravesDe
+"Francia", 2, 2, ["Portugal", "Marruecos"]
+"Brasil", 5, 2, ["Portugal", "Marruecos"]
+"Italia", 9, 2, ["Marruecos", "Alemania"]
+"Inglaterra", 4, 1, ["Alemania"]
+"Países Bajos", 7, 1, ["Alemania"]
+"Bélgica", 10, 1, ["Alemania"]
+"Japón", 17, 1, ["Alemania"]
+"Suiza", 20, 1, ["Alemania"]
+"Costa de Marfil", 37, 1, ["Uruguay"]
+"Suecia", 49, 1, ["Uruguay"]
+"Bolivia", 59, 1, ["Uruguay"]
+"Curazao", 62, 1, ["Uruguay"]
+sede, ciudad, capacidad, partidos, seleccionesDistintas
+"Spotify Camp Nou", "Barcelona", 105000, 11, 17
+"Estadio Santiago Bernabéu", "Madrid", 83186, 10, 16
+"Estádio da Luz", "Lisboa", 64642, 10, 17
+"Grand Stade Hassan II", "Casablanca", 115000, 10, 16
+"Estadio Adrar", "Agadir", 45480, 9, 13
+"Estadio Metropolitano", "Madrid", 70460, 9, 16
+"Estadio Moulay Abdellah", "Rabat", 68700, 8, 14
+"Estadio de Fez", "Fez", 45000, 8, 15
+"Estadio de Mestalla", "Valencia", 49500, 8, 15
+"Estadio Ibn Batouta", "Tánger", 75600, 7, 13
+"Estadio La Cartuja", "Sevilla", 70000, 7, 13
+"Estadio de Marrakech", "Marrakech", 45240, 7, 13
+"Estádio José Alvalade", "Lisboa", 50095, 7, 13
+"Estádio do Dragão", "Oporto", 50033, 7, 13
+"San Mamés", "Bilbao", 53289, 7, 12
+"Estadio Centenario", "Montevideo", 60000, 1, 2
+"Estadio Defensores del Chaco", "Asunción", 42000, 1, 2
+"Estadio Monumental", "Buenos Aires", 84567, 1, 2
+fecha, jugador, posicion, seleccion, minuto, partido, ciudad
+2030-06-13, "Baudelio Romeu", "Mediocampista", "Argentina", 2, "F2030-001", "Buenos Aires"
+2030-06-13, "Javier Ferrando", "Defensor", "España", 11, "F2030-001", "Buenos Aires"
+2030-06-14, "Fito Bou", "Mediocampista", "Dinamarca", 7, "F2030-012", "Oporto"
+2030-06-14, "Paulino Cases", "Mediocampista", "Portugal", 16, "F2030-004", "Madrid"
+2030-06-14, "Adolfo Rodrigo", "Defensor", "Nigeria", 35, "F2030-017", "Fez"
+2030-06-14, "Patricio Sáenz", "Mediocampista", "Ghana", 36, "F2030-017", "Fez"
+2030-06-14, "Lucas Naranjo", "Mediocampista", "Curazao", 39, "F2030-031", "Agadir"
+2030-06-14, "Emigdio Juliá", "Defensor", "Nueva Zelanda", 40, "F2030-023", "Lisboa"
+2030-06-14, "Conrado Cabañas", "Mediocampista", "Australia", 52, "F2030-021", "Bilbao"
+2030-06-14, "David Valle", "Mediocampista", "Catar", 59, "F2030-021", "Bilbao"
+2030-06-19, "Abel Corbacho", "Mediocampista", "Croacia", 25, "F2030-039", "Lisboa"
+2030-06-19, "Nicodemo Aguiló", "Defensor", "Austria", 25, "F2030-043", "Casablanca"
+2030-06-19, "Sebastian Mesa", "Defensor", "Camerún", 27, "F2030-052", "Barcelona"
+2030-06-19, "Bonifacio Girona", "Delantero", "Marruecos", 29, "F2030-034", "Barcelona"
+2030-06-19, "Calisto Alfaro", "Defensor", "Bélgica", 62, "F2030-038", "Valencia"
+2030-06-19, "Alejo Esteban", "Defensor", "Senegal", 71, "F2030-040", "Oporto"
+2030-06-19, "Isidoro Granados", "Defensor", "Corea del Sur", 84, "F2030-041", "Lisboa"
+2030-06-19, "Juan José Belmonte", "Defensor", "Bolivia", 90, "F2030-061", "Tánger"
+2030-06-24, "Gastón Cervera", "Delantero", "Gales", 1, "F2030-092", "Agadir"
+2030-06-24, "Melchor Pereira", "Defensor", "Austria", 16, "F2030-075", "Tánger"
+relevancia, jugador, dorsal, seleccion, club
+2.919, "Espiridión Pérez", 5, "Haití", "La Rioja FC"
+2.919, "Salomón Pérez", 3, "Uruguay", "Ciudad FC"
+2.335, "Cipriano Perez", 5, "Argentina", "Cantabria FC"
+2.335, "Vasco Perez", 4, "Curazao", "Cuenca AC"
+1.751, "Ambrosio Perea", 23, "Japón", "Málaga CF"
+1.751, "Juan Luis Perea", 5, "Suecia", "Cáceres SC"
+1.591, "Isidro Jerez", 24, "Chile", "Cádiz CF"
+1.591, "Juan Luis Jerez", 4, "Alemania", "Girona SC"
+1.591, "Juan Pablo Jerez", 21, "Inglaterra", "Cantabria FC"
+1.591, "Víctor Jerez", 21, "Uzbekistán", "Girona SC"
+partido, fecha, fase, local, marcador, visitante, totalGoles
+"F2030-070", 2030-06-24, "Fase de grupos", "Países Bajos", "5-3", "Alemania", 8
+"F2030-042", 2030-06-19, "Fase de grupos", "Dinamarca", "3-4", "Polonia", 7
+"F2030-124", 2030-07-09, "Cuartos de final", "Suecia", "2-5", "Uruguay", 7
+"F2030-027", 2030-06-14, "Fase de grupos", "Hungría", "4-2", "Rumania", 6
+"F2030-005", 2030-06-14, "Fase de grupos", "Inglaterra", "4-2", "Países Bajos", 6
+"F2030-035", 2030-06-19, "Fase de grupos", "Francia", "1-5", "Portugal", 6
+"F2030-037", 2030-06-19, "Fase de grupos", "Países Bajos", "3-3", "Italia", 6
+"F2030-087", 2030-06-24, "Fase de grupos", "Irak", "5-1", "Nueva Zelanda", 6
+"F2030-104", 2030-06-30, "Dieciseisavos de final", "Gales", "3-3", "Honduras", 6
+"F2030-105", 2030-07-01, "Dieciseisavos de final", "Alemania", "4-2", "Bélgica", 6
+camino1, camino2, camino3
+(:Seleccion {entrenador: "Saturnina Cazorla Martorell", anfitrion: TRUE, seleccionId: "URU", escudo: "https://fixture2030.example.com/escudos/uru.png", ranking: 14, nombre: "Selección de Uruguay", pais: "Uruguay"})-[:PARTICIPA_EN {golesRecibidos: 0, resultado: "victoria", goles: 2, rol: "visitante"}]->(:Partido {fecha: 2030-07-17, estado: "finalizado", golesLocal: 0, hora: "13:00", definidoPor: "tiempo_reglamentario", partidoId: "F2030-128", golesVisitante: 2})-[:SE_JUEGA_EN]->(:Estadio {estadioId: "MAD-BER", nombre: "Estadio Santiago Bernabéu", ciudad: "Madrid", capacidad: 83186}), (:Evento {tipo: "tarjeta_amarilla", eventoId: "EV-F2030-128-07", minuto: 55, detalle: "Infracción táctica"})-[:OCURRE_EN]->(:Partido {fecha: 2030-07-17, estado: "finalizado", golesLocal: 0, hora: "13:00", definidoPor: "tiempo_reglamentario", partidoId: "F2030-128", golesVisitante: 2}), (:Evento {tipo: "tarjeta_amarilla", eventoId: "EV-F2030-128-07", minuto: 55, detalle: "Infracción táctica"})-[:PROTAGONIZADO_POR]->(:Jugador {posicion: "Mediocampista", capitan: FALSE, jugadorId: "URU-07", dorsal: 7, peso: 75.1, fechaNacimiento: 2000-03-10, altura: 178, apellido: "Ariza", club: "Segovia FC", nombreCompleto: "Calisto Ariza", nombre: "Calisto"})-[:PERTENECE_A]->(:Seleccion {entrenador: "Saturnina Cazorla Martorell", anfitrion: TRUE, seleccionId: "URU", escudo: "https://fixture2030.example.com/escudos/uru.png", ranking: 14, nombre: "Selección de Uruguay", pais: "Uruguay"})
+(:Seleccion {entrenador: "Saturnina Cazorla Martorell", anfitrion: TRUE, seleccionId: "URU", escudo: "https://fixture2030.example.com/escudos/uru.png", ranking: 14, nombre: "Selección de Uruguay", pais: "Uruguay"})-[:PARTICIPA_EN {golesRecibidos: 0, resultado: "victoria", goles: 2, rol: "visitante"}]->(:Partido {fecha: 2030-07-17, estado: "finalizado", golesLocal: 0, hora: "13:00", definidoPor: "tiempo_reglamentario", partidoId: "F2030-128", golesVisitante: 2})-[:SE_JUEGA_EN]->(:Estadio {estadioId: "MAD-BER", nombre: "Estadio Santiago Bernabéu", ciudad: "Madrid", capacidad: 83186}), (:Evento {tipo: "gol", eventoId: "EV-F2030-128-02", minuto: 13, detalle: "Gol en jugada"})-[:OCURRE_EN]->(:Partido {fecha: 2030-07-17, estado: "finalizado", golesLocal: 0, hora: "13:00", definidoPor: "tiempo_reglamentario", partidoId: "F2030-128", golesVisitante: 2}), (:Evento {tipo: "gol", eventoId: "EV-F2030-128-02", minuto: 13, detalle: "Gol en jugada"})-[:PROTAGONIZADO_POR]->(:Jugador {posicion: "Delantero", capitan: FALSE, jugadorId: "URU-15", dorsal: 15, altura: 186, peso: 76.2, fechaNacimiento: 2005-03-01, apellido: "Badía", club: "Jaén FC", nombreCompleto: "Marcelo Badía", nombre: "Marcelo"})-[:PERTENECE_A]->(:Seleccion {entrenador: "Saturnina Cazorla Martorell", anfitrion: TRUE, seleccionId: "URU", escudo: "https://fixture2030.example.com/escudos/uru.png", ranking: 14, nombre: "Selección de Uruguay", pais: "Uruguay"})
+(:Seleccion {entrenador: "Natividad Mateo Morera", anfitrion: FALSE, seleccionId: "GER", escudo: "https://fixture2030.example.com/escudos/ger.png", ranking: 8, nombre: "Selección de Alemania", pais: "Alemania"})-[:PARTICIPA_EN {golesRecibidos: 2, resultado: "derrota", goles: 0, rol: "local"}]->(:Partido {fecha: 2030-07-17, estado: "finalizado", golesLocal: 0, hora: "13:00", definidoPor: "tiempo_reglamentario", partidoId: "F2030-128", golesVisitante: 2})-[:SE_JUEGA_EN]->(:Estadio {estadioId: "MAD-BER", nombre: "Estadio Santiago Bernabéu", ciudad: "Madrid", capacidad: 83186}), (:Evento {tipo: "tarjeta_amarilla", eventoId: "EV-F2030-128-05", minuto: 5, detalle: "Infracción táctica"})-[:OCURRE_EN]->(:Partido {fecha: 2030-07-17, estado: "finalizado", golesLocal: 0, hora: "13:00", definidoPor: "tiempo_reglamentario", partidoId: "F2030-128", golesVisitante: 2}), (:Evento {tipo: "tarjeta_amarilla", eventoId: "EV-F2030-128-05", minuto: 5, detalle: "Infracción táctica"})-[:PROTAGONIZADO_POR]->(:Jugador {posicion: "Defensor", capitan: FALSE, jugadorId: "GER-03", dorsal: 3, peso: 74.0, fechaNacimiento: 2008-02-09, altura: 181, apellido: "Nevado", club: "Asturias CF", nombreCompleto: "Iván Nevado", nombre: "Iván"})-[:PERTENECE_A]->(:Seleccion {entrenador: "Natividad Mateo Morera", anfitrion: FALSE, seleccionId: "GER", escudo: "https://fixture2030.example.com/escudos/ger.png", ranking: 8, nombre: "Selección de Alemania", pais: "Alemania"})
+(:Seleccion {entrenador: "Natividad Mateo Morera", anfitrion: FALSE, seleccionId: "GER", escudo: "https://fixture2030.example.com/escudos/ger.png", ranking: 8, nombre: "Selección de Alemania", pais: "Alemania"})-[:PARTICIPA_EN {golesRecibidos: 2, resultado: "derrota", goles: 0, rol: "local"}]->(:Partido {fecha: 2030-07-17, estado: "finalizado", golesLocal: 0, hora: "13:00", definidoPor: "tiempo_reglamentario", partidoId: "F2030-128", golesVisitante: 2})-[:SE_JUEGA_EN]->(:Estadio {estadioId: "MAD-BER", nombre: "Estadio Santiago Bernabéu", ciudad: "Madrid", capacidad: 83186}), (:Evento {tipo: "tarjeta_amarilla", eventoId: "EV-F2030-128-04", minuto: 72, detalle: "Infracción táctica"})-[:OCURRE_EN]->(:Partido {fecha: 2030-07-17, estado: "finalizado", golesLocal: 0, hora: "13:00", definidoPor: "tiempo_reglamentario", partidoId: "F2030-128", golesVisitante: 2}), (:Evento {tipo: "tarjeta_amarilla", eventoId: "EV-F2030-128-04", minuto: 72, detalle: "Infracción táctica"})-[:PROTAGONIZADO_POR]->(:Jugador {posicion: "Arquero", capitan: FALSE, jugadorId: "GER-19", dorsal: 19, altura: 189, peso: 81.5, fechaNacimiento: 1998-02-18, apellido: "Madrid", club: "Guipúzcoa FC", nombreCompleto: "Patricio Madrid", nombre: "Patricio"})-[:PERTENECE_A]->(:Seleccion {entrenador: "Natividad Mateo Morera", anfitrion: FALSE, seleccionId: "GER", escudo: "https://fixture2030.example.com/escudos/ger.png", ranking: 8, nombre: "Selección de Alemania", pais: "Alemania"})
+(:Seleccion {entrenador: "Natividad Mateo Morera", anfitrion: FALSE, seleccionId: "GER", escudo: "https://fixture2030.example.com/escudos/ger.png", ranking: 8, nombre: "Selección de Alemania", pais: "Alemania"})-[:PARTICIPA_EN {golesRecibidos: 2, resultado: "derrota", goles: 0, rol: "local"}]->(:Partido {fecha: 2030-07-17, estado: "finalizado", golesLocal: 0, hora: "13:00", definidoPor: "tiempo_reglamentario", partidoId: "F2030-128", golesVisitante: 2})-[:SE_JUEGA_EN]->(:Estadio {estadioId: "MAD-BER", nombre: "Estadio Santiago Bernabéu", ciudad: "Madrid", capacidad: 83186}), (:Evento {tipo: "tarjeta_amarilla", eventoId: "EV-F2030-128-03", minuto: 36, detalle: "Infracción táctica"})-[:OCURRE_EN]->(:Partido {fecha: 2030-07-17, estado: "finalizado", golesLocal: 0, hora: "13:00", definidoPor: "tiempo_reglamentario", partidoId: "F2030-128", golesVisitante: 2}), (:Evento {tipo: "tarjeta_amarilla", eventoId: "EV-F2030-128-03", minuto: 36, detalle: "Infracción táctica"})-[:PROTAGONIZADO_POR]->(:Jugador {posicion: "Mediocampista", capitan: FALSE, jugadorId: "GER-23", dorsal: 23, peso: 72.0, fechaNacimiento: 1990-01-24, altura: 181, apellido: "Vicens", club: "Cáceres AC", nombreCompleto: "Natalio Vicens", nombre: "Natalio"})-[:PERTENECE_A]->(:Seleccion {entrenador: "Natividad Mateo Morera", anfitrion: FALSE, seleccionId: "GER", escudo: "https://fixture2030.example.com/escudos/ger.png", ranking: 8, nombre: "Selección de Alemania", pais: "Alemania"})
+(:Seleccion {entrenador: "Saturnina Cazorla Martorell", anfitrion: TRUE, seleccionId: "URU", escudo: "https://fixture2030.example.com/escudos/uru.png", ranking: 14, nombre: "Selección de Uruguay", pais: "Uruguay"})-[:PARTICIPA_EN {golesRecibidos: 0, resultado: "victoria", goles: 2, rol: "visitante"}]->(:Partido {fecha: 2030-07-17, estado: "finalizado", golesLocal: 0, hora: "13:00", definidoPor: "tiempo_reglamentario", partidoId: "F2030-128", golesVisitante: 2})-[:SE_JUEGA_EN]->(:Estadio {estadioId: "MAD-BER", nombre: "Estadio Santiago Bernabéu", ciudad: "Madrid", capacidad: 83186}), (:Evento {tipo: "gol", eventoId: "EV-F2030-128-01", minuto: 2, detalle: "Gol en jugada"})-[:OCURRE_EN]->(:Partido {fecha: 2030-07-17, estado: "finalizado", golesLocal: 0, hora: "13:00", definidoPor: "tiempo_reglamentario", partidoId: "F2030-128", golesVisitante: 2}), (:Evento {tipo: "gol", eventoId: "EV-F2030-128-01", minuto: 2, detalle: "Gol en jugada"})-[:PROTAGONIZADO_POR]->(:Jugador {posicion: "Mediocampista", capitan: TRUE, jugadorId: "URU-08", dorsal: 8, altura: 184, peso: 69.9, fechaNacimiento: 2006-06-23, apellido: "Avilés", club: "Burgos AC", nombreCompleto: "Emiliano Avilés", nombre: "Emiliano"})-[:PERTENECE_A]->(:Seleccion {entrenador: "Saturnina Cazorla Martorell", anfitrion: TRUE, seleccionId: "URU", escudo: "https://fixture2030.example.com/escudos/uru.png", ranking: 14, nombre: "Selección de Uruguay", pais: "Uruguay"})
+(:Seleccion {entrenador: "Saturnina Cazorla Martorell", anfitrion: TRUE, seleccionId: "URU", escudo: "https://fixture2030.example.com/escudos/uru.png", ranking: 14, nombre: "Selección de Uruguay", pais: "Uruguay"})-[:PARTICIPA_EN {golesRecibidos: 0, resultado: "victoria", goles: 2, rol: "visitante"}]->(:Partido {fecha: 2030-07-17, estado: "finalizado", golesLocal: 0, hora: "13:00", definidoPor: "tiempo_reglamentario", partidoId: "F2030-128", golesVisitante: 2})-[:SE_JUEGA_EN]->(:Estadio {estadioId: "MAD-BER", nombre: "Estadio Santiago Bernabéu", ciudad: "Madrid", capacidad: 83186}), (:Evento {tipo: "tarjeta_amarilla", eventoId: "EV-F2030-128-06", minuto: 49, detalle: "Infracción táctica"})-[:OCURRE_EN]->(:Partido {fecha: 2030-07-17, estado: "finalizado", golesLocal: 0, hora: "13:00", definidoPor: "tiempo_reglamentario", partidoId: "F2030-128", golesVisitante: 2}), (:Evento {tipo: "tarjeta_amarilla", eventoId: "EV-F2030-128-06", minuto: 49, detalle: "Infracción táctica"})-[:PROTAGONIZADO_POR]->(:Jugador {posicion: "Defensor", capitan: FALSE, jugadorId: "URU-23", dorsal: 23, altura: 194, peso: 90.5, fechaNacimiento: 1999-10-12, apellido: "Gilabert", club: "Barcelona FC", nombreCompleto: "Casemiro Gilabert", nombre: "Casemiro"})-[:PERTENECE_A]->(:Seleccion {entrenador: "Saturnina Cazorla Martorell", anfitrion: TRUE, seleccionId: "URU", escudo: "https://fixture2030.example.com/escudos/uru.png", ranking: 14, nombre: "Selección de Uruguay", pais: "Uruguay"})

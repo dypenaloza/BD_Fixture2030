@@ -1,0 +1,65 @@
+===============================================================================
+EVIDENCIA 02 — Generación reproducible del dataset (RF6, RNF3)
+Fixture 2030 — Hito 5 (Grupo 12) | Módulo de grafos en Neo4j
+Capturado: 2026-09-11 13:45:01    
+===============================================================================
+
+--- Primera corrida de import/generar_dataset.py -----------------------------
+Fuente Hito 4: C:\JBM\notes\FACULTAD\BASES_DE_DATOS_2\TPO\CODE\BD_Fixture2030\MongoDB\data
+
+CSVs generados en C:\JBM\notes\FACULTAD\BASES_DE_DATOS_2\TPO\CODE\BD_Fixture2030\Neo4j\import
+  confederaciones.csv          6 filas
+  grupos.csv                  16 filas
+  fases.csv                    7 filas
+  selecciones.csv             64 filas
+  jugadores.csv             1536 filas
+  estadios.csv                18 filas
+  partidos.csv               128 filas
+  participaciones.csv        256 filas
+  eventos.csv                753 filas
+
+Semilla: 2030 (dataset reproducible)
+Equipos: 64 | Jugadores: 1536 | Estadios: 18 | Partidos: 128 | Participaciones: 256 | Eventos: 753
+Final (F2030-128): GER 0-2 URU -> campeon URU (Uruguay)
+Todos los controles de coherencia pasaron.
+
+--- Huellas MD5 de los CSV generados -----------------------------------------
+3fca0980f5ab0a186d208620d17625a4 *./confederaciones.csv
+68cd11f68e024120e7b74dfe6952cbf8 *./estadios.csv
+2e515c203d0a1748fef0070e7919d36e *./eventos.csv
+76766fa99e9545b613a306a49fbdb187 *./fases.csv
+b0d7a62eae323a4967013112ccd91223 *./grupos.csv
+74009b5cae97be95c972267f256f52b3 *./jugadores.csv
+31eb88548bfe5994021bc535c830ad3d *./participaciones.csv
+ed294dd0c624bbfda02b8e81ccb1637e *./partidos.csv
+3f1e4fa491967fa9f5e3d8c15933b445 *./selecciones.csv
+
+--- Segunda corrida: misma semilla, mismo resultado --------------------------
+Fuente Hito 4: C:\JBM\notes\FACULTAD\BASES_DE_DATOS_2\TPO\CODE\BD_Fixture2030\MongoDB\data
+
+CSVs generados en C:\JBM\notes\FACULTAD\BASES_DE_DATOS_2\TPO\CODE\BD_Fixture2030\Neo4j\import
+  confederaciones.csv          6 filas
+  grupos.csv                  16 filas
+  fases.csv                    7 filas
+  selecciones.csv             64 filas
+  jugadores.csv             1536 filas
+  estadios.csv                18 filas
+  partidos.csv               128 filas
+  participaciones.csv        256 filas
+  eventos.csv                753 filas
+
+Semilla: 2030 (dataset reproducible)
+Equipos: 64 | Jugadores: 1536 | Estadios: 18 | Partidos: 128 | Participaciones: 256 | Eventos: 753
+Final (F2030-128): GER 0-2 URU -> campeon URU (Uruguay)
+Todos los controles de coherencia pasaron.
+
+--- Huellas MD5 tras la segunda corrida (deben ser IDENTICAS) ----------------
+3fca0980f5ab0a186d208620d17625a4 *./confederaciones.csv
+68cd11f68e024120e7b74dfe6952cbf8 *./estadios.csv
+2e515c203d0a1748fef0070e7919d36e *./eventos.csv
+76766fa99e9545b613a306a49fbdb187 *./fases.csv
+b0d7a62eae323a4967013112ccd91223 *./grupos.csv
+74009b5cae97be95c972267f256f52b3 *./jugadores.csv
+31eb88548bfe5994021bc535c830ad3d *./participaciones.csv
+ed294dd0c624bbfda02b8e81ccb1637e *./partidos.csv
+3f1e4fa491967fa9f5e3d8c15933b445 *./selecciones.csv

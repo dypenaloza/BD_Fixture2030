@@ -1,0 +1,754 @@
+eventoId,partidoId,jugadorId,seleccionId,tipo,minuto,detalle
+EV-F2030-001-06,F2030-001,ARG-23,ARG,tarjeta_roja,2,Expulsión
+EV-F2030-001-02,F2030-001,ESP-14,ESP,gol,4,Gol en jugada
+EV-F2030-001-08,F2030-001,ESP-13,ESP,tarjeta_roja,11,Expulsión
+EV-F2030-001-03,F2030-001,ESP-06,ESP,gol,36,Gol en jugada
+EV-F2030-001-07,F2030-001,ESP-15,ESP,tarjeta_amarilla,39,Infracción táctica
+EV-F2030-001-05,F2030-001,ARG-23,ARG,tarjeta_amarilla,40,Infracción táctica
+EV-F2030-001-01,F2030-001,ARG-04,ARG,gol,42,Gol en jugada
+EV-F2030-001-04,F2030-001,ARG-09,ARG,tarjeta_amarilla,71,Infracción táctica
+EV-F2030-001-09,F2030-001,ESP-02,ESP,tarjeta_amarilla,84,Infracción táctica
+EV-F2030-002-03,F2030-002,URU-01,URU,penal_convertido,5,Gol de penal
+EV-F2030-002-02,F2030-002,URU-23,URU,penal_convertido,17,Gol de penal
+EV-F2030-002-01,F2030-002,URU-06,URU,penal_convertido,25,Gol de penal
+EV-F2030-002-05,F2030-002,PAR-16,PAR,tarjeta_amarilla,51,Infracción táctica
+EV-F2030-002-04,F2030-002,PAR-17,PAR,tarjeta_amarilla,67,Infracción táctica
+EV-F2030-003-02,F2030-003,FRA-08,FRA,gol,20,Gol en jugada
+EV-F2030-003-07,F2030-003,BRA-07,BRA,tarjeta_amarilla,39,Infracción táctica
+EV-F2030-003-01,F2030-003,FRA-08,FRA,penal_convertido,41,Gol de penal
+EV-F2030-003-04,F2030-003,FRA-15,FRA,tarjeta_amarilla,43,Infracción táctica
+EV-F2030-003-03,F2030-003,BRA-19,BRA,penal_convertido,55,Gol de penal
+EV-F2030-003-05,F2030-003,FRA-07,FRA,tarjeta_amarilla,61,Infracción táctica
+EV-F2030-003-06,F2030-003,BRA-09,BRA,tarjeta_amarilla,88,Infracción táctica
+EV-F2030-004-03,F2030-004,MAR-02,MAR,tarjeta_amarilla,14,Infracción táctica
+EV-F2030-004-02,F2030-004,POR-12,POR,tarjeta_roja,16,Expulsión
+EV-F2030-004-01,F2030-004,POR-03,POR,gol,32,Gol en jugada
+EV-F2030-005-02,F2030-005,ENG-03,ENG,gol,7,Gol en jugada
+EV-F2030-005-08,F2030-005,ENG-16,ENG,tarjeta_amarilla,10,Infracción táctica
+EV-F2030-005-05,F2030-005,NED-12,NED,gol,14,Gol en jugada
+EV-F2030-005-07,F2030-005,ENG-15,ENG,tarjeta_amarilla,41,Infracción táctica
+EV-F2030-005-06,F2030-005,NED-09,NED,gol,43,Gol en jugada
+EV-F2030-005-01,F2030-005,ENG-19,ENG,gol,48,Gol en jugada
+EV-F2030-005-03,F2030-005,ENG-03,ENG,gol,75,Gol en jugada
+EV-F2030-005-04,F2030-005,ENG-14,ENG,penal_convertido,77,Gol de penal
+EV-F2030-006-02,F2030-006,GER-05,GER,gol,18,Gol en jugada
+EV-F2030-006-03,F2030-006,ITA-05,ITA,gol,21,Gol en jugada
+EV-F2030-006-01,F2030-006,GER-06,GER,gol,42,Gol en jugada
+EV-F2030-006-04,F2030-006,GER-07,GER,tarjeta_amarilla,61,Infracción táctica
+EV-F2030-006-06,F2030-006,ITA-05,ITA,tarjeta_amarilla,74,Infracción táctica
+EV-F2030-006-05,F2030-006,GER-22,GER,tarjeta_amarilla,87,Infracción táctica
+EV-F2030-007-04,F2030-007,CRO-13,CRO,tarjeta_amarilla,1,Infracción táctica
+EV-F2030-007-03,F2030-007,CRO-01,CRO,tarjeta_amarilla,25,Infracción táctica
+EV-F2030-007-05,F2030-007,CRO-18,CRO,tarjeta_amarilla,38,Infracción táctica
+EV-F2030-007-02,F2030-007,BEL-06,BEL,tarjeta_amarilla,69,Infracción táctica
+EV-F2030-007-01,F2030-007,BEL-15,BEL,penal_convertido,89,Gol de penal
+EV-F2030-008-01,F2030-008,COL-05,COL,gol,35,Gol en jugada
+EV-F2030-008-04,F2030-008,USA-14,USA,tarjeta_amarilla,44,Infracción táctica
+EV-F2030-008-03,F2030-008,USA-20,USA,tarjeta_amarilla,76,Infracción táctica
+EV-F2030-008-02,F2030-008,COL-12,COL,gol,89,Gol en jugada
+EV-F2030-009-01,F2030-009,SEN-05,SEN,tarjeta_amarilla,6,Infracción táctica
+EV-F2030-009-03,F2030-009,SEN-08,SEN,tarjeta_amarilla,82,Infracción táctica
+EV-F2030-009-02,F2030-009,SEN-07,SEN,tarjeta_amarilla,85,Infracción táctica
+EV-F2030-010-05,F2030-010,JPN-05,JPN,gol,15,Gol en jugada
+EV-F2030-010-01,F2030-010,MEX-19,MEX,penal_convertido,29,Gol de penal
+EV-F2030-010-02,F2030-010,MEX-23,MEX,penal_convertido,31,Gol de penal
+EV-F2030-010-03,F2030-010,MEX-08,MEX,gol,38,Gol en jugada
+EV-F2030-010-07,F2030-010,MEX-11,MEX,tarjeta_amarilla,48,Infracción táctica
+EV-F2030-010-06,F2030-010,MEX-07,MEX,tarjeta_amarilla,53,Infracción táctica
+EV-F2030-010-04,F2030-010,MEX-05,MEX,gol,83,Gol en jugada
+EV-F2030-010-08,F2030-010,JPN-13,JPN,tarjeta_amarilla,84,Infracción táctica
+EV-F2030-011-02,F2030-011,POL-10,POL,penal_convertido,7,Gol de penal
+EV-F2030-011-04,F2030-011,AUT-13,AUT,tarjeta_amarilla,15,Infracción táctica
+EV-F2030-011-06,F2030-011,POL-13,POL,tarjeta_amarilla,32,Infracción táctica
+EV-F2030-011-01,F2030-011,AUT-01,AUT,gol,35,Gol en jugada
+EV-F2030-011-05,F2030-011,AUT-02,AUT,tarjeta_amarilla,48,Infracción táctica
+EV-F2030-011-07,F2030-011,POL-03,POL,tarjeta_amarilla,49,Infracción táctica
+EV-F2030-011-08,F2030-011,POL-24,POL,tarjeta_amarilla,59,Infracción táctica
+EV-F2030-011-03,F2030-011,POL-02,POL,gol,78,Gol en jugada
+EV-F2030-012-04,F2030-012,DEN-14,DEN,tarjeta_roja,7,Expulsión
+EV-F2030-012-03,F2030-012,DEN-09,DEN,gol,35,Gol en jugada
+EV-F2030-012-01,F2030-012,SUI-20,SUI,gol,59,Gol en jugada
+EV-F2030-012-05,F2030-012,DEN-15,DEN,tarjeta_amarilla,63,Infracción táctica
+EV-F2030-012-02,F2030-012,DEN-11,DEN,gol,69,Gol en jugada
+EV-F2030-012-06,F2030-012,DEN-23,DEN,tarjeta_amarilla,70,Infracción táctica
+EV-F2030-013-04,F2030-013,ECU-22,ECU,tarjeta_amarilla,23,Infracción táctica
+EV-F2030-013-03,F2030-013,PER-06,PER,tarjeta_amarilla,39,Infracción táctica
+EV-F2030-013-01,F2030-013,ECU-24,ECU,gol,73,Gol en jugada
+EV-F2030-013-02,F2030-013,ECU-07,ECU,gol,81,Gol en jugada
+EV-F2030-014-02,F2030-014,CHL-06,CHL,penal_convertido,10,Gol de penal
+EV-F2030-014-04,F2030-014,SRB-23,SRB,tarjeta_amarilla,12,Infracción táctica
+EV-F2030-014-01,F2030-014,SRB-11,SRB,gol,30,Gol en jugada
+EV-F2030-014-03,F2030-014,SRB-04,SRB,tarjeta_amarilla,90,Infracción táctica
+EV-F2030-015-01,F2030-015,CRC-07,CRC,penal_convertido,2,Gol de penal
+EV-F2030-015-02,F2030-015,CRC-14,CRC,tarjeta_amarilla,5,Infracción táctica
+EV-F2030-015-03,F2030-015,CRC-18,CRC,tarjeta_amarilla,73,Infracción táctica
+EV-F2030-016-02,F2030-016,JAM-19,JAM,gol,39,Gol en jugada
+EV-F2030-016-03,F2030-016,JAM-03,JAM,gol,42,Gol en jugada
+EV-F2030-016-04,F2030-016,PAN-14,PAN,gol,43,Gol en jugada
+EV-F2030-016-05,F2030-016,PAN-21,PAN,tarjeta_amarilla,50,Infracción táctica
+EV-F2030-016-01,F2030-016,JAM-14,JAM,penal_convertido,83,Gol de penal
+EV-F2030-017-03,F2030-017,GHA-04,GHA,penal_convertido,11,Gol de penal
+EV-F2030-017-07,F2030-017,NGA-23,NGA,tarjeta_amarilla,18,Infracción táctica
+EV-F2030-017-06,F2030-017,NGA-05,NGA,tarjeta_roja,35,Expulsión
+EV-F2030-017-02,F2030-017,NGA-06,NGA,gol,36,Gol en jugada
+EV-F2030-017-09,F2030-017,GHA-04,GHA,tarjeta_roja,36,Expulsión
+EV-F2030-017-01,F2030-017,NGA-24,NGA,gol,45,Gol en jugada
+EV-F2030-017-04,F2030-017,GHA-03,GHA,gol,62,Gol en jugada
+EV-F2030-017-08,F2030-017,GHA-04,GHA,tarjeta_amarilla,63,Infracción táctica
+EV-F2030-017-10,F2030-017,GHA-01,GHA,tarjeta_amarilla,69,Infracción táctica
+EV-F2030-017-05,F2030-017,NGA-20,NGA,tarjeta_amarilla,81,Infracción táctica
+EV-F2030-018-08,F2030-018,TUN-08,TUN,tarjeta_amarilla,5,Infracción táctica
+EV-F2030-018-07,F2030-018,TUN-19,TUN,tarjeta_amarilla,6,Infracción táctica
+EV-F2030-018-01,F2030-018,EGY-13,EGY,gol,18,Gol en jugada
+EV-F2030-018-04,F2030-018,EGY-22,EGY,tarjeta_amarilla,31,Infracción táctica
+EV-F2030-018-03,F2030-018,TUN-21,TUN,gol,43,Gol en jugada
+EV-F2030-018-05,F2030-018,EGY-03,EGY,tarjeta_amarilla,44,Infracción táctica
+EV-F2030-018-02,F2030-018,TUN-18,TUN,gol,81,Gol en jugada
+EV-F2030-018-06,F2030-018,EGY-04,EGY,tarjeta_amarilla,87,Infracción táctica
+EV-F2030-019-01,F2030-019,ALG-07,ALG,gol,14,Gol en jugada
+EV-F2030-019-03,F2030-019,ALG-18,ALG,tarjeta_amarilla,20,Infracción táctica
+EV-F2030-019-04,F2030-019,ALG-20,ALG,tarjeta_amarilla,21,Infracción táctica
+EV-F2030-019-02,F2030-019,RSA-21,RSA,gol,32,Gol en jugada
+EV-F2030-019-05,F2030-019,ALG-08,ALG,tarjeta_amarilla,38,Infracción táctica
+EV-F2030-020-01,F2030-020,CMR-13,CMR,gol,22,Gol en jugada
+EV-F2030-020-02,F2030-020,CIV-16,CIV,tarjeta_amarilla,45,Infracción táctica
+EV-F2030-020-03,F2030-020,CIV-24,CIV,tarjeta_amarilla,60,Infracción táctica
+EV-F2030-021-02,F2030-021,AUS-03,AUS,tarjeta_amarilla,26,Infracción táctica
+EV-F2030-021-03,F2030-021,AUS-14,AUS,tarjeta_roja,52,Expulsión
+EV-F2030-021-05,F2030-021,QAT-13,QAT,tarjeta_roja,59,Expulsión
+EV-F2030-021-06,F2030-021,QAT-12,QAT,tarjeta_amarilla,61,Infracción táctica
+EV-F2030-021-01,F2030-021,AUS-03,AUS,gol,65,Gol en jugada
+EV-F2030-021-04,F2030-021,QAT-15,QAT,tarjeta_amarilla,89,Infracción táctica
+EV-F2030-022-02,F2030-022,KSA-11,KSA,penal_convertido,51,Gol de penal
+EV-F2030-022-04,F2030-022,IRN-04,IRN,gol,58,Gol en jugada
+EV-F2030-022-03,F2030-022,KSA-18,KSA,gol,77,Gol en jugada
+EV-F2030-022-01,F2030-022,KSA-24,KSA,gol,86,Gol en jugada
+EV-F2030-023-01,F2030-023,NZL-04,NZL,gol,4,Gol en jugada
+EV-F2030-023-02,F2030-023,NZL-13,NZL,gol,19,Gol en jugada
+EV-F2030-023-05,F2030-023,NZL-10,NZL,tarjeta_roja,40,Expulsión
+EV-F2030-023-03,F2030-023,CHN-01,CHN,tarjeta_amarilla,42,Infracción táctica
+EV-F2030-023-04,F2030-023,CHN-06,CHN,tarjeta_amarilla,46,Infracción táctica
+EV-F2030-024-02,F2030-024,UZB-12,UZB,penal_convertido,10,Gol de penal
+EV-F2030-024-03,F2030-024,UZB-22,UZB,tarjeta_amarilla,10,Infracción táctica
+EV-F2030-024-04,F2030-024,UZB-14,UZB,tarjeta_amarilla,12,Infracción táctica
+EV-F2030-024-01,F2030-024,IRQ-04,IRQ,gol,70,Gol en jugada
+EV-F2030-025-01,F2030-025,SWE-13,SWE,gol,9,Gol en jugada
+EV-F2030-025-03,F2030-025,SWE-24,SWE,gol,11,Gol en jugada
+EV-F2030-025-07,F2030-025,SWE-15,SWE,tarjeta_amarilla,12,Infracción táctica
+EV-F2030-025-04,F2030-025,NOR-04,NOR,penal_convertido,13,Gol de penal
+EV-F2030-025-02,F2030-025,SWE-23,SWE,gol,86,Gol en jugada
+EV-F2030-025-05,F2030-025,SWE-15,SWE,tarjeta_amarilla,87,Infracción táctica
+EV-F2030-025-06,F2030-025,SWE-08,SWE,tarjeta_amarilla,89,Infracción táctica
+EV-F2030-026-01,F2030-026,UKR-08,UKR,gol,21,Gol en jugada
+EV-F2030-026-02,F2030-026,CZE-24,CZE,gol,37,Gol en jugada
+EV-F2030-026-04,F2030-026,CZE-18,CZE,tarjeta_amarilla,37,Infracción táctica
+EV-F2030-026-03,F2030-026,CZE-13,CZE,tarjeta_amarilla,59,Infracción táctica
+EV-F2030-027-03,F2030-027,HUN-09,HUN,gol,5,Gol en jugada
+EV-F2030-027-08,F2030-027,HUN-03,HUN,tarjeta_amarilla,6,Infracción táctica
+EV-F2030-027-05,F2030-027,ROU-11,ROU,gol,27,Gol en jugada
+EV-F2030-027-01,F2030-027,HUN-03,HUN,penal_convertido,32,Gol de penal
+EV-F2030-027-07,F2030-027,HUN-06,HUN,tarjeta_amarilla,36,Infracción táctica
+EV-F2030-027-04,F2030-027,HUN-06,HUN,gol,48,Gol en jugada
+EV-F2030-027-06,F2030-027,ROU-05,ROU,gol,75,Gol en jugada
+EV-F2030-027-02,F2030-027,HUN-08,HUN,gol,77,Gol en jugada
+EV-F2030-028-04,F2030-028,WAL-07,WAL,tarjeta_amarilla,3,Infracción táctica
+EV-F2030-028-02,F2030-028,SCO-04,SCO,tarjeta_amarilla,28,Infracción táctica
+EV-F2030-028-01,F2030-028,WAL-03,WAL,gol,48,Gol en jugada
+EV-F2030-028-03,F2030-028,SCO-01,SCO,tarjeta_amarilla,57,Infracción táctica
+EV-F2030-029-02,F2030-029,BOL-08,BOL,tarjeta_amarilla,38,Infracción táctica
+EV-F2030-029-01,F2030-029,BOL-13,BOL,gol,40,Gol en jugada
+EV-F2030-030-03,F2030-030,TUR-01,TUR,tarjeta_amarilla,18,Infracción táctica
+EV-F2030-030-02,F2030-030,VEN-06,VEN,gol,23,Gol en jugada
+EV-F2030-030-04,F2030-030,VEN-01,VEN,tarjeta_amarilla,45,Infracción táctica
+EV-F2030-030-01,F2030-030,TUR-18,TUR,gol,82,Gol en jugada
+EV-F2030-030-05,F2030-030,VEN-21,VEN,tarjeta_amarilla,84,Infracción táctica
+EV-F2030-031-01,F2030-031,CIW-04,CIW,penal_convertido,19,Gol de penal
+EV-F2030-031-06,F2030-031,CIW-07,CIW,tarjeta_roja,39,Expulsión
+EV-F2030-031-05,F2030-031,HAI-04,HAI,tarjeta_amarilla,42,Infracción táctica
+EV-F2030-031-07,F2030-031,CIW-08,CIW,tarjeta_amarilla,57,Infracción táctica
+EV-F2030-031-03,F2030-031,HAI-03,HAI,tarjeta_amarilla,71,Infracción táctica
+EV-F2030-031-04,F2030-031,HAI-20,HAI,tarjeta_amarilla,74,Infracción táctica
+EV-F2030-031-02,F2030-031,CIW-06,CIW,gol,82,Gol en jugada
+EV-F2030-032-07,F2030-032,VIE-22,VIE,tarjeta_amarilla,14,Infracción táctica
+EV-F2030-032-02,F2030-032,VIE-19,VIE,penal_convertido,26,Gol de penal
+EV-F2030-032-03,F2030-032,VIE-08,VIE,gol,26,Gol en jugada
+EV-F2030-032-06,F2030-032,VIE-13,VIE,tarjeta_amarilla,37,Infracción táctica
+EV-F2030-032-04,F2030-032,IND-06,IND,tarjeta_amarilla,42,Infracción táctica
+EV-F2030-032-08,F2030-032,VIE-08,VIE,tarjeta_amarilla,46,Infracción táctica
+EV-F2030-032-01,F2030-032,IND-19,IND,gol,49,Gol en jugada
+EV-F2030-032-05,F2030-032,IND-16,IND,tarjeta_amarilla,68,Infracción táctica
+EV-F2030-033-04,F2030-033,ESP-11,ESP,gol,27,Gol en jugada
+EV-F2030-033-07,F2030-033,PAR-20,PAR,tarjeta_amarilla,52,Infracción táctica
+EV-F2030-033-08,F2030-033,PAR-01,PAR,tarjeta_amarilla,57,Infracción táctica
+EV-F2030-033-02,F2030-033,ESP-13,ESP,gol,62,Gol en jugada
+EV-F2030-033-06,F2030-033,ESP-05,ESP,tarjeta_amarilla,64,Infracción táctica
+EV-F2030-033-05,F2030-033,PAR-04,PAR,gol,67,Gol en jugada
+EV-F2030-033-01,F2030-033,ESP-13,ESP,gol,78,Gol en jugada
+EV-F2030-033-03,F2030-033,ESP-03,ESP,gol,80,Gol en jugada
+EV-F2030-034-02,F2030-034,MAR-05,MAR,gol,20,Gol en jugada
+EV-F2030-034-05,F2030-034,MAR-21,MAR,tarjeta_roja,29,Expulsión
+EV-F2030-034-01,F2030-034,MAR-23,MAR,gol,46,Gol en jugada
+EV-F2030-034-06,F2030-034,MAR-08,MAR,tarjeta_amarilla,65,Infracción táctica
+EV-F2030-034-04,F2030-034,MAR-09,MAR,tarjeta_amarilla,75,Infracción táctica
+EV-F2030-034-03,F2030-034,BRA-03,BRA,tarjeta_amarilla,84,Infracción táctica
+EV-F2030-035-06,F2030-035,POR-04,POR,gol,33,Gol en jugada
+EV-F2030-035-02,F2030-035,POR-04,POR,gol,48,Gol en jugada
+EV-F2030-035-03,F2030-035,POR-03,POR,gol,55,Gol en jugada
+EV-F2030-035-04,F2030-035,POR-17,POR,gol,66,Gol en jugada
+EV-F2030-035-05,F2030-035,POR-11,POR,gol,67,Gol en jugada
+EV-F2030-035-01,F2030-035,FRA-23,FRA,gol,71,Gol en jugada
+EV-F2030-035-07,F2030-035,POR-18,POR,tarjeta_amarilla,76,Infracción táctica
+EV-F2030-036-05,F2030-036,ENG-08,ENG,tarjeta_amarilla,6,Infracción táctica
+EV-F2030-036-06,F2030-036,GER-04,GER,tarjeta_amarilla,24,Infracción táctica
+EV-F2030-036-03,F2030-036,GER-04,GER,gol,51,Gol en jugada
+EV-F2030-036-01,F2030-036,GER-17,GER,gol,54,Gol en jugada
+EV-F2030-036-04,F2030-036,ENG-16,ENG,tarjeta_amarilla,59,Infracción táctica
+EV-F2030-036-07,F2030-036,GER-09,GER,tarjeta_amarilla,59,Infracción táctica
+EV-F2030-036-02,F2030-036,GER-01,GER,gol,61,Gol en jugada
+EV-F2030-037-02,F2030-037,NED-09,NED,penal_convertido,3,Gol de penal
+EV-F2030-037-06,F2030-037,ITA-22,ITA,gol,27,Gol en jugada
+EV-F2030-037-03,F2030-037,NED-16,NED,penal_convertido,41,Gol de penal
+EV-F2030-037-04,F2030-037,ITA-20,ITA,gol,57,Gol en jugada
+EV-F2030-037-07,F2030-037,NED-07,NED,tarjeta_amarilla,59,Infracción táctica
+EV-F2030-037-01,F2030-037,NED-03,NED,gol,84,Gol en jugada
+EV-F2030-037-05,F2030-037,ITA-19,ITA,penal_convertido,87,Gol de penal
+EV-F2030-038-10,F2030-038,COL-14,COL,tarjeta_amarilla,6,Infracción táctica
+EV-F2030-038-04,F2030-038,COL-17,COL,gol,8,Gol en jugada
+EV-F2030-038-02,F2030-038,BEL-19,BEL,gol,12,Gol en jugada
+EV-F2030-038-05,F2030-038,COL-06,COL,gol,22,Gol en jugada
+EV-F2030-038-06,F2030-038,BEL-08,BEL,tarjeta_amarilla,38,Infracción táctica
+EV-F2030-038-09,F2030-038,COL-16,COL,tarjeta_amarilla,46,Infracción táctica
+EV-F2030-038-07,F2030-038,BEL-06,BEL,tarjeta_amarilla,49,Infracción táctica
+EV-F2030-038-08,F2030-038,BEL-12,BEL,tarjeta_roja,62,Expulsión
+EV-F2030-038-01,F2030-038,BEL-01,BEL,gol,83,Gol en jugada
+EV-F2030-038-03,F2030-038,COL-09,COL,gol,85,Gol en jugada
+EV-F2030-039-04,F2030-039,CRO-03,CRO,tarjeta_amarilla,7,Infracción táctica
+EV-F2030-039-02,F2030-039,CRO-03,CRO,tarjeta_roja,25,Expulsión
+EV-F2030-039-03,F2030-039,CRO-07,CRO,tarjeta_amarilla,64,Infracción táctica
+EV-F2030-039-01,F2030-039,USA-11,USA,gol,68,Gol en jugada
+EV-F2030-040-03,F2030-040,SEN-01,SEN,gol,24,Gol en jugada
+EV-F2030-040-05,F2030-040,JPN-06,JPN,tarjeta_amarilla,39,Infracción táctica
+EV-F2030-040-02,F2030-040,JPN-08,JPN,gol,53,Gol en jugada
+EV-F2030-040-04,F2030-040,JPN-15,JPN,tarjeta_amarilla,57,Infracción táctica
+EV-F2030-040-01,F2030-040,JPN-23,JPN,gol,70,Gol en jugada
+EV-F2030-040-07,F2030-040,SEN-21,SEN,tarjeta_roja,71,Expulsión
+EV-F2030-040-08,F2030-040,SEN-22,SEN,tarjeta_amarilla,71,Infracción táctica
+EV-F2030-040-06,F2030-040,SEN-03,SEN,tarjeta_amarilla,76,Infracción táctica
+EV-F2030-041-02,F2030-041,MEX-16,MEX,gol,12,Gol en jugada
+EV-F2030-041-04,F2030-041,KOR-06,KOR,gol,34,Gol en jugada
+EV-F2030-041-06,F2030-041,KOR-11,KOR,tarjeta_amarilla,41,Infracción táctica
+EV-F2030-041-03,F2030-041,KOR-14,KOR,gol,50,Gol en jugada
+EV-F2030-041-05,F2030-041,MEX-03,MEX,tarjeta_amarilla,52,Infracción táctica
+EV-F2030-041-01,F2030-041,MEX-18,MEX,penal_convertido,76,Gol de penal
+EV-F2030-041-07,F2030-041,KOR-10,KOR,tarjeta_roja,84,Expulsión
+EV-F2030-042-03,F2030-042,DEN-16,DEN,gol,7,Gol en jugada
+EV-F2030-042-01,F2030-042,DEN-10,DEN,penal_convertido,16,Gol de penal
+EV-F2030-042-08,F2030-042,DEN-08,DEN,tarjeta_amarilla,20,Infracción táctica
+EV-F2030-042-06,F2030-042,POL-23,POL,gol,21,Gol en jugada
+EV-F2030-042-04,F2030-042,POL-05,POL,gol,41,Gol en jugada
+EV-F2030-042-07,F2030-042,POL-01,POL,gol,47,Gol en jugada
+EV-F2030-042-09,F2030-042,DEN-17,DEN,tarjeta_amarilla,57,Infracción táctica
+EV-F2030-042-05,F2030-042,POL-16,POL,gol,68,Gol en jugada
+EV-F2030-042-02,F2030-042,DEN-22,DEN,gol,75,Gol en jugada
+EV-F2030-043-02,F2030-043,SUI-10,SUI,tarjeta_amarilla,24,Infracción táctica
+EV-F2030-043-05,F2030-043,AUT-16,AUT,tarjeta_roja,25,Expulsión
+EV-F2030-043-04,F2030-043,SUI-02,SUI,tarjeta_amarilla,33,Infracción táctica
+EV-F2030-043-01,F2030-043,SUI-09,SUI,gol,48,Gol en jugada
+EV-F2030-043-03,F2030-043,SUI-07,SUI,tarjeta_amarilla,64,Infracción táctica
+EV-F2030-044-03,F2030-044,ECU-23,ECU,gol,53,Gol en jugada
+EV-F2030-044-01,F2030-044,CHL-05,CHL,gol,77,Gol en jugada
+EV-F2030-044-04,F2030-044,CHL-19,CHL,tarjeta_amarilla,78,Infracción táctica
+EV-F2030-044-02,F2030-044,ECU-14,ECU,penal_convertido,83,Gol de penal
+EV-F2030-045-01,F2030-045,SRB-09,SRB,gol,16,Gol en jugada
+EV-F2030-045-05,F2030-045,PER-03,PER,tarjeta_amarilla,37,Infracción táctica
+EV-F2030-045-04,F2030-045,PER-11,PER,tarjeta_amarilla,42,Infracción táctica
+EV-F2030-045-03,F2030-045,PER-08,PER,tarjeta_amarilla,53,Infracción táctica
+EV-F2030-045-02,F2030-045,SRB-24,SRB,tarjeta_amarilla,54,Infracción táctica
+EV-F2030-046-04,F2030-046,CAN-15,CAN,gol,10,Gol en jugada
+EV-F2030-046-02,F2030-046,CAN-06,CAN,penal_convertido,29,Gol de penal
+EV-F2030-046-03,F2030-046,CAN-06,CAN,gol,35,Gol en jugada
+EV-F2030-046-05,F2030-046,CAN-09,CAN,tarjeta_amarilla,43,Infracción táctica
+EV-F2030-046-01,F2030-046,CAN-08,CAN,gol,72,Gol en jugada
+EV-F2030-047-06,F2030-047,PAN-13,PAN,tarjeta_amarilla,8,Infracción táctica
+EV-F2030-047-01,F2030-047,CRC-03,CRC,gol,18,Gol en jugada
+EV-F2030-047-05,F2030-047,CRC-03,CRC,tarjeta_amarilla,32,Infracción táctica
+EV-F2030-047-04,F2030-047,CRC-01,CRC,tarjeta_amarilla,61,Infracción táctica
+EV-F2030-047-02,F2030-047,PAN-20,PAN,gol,62,Gol en jugada
+EV-F2030-047-03,F2030-047,CRC-14,CRC,tarjeta_amarilla,63,Infracción táctica
+EV-F2030-048-02,F2030-048,URU-05,URU,gol,11,Gol en jugada
+EV-F2030-048-01,F2030-048,ARG-13,ARG,gol,28,Gol en jugada
+EV-F2030-048-03,F2030-048,ARG-02,ARG,tarjeta_amarilla,63,Infracción táctica
+EV-F2030-048-04,F2030-048,ARG-04,ARG,tarjeta_amarilla,86,Infracción táctica
+EV-F2030-049-03,F2030-049,TUN-11,TUN,gol,6,Gol en jugada
+EV-F2030-049-05,F2030-049,GHA-15,GHA,tarjeta_amarilla,20,Infracción táctica
+EV-F2030-049-04,F2030-049,TUN-03,TUN,gol,23,Gol en jugada
+EV-F2030-049-06,F2030-049,TUN-11,TUN,tarjeta_amarilla,32,Infracción táctica
+EV-F2030-049-01,F2030-049,GHA-18,GHA,gol,37,Gol en jugada
+EV-F2030-049-07,F2030-049,TUN-10,TUN,tarjeta_amarilla,63,Infracción táctica
+EV-F2030-049-02,F2030-049,TUN-03,TUN,gol,78,Gol en jugada
+EV-F2030-050-02,F2030-050,NGA-14,NGA,gol,28,Gol en jugada
+EV-F2030-050-03,F2030-050,NGA-13,NGA,gol,28,Gol en jugada
+EV-F2030-050-04,F2030-050,NGA-19,NGA,tarjeta_amarilla,29,Infracción táctica
+EV-F2030-050-05,F2030-050,NGA-24,NGA,tarjeta_amarilla,30,Infracción táctica
+EV-F2030-050-01,F2030-050,NGA-19,NGA,gol,79,Gol en jugada
+EV-F2030-051-05,F2030-051,CIV-09,CIV,tarjeta_amarilla,2,Infracción táctica
+EV-F2030-051-03,F2030-051,RSA-10,RSA,penal_convertido,5,Gol de penal
+EV-F2030-051-01,F2030-051,CIV-22,CIV,gol,10,Gol en jugada
+EV-F2030-051-06,F2030-051,RSA-23,RSA,tarjeta_amarilla,55,Infracción táctica
+EV-F2030-051-02,F2030-051,CIV-08,CIV,gol,71,Gol en jugada
+EV-F2030-051-04,F2030-051,CIV-09,CIV,tarjeta_amarilla,84,Infracción táctica
+EV-F2030-052-04,F2030-052,CMR-02,CMR,tarjeta_roja,27,Expulsión
+EV-F2030-052-03,F2030-052,ALG-18,ALG,gol,37,Gol en jugada
+EV-F2030-052-02,F2030-052,CMR-15,CMR,gol,39,Gol en jugada
+EV-F2030-052-05,F2030-052,CMR-13,CMR,tarjeta_amarilla,39,Infracción táctica
+EV-F2030-052-06,F2030-052,CMR-03,CMR,tarjeta_amarilla,42,Infracción táctica
+EV-F2030-052-01,F2030-052,CMR-01,CMR,gol,53,Gol en jugada
+EV-F2030-053-02,F2030-053,IRN-07,IRN,gol,31,Gol en jugada
+EV-F2030-053-03,F2030-053,QAT-12,QAT,tarjeta_amarilla,45,Infracción táctica
+EV-F2030-053-01,F2030-053,IRN-13,IRN,gol,46,Gol en jugada
+EV-F2030-053-04,F2030-053,QAT-06,QAT,tarjeta_amarilla,70,Infracción táctica
+EV-F2030-054-06,F2030-054,AUS-24,AUS,tarjeta_amarilla,14,Infracción táctica
+EV-F2030-054-02,F2030-054,AUS-24,AUS,gol,33,Gol en jugada
+EV-F2030-054-05,F2030-054,KSA-19,KSA,tarjeta_amarilla,38,Infracción táctica
+EV-F2030-054-07,F2030-054,AUS-20,AUS,tarjeta_amarilla,54,Infracción táctica
+EV-F2030-054-01,F2030-054,KSA-04,KSA,gol,73,Gol en jugada
+EV-F2030-054-04,F2030-054,KSA-18,KSA,tarjeta_amarilla,74,Infracción táctica
+EV-F2030-054-03,F2030-054,KSA-13,KSA,tarjeta_amarilla,90,Infracción táctica
+EV-F2030-055-06,F2030-055,IRQ-13,IRQ,tarjeta_amarilla,2,Infracción táctica
+EV-F2030-055-05,F2030-055,IRQ-13,IRQ,tarjeta_amarilla,8,Infracción táctica
+EV-F2030-055-09,F2030-055,CHN-23,CHN,tarjeta_amarilla,29,Infracción táctica
+EV-F2030-055-02,F2030-055,IRQ-14,IRQ,gol,34,Gol en jugada
+EV-F2030-055-04,F2030-055,IRQ-20,IRQ,tarjeta_amarilla,39,Infracción táctica
+EV-F2030-055-08,F2030-055,CHN-19,CHN,tarjeta_amarilla,41,Infracción táctica
+EV-F2030-055-01,F2030-055,IRQ-04,IRQ,gol,49,Gol en jugada
+EV-F2030-055-03,F2030-055,CHN-09,CHN,gol,55,Gol en jugada
+EV-F2030-055-07,F2030-055,CHN-10,CHN,tarjeta_amarilla,78,Infracción táctica
+EV-F2030-056-06,F2030-056,NZL-23,NZL,tarjeta_amarilla,18,Infracción táctica
+EV-F2030-056-04,F2030-056,UZB-23,UZB,tarjeta_amarilla,32,Infracción táctica
+EV-F2030-056-03,F2030-056,UZB-14,UZB,tarjeta_amarilla,68,Infracción táctica
+EV-F2030-056-05,F2030-056,NZL-05,NZL,tarjeta_amarilla,78,Infracción táctica
+EV-F2030-056-02,F2030-056,UZB-21,UZB,tarjeta_amarilla,83,Infracción táctica
+EV-F2030-056-01,F2030-056,NZL-14,NZL,gol,90,Gol en jugada
+EV-F2030-057-03,F2030-057,CZE-03,CZE,gol,3,Gol en jugada
+EV-F2030-057-02,F2030-057,NOR-09,NOR,penal_convertido,42,Gol de penal
+EV-F2030-057-01,F2030-057,NOR-21,NOR,gol,52,Gol en jugada
+EV-F2030-057-04,F2030-057,CZE-23,CZE,gol,76,Gol en jugada
+EV-F2030-058-03,F2030-058,UKR-08,UKR,gol,7,Gol en jugada
+EV-F2030-058-02,F2030-058,SWE-13,SWE,gol,50,Gol en jugada
+EV-F2030-058-01,F2030-058,SWE-03,SWE,gol,59,Gol en jugada
+EV-F2030-058-05,F2030-058,SWE-15,SWE,tarjeta_amarilla,61,Infracción táctica
+EV-F2030-058-04,F2030-058,SWE-08,SWE,tarjeta_amarilla,72,Infracción táctica
+EV-F2030-059-03,F2030-059,SCO-13,SCO,gol,22,Gol en jugada
+EV-F2030-059-01,F2030-059,SCO-08,SCO,gol,25,Gol en jugada
+EV-F2030-059-02,F2030-059,SCO-23,SCO,gol,68,Gol en jugada
+EV-F2030-059-04,F2030-059,SCO-09,SCO,tarjeta_amarilla,75,Infracción táctica
+EV-F2030-060-02,F2030-060,WAL-16,WAL,tarjeta_amarilla,78,Infracción táctica
+EV-F2030-060-01,F2030-060,WAL-08,WAL,gol,79,Gol en jugada
+EV-F2030-060-03,F2030-060,WAL-11,WAL,tarjeta_amarilla,86,Infracción táctica
+EV-F2030-061-07,F2030-061,BOL-15,BOL,tarjeta_amarilla,12,Infracción táctica
+EV-F2030-061-05,F2030-061,BOL-04,BOL,gol,21,Gol en jugada
+EV-F2030-061-02,F2030-061,BOL-08,BOL,gol,24,Gol en jugada
+EV-F2030-061-01,F2030-061,TUR-20,TUR,gol,29,Gol en jugada
+EV-F2030-061-04,F2030-061,BOL-22,BOL,gol,31,Gol en jugada
+EV-F2030-061-03,F2030-061,BOL-21,BOL,gol,60,Gol en jugada
+EV-F2030-061-06,F2030-061,TUR-02,TUR,tarjeta_amarilla,61,Infracción táctica
+EV-F2030-061-08,F2030-061,BOL-01,BOL,tarjeta_roja,90,Expulsión
+EV-F2030-062-01,F2030-062,HON-10,HON,gol,6,Gol en jugada
+EV-F2030-062-02,F2030-062,VEN-10,VEN,tarjeta_amarilla,57,Infracción táctica
+EV-F2030-063-01,F2030-063,IND-01,IND,gol,15,Gol en jugada
+EV-F2030-063-03,F2030-063,HAI-10,HAI,tarjeta_amarilla,28,Infracción táctica
+EV-F2030-063-02,F2030-063,HAI-18,HAI,tarjeta_amarilla,63,Infracción táctica
+EV-F2030-063-04,F2030-063,IND-18,IND,tarjeta_amarilla,84,Infracción táctica
+EV-F2030-064-03,F2030-064,CIW-18,CIW,penal_convertido,11,Gol de penal
+EV-F2030-064-01,F2030-064,CIW-13,CIW,gol,63,Gol en jugada
+EV-F2030-064-07,F2030-064,CIW-14,CIW,tarjeta_amarilla,72,Infracción táctica
+EV-F2030-064-06,F2030-064,CIW-21,CIW,tarjeta_amarilla,79,Infracción táctica
+EV-F2030-064-04,F2030-064,CIW-14,CIW,gol,85,Gol en jugada
+EV-F2030-064-02,F2030-064,CIW-16,CIW,penal_convertido,87,Gol de penal
+EV-F2030-064-05,F2030-064,CIW-09,CIW,tarjeta_amarilla,89,Infracción táctica
+EV-F2030-065-03,F2030-065,PAR-01,PAR,gol,13,Gol en jugada
+EV-F2030-065-04,F2030-065,ARG-09,ARG,tarjeta_amarilla,15,Infracción táctica
+EV-F2030-065-05,F2030-065,ARG-16,ARG,tarjeta_amarilla,39,Infracción táctica
+EV-F2030-065-02,F2030-065,PAR-19,PAR,gol,43,Gol en jugada
+EV-F2030-065-06,F2030-065,ARG-10,ARG,tarjeta_amarilla,54,Infracción táctica
+EV-F2030-065-07,F2030-065,PAR-09,PAR,tarjeta_amarilla,69,Infracción táctica
+EV-F2030-065-01,F2030-065,ARG-04,ARG,penal_convertido,71,Gol de penal
+EV-F2030-066-02,F2030-066,ESP-08,ESP,gol,5,Gol en jugada
+EV-F2030-066-05,F2030-066,URU-15,URU,gol,5,Gol en jugada
+EV-F2030-066-03,F2030-066,ESP-13,ESP,gol,37,Gol en jugada
+EV-F2030-066-01,F2030-066,ESP-10,ESP,gol,59,Gol en jugada
+EV-F2030-066-06,F2030-066,URU-02,URU,tarjeta_amarilla,78,Infracción táctica
+EV-F2030-066-04,F2030-066,URU-18,URU,gol,85,Gol en jugada
+EV-F2030-067-03,F2030-067,BRA-04,BRA,gol,22,Gol en jugada
+EV-F2030-067-07,F2030-067,BRA-15,BRA,tarjeta_amarilla,28,Infracción táctica
+EV-F2030-067-01,F2030-067,BRA-01,BRA,gol,35,Gol en jugada
+EV-F2030-067-08,F2030-067,POR-21,POR,tarjeta_amarilla,43,Infracción táctica
+EV-F2030-067-05,F2030-067,BRA-23,BRA,gol,67,Gol en jugada
+EV-F2030-067-06,F2030-067,BRA-01,BRA,tarjeta_roja,69,Expulsión
+EV-F2030-067-02,F2030-067,BRA-02,BRA,gol,76,Gol en jugada
+EV-F2030-067-04,F2030-067,BRA-08,BRA,gol,85,Gol en jugada
+EV-F2030-068-01,F2030-068,MAR-21,MAR,gol,5,Gol en jugada
+EV-F2030-068-02,F2030-068,MAR-15,MAR,gol,33,Gol en jugada
+EV-F2030-069-02,F2030-069,ITA-12,ITA,gol,7,Gol en jugada
+EV-F2030-069-03,F2030-069,ITA-13,ITA,gol,40,Gol en jugada
+EV-F2030-069-08,F2030-069,ITA-21,ITA,tarjeta_amarilla,44,Infracción táctica
+EV-F2030-069-05,F2030-069,ENG-15,ENG,tarjeta_amarilla,45,Infracción táctica
+EV-F2030-069-06,F2030-069,ITA-18,ITA,tarjeta_amarilla,49,Infracción táctica
+EV-F2030-069-01,F2030-069,ENG-20,ENG,gol,66,Gol en jugada
+EV-F2030-069-07,F2030-069,ITA-11,ITA,tarjeta_amarilla,80,Infracción táctica
+EV-F2030-069-04,F2030-069,ITA-10,ITA,gol,90,Gol en jugada
+EV-F2030-070-02,F2030-070,NED-18,NED,gol,4,Gol en jugada
+EV-F2030-070-01,F2030-070,NED-18,NED,gol,19,Gol en jugada
+EV-F2030-070-05,F2030-070,NED-07,NED,gol,19,Gol en jugada
+EV-F2030-070-07,F2030-070,GER-07,GER,gol,26,Gol en jugada
+EV-F2030-070-03,F2030-070,NED-02,NED,gol,30,Gol en jugada
+EV-F2030-070-09,F2030-070,GER-03,GER,tarjeta_amarilla,46,Infracción táctica
+EV-F2030-070-06,F2030-070,GER-24,GER,gol,56,Gol en jugada
+EV-F2030-070-08,F2030-070,GER-10,GER,gol,74,Gol en jugada
+EV-F2030-070-04,F2030-070,NED-18,NED,penal_convertido,75,Gol de penal
+EV-F2030-071-05,F2030-071,USA-04,USA,tarjeta_amarilla,3,Infracción táctica
+EV-F2030-071-04,F2030-071,USA-20,USA,gol,30,Gol en jugada
+EV-F2030-071-02,F2030-071,BEL-18,BEL,gol,61,Gol en jugada
+EV-F2030-071-03,F2030-071,USA-23,USA,gol,67,Gol en jugada
+EV-F2030-071-01,F2030-071,BEL-15,BEL,gol,76,Gol en jugada
+EV-F2030-072-09,F2030-072,COL-01,COL,tarjeta_amarilla,7,Infracción táctica
+EV-F2030-072-04,F2030-072,CRO-14,CRO,gol,19,Gol en jugada
+EV-F2030-072-01,F2030-072,CRO-05,CRO,gol,23,Gol en jugada
+EV-F2030-072-07,F2030-072,CRO-21,CRO,tarjeta_amarilla,26,Infracción táctica
+EV-F2030-072-08,F2030-072,COL-01,COL,tarjeta_amarilla,37,Infracción táctica
+EV-F2030-072-03,F2030-072,CRO-08,CRO,gol,39,Gol en jugada
+EV-F2030-072-06,F2030-072,CRO-04,CRO,tarjeta_amarilla,49,Infracción táctica
+EV-F2030-072-05,F2030-072,CRO-02,CRO,tarjeta_amarilla,54,Infracción táctica
+EV-F2030-072-10,F2030-072,COL-12,COL,tarjeta_amarilla,66,Infracción táctica
+EV-F2030-072-02,F2030-072,CRO-12,CRO,gol,69,Gol en jugada
+EV-F2030-073-01,F2030-073,JPN-11,JPN,gol,8,Gol en jugada
+EV-F2030-073-02,F2030-073,KOR-03,KOR,gol,15,Gol en jugada
+EV-F2030-073-04,F2030-073,JPN-10,JPN,tarjeta_amarilla,16,Infracción táctica
+EV-F2030-073-07,F2030-073,KOR-12,KOR,tarjeta_amarilla,27,Infracción táctica
+EV-F2030-073-06,F2030-073,KOR-22,KOR,tarjeta_amarilla,47,Infracción táctica
+EV-F2030-073-05,F2030-073,JPN-13,JPN,tarjeta_amarilla,59,Infracción táctica
+EV-F2030-073-03,F2030-073,JPN-23,JPN,tarjeta_amarilla,63,Infracción táctica
+EV-F2030-073-08,F2030-073,KOR-03,KOR,tarjeta_amarilla,82,Infracción táctica
+EV-F2030-074-06,F2030-074,MEX-19,MEX,tarjeta_amarilla,7,Infracción táctica
+EV-F2030-074-02,F2030-074,MEX-20,MEX,gol,39,Gol en jugada
+EV-F2030-074-03,F2030-074,MEX-13,MEX,gol,43,Gol en jugada
+EV-F2030-074-01,F2030-074,MEX-23,MEX,gol,60,Gol en jugada
+EV-F2030-074-05,F2030-074,MEX-03,MEX,tarjeta_amarilla,64,Infracción táctica
+EV-F2030-074-04,F2030-074,SEN-03,SEN,penal_convertido,70,Gol de penal
+EV-F2030-074-07,F2030-074,MEX-01,MEX,tarjeta_amarilla,76,Infracción táctica
+EV-F2030-075-02,F2030-075,DEN-08,DEN,gol,3,Gol en jugada
+EV-F2030-075-07,F2030-075,AUT-02,AUT,tarjeta_roja,16,Expulsión
+EV-F2030-075-05,F2030-075,DEN-15,DEN,tarjeta_amarilla,32,Infracción táctica
+EV-F2030-075-01,F2030-075,DEN-20,DEN,gol,35,Gol en jugada
+EV-F2030-075-04,F2030-075,AUT-10,AUT,gol,41,Gol en jugada
+EV-F2030-075-08,F2030-075,AUT-17,AUT,tarjeta_amarilla,49,Infracción táctica
+EV-F2030-075-06,F2030-075,DEN-07,DEN,tarjeta_amarilla,81,Infracción táctica
+EV-F2030-075-03,F2030-075,AUT-03,AUT,gol,85,Gol en jugada
+EV-F2030-076-06,F2030-076,POL-01,POL,tarjeta_amarilla,41,Infracción táctica
+EV-F2030-076-04,F2030-076,POL-22,POL,tarjeta_roja,44,Expulsión
+EV-F2030-076-01,F2030-076,SUI-14,SUI,gol,52,Gol en jugada
+EV-F2030-076-05,F2030-076,POL-23,POL,tarjeta_amarilla,57,Infracción táctica
+EV-F2030-076-02,F2030-076,SUI-15,SUI,penal_convertido,72,Gol de penal
+EV-F2030-076-03,F2030-076,SUI-05,SUI,gol,88,Gol en jugada
+EV-F2030-077-01,F2030-077,CHL-17,CHL,gol,36,Gol en jugada
+EV-F2030-077-03,F2030-077,PER-03,PER,gol,42,Gol en jugada
+EV-F2030-077-05,F2030-077,CHL-09,CHL,tarjeta_amarilla,81,Infracción táctica
+EV-F2030-077-02,F2030-077,PER-10,PER,gol,83,Gol en jugada
+EV-F2030-077-04,F2030-077,CHL-07,CHL,tarjeta_amarilla,84,Infracción táctica
+EV-F2030-078-05,F2030-078,ECU-21,ECU,tarjeta_amarilla,15,Infracción táctica
+EV-F2030-078-02,F2030-078,SRB-07,SRB,gol,35,Gol en jugada
+EV-F2030-078-06,F2030-078,ECU-22,ECU,tarjeta_amarilla,36,Infracción táctica
+EV-F2030-078-04,F2030-078,SRB-07,SRB,tarjeta_amarilla,42,Infracción táctica
+EV-F2030-078-01,F2030-078,SRB-07,SRB,gol,62,Gol en jugada
+EV-F2030-078-03,F2030-078,SRB-22,SRB,tarjeta_roja,65,Expulsión
+EV-F2030-079-01,F2030-079,CAN-23,CAN,gol,12,Gol en jugada
+EV-F2030-079-02,F2030-079,PAN-19,PAN,tarjeta_amarilla,32,Infracción táctica
+EV-F2030-080-01,F2030-080,JAM-07,JAM,penal_convertido,9,Gol de penal
+EV-F2030-080-04,F2030-080,CRC-14,CRC,tarjeta_amarilla,16,Infracción táctica
+EV-F2030-080-07,F2030-080,JAM-04,JAM,tarjeta_amarilla,21,Infracción táctica
+EV-F2030-080-03,F2030-080,CRC-19,CRC,tarjeta_amarilla,29,Infracción táctica
+EV-F2030-080-06,F2030-080,JAM-11,JAM,tarjeta_roja,32,Expulsión
+EV-F2030-080-05,F2030-080,JAM-16,JAM,tarjeta_amarilla,39,Infracción táctica
+EV-F2030-080-02,F2030-080,CRC-12,CRC,tarjeta_amarilla,86,Infracción táctica
+EV-F2030-081-04,F2030-081,EGY-02,EGY,gol,9,Gol en jugada
+EV-F2030-081-02,F2030-081,GHA-09,GHA,gol,10,Gol en jugada
+EV-F2030-081-03,F2030-081,EGY-02,EGY,gol,15,Gol en jugada
+EV-F2030-081-05,F2030-081,GHA-07,GHA,tarjeta_amarilla,49,Infracción táctica
+EV-F2030-081-07,F2030-081,GHA-03,GHA,tarjeta_amarilla,50,Infracción táctica
+EV-F2030-081-09,F2030-081,EGY-21,EGY,tarjeta_roja,57,Expulsión
+EV-F2030-081-01,F2030-081,GHA-11,GHA,gol,66,Gol en jugada
+EV-F2030-081-06,F2030-081,GHA-16,GHA,tarjeta_amarilla,72,Infracción táctica
+EV-F2030-081-08,F2030-081,EGY-12,EGY,tarjeta_amarilla,77,Infracción táctica
+EV-F2030-082-02,F2030-082,NGA-11,NGA,tarjeta_amarilla,36,Infracción táctica
+EV-F2030-082-03,F2030-082,NGA-08,NGA,tarjeta_amarilla,37,Infracción táctica
+EV-F2030-082-05,F2030-082,TUN-11,TUN,tarjeta_amarilla,38,Infracción táctica
+EV-F2030-082-01,F2030-082,TUN-08,TUN,gol,50,Gol en jugada
+EV-F2030-082-06,F2030-082,TUN-09,TUN,tarjeta_amarilla,74,Infracción táctica
+EV-F2030-082-04,F2030-082,NGA-12,NGA,tarjeta_amarilla,86,Infracción táctica
+EV-F2030-083-02,F2030-083,CIV-11,CIV,gol,27,Gol en jugada
+EV-F2030-083-04,F2030-083,CIV-08,CIV,tarjeta_amarilla,45,Infracción táctica
+EV-F2030-083-05,F2030-083,CIV-10,CIV,tarjeta_amarilla,64,Infracción táctica
+EV-F2030-083-01,F2030-083,CIV-18,CIV,gol,73,Gol en jugada
+EV-F2030-083-03,F2030-083,CIV-07,CIV,tarjeta_amarilla,78,Infracción táctica
+EV-F2030-083-06,F2030-083,ALG-24,ALG,tarjeta_amarilla,90,Infracción táctica
+EV-F2030-084-02,F2030-084,CMR-16,CMR,gol,24,Gol en jugada
+EV-F2030-084-04,F2030-084,RSA-09,RSA,gol,36,Gol en jugada
+EV-F2030-084-05,F2030-084,CMR-07,CMR,tarjeta_amarilla,39,Infracción táctica
+EV-F2030-084-03,F2030-084,RSA-10,RSA,gol,41,Gol en jugada
+EV-F2030-084-06,F2030-084,CMR-16,CMR,tarjeta_amarilla,60,Infracción táctica
+EV-F2030-084-01,F2030-084,CMR-07,CMR,penal_convertido,67,Gol de penal
+EV-F2030-085-01,F2030-085,IRN-13,IRN,gol,5,Gol en jugada
+EV-F2030-085-03,F2030-085,IRN-20,IRN,tarjeta_amarilla,15,Infracción táctica
+EV-F2030-085-05,F2030-085,AUS-15,AUS,tarjeta_amarilla,19,Infracción táctica
+EV-F2030-085-02,F2030-085,AUS-20,AUS,gol,26,Gol en jugada
+EV-F2030-085-04,F2030-085,AUS-22,AUS,tarjeta_amarilla,78,Infracción táctica
+EV-F2030-086-01,F2030-086,KSA-10,KSA,tarjeta_amarilla,13,Infracción táctica
+EV-F2030-086-05,F2030-086,QAT-05,QAT,tarjeta_amarilla,31,Infracción táctica
+EV-F2030-086-04,F2030-086,QAT-05,QAT,tarjeta_amarilla,39,Infracción táctica
+EV-F2030-086-03,F2030-086,KSA-02,KSA,tarjeta_amarilla,84,Infracción táctica
+EV-F2030-086-02,F2030-086,KSA-16,KSA,tarjeta_roja,86,Expulsión
+EV-F2030-087-04,F2030-087,IRQ-12,IRQ,gol,1,Gol en jugada
+EV-F2030-087-01,F2030-087,IRQ-05,IRQ,gol,13,Gol en jugada
+EV-F2030-087-10,F2030-087,NZL-16,NZL,tarjeta_amarilla,14,Infracción táctica
+EV-F2030-087-06,F2030-087,NZL-18,NZL,gol,41,Gol en jugada
+EV-F2030-087-08,F2030-087,IRQ-01,IRQ,tarjeta_amarilla,46,Infracción táctica
+EV-F2030-087-05,F2030-087,IRQ-02,IRQ,gol,48,Gol en jugada
+EV-F2030-087-02,F2030-087,IRQ-07,IRQ,gol,62,Gol en jugada
+EV-F2030-087-07,F2030-087,IRQ-05,IRQ,tarjeta_amarilla,73,Infracción táctica
+EV-F2030-087-09,F2030-087,NZL-22,NZL,tarjeta_roja,73,Expulsión
+EV-F2030-087-03,F2030-087,IRQ-09,IRQ,penal_convertido,76,Gol de penal
+EV-F2030-088-01,F2030-088,UZB-12,UZB,gol,10,Gol en jugada
+EV-F2030-088-03,F2030-088,CHN-15,CHN,gol,23,Gol en jugada
+EV-F2030-088-02,F2030-088,UZB-22,UZB,gol,83,Gol en jugada
+EV-F2030-089-05,F2030-089,NOR-16,NOR,tarjeta_amarilla,7,Infracción táctica
+EV-F2030-089-07,F2030-089,UKR-04,UKR,tarjeta_amarilla,12,Infracción táctica
+EV-F2030-089-04,F2030-089,NOR-12,NOR,tarjeta_amarilla,18,Infracción táctica
+EV-F2030-089-03,F2030-089,NOR-11,NOR,gol,21,Gol en jugada
+EV-F2030-089-01,F2030-089,NOR-08,NOR,gol,35,Gol en jugada
+EV-F2030-089-06,F2030-089,NOR-15,NOR,tarjeta_amarilla,42,Infracción táctica
+EV-F2030-089-02,F2030-089,NOR-04,NOR,gol,82,Gol en jugada
+EV-F2030-090-02,F2030-090,SWE-22,SWE,gol,4,Gol en jugada
+EV-F2030-090-01,F2030-090,SWE-01,SWE,gol,13,Gol en jugada
+EV-F2030-090-03,F2030-090,SWE-02,SWE,gol,13,Gol en jugada
+EV-F2030-091-01,F2030-091,ROU-01,ROU,tarjeta_amarilla,15,Infracción táctica
+EV-F2030-092-01,F2030-092,WAL-08,WAL,tarjeta_roja,1,Expulsión
+EV-F2030-092-03,F2030-092,WAL-20,WAL,tarjeta_amarilla,14,Infracción táctica
+EV-F2030-092-02,F2030-092,WAL-01,WAL,tarjeta_amarilla,45,Infracción táctica
+EV-F2030-092-04,F2030-092,HUN-19,HUN,tarjeta_amarilla,60,Infracción táctica
+EV-F2030-092-05,F2030-092,HUN-02,HUN,tarjeta_amarilla,68,Infracción táctica
+EV-F2030-093-01,F2030-093,TUR-12,TUR,tarjeta_roja,22,Expulsión
+EV-F2030-093-03,F2030-093,HON-03,HON,tarjeta_amarilla,26,Infracción táctica
+EV-F2030-093-02,F2030-093,HON-22,HON,tarjeta_amarilla,78,Infracción táctica
+EV-F2030-094-01,F2030-094,BOL-02,BOL,gol,15,Gol en jugada
+EV-F2030-094-03,F2030-094,VEN-19,VEN,tarjeta_amarilla,24,Infracción táctica
+EV-F2030-094-02,F2030-094,VEN-05,VEN,tarjeta_amarilla,36,Infracción táctica
+EV-F2030-094-05,F2030-094,BOL-04,BOL,tarjeta_amarilla,48,Infracción táctica
+EV-F2030-094-04,F2030-094,VEN-11,VEN,tarjeta_amarilla,82,Infracción táctica
+EV-F2030-095-03,F2030-095,IND-16,IND,tarjeta_amarilla,4,Infracción táctica
+EV-F2030-095-01,F2030-095,CIW-12,CIW,gol,20,Gol en jugada
+EV-F2030-095-02,F2030-095,CIW-04,CIW,tarjeta_amarilla,82,Infracción táctica
+EV-F2030-096-02,F2030-096,HAI-18,HAI,tarjeta_amarilla,4,Infracción táctica
+EV-F2030-096-04,F2030-096,VIE-08,VIE,tarjeta_amarilla,59,Infracción táctica
+EV-F2030-096-05,F2030-096,VIE-10,VIE,tarjeta_amarilla,60,Infracción táctica
+EV-F2030-096-01,F2030-096,HAI-21,HAI,tarjeta_amarilla,67,Infracción táctica
+EV-F2030-096-03,F2030-096,VIE-07,VIE,tarjeta_amarilla,82,Infracción táctica
+EV-F2030-097-02,F2030-097,ESP-16,ESP,gol,24,Gol en jugada
+EV-F2030-097-03,F2030-097,ESP-11,ESP,tarjeta_amarilla,36,Infracción táctica
+EV-F2030-097-04,F2030-097,ESP-20,ESP,tarjeta_amarilla,43,Infracción táctica
+EV-F2030-097-01,F2030-097,ESP-08,ESP,gol,86,Gol en jugada
+EV-F2030-098-05,F2030-098,POL-23,POL,tarjeta_amarilla,16,Infracción táctica
+EV-F2030-098-01,F2030-098,POL-11,POL,gol,35,Gol en jugada
+EV-F2030-098-06,F2030-098,POL-01,POL,tarjeta_amarilla,55,Infracción táctica
+EV-F2030-098-02,F2030-098,POL-08,POL,gol,60,Gol en jugada
+EV-F2030-098-03,F2030-098,MEX-11,MEX,tarjeta_amarilla,82,Infracción táctica
+EV-F2030-098-07,F2030-098,POL-12,POL,tarjeta_amarilla,84,Infracción táctica
+EV-F2030-098-04,F2030-098,MEX-24,MEX,tarjeta_amarilla,85,Infracción táctica
+EV-F2030-099-03,F2030-099,CIV-12,CIV,tarjeta_amarilla,35,Infracción táctica
+EV-F2030-099-02,F2030-099,CIV-16,CIV,tarjeta_amarilla,104,Infracción táctica
+EV-F2030-099-01,F2030-099,CIV-24,CIV,tarjeta_amarilla,111,Infracción táctica
+EV-F2030-100-01,F2030-100,SWE-23,SWE,gol,18,Gol en jugada
+EV-F2030-100-07,F2030-100,SCO-23,SCO,tarjeta_amarilla,23,Infracción táctica
+EV-F2030-100-04,F2030-100,SWE-12,SWE,tarjeta_amarilla,32,Infracción táctica
+EV-F2030-100-05,F2030-100,SWE-23,SWE,tarjeta_roja,57,Expulsión
+EV-F2030-100-02,F2030-100,SCO-21,SCO,gol,100,Gol en jugada
+EV-F2030-100-06,F2030-100,SCO-09,SCO,tarjeta_roja,103,Expulsión
+EV-F2030-100-03,F2030-100,SWE-19,SWE,tarjeta_amarilla,117,Infracción táctica
+EV-F2030-101-07,F2030-101,ITA-06,ITA,tarjeta_amarilla,2,Infracción táctica
+EV-F2030-101-06,F2030-101,ITA-04,ITA,tarjeta_amarilla,8,Infracción táctica
+EV-F2030-101-03,F2030-101,MAR-14,MAR,tarjeta_amarilla,25,Infracción táctica
+EV-F2030-101-04,F2030-101,MAR-19,MAR,tarjeta_amarilla,46,Infracción táctica
+EV-F2030-101-02,F2030-101,ITA-22,ITA,gol,77,Gol en jugada
+EV-F2030-101-05,F2030-101,MAR-08,MAR,tarjeta_amarilla,100,Infracción táctica
+EV-F2030-101-01,F2030-101,MAR-23,MAR,gol,109,Gol en jugada
+EV-F2030-102-08,F2030-102,ECU-04,ECU,tarjeta_amarilla,5,Infracción táctica
+EV-F2030-102-07,F2030-102,ECU-18,ECU,tarjeta_amarilla,25,Infracción táctica
+EV-F2030-102-04,F2030-102,SUI-05,SUI,gol,26,Gol en jugada
+EV-F2030-102-05,F2030-102,ECU-09,ECU,gol,36,Gol en jugada
+EV-F2030-102-03,F2030-102,SUI-10,SUI,gol,39,Gol en jugada
+EV-F2030-102-02,F2030-102,SUI-21,SUI,gol,43,Gol en jugada
+EV-F2030-102-06,F2030-102,SUI-02,SUI,tarjeta_roja,59,Expulsión
+EV-F2030-102-01,F2030-102,SUI-05,SUI,gol,61,Gol en jugada
+EV-F2030-103-04,F2030-103,CMR-04,CMR,gol,8,Gol en jugada
+EV-F2030-103-01,F2030-103,CMR-13,CMR,penal_convertido,13,Gol de penal
+EV-F2030-103-05,F2030-103,AUS-20,AUS,gol,23,Gol en jugada
+EV-F2030-103-07,F2030-103,CMR-08,CMR,tarjeta_amarilla,32,Infracción táctica
+EV-F2030-103-02,F2030-103,CMR-08,CMR,gol,41,Gol en jugada
+EV-F2030-103-03,F2030-103,CMR-17,CMR,gol,51,Gol en jugada
+EV-F2030-103-06,F2030-103,CMR-02,CMR,tarjeta_amarilla,85,Infracción táctica
+EV-F2030-104-10,F2030-104,HON-16,HON,tarjeta_amarilla,16,Infracción táctica
+EV-F2030-104-07,F2030-104,WAL-24,WAL,tarjeta_amarilla,19,Infracción táctica
+EV-F2030-104-11,F2030-104,HON-12,HON,tarjeta_amarilla,21,Infracción táctica
+EV-F2030-104-04,F2030-104,HON-20,HON,gol,27,Gol en jugada
+EV-F2030-104-03,F2030-104,WAL-02,WAL,gol,37,Gol en jugada
+EV-F2030-104-05,F2030-104,HON-19,HON,penal_convertido,53,Gol de penal
+EV-F2030-104-06,F2030-104,HON-19,HON,gol,56,Gol en jugada
+EV-F2030-104-09,F2030-104,HON-18,HON,tarjeta_amarilla,61,Infracción táctica
+EV-F2030-104-01,F2030-104,WAL-14,WAL,gol,75,Gol en jugada
+EV-F2030-104-02,F2030-104,WAL-18,WAL,gol,93,Gol en jugada
+EV-F2030-104-08,F2030-104,WAL-13,WAL,tarjeta_amarilla,105,Infracción táctica
+EV-F2030-105-06,F2030-105,BEL-19,BEL,gol,20,Gol en jugada
+EV-F2030-105-07,F2030-105,GER-21,GER,tarjeta_roja,27,Expulsión
+EV-F2030-105-01,F2030-105,GER-16,GER,gol,33,Gol en jugada
+EV-F2030-105-02,F2030-105,GER-24,GER,gol,33,Gol en jugada
+EV-F2030-105-05,F2030-105,BEL-11,BEL,penal_convertido,34,Gol de penal
+EV-F2030-105-09,F2030-105,GER-13,GER,tarjeta_amarilla,40,Infracción táctica
+EV-F2030-105-08,F2030-105,GER-01,GER,tarjeta_amarilla,70,Infracción táctica
+EV-F2030-105-03,F2030-105,GER-20,GER,gol,71,Gol en jugada
+EV-F2030-105-04,F2030-105,GER-17,GER,gol,89,Gol en jugada
+EV-F2030-106-01,F2030-106,JAM-09,JAM,gol,8,Gol en jugada
+EV-F2030-106-02,F2030-106,JAM-03,JAM,gol,27,Gol en jugada
+EV-F2030-106-04,F2030-106,JAM-12,JAM,tarjeta_amarilla,41,Infracción táctica
+EV-F2030-106-03,F2030-106,JAM-13,JAM,tarjeta_amarilla,76,Infracción táctica
+EV-F2030-106-05,F2030-106,JAM-19,JAM,tarjeta_amarilla,84,Infracción táctica
+EV-F2030-107-02,F2030-107,NZL-17,NZL,gol,7,Gol en jugada
+EV-F2030-107-05,F2030-107,NZL-11,NZL,tarjeta_roja,34,Expulsión
+EV-F2030-107-04,F2030-107,NZL-03,NZL,tarjeta_amarilla,35,Infracción táctica
+EV-F2030-107-03,F2030-107,KSA-14,KSA,tarjeta_amarilla,60,Infracción táctica
+EV-F2030-107-01,F2030-107,NZL-04,NZL,gol,69,Gol en jugada
+EV-F2030-107-06,F2030-107,NZL-15,NZL,tarjeta_amarilla,87,Infracción táctica
+EV-F2030-108-03,F2030-108,VIE-14,VIE,gol,10,Gol en jugada
+EV-F2030-108-01,F2030-108,BOL-11,BOL,gol,28,Gol en jugada
+EV-F2030-108-02,F2030-108,BOL-08,BOL,gol,78,Gol en jugada
+EV-F2030-109-05,F2030-109,JPN-15,JPN,tarjeta_amarilla,18,Infracción táctica
+EV-F2030-109-06,F2030-109,JPN-21,JPN,tarjeta_amarilla,50,Infracción táctica
+EV-F2030-109-04,F2030-109,COL-15,COL,tarjeta_amarilla,54,Infracción táctica
+EV-F2030-109-01,F2030-109,COL-10,COL,gol,70,Gol en jugada
+EV-F2030-109-07,F2030-109,JPN-02,JPN,tarjeta_amarilla,73,Infracción táctica
+EV-F2030-109-03,F2030-109,COL-13,COL,tarjeta_amarilla,78,Infracción táctica
+EV-F2030-109-02,F2030-109,JPN-09,JPN,gol,87,Gol en jugada
+EV-F2030-110-03,F2030-110,CAN-09,CAN,gol,5,Gol en jugada
+EV-F2030-110-05,F2030-110,NGA-04,NGA,gol,7,Gol en jugada
+EV-F2030-110-04,F2030-110,NGA-22,NGA,gol,13,Gol en jugada
+EV-F2030-110-10,F2030-110,NGA-15,NGA,tarjeta_amarilla,22,Infracción táctica
+EV-F2030-110-07,F2030-110,CAN-01,CAN,tarjeta_amarilla,54,Infracción táctica
+EV-F2030-110-02,F2030-110,CAN-05,CAN,gol,63,Gol en jugada
+EV-F2030-110-06,F2030-110,NGA-11,NGA,gol,85,Gol en jugada
+EV-F2030-110-09,F2030-110,CAN-18,CAN,tarjeta_amarilla,104,Infracción táctica
+EV-F2030-110-08,F2030-110,CAN-20,CAN,tarjeta_amarilla,106,Infracción táctica
+EV-F2030-110-01,F2030-110,CAN-12,CAN,gol,116,Gol en jugada
+EV-F2030-111-02,F2030-111,NOR-20,NOR,gol,3,Gol en jugada
+EV-F2030-111-03,F2030-111,NOR-07,NOR,gol,8,Gol en jugada
+EV-F2030-111-04,F2030-111,NOR-05,NOR,tarjeta_amarilla,48,Infracción táctica
+EV-F2030-111-01,F2030-111,IRQ-13,IRQ,gol,71,Gol en jugada
+EV-F2030-112-01,F2030-112,URU-21,URU,gol,7,Gol en jugada
+EV-F2030-112-03,F2030-112,CIW-03,CIW,tarjeta_amarilla,13,Infracción táctica
+EV-F2030-112-05,F2030-112,URU-07,URU,tarjeta_amarilla,31,Infracción táctica
+EV-F2030-112-02,F2030-112,URU-18,URU,gol,41,Gol en jugada
+EV-F2030-112-04,F2030-112,URU-04,URU,tarjeta_amarilla,55,Infracción táctica
+EV-F2030-112-06,F2030-112,URU-18,URU,tarjeta_amarilla,82,Infracción táctica
+EV-F2030-113-03,F2030-113,MAR-18,MAR,gol,1,Gol en jugada
+EV-F2030-113-05,F2030-113,ESP-23,ESP,tarjeta_roja,7,Expulsión
+EV-F2030-113-07,F2030-113,MAR-19,MAR,tarjeta_amarilla,36,Infracción táctica
+EV-F2030-113-02,F2030-113,ESP-03,ESP,penal_convertido,37,Gol de penal
+EV-F2030-113-01,F2030-113,ESP-22,ESP,gol,50,Gol en jugada
+EV-F2030-113-04,F2030-113,ESP-09,ESP,tarjeta_amarilla,72,Infracción táctica
+EV-F2030-113-06,F2030-113,MAR-07,MAR,tarjeta_roja,86,Expulsión
+EV-F2030-114-02,F2030-114,SUI-15,SUI,tarjeta_amarilla,72,Infracción táctica
+EV-F2030-114-01,F2030-114,POL-03,POL,tarjeta_roja,110,Expulsión
+EV-F2030-115-06,F2030-115,CMR-19,CMR,tarjeta_amarilla,21,Infracción táctica
+EV-F2030-115-05,F2030-115,CMR-14,CMR,tarjeta_amarilla,24,Infracción táctica
+EV-F2030-115-04,F2030-115,CIV-07,CIV,tarjeta_amarilla,26,Infracción táctica
+EV-F2030-115-01,F2030-115,CIV-10,CIV,gol,32,Gol en jugada
+EV-F2030-115-07,F2030-115,CMR-11,CMR,tarjeta_amarilla,36,Infracción táctica
+EV-F2030-115-02,F2030-115,CIV-24,CIV,tarjeta_amarilla,55,Infracción táctica
+EV-F2030-115-03,F2030-115,CIV-11,CIV,tarjeta_amarilla,72,Infracción táctica
+EV-F2030-116-05,F2030-116,SWE-06,SWE,tarjeta_amarilla,13,Infracción táctica
+EV-F2030-116-01,F2030-116,SWE-10,SWE,gol,17,Gol en jugada
+EV-F2030-116-04,F2030-116,SWE-21,SWE,tarjeta_amarilla,27,Infracción táctica
+EV-F2030-116-03,F2030-116,SWE-19,SWE,tarjeta_amarilla,30,Infracción táctica
+EV-F2030-116-06,F2030-116,HON-16,HON,tarjeta_amarilla,31,Infracción táctica
+EV-F2030-116-02,F2030-116,SWE-03,SWE,gol,54,Gol en jugada
+EV-F2030-117-01,F2030-117,GER-01,GER,gol,27,Gol en jugada
+EV-F2030-117-02,F2030-117,GER-05,GER,gol,31,Gol en jugada
+EV-F2030-117-03,F2030-117,JPN-13,JPN,gol,36,Gol en jugada
+EV-F2030-117-04,F2030-117,GER-21,GER,tarjeta_amarilla,41,Infracción táctica
+EV-F2030-118-04,F2030-118,JAM-14,JAM,tarjeta_amarilla,3,Infracción táctica
+EV-F2030-118-03,F2030-118,NGA-15,NGA,gol,4,Gol en jugada
+EV-F2030-118-01,F2030-118,JAM-06,JAM,gol,17,Gol en jugada
+EV-F2030-118-02,F2030-118,JAM-15,JAM,gol,26,Gol en jugada
+EV-F2030-118-05,F2030-118,NGA-19,NGA,tarjeta_amarilla,37,Infracción táctica
+EV-F2030-119-04,F2030-119,NZL-08,NZL,gol,2,Gol en jugada
+EV-F2030-119-06,F2030-119,NZL-01,NZL,tarjeta_roja,19,Expulsión
+EV-F2030-119-01,F2030-119,NZL-24,NZL,gol,46,Gol en jugada
+EV-F2030-119-03,F2030-119,NZL-08,NZL,gol,64,Gol en jugada
+EV-F2030-119-07,F2030-119,NOR-14,NOR,tarjeta_amarilla,71,Infracción táctica
+EV-F2030-119-02,F2030-119,NZL-11,NZL,gol,81,Gol en jugada
+EV-F2030-119-05,F2030-119,NZL-10,NZL,tarjeta_amarilla,87,Infracción táctica
+EV-F2030-120-04,F2030-120,URU-11,URU,tarjeta_amarilla,11,Infracción táctica
+EV-F2030-120-03,F2030-120,URU-21,URU,tarjeta_amarilla,13,Infracción táctica
+EV-F2030-120-05,F2030-120,URU-24,URU,tarjeta_roja,33,Expulsión
+EV-F2030-120-02,F2030-120,URU-01,URU,gol,46,Gol en jugada
+EV-F2030-120-01,F2030-120,URU-03,URU,gol,78,Gol en jugada
+EV-F2030-121-04,F2030-121,GER-07,GER,gol,8,Gol en jugada
+EV-F2030-121-05,F2030-121,GER-20,GER,gol,8,Gol en jugada
+EV-F2030-121-08,F2030-121,GER-23,GER,tarjeta_amarilla,14,Infracción táctica
+EV-F2030-121-02,F2030-121,ESP-12,ESP,gol,27,Gol en jugada
+EV-F2030-121-09,F2030-121,GER-21,GER,tarjeta_roja,38,Expulsión
+EV-F2030-121-07,F2030-121,ESP-13,ESP,tarjeta_amarilla,58,Infracción táctica
+EV-F2030-121-10,F2030-121,GER-10,GER,tarjeta_roja,67,Expulsión
+EV-F2030-121-03,F2030-121,GER-23,GER,gol,79,Gol en jugada
+EV-F2030-121-01,F2030-121,ESP-12,ESP,penal_convertido,81,Gol de penal
+EV-F2030-121-06,F2030-121,ESP-05,ESP,tarjeta_amarilla,85,Infracción táctica
+EV-F2030-122-03,F2030-122,CIV-04,CIV,tarjeta_amarilla,29,Infracción táctica
+EV-F2030-122-05,F2030-122,CIV-23,CIV,tarjeta_roja,51,Expulsión
+EV-F2030-122-01,F2030-122,CIV-24,CIV,gol,88,Gol en jugada
+EV-F2030-122-02,F2030-122,NZL-13,NZL,gol,96,Gol en jugada
+EV-F2030-122-04,F2030-122,CIV-05,CIV,tarjeta_amarilla,115,Infracción táctica
+EV-F2030-123-03,F2030-123,SUI-04,SUI,tarjeta_amarilla,35,Infracción táctica
+EV-F2030-123-04,F2030-123,JAM-17,JAM,tarjeta_amarilla,50,Infracción táctica
+EV-F2030-123-05,F2030-123,JAM-01,JAM,tarjeta_amarilla,51,Infracción táctica
+EV-F2030-123-01,F2030-123,SUI-02,SUI,gol,72,Gol en jugada
+EV-F2030-123-02,F2030-123,SUI-24,SUI,gol,75,Gol en jugada
+EV-F2030-124-08,F2030-124,SWE-21,SWE,tarjeta_amarilla,11,Infracción táctica
+EV-F2030-124-10,F2030-124,URU-04,URU,tarjeta_amarilla,20,Infracción táctica
+EV-F2030-124-09,F2030-124,SWE-11,SWE,tarjeta_amarilla,27,Infracción táctica
+EV-F2030-124-03,F2030-124,URU-08,URU,gol,29,Gol en jugada
+EV-F2030-124-07,F2030-124,URU-18,URU,gol,37,Gol en jugada
+EV-F2030-124-06,F2030-124,URU-07,URU,penal_convertido,39,Gol de penal
+EV-F2030-124-04,F2030-124,URU-11,URU,gol,42,Gol en jugada
+EV-F2030-124-05,F2030-124,URU-06,URU,gol,49,Gol en jugada
+EV-F2030-124-02,F2030-124,SWE-03,SWE,gol,54,Gol en jugada
+EV-F2030-124-01,F2030-124,SWE-22,SWE,gol,56,Gol en jugada
+EV-F2030-125-04,F2030-125,GER-10,GER,gol,2,Gol en jugada
+EV-F2030-125-06,F2030-125,SUI-04,SUI,tarjeta_amarilla,20,Infracción táctica
+EV-F2030-125-03,F2030-125,GER-14,GER,gol,26,Gol en jugada
+EV-F2030-125-05,F2030-125,SUI-16,SUI,tarjeta_amarilla,35,Infracción táctica
+EV-F2030-125-02,F2030-125,GER-05,GER,gol,40,Gol en jugada
+EV-F2030-125-01,F2030-125,GER-08,GER,gol,79,Gol en jugada
+EV-F2030-126-02,F2030-126,CIV-05,CIV,tarjeta_amarilla,44,Infracción táctica
+EV-F2030-126-03,F2030-126,URU-08,URU,tarjeta_amarilla,51,Infracción táctica
+EV-F2030-126-01,F2030-126,URU-02,URU,gol,86,Gol en jugada
+EV-F2030-127-03,F2030-127,SUI-23,SUI,gol,16,Gol en jugada
+EV-F2030-127-05,F2030-127,CIV-04,CIV,penal_convertido,22,Gol de penal
+EV-F2030-127-06,F2030-127,CIV-02,CIV,gol,37,Gol en jugada
+EV-F2030-127-07,F2030-127,SUI-01,SUI,tarjeta_roja,45,Expulsión
+EV-F2030-127-01,F2030-127,SUI-10,SUI,gol,53,Gol en jugada
+EV-F2030-127-04,F2030-127,SUI-07,SUI,gol,81,Gol en jugada
+EV-F2030-127-02,F2030-127,SUI-06,SUI,gol,85,Gol en jugada
+EV-F2030-128-01,F2030-128,URU-08,URU,gol,2,Gol en jugada
+EV-F2030-128-05,F2030-128,GER-03,GER,tarjeta_amarilla,5,Infracción táctica
+EV-F2030-128-02,F2030-128,URU-15,URU,gol,13,Gol en jugada
+EV-F2030-128-03,F2030-128,GER-23,GER,tarjeta_amarilla,36,Infracción táctica
+EV-F2030-128-06,F2030-128,URU-23,URU,tarjeta_amarilla,49,Infracción táctica
+EV-F2030-128-07,F2030-128,URU-07,URU,tarjeta_amarilla,55,Infracción táctica
+EV-F2030-128-04,F2030-128,GER-19,GER,tarjeta_amarilla,72,Infracción táctica

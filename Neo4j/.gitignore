@@ -1,0 +1,11 @@
+# Credenciales locales: se versiona únicamente .env.example
+.env
+
+# Entorno Python del generador de datos
+.venv/
+__pycache__/
+*.pyc
+
+# Artefactos locales
+*.bak
+*.log

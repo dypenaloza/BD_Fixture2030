@@ -1,0 +1,66 @@
+===============================================================================
+EVIDENCIA 04 — Carga del subgrafo e IDEMPOTENCIA (RF6, RNF4)
+Fixture 2030 — Hito 5 (Grupo 12) | Módulo de grafos en Neo4j
+Capturado: 2026-09-11 13:45:06    
+===============================================================================
+
+El archivo queries/carga.cypher se ejecuta DOS VECES consecutivas sobre el
+mismo ambiente. Los conteos finales de nodos y relaciones deben ser idénticos
+en ambas corridas: eso demuestra que la carga no genera duplicados.
+
+############################ PRIMERA CORRIDA #################################
+etiqueta, nodos
+"Confederacion", 6
+"Estadio", 18
+"Evento", 753
+"Fase", 7
+"Grupo", 16
+"Jugador", 1536
+"Partido", 128
+"Seleccion", 64
+relacion, relaciones
+"AFILIADO_A", 64
+"CORRESPONDE_A", 128
+"EN_PAIS_DE", 18
+"INTEGRA", 64
+"OCURRE_EN", 753
+"PARTICIPA_EN", 256
+"PERTENECE_A", 1536
+"PROTAGONIZADO_POR", 753
+"SE_JUEGA_EN", 128
+
+real	0m4.431s
+user	0m0.092s
+sys	0m0.685s
+
+############################ SEGUNDA CORRIDA #################################
+etiqueta, nodos
+"Confederacion", 6
+"Estadio", 18
+"Evento", 753
+"Fase", 7
+"Grupo", 16
+"Jugador", 1536
+"Partido", 128
+"Seleccion", 64
+relacion, relaciones
+"AFILIADO_A", 64
+"CORRESPONDE_A", 128
+"EN_PAIS_DE", 18
+"INTEGRA", 64
+"OCURRE_EN", 753
+"PARTICIPA_EN", 256
+"PERTENECE_A", 1536
+"PROTAGONIZADO_POR", 753
+"SE_JUEGA_EN", 128
+
+real	0m3.718s
+user	0m0.152s
+sys	0m0.733s
+
+--- Comparacion explicita ----------------------------------------------------
+nodosTotales, relacionesTotales
+2528, 3700
+
+--- Y ninguna relacion duplicada entre el mismo par de nodos -----------------
+(sin filas = no existen relaciones paralelas duplicadas)

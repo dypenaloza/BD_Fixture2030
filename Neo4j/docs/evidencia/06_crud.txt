@@ -1,0 +1,61 @@
+===============================================================================
+EVIDENCIA 06 — CRUD sobre el modelo (RF7)
+Fixture 2030 — Hito 5 (Grupo 12) | Módulo de grafos en Neo4j
+Capturado: 2026-09-11 13:45:25    
+===============================================================================
+
+Crea un amistoso de prueba, lo actualiza, lo elimina con patrones acotados y
+comprueba que el subgrafo del torneo queda intacto (64/1536/128/18/753).
+
+momento, nodosTotales
+"ANTES DEL CRUD", 2528
+sedeCreada
+(:Estadio:Prueba {estadioId: "TST-AMI", origen: "crud_demo", nombre: "Estadio de pruebas Fixture 2030", ciudad: "Montevideo", capacidad: 25000})
+partido, estado, sede
+"F2030-AMI-01", "programado", "Estadio de pruebas Fixture 2030"
+local, visitante, partido
+"Uruguay", "Argentina", "F2030-AMI-01"
+partido, fecha, rol, seleccion, sede, estado
+"F2030-AMI-01", 2030-06-05, "local", "Uruguay", "Estadio de pruebas Fixture 2030", "programado"
+"F2030-AMI-01", 2030-06-05, "visitante", "Argentina", "Estadio de pruebas Fixture 2030", "programado"
+camino
+(:Partido:Prueba {fecha: 2030-06-05, estado: "programado", golesLocal: 0, hora: "19:00", definidoPor: "tiempo_reglamentario", origen: "crud_demo", partidoId: "F2030-AMI-01", golesVisitante: 0})-[:SE_JUEGA_EN]->(:Estadio:Prueba {estadioId: "TST-AMI", origen: "crud_demo", nombre: "Estadio de pruebas Fixture 2030", ciudad: "Montevideo", capacidad: 25000})
+(:Partido:Prueba {fecha: 2030-06-05, estado: "programado", golesLocal: 0, hora: "19:00", definidoPor: "tiempo_reglamentario", origen: "crud_demo", partidoId: "F2030-AMI-01", golesVisitante: 0})-[:CORRESPONDE_A]->(:Fase:Prueba {codigo: "AMISTOSO", orden: 0, origen: "crud_demo", nombre: "Amistoso preparatorio"})
+(:Partido:Prueba {fecha: 2030-06-05, estado: "programado", golesLocal: 0, hora: "19:00", definidoPor: "tiempo_reglamentario", origen: "crud_demo", partidoId: "F2030-AMI-01", golesVisitante: 0})<-[:PARTICIPA_EN {golesRecibidos: 0, resultado: "pendiente", goles: 0, rol: "local"}]-(:Seleccion {entrenador: "Saturnina Cazorla Martorell", anfitrion: TRUE, seleccionId: "URU", escudo: "https://fixture2030.example.com/escudos/uru.png", ranking: 14, nombre: "Selección de Uruguay", pais: "Uruguay"})
+(:Partido:Prueba {fecha: 2030-06-05, estado: "programado", golesLocal: 0, hora: "19:00", definidoPor: "tiempo_reglamentario", origen: "crud_demo", partidoId: "F2030-AMI-01", golesVisitante: 0})<-[:PARTICIPA_EN {golesRecibidos: 0, resultado: "pendiente", goles: 0, rol: "local"}]-(:Seleccion {entrenador: "Saturnina Cazorla Martorell", anfitrion: TRUE, seleccionId: "URU", escudo: "https://fixture2030.example.com/escudos/uru.png", ranking: 14, nombre: "Selección de Uruguay", pais: "Uruguay"})-[:AFILIADO_A]->(:Confederacion {nombre: "Confederación Sudamericana de Fútbol", codigo: "CONMEBOL"})
+(:Partido:Prueba {fecha: 2030-06-05, estado: "programado", golesLocal: 0, hora: "19:00", definidoPor: "tiempo_reglamentario", origen: "crud_demo", partidoId: "F2030-AMI-01", golesVisitante: 0})<-[:PARTICIPA_EN {golesRecibidos: 0, resultado: "pendiente", goles: 0, rol: "local"}]-(:Seleccion {entrenador: "Saturnina Cazorla Martorell", anfitrion: TRUE, seleccionId: "URU", escudo: "https://fixture2030.example.com/escudos/uru.png", ranking: 14, nombre: "Selección de Uruguay", pais: "Uruguay"})-[:INTEGRA]->(:Grupo {codigo: "A"})
+(:Partido:Prueba {fecha: 2030-06-05, estado: "programado", golesLocal: 0, hora: "19:00", definidoPor: "tiempo_reglamentario", origen: "crud_demo", partidoId: "F2030-AMI-01", golesVisitante: 0})<-[:PARTICIPA_EN {golesRecibidos: 0, resultado: "pendiente", goles: 0, rol: "local"}]-(:Seleccion {entrenador: "Saturnina Cazorla Martorell", anfitrion: TRUE, seleccionId: "URU", escudo: "https://fixture2030.example.com/escudos/uru.png", ranking: 14, nombre: "Selección de Uruguay", pais: "Uruguay"})<-[:PERTENECE_A]-(:Jugador {posicion: "Defensor", capitan: FALSE, jugadorId: "URU-05", dorsal: 5, altura: 186, peso: 81.6, fechaNacimiento: 1991-01-08, apellido: "Perales", club: "Castellón SC", nombreCompleto: "Máximo Perales", nombre: "Máximo"})
+(:Partido:Prueba {fecha: 2030-06-05, estado: "programado", golesLocal: 0, hora: "19:00", definidoPor: "tiempo_reglamentario", origen: "crud_demo", partidoId: "F2030-AMI-01", golesVisitante: 0})<-[:PARTICIPA_EN {golesRecibidos: 0, resultado: "pendiente", goles: 0, rol: "local"}]-(:Seleccion {entrenador: "Saturnina Cazorla Martorell", anfitrion: TRUE, seleccionId: "URU", escudo: "https://fixture2030.example.com/escudos/uru.png", ranking: 14, nombre: "Selección de Uruguay", pais: "Uruguay"})<-[:PERTENECE_A]-(:Jugador {posicion: "Defensor", capitan: FALSE, jugadorId: "URU-10", dorsal: 10, peso: 75.2, fechaNacimiento: 1994-10-21, altura: 180, apellido: "Jove", club: "Baleares FC", nombreCompleto: "Calisto Jove", nombre: "Calisto"})
+(:Partido:Prueba {fecha: 2030-06-05, estado: "programado", golesLocal: 0, hora: "19:00", definidoPor: "tiempo_reglamentario", origen: "crud_demo", partidoId: "F2030-AMI-01", golesVisitante: 0})<-[:PARTICIPA_EN {golesRecibidos: 0, resultado: "pendiente", goles: 0, rol: "local"}]-(:Seleccion {entrenador: "Saturnina Cazorla Martorell", anfitrion: TRUE, seleccionId: "URU", escudo: "https://fixture2030.example.com/escudos/uru.png", ranking: 14, nombre: "Selección de Uruguay", pais: "Uruguay"})<-[:PERTENECE_A]-(:Jugador {posicion: "Mediocampista", capitan: FALSE, jugadorId: "URU-07", dorsal: 7, peso: 75.1, fechaNacimiento: 2000-03-10, altura: 178, apellido: "Ariza", club: "Segovia FC", nombreCompleto: "Calisto Ariza", nombre: "Calisto"})
+(:Partido:Prueba {fecha: 2030-06-05, estado: "programado", golesLocal: 0, hora: "19:00", definidoPor: "tiempo_reglamentario", origen: "crud_demo", partidoId: "F2030-AMI-01", golesVisitante: 0})<-[:PARTICIPA_EN {golesRecibidos: 0, resultado: "pendiente", goles: 0, rol: "local"}]-(:Seleccion {entrenador: "Saturnina Cazorla Martorell", anfitrion: TRUE, seleccionId: "URU", escudo: "https://fixture2030.example.com/escudos/uru.png", ranking: 14, nombre: "Selección de Uruguay", pais: "Uruguay"})<-[:PERTENECE_A]-(:Jugador {posicion: "Defensor", capitan: FALSE, jugadorId: "URU-21", dorsal: 21, altura: 191, peso: 87.4, fechaNacimiento: 2007-10-12, apellido: "Hurtado", club: "Girona AC", nombreCompleto: "Sebastian Hurtado", nombre: "Sebastian"})
+(:Partido:Prueba {fecha: 2030-06-05, estado: "programado", golesLocal: 0, hora: "19:00", definidoPor: "tiempo_reglamentario", origen: "crud_demo", partidoId: "F2030-AMI-01", golesVisitante: 0})<-[:PARTICIPA_EN {golesRecibidos: 0, resultado: "pendiente", goles: 0, rol: "local"}]-(:Seleccion {entrenador: "Saturnina Cazorla Martorell", anfitrion: TRUE, seleccionId: "URU", escudo: "https://fixture2030.example.com/escudos/uru.png", ranking: 14, nombre: "Selección de Uruguay", pais: "Uruguay"})<-[:PERTENECE_A]-(:Jugador {posicion: "Mediocampista", capitan: FALSE, jugadorId: "URU-02", dorsal: 2, peso: 71.1, fechaNacimiento: 2005-04-05, altura: 174, apellido: "Abellán", club: "Ávila FC", nombreCompleto: "Che Abellán", nombre: "Che"})
+partido, estado, minuto
+"F2030-AMI-01", "en_juego", 37
+goleador, golesLocal, golesVisitante
+"Wilfredo Zabala", 1, 0
+seleccion, goles, resultado
+"Argentina", 0, "derrota"
+"Uruguay", 1, "victoria"
+sede, etiquetas
+"TST-AMI", ["Estadio", "Prueba", "SedeAuxiliar"]
+resultado, partido, sede
+"Relacion SE_JUEGA_EN eliminada", "F2030-AMI-01", "TST-AMI"
+sede, etiquetas
+"TST-AMI", ["Estadio", "Prueba"]
+accion, etiquetas, cantidad
+"A eliminar", ["Estadio", "Prueba"], 1
+"A eliminar", ["Fase", "Prueba"], 1
+"A eliminar", ["Partido", "Prueba"], 1
+nodosDePruebaRestantes
+0
+etiqueta, nodos
+"Confederacion", 6
+"Estadio", 18
+"Evento", 753
+"Fase", 7
+"Grupo", 16
+"Jugador", 1536
+"Partido", 128
+"Seleccion", 64
+participacionesTotales
+256

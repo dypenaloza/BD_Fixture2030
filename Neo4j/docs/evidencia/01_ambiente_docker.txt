@@ -1,0 +1,41 @@
+===============================================================================
+EVIDENCIA 01 — Ambiente local de Neo4j con Docker Compose (RF1, RNF1, RNF2)
+Fixture 2030 — Hito 5 (Grupo 12) | Módulo de grafos en Neo4j
+Capturado: 2026-09-11 13:44:45    
+===============================================================================
+
+--- docker compose config: imagen declarada -----------------------------------
+17:    image: neo4j:latest
+
+--- docker compose ps ---------------------------------------------------------
+NAME                IMAGE          COMMAND                  SERVICE   CREATED              STATUS                        PORTS
+fixture2030-neo4j   neo4j:latest   "tini -g -- /startup…"   neo4j     About a minute ago   Up About a minute (healthy)   0.0.0.0:7474->7474/tcp, [::]:7474->7474/tcp, 0.0.0.0:7687->7687/tcp, [::]:7687->7687/tcp
+
+--- Version del servidor y edicion -------------------------------------------
+name, versions, edition
+"Neo4j Kernel", ["2026.07.1"], "community"
+"Cypher", ["5", "25"], ""
+
+--- Version de la imagen de Docker efectivamente descargada ------------------
+neo4j:latest -> neo4j@sha256:dbc377fb9cd8fe8dabc19d3041b197d5ca0ef8bae514cea175b8df265e5b7a76
+
+--- Plugins disponibles (APOC y Graph Data Science) --------------------------
+apoc, gds
+"2026.07.1", "2026.07.0"
+
+--- Volumenes nombrados de persistencia (RNF2) -------------------------------
+DRIVER    VOLUME NAME
+local     fixture2030_neo4j_data
+local     fixture2030_neo4j_logs
+local     fixture2030_neo4j_plugins
+
+--- Puertos publicados -------------------------------------------------------
+0.0.0.0:7474
+0.0.0.0:7687
+
+--- Neo4j Browser responde en HTTP (RF1) -------------------------------------
+  HTTP/1.1 200 OK
+  Content-Type: application/json
+
+--- Endpoint de descubrimiento: URIs publicadas por el servidor --------------
+{"bolt_routing":"neo4j://localhost:7687","query":"http://localhost:7474/db/{databaseName}/query/v2","transaction":"http://localhost:7474/db/{databaseName}/tx","bolt_direct":"bolt://localhost:7687","neo4j_version":"2026.07.1","neo4j_edition":"community"}

@@ -1,0 +1,19 @@
+estadioId,nombre,ciudad,paisId,capacidad
+MVD-CEN,Estadio Centenario,Montevideo,URU,60000
+BUE-MON,Estadio Monumental,Buenos Aires,ARG,84567
+ASU-DCH,Estadio Defensores del Chaco,Asunción,PAR,42000
+MAD-BER,Estadio Santiago Bernabéu,Madrid,ESP,83186
+MAD-MET,Estadio Metropolitano,Madrid,ESP,70460
+BCN-CAM,Spotify Camp Nou,Barcelona,ESP,105000
+SEV-CAR,Estadio La Cartuja,Sevilla,ESP,70000
+BIO-SMA,San Mamés,Bilbao,ESP,53289
+VAL-MES,Estadio de Mestalla,Valencia,ESP,49500
+LIS-LUZ,Estádio da Luz,Lisboa,POR,64642
+LIS-ALV,Estádio José Alvalade,Lisboa,POR,50095
+OPO-DRA,Estádio do Dragão,Oporto,POR,50033
+CAS-HII,Grand Stade Hassan II,Casablanca,MAR,115000
+RAB-MAB,Estadio Moulay Abdellah,Rabat,MAR,68700
+MRK-MAR,Estadio de Marrakech,Marrakech,MAR,45240
+TAN-IBN,Estadio Ibn Batouta,Tánger,MAR,75600
+AGA-ADR,Estadio Adrar,Agadir,MAR,45480
+FEZ-FEZ,Estadio de Fez,Fez,MAR,45000

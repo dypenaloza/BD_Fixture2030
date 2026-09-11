@@ -1,0 +1,65 @@
+seleccionId,pais,nombre,confederacion,grupo,ranking,entrenador,escudo,anfitrion
+ARG,Argentina,Selección de Argentina,CONMEBOL,A,1,Guadalupe Gilberto Valle Abellán,https://fixture2030.example.com/escudos/arg.png,true
+PAR,Paraguay,Selección de Paraguay,CONMEBOL,A,45,Noa Sedano Rueda,https://fixture2030.example.com/escudos/par.png,true
+URU,Uruguay,Selección de Uruguay,CONMEBOL,A,14,Saturnina Cazorla Martorell,https://fixture2030.example.com/escudos/uru.png,true
+ESP,España,Selección de España,UEFA,A,3,Luis Miguel Roda Barberá,https://fixture2030.example.com/escudos/esp.png,true
+POR,Portugal,Selección de Portugal,UEFA,B,6,Concepción Solana,https://fixture2030.example.com/escudos/por.png,true
+MAR,Marruecos,Selección de Marruecos,CAF,B,12,Tecla Pintor,https://fixture2030.example.com/escudos/mar.png,true
+BRA,Brasil,Selección de Brasil,CONMEBOL,B,5,Crescencia Vázquez Peña,https://fixture2030.example.com/escudos/bra.png,false
+FRA,Francia,Selección de Francia,UEFA,B,2,Sebastián Goñi Pozuelo,https://fixture2030.example.com/escudos/fra.png,false
+ENG,Inglaterra,Selección de Inglaterra,UEFA,C,4,Baldomero Galiano-Ugarte,https://fixture2030.example.com/escudos/eng.png,false
+GER,Alemania,Selección de Alemania,UEFA,C,8,Natividad Mateo Morera,https://fixture2030.example.com/escudos/ger.png,false
+ITA,Italia,Selección de Italia,UEFA,C,9,Samu Lasa Ugarte,https://fixture2030.example.com/escudos/ita.png,false
+NED,Países Bajos,Selección de Países Bajos,UEFA,C,7,Pascuala Cañas Ferrer,https://fixture2030.example.com/escudos/ned.png,false
+BEL,Bélgica,Selección de Bélgica,UEFA,D,10,Lara Ferrández Granados,https://fixture2030.example.com/escudos/bel.png,false
+CRO,Croacia,Selección de Croacia,UEFA,D,11,Eloy Pagès Arellano,https://fixture2030.example.com/escudos/cro.png,false
+COL,Colombia,Selección de Colombia,CONMEBOL,D,13,Che Galván Guerra,https://fixture2030.example.com/escudos/col.png,false
+USA,Estados Unidos,Selección de Estados Unidos,CONCACAF,D,15,Trinidad Goicoechea,https://fixture2030.example.com/escudos/usa.png,false
+MEX,México,Selección de México,CONCACAF,E,16,Lalo Becerra Atienza,https://fixture2030.example.com/escudos/mex.png,false
+JPN,Japón,Selección de Japón,AFC,E,17,Aurelio Carbajo Aramburu,https://fixture2030.example.com/escudos/jpn.png,false
+KOR,Corea del Sur,Selección de Corea del Sur,AFC,E,18,Julio César Segarra Tejada,https://fixture2030.example.com/escudos/kor.png,false
+SEN,Senegal,Selección de Senegal,CAF,E,19,Jesusa Nuria Pujadas Alfonso,https://fixture2030.example.com/escudos/sen.png,false
+SUI,Suiza,Selección de Suiza,UEFA,F,20,Manuel Santana Pareja,https://fixture2030.example.com/escudos/sui.png,false
+DEN,Dinamarca,Selección de Dinamarca,UEFA,F,21,Clímaco Pont-Rosell,https://fixture2030.example.com/escudos/den.png,false
+AUT,Austria,Selección de Austria,UEFA,F,22,Amarilis Revilla Ordóñez,https://fixture2030.example.com/escudos/aut.png,false
+POL,Polonia,Selección de Polonia,UEFA,F,23,Fabio Olivera,https://fixture2030.example.com/escudos/pol.png,false
+SRB,Serbia,Selección de Serbia,UEFA,G,24,Reyes Lucas Lluch,https://fixture2030.example.com/escudos/srb.png,false
+CHL,Chile,Selección de Chile,CONMEBOL,G,25,Inmaculada Angulo,https://fixture2030.example.com/escudos/chl.png,false
+PER,Perú,Selección de Perú,CONMEBOL,G,26,Néstor Salvà Morante,https://fixture2030.example.com/escudos/per.png,false
+ECU,Ecuador,Selección de Ecuador,CONMEBOL,G,27,Nydia Torres Montes,https://fixture2030.example.com/escudos/ecu.png,false
+CAN,Canadá,Selección de Canadá,CONCACAF,H,28,Aroa Melero Salas,https://fixture2030.example.com/escudos/can.png,false
+CRC,Costa Rica,Selección de Costa Rica,CONCACAF,H,29,Isidora Roldan Sacristán,https://fixture2030.example.com/escudos/crc.png,false
+JAM,Jamaica,Selección de Jamaica,CONCACAF,H,30,Lara Elorza Amor,https://fixture2030.example.com/escudos/jam.png,false
+PAN,Panamá,Selección de Panamá,CONCACAF,H,31,Adán Llobet Ayala,https://fixture2030.example.com/escudos/pan.png,false
+NGA,Nigeria,Selección de Nigeria,CAF,I,32,Isidro Sarmiento-Estrada,https://fixture2030.example.com/escudos/nga.png,false
+GHA,Ghana,Selección de Ghana,CAF,I,33,Ángela Hierro,https://fixture2030.example.com/escudos/gha.png,false
+EGY,Egipto,Selección de Egipto,CAF,I,34,Candela Guadalupe Torres Villalonga,https://fixture2030.example.com/escudos/egy.png,false
+TUN,Túnez,Selección de Túnez,CAF,I,35,Flora Orozco Montesinos,https://fixture2030.example.com/escudos/tun.png,false
+CMR,Camerún,Selección de Camerún,CAF,J,36,Gilberto Arribas Segura,https://fixture2030.example.com/escudos/cmr.png,false
+CIV,Costa de Marfil,Selección de Costa de Marfil,CAF,J,37,Aureliano Bejarano Ocaña,https://fixture2030.example.com/escudos/civ.png,false
+ALG,Argelia,Selección de Argelia,CAF,J,38,Delfina Quintanilla-Vila,https://fixture2030.example.com/escudos/alg.png,false
+RSA,Sudáfrica,Selección de Sudáfrica,CAF,J,39,Edgardo Alfredo Jimenez Rosado,https://fixture2030.example.com/escudos/rsa.png,false
+KSA,Arabia Saudita,Selección de Arabia Saudita,AFC,K,40,Berto Urbano Ibarra Lumbreras,https://fixture2030.example.com/escudos/ksa.png,false
+IRN,Irán,Selección de Irán,AFC,K,41,Salud Mosquera-Gargallo,https://fixture2030.example.com/escudos/irn.png,false
+AUS,Australia,Selección de Australia,AFC,K,42,Loida Benitez Gomila,https://fixture2030.example.com/escudos/aus.png,false
+QAT,Catar,Selección de Catar,AFC,K,43,Sandra Bou Laguna,https://fixture2030.example.com/escudos/qat.png,false
+IRQ,Irak,Selección de Irak,AFC,L,44,Vasco Bellido Rodríguez,https://fixture2030.example.com/escudos/irq.png,false
+UZB,Uzbekistán,Selección de Uzbekistán,AFC,L,46,Severino Varela González,https://fixture2030.example.com/escudos/uzb.png,false
+CHN,China,Selección de China,AFC,L,47,Erasmo Codina Jover,https://fixture2030.example.com/escudos/chn.png,false
+NZL,Nueva Zelanda,Selección de Nueva Zelanda,OFC,L,48,Fernando Pons,https://fixture2030.example.com/escudos/nzl.png,false
+SWE,Suecia,Selección de Suecia,UEFA,M,49,Adora Jódar Dueñas,https://fixture2030.example.com/escudos/swe.png,false
+NOR,Noruega,Selección de Noruega,UEFA,M,50,Ana Anguita Infante,https://fixture2030.example.com/escudos/nor.png,false
+UKR,Ucrania,Selección de Ucrania,UEFA,M,51,Modesto Planas Villar,https://fixture2030.example.com/escudos/ukr.png,false
+CZE,Chequia,Selección de Chequia,UEFA,M,52,Alicia Lladó,https://fixture2030.example.com/escudos/cze.png,false
+SCO,Escocia,Selección de Escocia,UEFA,N,53,Felipe Hervás Arrieta,https://fixture2030.example.com/escudos/sco.png,false
+WAL,Gales,Selección de Gales,UEFA,N,54,Leticia Atienza-Palau,https://fixture2030.example.com/escudos/wal.png,false
+HUN,Hungría,Selección de Hungría,UEFA,N,55,Maura del Goñi,https://fixture2030.example.com/escudos/hun.png,false
+ROU,Rumania,Selección de Rumania,UEFA,N,56,Eliana Aguado Ortega,https://fixture2030.example.com/escudos/rou.png,false
+TUR,Turquía,Selección de Turquía,UEFA,O,57,Rafael de Tejedor,https://fixture2030.example.com/escudos/tur.png,false
+VEN,Venezuela,Selección de Venezuela,CONMEBOL,O,58,Jerónimo Rocha Nogueira,https://fixture2030.example.com/escudos/ven.png,false
+BOL,Bolivia,Selección de Bolivia,CONMEBOL,O,59,Aurelio del Solana,https://fixture2030.example.com/escudos/bol.png,false
+HON,Honduras,Selección de Honduras,CONCACAF,O,60,Chus López Yáñez,https://fixture2030.example.com/escudos/hon.png,false
+HAI,Haití,Selección de Haití,CONCACAF,P,61,Tito Tejedor Cabeza,https://fixture2030.example.com/escudos/hai.png,false
+CIW,Curazao,Selección de Curazao,CONCACAF,P,62,Miguel Ángel Lledó Toledo,https://fixture2030.example.com/escudos/ciw.png,false
+IND,India,Selección de India,AFC,P,63,Cecilio de Paniagua,https://fixture2030.example.com/escudos/ind.png,false
+VIE,Vietnam,Selección de Vietnam,AFC,P,64,Loreto Guardiola Lozano,https://fixture2030.example.com/escudos/vie.png,false
