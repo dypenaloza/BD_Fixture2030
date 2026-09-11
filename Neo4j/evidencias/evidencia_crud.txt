@@ -1,0 +1,30 @@
+Evidencia RF7 — CRUD sobre el modelo real (queries/crud.cypher)
+Fecha de verificación: 2026-09-11
+
+1. CREATE — jugador de prueba (TEST-01) + relación PERTENECE_A a Argentina;
+   evento de prueba (EV-TEST-01) + relaciones OCURRE_EN/PROTAGONIZADO_POR.
+
+2. READ
+j.jugadorId, j.nombre, j.apellido, j.posicion, s.pais
+"TEST-01", "Jugador", "De Prueba", "Mediocampista", "Argentina"
+
+ev.eventoId, ev.tipo, ev.minuto, p.partidoId, j.jugadorId
+"EV-TEST-01", "Gol", 45, "P-A-1", "TEST-01"
+
+3. UPDATE
+j.jugadorId, j.posicion, j.dorsal
+"TEST-01", "Defensor", 88
+
+ev.eventoId, ev.minuto, ev.descripcion
+"EV-TEST-01", 67, "Evento de prueba actualizado"
+
+4. DELETE (relación puntual -> evento -> jugador, todo con match acotado por ID)
+
+5. VERIFICACIÓN FINAL
+entidadesDePruebaRestantes
+0
+
+Conclusión: el ciclo completo de alta, lectura, actualización y baja se
+ejecutó sobre etiquetas reales del modelo (Jugador, Seleccion, Evento,
+Partido) sin dejar rastros de las entidades de prueba ni afectar los datos
+del fixture cargado.

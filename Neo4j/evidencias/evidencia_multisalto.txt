@@ -1,0 +1,27 @@
+Evidencia RF8 — Consultas de 2+ relaciones consecutivas (queries/consultas.cypher, bloque final)
+Fecha de verificación: 2026-09-11
+
+Consulta 9: Jugador -> Seleccion -> Partido -> Estadio (3 saltos)
+jugador, apellido, seleccion, partido, fecha, fase, estadio, ciudad
+"Victoriano", "Gaya", "Argentina", "P-A-3", 2030-06-08, "Fase de grupos", "Estadio Gigante de Arroyito", "Rosario"
+"Victoriano", "Gaya", "Argentina", "P-A-2", 2030-06-08, "Fase de grupos", "Estadio Mario Alberto Kempes", "Córdoba"
+"Victoriano", "Gaya", "Argentina", "P-A-1", 2030-06-08, "Fase de grupos", "Estadio Monumental", "Buenos Aires"
+
+Consulta 10: Seleccion -> Partido <- Evento (2 saltos convergentes)
+seleccion, partido, fase, evento, minuto, descripcion
+"Argentina", "P-A-1", "Fase de grupos", "Tarjeta Amarilla", 2, "Amonestación a Cosme Baquero"
+"Argentina", "P-A-3", "Fase de grupos", "Gol", 5, "Gol de Édgar Arellano"
+"Argentina", "P-A-3", "Fase de grupos", "Gol", 8, "Gol de Martin Lerma"
+"Argentina", "P-A-2", "Fase de grupos", "Gol", 13, "Gol de Carlos Castejón"
+"Argentina", "P-A-1", "Fase de grupos", "Gol", 15, "Gol de Édgar Arellano"
+"Argentina", "P-A-2", "Fase de grupos", "Gol", 36, "Gol de Calisto Ariza"
+"Argentina", "P-A-1", "Fase de grupos", "Gol", 45, "Gol de Cosme Baquero"
+"Argentina", "P-A-3", "Fase de grupos", "Gol", 50, "Gol de Eliseo Maldonado"
+"Argentina", "P-A-1", "Fase de grupos", "Tarjeta Amarilla", 50, "Amonestación a Victoriano Gaya"
+"Argentina", "P-A-3", "Fase de grupos", "Tarjeta Amarilla", 63, "Amonestación a Carmelo Huertas"
+"Argentina", "P-A-3", "Fase de grupos", "Tarjeta Amarilla", 67, "Amonestación a Goyo Morata"
+"Argentina", "P-A-2", "Fase de grupos", "Gol", 79, "Gol de Sancho Benito"
+
+Ambas consultas atraviesan dos o más relaciones consecutivas
+(PERTENECE_A->PARTICIPA_EN->SE_JUEGA_EN y PARTICIPA_EN<-OCURRE_EN
+respectivamente), cumpliendo el mínimo de dos consultas multi-salto de RF8.

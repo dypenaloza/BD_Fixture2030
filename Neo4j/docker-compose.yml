@@ -1,23 +1,28 @@
-version: '3.8'
-
 services:
   neo4j:
     image: neo4j:latest
-    container_name: fixture2030-neo4j
+    container_name: bd-fixture2030-neo4j-hito5
     restart: always
     ports:
-      - "7474:7474" # Neo4j Browser
-      - "7687:7687" # Bolt port
+      - "${NEO4J_HTTP_PORT:-7474}:7474" # Neo4j Browser
+      - "${NEO4J_BOLT_PORT:-7687}:7687" # Bolt port
     volumes:
       - neo4j_data:/data
       - neo4j_logs:/logs
       - neo4j_import:/var/lib/neo4j/import
       - neo4j_plugins:/plugins
     environment:
-      # Configuración de autenticación para el ambiente local de la materia
-      NEO4J_AUTH: neo4j/fixture2030
+      # Credenciales tomadas de variables de entorno (.env) — RNF8: no se
+      # escriben credenciales directamente en el archivo de configuración.
+      NEO4J_AUTH: ${NEO4J_USER:-neo4j}/${NEO4J_PASSWORD:?Definir NEO4J_PASSWORD en .env}
       # Plugins para prácticas de procedimientos y algoritmos de grafos
       NEO4J_PLUGINS: '["apoc", "graph-data-science"]'
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q --spider http://localhost:7474 || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 30s
     networks:
       - neo4j-network
 

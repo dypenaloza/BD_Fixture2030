@@ -1,0 +1,25 @@
+Evidencia RF10/RF11 — Restricciones e índices vigentes (SHOW CONSTRAINTS / SHOW INDEXES)
+Comando: docker exec <contenedor> cypher-shell -u neo4j -p *** -f queries/indices.cypher
+Fecha de verificación: 2026-09-11
+
+id, name, type, entityType, labelsOrTypes, properties, enforcedLabel, ownedIndex, propertyType
+10, "estadio_id_unique", "NODE_PROPERTY_UNIQUENESS", "NODE", ["Estadio"], ["estadioId"], NULL, "estadio_id_unique", NULL
+12, "evento_id_unique", "NODE_PROPERTY_UNIQUENESS", "NODE", ["Evento"], ["eventoId"], NULL, "evento_id_unique", NULL
+4, "jugador_id_unique", "NODE_PROPERTY_UNIQUENESS", "NODE", ["Jugador"], ["jugadorId"], NULL, "jugador_id_unique", NULL
+8, "partido_id_unique", "NODE_PROPERTY_UNIQUENESS", "NODE", ["Partido"], ["partidoId"], NULL, "partido_id_unique", NULL
+6, "seleccion_id_unique", "NODE_PROPERTY_UNIQUENESS", "NODE", ["Seleccion"], ["seleccionId"], NULL, "seleccion_id_unique", NULL
+
+id, name, state, populationPercent, type, entityType, labelsOrTypes, properties, indexProvider, owningConstraint
+9,  "estadio_id_unique",    "ONLINE", 100.0, "RANGE", "NODE", ["Estadio"],  ["estadioId"], "range-1.0", "estadio_id_unique"
+16, "estadio_pais_idx",     "ONLINE", 100.0, "RANGE", "NODE", ["Estadio"],  ["pais"],       "range-1.0", NULL
+11, "evento_id_unique",     "ONLINE", 100.0, "RANGE", "NODE", ["Evento"],   ["eventoId"],   "range-1.0", "evento_id_unique"
+3,  "jugador_id_unique",    "ONLINE", 100.0, "RANGE", "NODE", ["Jugador"],  ["jugadorId"],  "range-1.0", "jugador_id_unique"
+14, "jugador_posicion_idx", "ONLINE", 100.0, "RANGE", "NODE", ["Jugador"],  ["posicion"],   "range-1.0", NULL
+15, "partido_fecha_idx",    "ONLINE", 100.0, "RANGE", "NODE", ["Partido"],  ["fecha"],      "range-1.0", NULL
+7,  "partido_id_unique",    "ONLINE", 100.0, "RANGE", "NODE", ["Partido"],  ["partidoId"],  "range-1.0", "partido_id_unique"
+5,  "seleccion_id_unique",  "ONLINE", 100.0, "RANGE", "NODE", ["Seleccion"],["seleccionId"],"range-1.0", "seleccion_id_unique"
+13, "seleccion_pais_idx",   "ONLINE", 100.0, "RANGE", "NODE", ["Seleccion"],["pais"],       "range-1.0", NULL
+(+2 índices LOOKUP internos que Neo4j crea automáticamente para recorrer por etiqueta/tipo)
+
+Las 5 restricciones de unicidad y los 4 índices adicionales (RF10) quedaron
+ONLINE con populationPercent 100.0 tras cargar el subgrafo completo.

@@ -1,17 +1,23 @@
+import os
 import json
 from pathlib import Path
 from neo4j import GraphDatabase
+from dotenv import load_dotenv
 
 # --------------------------------------------------
-# CONFIGURACIÓN DE NEO4J
+# CONFIGURACIÓN DE NEO4J (RNF8: credenciales por variables de entorno,
+# nunca escritas directamente en el código)
 # --------------------------------------------------
-
-URI = "bolt://localhost:7687"
-USUARIO = "neo4j"
-CLAVE = "fixture2030"
 
 # Carpeta Neo4j/
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+load_dotenv(BASE_DIR / ".env")
+
+USUARIO = os.environ.get("NEO4J_USER", "neo4j")
+CLAVE = os.environ["NEO4J_PASSWORD"]
+BOLT_PORT = os.environ.get("NEO4J_BOLT_PORT", "7687")
+URI = f"bolt://localhost:{BOLT_PORT}"
 
 ARCHIVO_EQUIPOS = BASE_DIR / "data" / "equipos.json"
 ARCHIVO_JUGADORES = BASE_DIR / "data" / "jugadores.json"

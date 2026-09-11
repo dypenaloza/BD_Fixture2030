@@ -1,0 +1,52 @@
+Evidencia RNF4 — Carga idempotente (equipos, jugadores, fixture) ejecutada dos veces
+Fecha de verificación: 2026-09-11
+
+===== 1ra ejecución =====
+$ python scripts/load_data.py
+Selecciones cargadas.
+Jugadores y relaciones cargados.
+
+===== RESULTADO DE LA CARGA =====
+Selecciones: 64
+Jugadores: 1536
+Relaciones PERTENECE_A: 1536
+Jugadores sin selección: 0
+
+$ python scripts/generar_fixture.py
+===== RESULTADO DE LA CARGA DEL FIXTURE =====
+Partidos generados en memoria: 128 (grupos: 96, eliminatorias: 32)
+Eventos generados en memoria: 591
+Estadio: 16
+Partido: 128
+PARTICIPA_EN: 256
+SE_JUEGA_EN: 128
+Evento: 591
+OCURRE_EN: 591
+PROTAGONIZADO_POR: 591
+
+===== 2da ejecución (mismo ambiente, sin reiniciar el contenedor) =====
+$ python scripts/load_data.py
+Selecciones cargadas.
+Jugadores y relaciones cargados.
+
+===== RESULTADO DE LA CARGA =====
+Selecciones: 64
+Jugadores: 1536
+Relaciones PERTENECE_A: 1536
+Jugadores sin selección: 0
+
+$ python scripts/generar_fixture.py
+===== RESULTADO DE LA CARGA DEL FIXTURE =====
+Partidos generados en memoria: 128 (grupos: 96, eliminatorias: 32)
+Eventos generados en memoria: 591
+Estadio: 16
+Partido: 128
+PARTICIPA_EN: 256
+SE_JUEGA_EN: 128
+Evento: 591
+OCURRE_EN: 591
+PROTAGONIZADO_POR: 591
+
+Conclusión: los conteos son idénticos entre la 1ra y la 2da ejecución de
+ambos scripts (MERGE + semilla fija SEED=2030 en generar_fixture.py). No se
+generan nodos ni relaciones duplicados al repetir la carga (RNF4).
