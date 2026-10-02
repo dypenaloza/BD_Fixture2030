@@ -1,0 +1,32 @@
+PONG
+# Server
+redis_version:8.10.2
+redis_git_sha1:00000000
+redis_git_dirty:1
+redis_build_id:fbc5ac9ab55dc180
+redis_mode:standalone
+os:Linux 6.18.44-fc-v51 x86_64
+arch_bits:64
+monotonic_clock:POSIX clock_gettime
+multiplexing_api:epoll
+atomicvar_api:c11-builtin
+gcc_version:14.2.0
+process_id:1
+process_supervised:no
+run_id:5db204c0c3662320ddd1864b37db32027a29f7bd
+tcp_port:6379
+server_time_usec:1790918404805182
+uptime_in_seconds:172
+uptime_in_days:0
+hz:10
+configured_hz:10
+lru_clock:12533508
+executable:/data/redis-server
+config_file:
+io_threads_active:0
+listener0:name=tcp,bind=*,port=6379
+maxmemory
+104857600
+maxmemory-policy
+noeviction
+202

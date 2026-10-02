@@ -1,0 +1,61 @@
+# =============================================================================
+# SESIONES (RF3, RF4, RF5, RF7) — ciclo de vida completo de una sesión.
+#
+# Requiere haber corrido antes scripts/carga_muestra.redis (usa claves
+# sesion:U00001.. ya cargadas, más una sesión nueva creada acá mismo).
+#
+# Uso:
+#   ./scripts/ejecutar.sh scripts/sesiones.redis
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# 1. CREAR una sesión nueva (RF3)
+# -----------------------------------------------------------------------------
+HSET sesion:U99999 usuario_id "U99999" nombre "Demo" rol "fan" ultimo_acceso "2030-06-13T20:15:00Z" partido_siguiendo "P-A-1"
+EXPIRE sesion:U99999 1800
+
+# -----------------------------------------------------------------------------
+# 2. RECUPERAR la sesión (RF3) y comprobar su tiempo de vida restante
+# -----------------------------------------------------------------------------
+HGETALL sesion:U99999
+TTL sesion:U99999
+# 0 o positivo: segundos restantes | -1: sin expiración | -2: no existe
+
+# -----------------------------------------------------------------------------
+# 3. ACTUALIZAR / RENOVAR (RF3, RF4) — cualquier acción del usuario
+#    actualiza el último acceso y renueva el TTL explícitamente. Actualizar
+#    un campo del Hash NO renueva el TTL por sí solo (ver nota en Clase 8):
+#    por eso el EXPIRE se repite a propósito después del HSET.
+# -----------------------------------------------------------------------------
+HSET sesion:U99999 ultimo_acceso "2030-06-13T20:17:00Z"
+EXPIRE sesion:U99999 1800
+TTL sesion:U99999
+
+# -----------------------------------------------------------------------------
+# 4. EXPIRACIÓN por inactividad (RF4) — demostración en vivo
+#    Las primeras 10 sesiones de carga_muestra.redis se cargaron con TTL de
+#    5 segundos a propósito. Esperar ~6s entre estos dos comandos (en la
+#    práctica en vivo, hacer una pausa real; acá se documenta el resultado
+#    esperado de cada uno).
+# -----------------------------------------------------------------------------
+EXISTS sesion:U18727
+# (antes de los 5s: 1 -> existe)
+#   ... esperar 6 segundos ...
+EXISTS sesion:U18727
+# (después de los 5s: 0 -> Redis ya la eliminó solo; no hizo falta que la
+#  aplicación recorra ninguna lista de sesiones para encontrarla y borrarla)
+
+# -----------------------------------------------------------------------------
+# 5. CIERRE EXPLÍCITO de sesión (logout) (RF3) — invalidación antes del TTL
+# -----------------------------------------------------------------------------
+DEL sesion:U99999
+EXISTS sesion:U99999
+# 0: ya no existe, el logout no depende de esperar la expiración
+
+# -----------------------------------------------------------------------------
+# 6. Comportamiento ante una sesión INEXISTENTE (RF3, ciclo de vida)
+# -----------------------------------------------------------------------------
+HGETALL sesion:U99999
+# Devuelve un resultado vacío (no un error): la aplicación debe interpretar
+# "Hash vacío" como "sesión vencida o cerrada" y redirigir a login, nunca
+# tratarlo como una sesión válida con campos en blanco.

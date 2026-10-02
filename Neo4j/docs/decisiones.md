@@ -212,15 +212,25 @@ resultados verificados en `evidencias/evidencia_analisis_rf9.txt`):
 
 1. **Camino más corto (conectividad) entre dos selecciones.** Usando
    `shortestPath()` sobre `PARTICIPA_EN`/`SE_JUEGA_EN` como grafo no
-   dirigido, se calculó el camino más corto entre Argentina (grupo A) y
-   Japón (grupo E), que no comparten grupo. Resultado: **4 saltos**, porque
-   —según el sorteo de eliminatorias generado a partir de las posiciones de
-   grupo— terminaron enfrentándose directamente en Octavos de Final.
+   dirigido, se calculó el camino más corto entre Argentina (grupo A,
+   eliminada en fase de grupos) y Japón (grupo E, llegó a Cuartos de
+   Final), que nunca se enfrentaron directamente (se verificó que ningún
+   partido tiene a ambas selecciones). Resultado: **4 saltos**, no por un
+   cruce entre ellas sino por una **sede compartida**: el partido de grupos
+   de Argentina y el de Octavos de Final de Japón se jugaron en el mismo
+   estadio (Estadio Gigante de Arroyito, Rosario). El camino real es
+   Argentina → su partido de grupos → ese estadio → el partido de Japón →
+   Japón. (La verificación del 11/09 había interpretado mal este resultado
+   como un cruce directo entre ambas selecciones, porque el `RETURN`
+   original no distinguía la etiqueta del nodo y un estadio ubicado en
+   Argentina se imprimía igual que la propia selección; se corrigió la
+   consulta para anteponer `labels(n)[0]` a cada nodo del recorrido — ver
+   `evidencias/evidencia_analisis_rf9.txt`.)
    **Qué aporta al Fixture 2030:** permite responder "¿qué tan conectadas
    están dos selecciones dentro del torneo?" sin reconstruir manualmente la
-   llave de eliminatorias, y sirve como control de coherencia del propio
-   fixture generado (un camino inesperadamente largo indicaría un bracket
-   mal formado).
+   llave de eliminatorias, y revela conexiones por infraestructura (misma
+   sede) que no surgen de mirar quién jugó contra quién — información útil
+   para planificación logística y de seguridad por estadio.
 
 2. **Centralidad de grado de estadios.** Conteo de partidos alojados por
    cada sede (grado de entrada de `SE_JUEGA_EN`). Resultado: entre 7 y 9

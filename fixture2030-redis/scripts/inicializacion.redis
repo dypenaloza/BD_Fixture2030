@@ -1,0 +1,19 @@
+# =============================================================================
+# INICIALIZACIÓN (RF1) — Verificación del ambiente, sin tocar datos.
+#
+# No crea ni borra ninguna clave: solo confirma que el servidor está
+# disponible y que arrancó con la configuración de memoria esperada (RF10),
+# antes de cargar nada.
+#
+# Uso:
+#   ./scripts/ejecutar.sh scripts/inicializacion.redis
+# =============================================================================
+
+PING
+
+INFO server
+
+CONFIG GET maxmemory
+CONFIG GET maxmemory-policy
+
+DBSIZE

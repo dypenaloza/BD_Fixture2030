@@ -1,16 +1,38 @@
 Evidencia RF9 — Análisis relacional (queries/analisis.cypher)
-Fecha de verificación: 2026-09-11
+Fecha de verificación: 2026-10-02 (corregido; verificación original: 2026-09-11)
 
 1. shortestPath entre Argentina (ARG) y Japón (JPN):
 recorrido, saltos
-["Argentina", "P-A-3", "Argentina", "P-R16-3", "Japón"], 4
+["Seleccion:Argentina", "Partido:P-A-3", "Estadio:Argentina", "Partido:P-R16-3", "Seleccion:Japón"], 4
 
-Interpretación: Argentina y Japón no comparten grupo (A vs E), pero el
-camino más corto entre ambas selecciones tiene 4 saltos porque terminaron
-enfrentándose directamente en Octavos de Final (P-R16-3) según el sorteo de
-eliminatorias generado a partir de las posiciones de grupo. El primer tramo
-(Argentina -> P-A-3) es un salto "administrativo" porque shortestPath
-recorre la relación PARTICIPA_EN sin dirección para llegar al partido común.
+Interpretación (corregida): Argentina (grupo A) quedó eliminada en la fase
+de grupos (solo jugó P-A-1, P-A-2 y P-A-3) y Japón (grupo E) avanzó hasta
+Cuartos de Final; nunca se enfrentaron directamente — se verificó que
+ningún (:Partido) tiene PARTICIPA_EN hacia las dos selecciones a la vez.
+El camino de 4 saltos no pasa por un cruce entre ellas, sino por una sede
+compartida: el partido de grupos de Argentina (P-A-3) y el partido de
+Octavos de Final de Japón (P-R16-3, Japón vs. Senegal) se jugaron en el
+mismo estadio, el Estadio Gigante de Arroyito (Rosario, Argentina). Por
+eso el recorrido es Argentina -> P-A-3 -> [Estadio Gigante de Arroyito] ->
+P-R16-3 -> Japón.
+
+Nota sobre la corrección: en la verificación anterior (11/09) el resultado
+se leía ["Argentina", "P-A-3", "Argentina", "P-R16-3", "Japón"], y de ahí
+se interpretó erróneamente que Argentina y Japón "terminaron enfrentándose
+directamente en Octavos de Final". Eso era incorrecto: el RETURN original
+mostraba `coalesce(n.pais, n.partidoId, n.nombre)` sin indicar la etiqueta
+del nodo, y el Estadio Gigante de Arroyito —al estar ubicado en Argentina—
+se imprimía con el mismo texto "Argentina" que el nodo de la selección,
+dando la falsa impresión de que el camino volvía a pasar por el equipo
+argentino. La consulta ahora antepone la etiqueta del nodo
+(`labels(n)[0]`), por lo que el resultado distingue "Seleccion:Argentina"
+de "Estadio:Argentina" sin ambigüedad.
+
+Qué aporta al Fixture 2030: muestra una conexión entre dos selecciones que
+no surge de los partidos que jugaron entre sí, sino de la infraestructura
+que comparten (misma sede en fechas distintas) — información relevante
+para planificación logística y de seguridad por estadio, que no es visible
+consultando un partido a la vez.
 
 2. Centralidad de grado de estadios (partidos alojados):
 estadio, ciudad, pais, cantidadPartidos
@@ -41,4 +63,14 @@ jugador, nombre, apellido, cantidadEventos
 "USA-19", "Aristides", "Barrios", 5
 "URU-02", "Che", "Abellán", 4
 "PAN-04", "Martín", "Jordá", 4
-...
+"SEN-01", "Remigio", "Francisco", 3
+"JPN-22", "Heliodoro", "Fuentes", 3
+"SEN-08", "Pancho", "Alcaraz", 3
+"COL-17", "Hermenegildo", "Bravo", 3
+"POR-02", "Jenaro", "Aragonés", 3
+"ENG-06", "Juan Manuel", "Cuevas", 3
+"FRA-03", "Cosme", "Marti", 3
+
+Interpretación: identifica a los jugadores más involucrados en eventos
+(goles y tarjetas) del torneo, útil para un tablero de "figuras del
+Mundial" sin tener que recorrer partido por partido.

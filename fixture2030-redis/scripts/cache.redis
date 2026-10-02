@@ -1,0 +1,51 @@
+# =============================================================================
+# CACHÉ E INVALIDACIÓN (RF6, RF7) — patrón Cache-Aside sobre el resultado
+# de un partido. Fuente de verdad: Neo4j (nodo :Partido, Hito 5).
+#
+# Requiere haber corrido antes scripts/carga_muestra.redis.
+#
+# Uso:
+#   ./scripts/ejecutar.sh scripts/cache.redis
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# 1. CACHE HIT — el dato ya está en Redis, se responde desde ahí
+# -----------------------------------------------------------------------------
+GET cache:partido:P-A-1
+TTL cache:partido:P-A-1
+# TTL > 0: todavía es válido según la ventana de 45s decidida para datos
+# "en vivo" (ver docs/ciclo_de_vida_e_invalidacion.md).
+
+# -----------------------------------------------------------------------------
+# 2. CACHE MISS — simula un partido que todavía no se cacheó
+#    En la aplicación real, un GET que devuelve null dispara una consulta a
+#    Neo4j y luego un SET con el resultado. Acá se simula ese SET a mano
+#    para mostrar la forma exacta del flujo (RF7).
+# -----------------------------------------------------------------------------
+GET cache:partido:P-A-2
+# (nil) -> MISS: la aplicación debe ir a buscar el dato a Neo4j
+
+# Resultado que "Neo4j habría devuelto" para P-A-2 (simulado para la demo):
+SET cache:partido:P-A-2 "{\"golesLocal\":1,\"golesVisitante\":1,\"estado\":\"finalizado\"}" EX 45
+GET cache:partido:P-A-2
+
+# -----------------------------------------------------------------------------
+# 3. INVALIDACIÓN por cambio en la fuente de verdad (RF7) — NO se espera
+#    al TTL. Se simula que llegó un gol nuevo en P-E-4 (partido "en_juego"):
+#    la aplicación debe borrar la clave en el mismo momento en que escribe
+#    el evento en Neo4j, no confiar en que los 45s de TTL alcancen.
+# -----------------------------------------------------------------------------
+GET cache:partido:P-E-4
+DEL cache:partido:P-E-4
+GET cache:partido:P-E-4
+# (nil) -> el próximo GET de cualquier usuario será un MISS controlado,
+# que vuelve a consultar Neo4j y recarga la caché con el marcador real.
+SET cache:partido:P-E-4 "{\"golesLocal\":1,\"golesVisitante\":0,\"estado\":\"en_juego\"}" EX 45
+GET cache:partido:P-E-4
+
+# -----------------------------------------------------------------------------
+# 4. Redis no disponible o clave ausente por evicción (RF6) — comportamiento
+#    esperado de la aplicación: ante un error de conexión o un MISS, SIEMPRE
+#    se cae a Neo4j (la caché es prescindible y reconstruible; nunca es la
+#    única fuente de un resultado). No se simula acá porque requiere apagar
+#    el contenedor; queda documentado en docs/ciclo_de_vida_e_invalidacion.md.

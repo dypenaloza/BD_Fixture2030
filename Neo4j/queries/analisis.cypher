@@ -17,8 +17,10 @@
 // -----------------------------------------------------------------------------
 // 1. CAMINO MÁS CORTO ENTRE DOS SELECCIONES (conectividad)
 // -----------------------------------------------------------------------------
-// Argentina (grupo A) y Japón (grupo E) no compartieron grupo ni, según el
-// sorteo generado, se cruzaron en la misma llave de eliminatorias. shortestPath
+// Argentina (grupo A, eliminada en fase de grupos) y Japón (grupo E, llegó a
+// Cuartos de Final) no compartieron grupo ni se enfrentaron directamente en
+// ningún partido del fixture generado — se verificó que no existe ningún
+// (:Partido) con PARTICIPA_EN hacia ambas selecciones a la vez. shortestPath
 // recorre PARTICIPA_EN y SE_JUEGA_EN como un grafo no dirigido para encontrar
 // la cadena más corta de partidos/sedes que las conecta indirectamente.
 //
@@ -28,11 +30,19 @@
 // "equipos relacionados" o "seis grados de separación del Mundial" en la
 // plataforma, y para detectar qué tan conectado (o disperso) quedó el fixture
 // generado.
+//
+// Nota sobre el RETURN: se antepone la etiqueta del nodo (labels(n)[0]) a
+// cada elemento del recorrido. Sin esto, un (:Estadio) y una (:Seleccion) se
+// ven idénticos en el resultado cuando coinciden en su campo `pais` (p.ej. un
+// estadio ubicado en Argentina se imprimía igual que la selección Argentina),
+// lo que en una corrida anterior llevó a interpretar mal el camino como si
+// Argentina apareciera dos veces. Con la etiqueta explícita, el recorrido se
+// lee sin ambigüedad.
 
 MATCH (a:Seleccion {seleccionId: "ARG"}), (b:Seleccion {seleccionId: "JPN"})
 MATCH camino = shortestPath((a)-[:PARTICIPA_EN|SE_JUEGA_EN*..12]-(b))
 RETURN
-    [n IN nodes(camino) | coalesce(n.pais, n.partidoId, n.nombre)] AS recorrido,
+    [n IN nodes(camino) | labels(n)[0] + ":" + coalesce(n.pais, n.partidoId, n.nombre)] AS recorrido,
     length(camino) AS saltos;
 
 // -----------------------------------------------------------------------------

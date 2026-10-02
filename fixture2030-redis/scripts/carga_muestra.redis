@@ -1,0 +1,457 @@
+# ======================================================================
+# 1. SESIONES DE USUARIO (RF3/RF4/RF5)
+# Hash por usuario + TTL de 1800s (30 min de inactividad, ver
+# docs/ciclo_de_vida_e_invalidacion.md). La mayoría se carga con
+# TTL completo; un grupo chico se carga con TTL muy corto (5s)
+# para poder demostrar la expiración real en la práctica en vivo
+# sin esperar 30 minutos.
+# ======================================================================
+HSET sesion:U18727 usuario_id "U18727" nombre "Mía" rol "moderador" ultimo_acceso "2030-06-13T19:58:00Z" partido_siguiendo "P-E-4"
+EXPIRE sesion:U18727 5
+HSET sesion:U25233 usuario_id "U25233" nombre "Bruno" rol "fan" ultimo_acceso "2030-06-13T19:47:00Z" partido_siguiendo "P-A-1"
+EXPIRE sesion:U25233 5
+HSET sesion:U24381 usuario_id "U24381" nombre "Agustín" rol "fan" ultimo_acceso "2030-06-13T19:42:00Z" partido_siguiendo "P-R32-6"
+EXPIRE sesion:U24381 5
+HSET sesion:U32828 usuario_id "U32828" nombre "Thiago" rol "fan" ultimo_acceso "2030-06-13T19:51:00Z" partido_siguiendo "P-A-3"
+EXPIRE sesion:U32828 5
+HSET sesion:U00100 usuario_id "U00100" nombre "Lucía" rol "fan" ultimo_acceso "2030-06-13T19:50:00Z" partido_siguiendo "P-QF-2"
+EXPIRE sesion:U00100 5
+HSET sesion:U30741 usuario_id "U30741" nombre "Julieta" rol "fan" ultimo_acceso "2030-06-13T19:52:00Z" partido_siguiendo "P-R16-3"
+EXPIRE sesion:U30741 5
+HSET sesion:U44877 usuario_id "U44877" nombre "Bruno" rol "fan" ultimo_acceso "2030-06-13T19:59:00Z" partido_siguiendo "P-A-1"
+EXPIRE sesion:U44877 5
+HSET sesion:U30026 usuario_id "U30026" nombre "Lucía" rol "fan" ultimo_acceso "2030-06-13T19:40:00Z" partido_siguiendo "P-QF-2"
+EXPIRE sesion:U30026 5
+HSET sesion:U28624 usuario_id "U28624" nombre "Abril" rol "fan" ultimo_acceso "2030-06-13T19:59:00Z" partido_siguiendo "P-R32-6"
+EXPIRE sesion:U28624 5
+HSET sesion:U24995 usuario_id "U24995" nombre "Lucía" rol "fan" ultimo_acceso "2030-06-13T19:50:00Z" partido_siguiendo "P-A-3"
+EXPIRE sesion:U24995 5
+HSET sesion:U08683 usuario_id "U08683" nombre "Mateo" rol "moderador" ultimo_acceso "2030-06-13T19:45:00Z" partido_siguiendo "P-A-1"
+EXPIRE sesion:U08683 1800
+HSET sesion:U47654 usuario_id "U47654" nombre "Joaquín" rol "fan" ultimo_acceso "2030-06-13T19:40:00Z" partido_siguiendo "P-E-4"
+EXPIRE sesion:U47654 1800
+HSET sesion:U39891 usuario_id "U39891" nombre "Thiago" rol "fan" ultimo_acceso "2030-06-13T19:52:00Z" partido_siguiendo "P-R16-3"
+EXPIRE sesion:U39891 1800
+HSET sesion:U19517 usuario_id "U19517" nombre "Sofía" rol "fan" ultimo_acceso "2030-06-13T19:38:00Z" partido_siguiendo "P-R32-6"
+EXPIRE sesion:U19517 1800
+HSET sesion:U06050 usuario_id "U06050" nombre "Thiago" rol "fan" ultimo_acceso "2030-06-13T19:45:00Z" partido_siguiendo "P-A-1"
+EXPIRE sesion:U06050 1800
+HSET sesion:U37934 usuario_id "U37934" nombre "Julieta" rol "fan" ultimo_acceso "2030-06-13T19:47:00Z" partido_siguiendo "P-R16-3"
+EXPIRE sesion:U37934 1800
+HSET sesion:U27764 usuario_id "U27764" nombre "Emma" rol "fan" ultimo_acceso "2030-06-13T19:57:00Z" partido_siguiendo "P-E-4"
+EXPIRE sesion:U27764 1800
+HSET sesion:U03723 usuario_id "U03723" nombre "Julieta" rol "fan" ultimo_acceso "2030-06-13T19:54:00Z" partido_siguiendo "P-R32-6"
+EXPIRE sesion:U03723 1800
+HSET sesion:U33813 usuario_id "U33813" nombre "Benjamín" rol "fan" ultimo_acceso "2030-06-13T19:55:00Z" partido_siguiendo "P-R16-3"
+EXPIRE sesion:U33813 1800
+HSET sesion:U14081 usuario_id "U14081" nombre "Facundo" rol "fan" ultimo_acceso "2030-06-13T19:42:00Z" partido_siguiendo "P-R16-3"
+EXPIRE sesion:U14081 1800
+HSET sesion:U30518 usuario_id "U30518" nombre "Tomás" rol "fan" ultimo_acceso "2030-06-13T19:58:00Z" partido_siguiendo "P-R32-6"
+EXPIRE sesion:U30518 1800
+HSET sesion:U33631 usuario_id "U33631" nombre "Lucía" rol "fan" ultimo_acceso "2030-06-13T19:53:00Z" partido_siguiendo "P-A-3"
+EXPIRE sesion:U33631 1800
+HSET sesion:U24934 usuario_id "U24934" nombre "Bruno" rol "fan" ultimo_acceso "2030-06-13T19:40:00Z" partido_siguiendo "P-QF-2"
+EXPIRE sesion:U24934 1800
+HSET sesion:U23002 usuario_id "U23002" nombre "Abril" rol "fan" ultimo_acceso "2030-06-13T19:40:00Z" partido_siguiendo "P-R16-3"
+EXPIRE sesion:U23002 1800
+HSET sesion:U14978 usuario_id "U14978" nombre "Lucía" rol "moderador" ultimo_acceso "2030-06-13T19:54:00Z" partido_siguiendo "P-A-1"
+EXPIRE sesion:U14978 1800
+HSET sesion:U34167 usuario_id "U34167" nombre "Camila" rol "fan" ultimo_acceso "2030-06-13T19:53:00Z" partido_siguiendo "P-A-1"
+EXPIRE sesion:U34167 1800
+HSET sesion:U35631 usuario_id "U35631" nombre "Julieta" rol "fan" ultimo_acceso "2030-06-13T19:52:00Z" partido_siguiendo "P-QF-2"
+EXPIRE sesion:U35631 1800
+HSET sesion:U35618 usuario_id "U35618" nombre "Valentina" rol "fan" ultimo_acceso "2030-06-13T20:00:00Z" partido_siguiendo "P-A-1"
+EXPIRE sesion:U35618 1800
+HSET sesion:U24630 usuario_id "U24630" nombre "Lucía" rol "fan" ultimo_acceso "2030-06-13T19:52:00Z" partido_siguiendo "P-QF-2"
+EXPIRE sesion:U24630 1800
+HSET sesion:U10177 usuario_id "U10177" nombre "Abril" rol "fan" ultimo_acceso "2030-06-13T19:44:00Z" partido_siguiendo "P-A-1"
+EXPIRE sesion:U10177 1800
+HSET sesion:U14929 usuario_id "U14929" nombre "Tomás" rol "fan" ultimo_acceso "2030-06-13T19:52:00Z" partido_siguiendo "P-A-3"
+EXPIRE sesion:U14929 1800
+HSET sesion:U25778 usuario_id "U25778" nombre "Benjamín" rol "fan" ultimo_acceso "2030-06-13T19:51:00Z" partido_siguiendo "P-A-1"
+EXPIRE sesion:U25778 1800
+HSET sesion:U17761 usuario_id "U17761" nombre "Camila" rol "fan" ultimo_acceso "2030-06-13T19:35:00Z" partido_siguiendo "P-A-3"
+EXPIRE sesion:U17761 1800
+HSET sesion:U06788 usuario_id "U06788" nombre "Sofía" rol "fan" ultimo_acceso "2030-06-13T19:35:00Z" partido_siguiendo "P-R32-6"
+EXPIRE sesion:U06788 1800
+HSET sesion:U13612 usuario_id "U13612" nombre "Valentina" rol "fan" ultimo_acceso "2030-06-13T19:36:00Z" partido_siguiendo "P-A-1"
+EXPIRE sesion:U13612 1800
+HSET sesion:U32263 usuario_id "U32263" nombre "Martina" rol "fan" ultimo_acceso "2030-06-13T19:39:00Z" partido_siguiendo "P-A-1"
+EXPIRE sesion:U32263 1800
+HSET sesion:U32448 usuario_id "U32448" nombre "Julieta" rol "fan" ultimo_acceso "2030-06-13T19:45:00Z" partido_siguiendo "P-QF-2"
+EXPIRE sesion:U32448 1800
+HSET sesion:U43771 usuario_id "U43771" nombre "Lucía" rol "fan" ultimo_acceso "2030-06-13T19:48:00Z" partido_siguiendo "P-A-3"
+EXPIRE sesion:U43771 1800
+HSET sesion:U35300 usuario_id "U35300" nombre "Camila" rol "fan" ultimo_acceso "2030-06-13T19:43:00Z" partido_siguiendo "P-A-1"
+EXPIRE sesion:U35300 1800
+HSET sesion:U35018 usuario_id "U35018" nombre "Tomás" rol "fan" ultimo_acceso "2030-06-13T19:45:00Z" partido_siguiendo "P-A-1"
+EXPIRE sesion:U35018 1800
+HSET sesion:U38167 usuario_id "U38167" nombre "Renata" rol "fan" ultimo_acceso "2030-06-13T19:59:00Z" partido_siguiendo "P-A-1"
+EXPIRE sesion:U38167 1800
+HSET sesion:U19854 usuario_id "U19854" nombre "Agustín" rol "fan" ultimo_acceso "2030-06-13T19:44:00Z" partido_siguiendo "P-R32-6"
+EXPIRE sesion:U19854 1800
+HSET sesion:U21384 usuario_id "U21384" nombre "Mateo" rol "fan" ultimo_acceso "2030-06-13T19:45:00Z" partido_siguiendo "P-A-3"
+EXPIRE sesion:U21384 1800
+HSET sesion:U47836 usuario_id "U47836" nombre "Lucas" rol "fan" ultimo_acceso "2030-06-13T19:41:00Z" partido_siguiendo "P-A-3"
+EXPIRE sesion:U47836 1800
+HSET sesion:U07864 usuario_id "U07864" nombre "Agustín" rol "moderador" ultimo_acceso "2030-06-13T19:57:00Z" partido_siguiendo "P-R32-6"
+EXPIRE sesion:U07864 1800
+HSET sesion:U38903 usuario_id "U38903" nombre "Santiago" rol "fan" ultimo_acceso "2030-06-13T19:43:00Z" partido_siguiendo "P-A-3"
+EXPIRE sesion:U38903 1800
+HSET sesion:U47862 usuario_id "U47862" nombre "Benjamín" rol "fan" ultimo_acceso "2030-06-13T19:58:00Z" partido_siguiendo "P-E-4"
+EXPIRE sesion:U47862 1800
+HSET sesion:U37353 usuario_id "U37353" nombre "Julieta" rol "fan" ultimo_acceso "2030-06-13T19:37:00Z" partido_siguiendo "P-R32-6"
+EXPIRE sesion:U37353 1800
+HSET sesion:U17492 usuario_id "U17492" nombre "Martina" rol "fan" ultimo_acceso "2030-06-13T19:55:00Z" partido_siguiendo "P-R32-6"
+EXPIRE sesion:U17492 1800
+HSET sesion:U32265 usuario_id "U32265" nombre "Tomás" rol "fan" ultimo_acceso "2030-06-13T19:51:00Z" partido_siguiendo "P-R16-3"
+EXPIRE sesion:U32265 1800
+HSET sesion:U20903 usuario_id "U20903" nombre "Abril" rol "fan" ultimo_acceso "2030-06-13T19:37:00Z" partido_siguiendo "P-R16-3"
+EXPIRE sesion:U20903 1800
+HSET sesion:U47679 usuario_id "U47679" nombre "Camila" rol "fan" ultimo_acceso "2030-06-13T19:46:00Z" partido_siguiendo "P-A-3"
+EXPIRE sesion:U47679 1800
+HSET sesion:U44820 usuario_id "U44820" nombre "Facundo" rol "fan" ultimo_acceso "2030-06-13T19:56:00Z" partido_siguiendo "P-A-3"
+EXPIRE sesion:U44820 1800
+HSET sesion:U08715 usuario_id "U08715" nombre "Facundo" rol "fan" ultimo_acceso "2030-06-13T19:56:00Z" partido_siguiendo "P-R16-3"
+EXPIRE sesion:U08715 1800
+HSET sesion:U12699 usuario_id "U12699" nombre "Valentina" rol "moderador" ultimo_acceso "2030-06-13T19:53:00Z" partido_siguiendo "P-R32-6"
+EXPIRE sesion:U12699 1800
+HSET sesion:U22437 usuario_id "U22437" nombre "Abril" rol "fan" ultimo_acceso "2030-06-13T20:00:00Z" partido_siguiendo "P-R32-6"
+EXPIRE sesion:U22437 1800
+HSET sesion:U31944 usuario_id "U31944" nombre "Lucas" rol "fan" ultimo_acceso "2030-06-13T19:52:00Z" partido_siguiendo "P-R32-6"
+EXPIRE sesion:U31944 1800
+HSET sesion:U35447 usuario_id "U35447" nombre "Emma" rol "fan" ultimo_acceso "2030-06-13T19:44:00Z" partido_siguiendo "P-A-1"
+EXPIRE sesion:U35447 1800
+HSET sesion:U12840 usuario_id "U12840" nombre "Benjamín" rol "fan" ultimo_acceso "2030-06-13T19:59:00Z" partido_siguiendo "P-A-3"
+EXPIRE sesion:U12840 1800
+HSET sesion:U43629 usuario_id "U43629" nombre "Mía" rol "fan" ultimo_acceso "2030-06-13T19:46:00Z" partido_siguiendo "P-QF-2"
+EXPIRE sesion:U43629 1800
+HSET sesion:U14993 usuario_id "U14993" nombre "Lucas" rol "fan" ultimo_acceso "2030-06-13T19:39:00Z" partido_siguiendo "P-R16-3"
+EXPIRE sesion:U14993 1800
+HSET sesion:U07357 usuario_id "U07357" nombre "Valentina" rol "fan" ultimo_acceso "2030-06-13T19:59:00Z" partido_siguiendo "P-A-1"
+EXPIRE sesion:U07357 1800
+HSET sesion:U17625 usuario_id "U17625" nombre "Joaquín" rol "fan" ultimo_acceso "2030-06-13T19:58:00Z" partido_siguiendo "P-R32-6"
+EXPIRE sesion:U17625 1800
+HSET sesion:U23297 usuario_id "U23297" nombre "Tomás" rol "fan" ultimo_acceso "2030-06-13T19:53:00Z" partido_siguiendo "P-QF-2"
+EXPIRE sesion:U23297 1800
+HSET sesion:U02480 usuario_id "U02480" nombre "Valentina" rol "fan" ultimo_acceso "2030-06-13T19:51:00Z" partido_siguiendo "P-A-3"
+EXPIRE sesion:U02480 1800
+HSET sesion:U11514 usuario_id "U11514" nombre "Renata" rol "fan" ultimo_acceso "2030-06-13T19:54:00Z" partido_siguiendo "P-A-1"
+EXPIRE sesion:U11514 1800
+HSET sesion:U11225 usuario_id "U11225" nombre "Julieta" rol "fan" ultimo_acceso "2030-06-13T19:45:00Z" partido_siguiendo "P-R32-6"
+EXPIRE sesion:U11225 1800
+HSET sesion:U13835 usuario_id "U13835" nombre "Emma" rol "fan" ultimo_acceso "2030-06-13T19:42:00Z" partido_siguiendo "P-QF-2"
+EXPIRE sesion:U13835 1800
+HSET sesion:U15211 usuario_id "U15211" nombre "Lucas" rol "fan" ultimo_acceso "2030-06-13T19:58:00Z" partido_siguiendo "P-A-1"
+EXPIRE sesion:U15211 1800
+HSET sesion:U12338 usuario_id "U12338" nombre "Benjamín" rol "fan" ultimo_acceso "2030-06-13T19:41:00Z" partido_siguiendo "P-A-3"
+EXPIRE sesion:U12338 1800
+HSET sesion:U14675 usuario_id "U14675" nombre "Mateo" rol "fan" ultimo_acceso "2030-06-13T19:43:00Z" partido_siguiendo "P-A-1"
+EXPIRE sesion:U14675 1800
+HSET sesion:U03289 usuario_id "U03289" nombre "Benjamín" rol "fan" ultimo_acceso "2030-06-13T19:47:00Z" partido_siguiendo "P-A-3"
+EXPIRE sesion:U03289 1800
+HSET sesion:U35606 usuario_id "U35606" nombre "Camila" rol "fan" ultimo_acceso "2030-06-13T20:00:00Z" partido_siguiendo "P-A-1"
+EXPIRE sesion:U35606 1800
+HSET sesion:U43225 usuario_id "U43225" nombre "Renata" rol "fan" ultimo_acceso "2030-06-13T19:50:00Z" partido_siguiendo "P-R16-3"
+EXPIRE sesion:U43225 1800
+HSET sesion:U42803 usuario_id "U42803" nombre "Lucas" rol "fan" ultimo_acceso "2030-06-13T19:49:00Z" partido_siguiendo "P-R16-3"
+EXPIRE sesion:U42803 1800
+HSET sesion:U37990 usuario_id "U37990" nombre "Emma" rol "fan" ultimo_acceso "2030-06-13T19:57:00Z" partido_siguiendo "P-A-1"
+EXPIRE sesion:U37990 1800
+HSET sesion:U04590 usuario_id "U04590" nombre "Bruno" rol "fan" ultimo_acceso "2030-06-13T19:49:00Z" partido_siguiendo "P-R32-6"
+EXPIRE sesion:U04590 1800
+HSET sesion:U03185 usuario_id "U03185" nombre "Mía" rol "fan" ultimo_acceso "2030-06-13T19:45:00Z" partido_siguiendo "P-A-3"
+EXPIRE sesion:U03185 1800
+HSET sesion:U10488 usuario_id "U10488" nombre "Sofía" rol "fan" ultimo_acceso "2030-06-13T19:39:00Z" partido_siguiendo "P-R32-6"
+EXPIRE sesion:U10488 1800
+HSET sesion:U06723 usuario_id "U06723" nombre "Mía" rol "fan" ultimo_acceso "2030-06-13T19:57:00Z" partido_siguiendo "P-QF-2"
+EXPIRE sesion:U06723 1800
+HSET sesion:U07423 usuario_id "U07423" nombre "Emma" rol "fan" ultimo_acceso "2030-06-13T19:57:00Z" partido_siguiendo "P-R32-6"
+EXPIRE sesion:U07423 1800
+HSET sesion:U02255 usuario_id "U02255" nombre "Agustín" rol "moderador" ultimo_acceso "2030-06-13T19:53:00Z" partido_siguiendo "P-A-3"
+EXPIRE sesion:U02255 1800
+HSET sesion:U03777 usuario_id "U03777" nombre "Julieta" rol "moderador" ultimo_acceso "2030-06-13T19:38:00Z" partido_siguiendo "P-R16-3"
+EXPIRE sesion:U03777 1800
+HSET sesion:U35232 usuario_id "U35232" nombre "Tomás" rol "fan" ultimo_acceso "2030-06-13T19:44:00Z" partido_siguiendo "P-A-1"
+EXPIRE sesion:U35232 1800
+HSET sesion:U30079 usuario_id "U30079" nombre "Mía" rol "fan" ultimo_acceso "2030-06-13T19:58:00Z" partido_siguiendo "P-R16-3"
+EXPIRE sesion:U30079 1800
+HSET sesion:U31272 usuario_id "U31272" nombre "Emma" rol "fan" ultimo_acceso "2030-06-13T19:45:00Z" partido_siguiendo "P-A-3"
+EXPIRE sesion:U31272 1800
+HSET sesion:U40455 usuario_id "U40455" nombre "Julieta" rol "moderador" ultimo_acceso "2030-06-13T19:44:00Z" partido_siguiendo "P-QF-2"
+EXPIRE sesion:U40455 1800
+HSET sesion:U29988 usuario_id "U29988" nombre "Lucas" rol "fan" ultimo_acceso "2030-06-13T19:43:00Z" partido_siguiendo "P-A-3"
+EXPIRE sesion:U29988 1800
+HSET sesion:U45271 usuario_id "U45271" nombre "Joaquín" rol "fan" ultimo_acceso "2030-06-13T19:36:00Z" partido_siguiendo "P-R32-6"
+EXPIRE sesion:U45271 1800
+HSET sesion:U26131 usuario_id "U26131" nombre "Julieta" rol "fan" ultimo_acceso "2030-06-13T19:44:00Z" partido_siguiendo "P-A-3"
+EXPIRE sesion:U26131 1800
+HSET sesion:U01234 usuario_id "U01234" nombre "Tomás" rol "fan" ultimo_acceso "2030-06-13T19:36:00Z" partido_siguiendo "P-A-3"
+EXPIRE sesion:U01234 1800
+HSET sesion:U00883 usuario_id "U00883" nombre "Bruno" rol "fan" ultimo_acceso "2030-06-13T19:37:00Z" partido_siguiendo "P-R16-3"
+EXPIRE sesion:U00883 1800
+HSET sesion:U38957 usuario_id "U38957" nombre "Agustín" rol "fan" ultimo_acceso "2030-06-13T19:47:00Z" partido_siguiendo "P-E-4"
+EXPIRE sesion:U38957 1800
+HSET sesion:U29702 usuario_id "U29702" nombre "Lucas" rol "fan" ultimo_acceso "2030-06-13T19:55:00Z" partido_siguiendo "P-A-3"
+EXPIRE sesion:U29702 1800
+HSET sesion:U23774 usuario_id "U23774" nombre "Santiago" rol "fan" ultimo_acceso "2030-06-13T19:58:00Z" partido_siguiendo "P-A-1"
+EXPIRE sesion:U23774 1800
+HSET sesion:U18420 usuario_id "U18420" nombre "Mía" rol "fan" ultimo_acceso "2030-06-13T19:42:00Z" partido_siguiendo "P-A-3"
+EXPIRE sesion:U18420 1800
+HSET sesion:U12803 usuario_id "U12803" nombre "Santiago" rol "moderador" ultimo_acceso "2030-06-13T19:50:00Z" partido_siguiendo "P-R16-3"
+EXPIRE sesion:U12803 1800
+HSET sesion:U46875 usuario_id "U46875" nombre "Santiago" rol "moderador" ultimo_acceso "2030-06-13T19:47:00Z" partido_siguiendo "P-R32-6"
+EXPIRE sesion:U46875 1800
+HSET sesion:U47920 usuario_id "U47920" nombre "Tomás" rol "fan" ultimo_acceso "2030-06-13T19:40:00Z" partido_siguiendo "P-QF-2"
+EXPIRE sesion:U47920 1800
+HSET sesion:U25468 usuario_id "U25468" nombre "Valentina" rol "fan" ultimo_acceso "2030-06-13T19:56:00Z" partido_siguiendo "P-R32-6"
+EXPIRE sesion:U25468 1800
+HSET sesion:U47335 usuario_id "U47335" nombre "Emma" rol "fan" ultimo_acceso "2030-06-13T19:43:00Z" partido_siguiendo "P-A-3"
+EXPIRE sesion:U47335 1800
+HSET sesion:U28344 usuario_id "U28344" nombre "Martina" rol "fan" ultimo_acceso "2030-06-13T19:53:00Z" partido_siguiendo "P-A-3"
+EXPIRE sesion:U28344 1800
+HSET sesion:U24807 usuario_id "U24807" nombre "Camila" rol "fan" ultimo_acceso "2030-06-13T19:52:00Z" partido_siguiendo "P-R16-3"
+EXPIRE sesion:U24807 1800
+HSET sesion:U03202 usuario_id "U03202" nombre "Thiago" rol "fan" ultimo_acceso "2030-06-13T19:40:00Z" partido_siguiendo "P-E-4"
+EXPIRE sesion:U03202 1800
+HSET sesion:U40985 usuario_id "U40985" nombre "Abril" rol "fan" ultimo_acceso "2030-06-13T19:52:00Z" partido_siguiendo "P-A-1"
+EXPIRE sesion:U40985 1800
+HSET sesion:U27009 usuario_id "U27009" nombre "Lucas" rol "fan" ultimo_acceso "2030-06-13T19:46:00Z" partido_siguiendo "P-A-3"
+EXPIRE sesion:U27009 1800
+HSET sesion:U22960 usuario_id "U22960" nombre "Mateo" rol "fan" ultimo_acceso "2030-06-13T19:45:00Z" partido_siguiendo "P-R32-6"
+EXPIRE sesion:U22960 1800
+HSET sesion:U14288 usuario_id "U14288" nombre "Tomás" rol "fan" ultimo_acceso "2030-06-13T19:49:00Z" partido_siguiendo "P-E-4"
+EXPIRE sesion:U14288 1800
+HSET sesion:U20197 usuario_id "U20197" nombre "Camila" rol "moderador" ultimo_acceso "2030-06-13T19:57:00Z" partido_siguiendo "P-E-4"
+EXPIRE sesion:U20197 1800
+HSET sesion:U43462 usuario_id "U43462" nombre "Bruno" rol "fan" ultimo_acceso "2030-06-13T19:58:00Z" partido_siguiendo "P-R32-6"
+EXPIRE sesion:U43462 1800
+HSET sesion:U22784 usuario_id "U22784" nombre "Joaquín" rol "fan" ultimo_acceso "2030-06-13T19:54:00Z" partido_siguiendo "P-QF-2"
+EXPIRE sesion:U22784 1800
+HSET sesion:U44888 usuario_id "U44888" nombre "Santiago" rol "fan" ultimo_acceso "2030-06-13T19:57:00Z" partido_siguiendo "P-A-3"
+EXPIRE sesion:U44888 1800
+HSET sesion:U41648 usuario_id "U41648" nombre "Tomás" rol "fan" ultimo_acceso "2030-06-13T19:59:00Z" partido_siguiendo "P-R16-3"
+EXPIRE sesion:U41648 1800
+HSET sesion:U24700 usuario_id "U24700" nombre "Thiago" rol "fan" ultimo_acceso "2030-06-13T19:38:00Z" partido_siguiendo "P-E-4"
+EXPIRE sesion:U24700 1800
+HSET sesion:U18406 usuario_id "U18406" nombre "Bruno" rol "fan" ultimo_acceso "2030-06-13T19:40:00Z" partido_siguiendo "P-R16-3"
+EXPIRE sesion:U18406 1800
+HSET sesion:U18174 usuario_id "U18174" nombre "Joaquín" rol "fan" ultimo_acceso "2030-06-13T19:37:00Z" partido_siguiendo "P-R32-6"
+EXPIRE sesion:U18174 1800
+HSET sesion:U34316 usuario_id "U34316" nombre "Bruno" rol "fan" ultimo_acceso "2030-06-13T19:56:00Z" partido_siguiendo "P-A-1"
+EXPIRE sesion:U34316 1800
+HSET sesion:U27985 usuario_id "U27985" nombre "Benjamín" rol "fan" ultimo_acceso "2030-06-13T19:59:00Z" partido_siguiendo "P-A-3"
+EXPIRE sesion:U27985 1800
+HSET sesion:U02049 usuario_id "U02049" nombre "Martina" rol "fan" ultimo_acceso "2030-06-13T19:43:00Z" partido_siguiendo "P-A-1"
+EXPIRE sesion:U02049 1800
+HSET sesion:U07707 usuario_id "U07707" nombre "Benjamín" rol "fan" ultimo_acceso "2030-06-13T19:59:00Z" partido_siguiendo "P-A-1"
+EXPIRE sesion:U07707 1800
+HSET sesion:U44727 usuario_id "U44727" nombre "Joaquín" rol "fan" ultimo_acceso "2030-06-13T19:55:00Z" partido_siguiendo "P-A-3"
+EXPIRE sesion:U44727 1800
+HSET sesion:U29318 usuario_id "U29318" nombre "Mía" rol "fan" ultimo_acceso "2030-06-13T19:45:00Z" partido_siguiendo "P-E-4"
+EXPIRE sesion:U29318 1800
+HSET sesion:U21218 usuario_id "U21218" nombre "Benjamín" rol "moderador" ultimo_acceso "2030-06-13T19:59:00Z" partido_siguiendo "P-E-4"
+EXPIRE sesion:U21218 1800
+HSET sesion:U28413 usuario_id "U28413" nombre "Mía" rol "moderador" ultimo_acceso "2030-06-13T19:35:00Z" partido_siguiendo "P-QF-2"
+EXPIRE sesion:U28413 1800
+HSET sesion:U45405 usuario_id "U45405" nombre "Mateo" rol "fan" ultimo_acceso "2030-06-13T19:48:00Z" partido_siguiendo "P-R32-6"
+EXPIRE sesion:U45405 1800
+HSET sesion:U32025 usuario_id "U32025" nombre "Emma" rol "fan" ultimo_acceso "2030-06-13T19:53:00Z" partido_siguiendo "P-A-3"
+EXPIRE sesion:U32025 1800
+HSET sesion:U43610 usuario_id "U43610" nombre "Abril" rol "fan" ultimo_acceso "2030-06-13T19:53:00Z" partido_siguiendo "P-E-4"
+EXPIRE sesion:U43610 1800
+HSET sesion:U21010 usuario_id "U21010" nombre "Facundo" rol "fan" ultimo_acceso "2030-06-13T19:47:00Z" partido_siguiendo "P-R32-6"
+EXPIRE sesion:U21010 1800
+HSET sesion:U21069 usuario_id "U21069" nombre "Martina" rol "moderador" ultimo_acceso "2030-06-13T19:52:00Z" partido_siguiendo "P-QF-2"
+EXPIRE sesion:U21069 1800
+HSET sesion:U06658 usuario_id "U06658" nombre "Lucía" rol "fan" ultimo_acceso "2030-06-13T19:49:00Z" partido_siguiendo "P-A-3"
+EXPIRE sesion:U06658 1800
+HSET sesion:U38106 usuario_id "U38106" nombre "Tomás" rol "fan" ultimo_acceso "2030-06-13T19:54:00Z" partido_siguiendo "P-R16-3"
+EXPIRE sesion:U38106 1800
+HSET sesion:U20103 usuario_id "U20103" nombre "Facundo" rol "moderador" ultimo_acceso "2030-06-13T19:54:00Z" partido_siguiendo "P-E-4"
+EXPIRE sesion:U20103 1800
+HSET sesion:U29022 usuario_id "U29022" nombre "Tomás" rol "fan" ultimo_acceso "2030-06-13T19:40:00Z" partido_siguiendo "P-R16-3"
+EXPIRE sesion:U29022 1800
+HSET sesion:U49524 usuario_id "U49524" nombre "Emma" rol "fan" ultimo_acceso "2030-06-13T19:38:00Z" partido_siguiendo "P-R16-3"
+EXPIRE sesion:U49524 1800
+HSET sesion:U21419 usuario_id "U21419" nombre "Camila" rol "fan" ultimo_acceso "2030-06-13T20:00:00Z" partido_siguiendo "P-A-1"
+EXPIRE sesion:U21419 1800
+HSET sesion:U29127 usuario_id "U29127" nombre "Martina" rol "fan" ultimo_acceso "2030-06-13T20:00:00Z" partido_siguiendo "P-A-1"
+EXPIRE sesion:U29127 1800
+HSET sesion:U27961 usuario_id "U27961" nombre "Bruno" rol "fan" ultimo_acceso "2030-06-13T19:48:00Z" partido_siguiendo "P-R32-6"
+EXPIRE sesion:U27961 1800
+HSET sesion:U44119 usuario_id "U44119" nombre "Julieta" rol "fan" ultimo_acceso "2030-06-13T20:00:00Z" partido_siguiendo "P-R32-6"
+EXPIRE sesion:U44119 1800
+HSET sesion:U28855 usuario_id "U28855" nombre "Martina" rol "fan" ultimo_acceso "2030-06-13T19:44:00Z" partido_siguiendo "P-QF-2"
+EXPIRE sesion:U28855 1800
+HSET sesion:U43302 usuario_id "U43302" nombre "Mía" rol "fan" ultimo_acceso "2030-06-13T19:38:00Z" partido_siguiendo "P-A-1"
+EXPIRE sesion:U43302 1800
+HSET sesion:U21334 usuario_id "U21334" nombre "Abril" rol "fan" ultimo_acceso "2030-06-13T19:37:00Z" partido_siguiendo "P-QF-2"
+EXPIRE sesion:U21334 1800
+HSET sesion:U31936 usuario_id "U31936" nombre "Julieta" rol "fan" ultimo_acceso "2030-06-13T19:54:00Z" partido_siguiendo "P-R32-6"
+EXPIRE sesion:U31936 1800
+HSET sesion:U11590 usuario_id "U11590" nombre "Joaquín" rol "fan" ultimo_acceso "2030-06-13T19:49:00Z" partido_siguiendo "P-R16-3"
+EXPIRE sesion:U11590 1800
+HSET sesion:U01747 usuario_id "U01747" nombre "Valentina" rol "fan" ultimo_acceso "2030-06-13T19:37:00Z" partido_siguiendo "P-R32-6"
+EXPIRE sesion:U01747 1800
+HSET sesion:U04740 usuario_id "U04740" nombre "Mía" rol "fan" ultimo_acceso "2030-06-13T19:38:00Z" partido_siguiendo "P-QF-2"
+EXPIRE sesion:U04740 1800
+HSET sesion:U01042 usuario_id "U01042" nombre "Benjamín" rol "fan" ultimo_acceso "2030-06-13T19:43:00Z" partido_siguiendo "P-E-4"
+EXPIRE sesion:U01042 1800
+HSET sesion:U17990 usuario_id "U17990" nombre "Santiago" rol "fan" ultimo_acceso "2030-06-13T19:39:00Z" partido_siguiendo "P-A-1"
+EXPIRE sesion:U17990 1800
+HSET sesion:U03244 usuario_id "U03244" nombre "Valentina" rol "moderador" ultimo_acceso "2030-06-13T19:51:00Z" partido_siguiendo "P-E-4"
+EXPIRE sesion:U03244 1800
+HSET sesion:U48103 usuario_id "U48103" nombre "Renata" rol "fan" ultimo_acceso "2030-06-13T19:51:00Z" partido_siguiendo "P-A-3"
+EXPIRE sesion:U48103 1800
+HSET sesion:U16958 usuario_id "U16958" nombre "Benjamín" rol "moderador" ultimo_acceso "2030-06-13T19:49:00Z" partido_siguiendo "P-QF-2"
+EXPIRE sesion:U16958 1800
+HSET sesion:U28864 usuario_id "U28864" nombre "Facundo" rol "fan" ultimo_acceso "2030-06-13T19:40:00Z" partido_siguiendo "P-A-1"
+EXPIRE sesion:U28864 1800
+HSET sesion:U37468 usuario_id "U37468" nombre "Lucía" rol "fan" ultimo_acceso "2030-06-13T19:40:00Z" partido_siguiendo "P-R32-6"
+EXPIRE sesion:U37468 1800
+HSET sesion:U29864 usuario_id "U29864" nombre "Valentina" rol "fan" ultimo_acceso "2030-06-13T19:40:00Z" partido_siguiendo "P-A-1"
+EXPIRE sesion:U29864 1800
+HSET sesion:U12205 usuario_id "U12205" nombre "Tomás" rol "fan" ultimo_acceso "2030-06-13T19:44:00Z" partido_siguiendo "P-R32-6"
+EXPIRE sesion:U12205 1800
+HSET sesion:U33221 usuario_id "U33221" nombre "Joaquín" rol "fan" ultimo_acceso "2030-06-13T19:57:00Z" partido_siguiendo "P-R32-6"
+EXPIRE sesion:U33221 1800
+HSET sesion:U16062 usuario_id "U16062" nombre "Agustín" rol "fan" ultimo_acceso "2030-06-13T19:44:00Z" partido_siguiendo "P-A-3"
+EXPIRE sesion:U16062 1800
+HSET sesion:U40351 usuario_id "U40351" nombre "Emma" rol "fan" ultimo_acceso "2030-06-13T19:58:00Z" partido_siguiendo "P-A-1"
+EXPIRE sesion:U40351 1800
+HSET sesion:U10464 usuario_id "U10464" nombre "Benjamín" rol "fan" ultimo_acceso "2030-06-13T19:40:00Z" partido_siguiendo "P-R32-6"
+EXPIRE sesion:U10464 1800
+HSET sesion:U26780 usuario_id "U26780" nombre "Thiago" rol "fan" ultimo_acceso "2030-06-13T20:00:00Z" partido_siguiendo "P-E-4"
+EXPIRE sesion:U26780 1800
+HSET sesion:U32028 usuario_id "U32028" nombre "Camila" rol "fan" ultimo_acceso "2030-06-13T20:00:00Z" partido_siguiendo "P-R32-6"
+EXPIRE sesion:U32028 1800
+HSET sesion:U33831 usuario_id "U33831" nombre "Bruno" rol "fan" ultimo_acceso "2030-06-13T19:56:00Z" partido_siguiendo "P-A-1"
+EXPIRE sesion:U33831 1800
+HSET sesion:U26480 usuario_id "U26480" nombre "Renata" rol "fan" ultimo_acceso "2030-06-13T19:47:00Z" partido_siguiendo "P-A-1"
+EXPIRE sesion:U26480 1800
+HSET sesion:U24309 usuario_id "U24309" nombre "Joaquín" rol "fan" ultimo_acceso "2030-06-13T19:59:00Z" partido_siguiendo "P-E-4"
+EXPIRE sesion:U24309 1800
+HSET sesion:U22995 usuario_id "U22995" nombre "Martina" rol "fan" ultimo_acceso "2030-06-13T19:49:00Z" partido_siguiendo "P-R16-3"
+EXPIRE sesion:U22995 1800
+HSET sesion:U21029 usuario_id "U21029" nombre "Facundo" rol "fan" ultimo_acceso "2030-06-13T19:37:00Z" partido_siguiendo "P-R32-6"
+EXPIRE sesion:U21029 1800
+HSET sesion:U00856 usuario_id "U00856" nombre "Martina" rol "fan" ultimo_acceso "2030-06-13T19:52:00Z" partido_siguiendo "P-A-3"
+EXPIRE sesion:U00856 1800
+HSET sesion:U24364 usuario_id "U24364" nombre "Facundo" rol "fan" ultimo_acceso "2030-06-13T19:50:00Z" partido_siguiendo "P-R32-6"
+EXPIRE sesion:U24364 1800
+HSET sesion:U02916 usuario_id "U02916" nombre "Emma" rol "fan" ultimo_acceso "2030-06-13T19:45:00Z" partido_siguiendo "P-A-1"
+EXPIRE sesion:U02916 1800
+HSET sesion:U36704 usuario_id "U36704" nombre "Valentina" rol "fan" ultimo_acceso "2030-06-13T19:44:00Z" partido_siguiendo "P-R16-3"
+EXPIRE sesion:U36704 1800
+HSET sesion:U30139 usuario_id "U30139" nombre "Tomás" rol "fan" ultimo_acceso "2030-06-13T19:38:00Z" partido_siguiendo "P-A-1"
+EXPIRE sesion:U30139 1800
+HSET sesion:U05828 usuario_id "U05828" nombre "Sofía" rol "fan" ultimo_acceso "2030-06-13T19:35:00Z" partido_siguiendo "P-R32-6"
+EXPIRE sesion:U05828 1800
+HSET sesion:U06600 usuario_id "U06600" nombre "Agustín" rol "fan" ultimo_acceso "2030-06-13T19:36:00Z" partido_siguiendo "P-E-4"
+EXPIRE sesion:U06600 1800
+HSET sesion:U04622 usuario_id "U04622" nombre "Martina" rol "fan" ultimo_acceso "2030-06-13T19:44:00Z" partido_siguiendo "P-E-4"
+EXPIRE sesion:U04622 1800
+HSET sesion:U22587 usuario_id "U22587" nombre "Camila" rol "fan" ultimo_acceso "2030-06-13T19:48:00Z" partido_siguiendo "P-R32-6"
+EXPIRE sesion:U22587 1800
+HSET sesion:U38779 usuario_id "U38779" nombre "Agustín" rol "fan" ultimo_acceso "2030-06-13T19:36:00Z" partido_siguiendo "P-E-4"
+EXPIRE sesion:U38779 1800
+HSET sesion:U16086 usuario_id "U16086" nombre "Thiago" rol "fan" ultimo_acceso "2030-06-13T19:53:00Z" partido_siguiendo "P-R32-6"
+EXPIRE sesion:U16086 1800
+HSET sesion:U26453 usuario_id "U26453" nombre "Mía" rol "fan" ultimo_acceso "2030-06-13T19:44:00Z" partido_siguiendo "P-A-1"
+EXPIRE sesion:U26453 1800
+HSET sesion:U33583 usuario_id "U33583" nombre "Abril" rol "fan" ultimo_acceso "2030-06-13T19:53:00Z" partido_siguiendo "P-A-3"
+EXPIRE sesion:U33583 1800
+HSET sesion:U41554 usuario_id "U41554" nombre "Sofía" rol "fan" ultimo_acceso "2030-06-13T19:45:00Z" partido_siguiendo "P-A-1"
+EXPIRE sesion:U41554 1800
+HSET sesion:U19390 usuario_id "U19390" nombre "Emma" rol "fan" ultimo_acceso "2030-06-13T19:41:00Z" partido_siguiendo "P-E-4"
+EXPIRE sesion:U19390 1800
+HSET sesion:U16505 usuario_id "U16505" nombre "Sofía" rol "fan" ultimo_acceso "2030-06-13T19:53:00Z" partido_siguiendo "P-E-4"
+EXPIRE sesion:U16505 1800
+HSET sesion:U02904 usuario_id "U02904" nombre "Mía" rol "fan" ultimo_acceso "2030-06-13T20:00:00Z" partido_siguiendo "P-A-1"
+EXPIRE sesion:U02904 1800
+HSET sesion:U16838 usuario_id "U16838" nombre "Tomás" rol "fan" ultimo_acceso "2030-06-13T19:54:00Z" partido_siguiendo "P-E-4"
+EXPIRE sesion:U16838 1800
+HSET sesion:U28260 usuario_id "U28260" nombre "Julieta" rol "fan" ultimo_acceso "2030-06-13T20:00:00Z" partido_siguiendo "P-R32-6"
+EXPIRE sesion:U28260 1800
+HSET sesion:U19223 usuario_id "U19223" nombre "Julieta" rol "fan" ultimo_acceso "2030-06-13T19:54:00Z" partido_siguiendo "P-R32-6"
+EXPIRE sesion:U19223 1800
+HSET sesion:U08488 usuario_id "U08488" nombre "Benjamín" rol "fan" ultimo_acceso "2030-06-13T20:00:00Z" partido_siguiendo "P-R32-6"
+EXPIRE sesion:U08488 1800
+HSET sesion:U43867 usuario_id "U43867" nombre "Valentina" rol "fan" ultimo_acceso "2030-06-13T19:39:00Z" partido_siguiendo "P-QF-2"
+EXPIRE sesion:U43867 1800
+HSET sesion:U16300 usuario_id "U16300" nombre "Emma" rol "fan" ultimo_acceso "2030-06-13T19:42:00Z" partido_siguiendo "P-A-3"
+EXPIRE sesion:U16300 1800
+HSET sesion:U18518 usuario_id "U18518" nombre "Sofía" rol "fan" ultimo_acceso "2030-06-13T20:00:00Z" partido_siguiendo "P-R32-6"
+EXPIRE sesion:U18518 1800
+HSET sesion:U38349 usuario_id "U38349" nombre "Martina" rol "fan" ultimo_acceso "2030-06-13T19:41:00Z" partido_siguiendo "P-A-1"
+EXPIRE sesion:U38349 1800
+HSET sesion:U21486 usuario_id "U21486" nombre "Mateo" rol "fan" ultimo_acceso "2030-06-13T19:55:00Z" partido_siguiendo "P-A-1"
+EXPIRE sesion:U21486 1800
+HSET sesion:U43886 usuario_id "U43886" nombre "Martina" rol "moderador" ultimo_acceso "2030-06-13T19:44:00Z" partido_siguiendo "P-E-4"
+EXPIRE sesion:U43886 1800
+HSET sesion:U14028 usuario_id "U14028" nombre "Lucas" rol "fan" ultimo_acceso "2030-06-13T19:37:00Z" partido_siguiendo "P-QF-2"
+EXPIRE sesion:U14028 1800
+HSET sesion:U32525 usuario_id "U32525" nombre "Camila" rol "fan" ultimo_acceso "2030-06-13T19:59:00Z" partido_siguiendo "P-QF-2"
+EXPIRE sesion:U32525 1800
+HSET sesion:U33573 usuario_id "U33573" nombre "Emma" rol "fan" ultimo_acceso "2030-06-13T19:57:00Z" partido_siguiendo "P-R32-6"
+EXPIRE sesion:U33573 1800
+HSET sesion:U45322 usuario_id "U45322" nombre "Sofía" rol "fan" ultimo_acceso "2030-06-13T19:53:00Z" partido_siguiendo "P-A-1"
+EXPIRE sesion:U45322 1800
+HSET sesion:U37984 usuario_id "U37984" nombre "Santiago" rol "fan" ultimo_acceso "2030-06-13T20:00:00Z" partido_siguiendo "P-A-1"
+EXPIRE sesion:U37984 1800
+HSET sesion:U04987 usuario_id "U04987" nombre "Camila" rol "fan" ultimo_acceso "2030-06-13T19:50:00Z" partido_siguiendo "P-A-3"
+EXPIRE sesion:U04987 1800
+HSET sesion:U39467 usuario_id "U39467" nombre "Emma" rol "fan" ultimo_acceso "2030-06-13T19:45:00Z" partido_siguiendo "P-E-4"
+EXPIRE sesion:U39467 1800
+HSET sesion:U14730 usuario_id "U14730" nombre "Lucas" rol "fan" ultimo_acceso "2030-06-13T19:53:00Z" partido_siguiendo "P-A-1"
+EXPIRE sesion:U14730 1800
+# 
+# ======================================================================
+# 2. CACHE DE RESULTADO DE PARTIDO (RF6/RF7)
+# Fuente de verdad: Neo4j (nodo :Partido). TTL corto (45s) porque
+# es un dato que cambia mientras el partido está en curso -- ver
+# docs/ciclo_de_vida_e_invalidacion.md.
+# ======================================================================
+SET cache:partido:P-A-1 "{\"golesLocal\":1,\"golesVisitante\":2,\"estado\":\"finalizado\"}" EX 45
+SET cache:partido:P-A-3 "{\"golesLocal\":2,\"golesVisitante\":1,\"estado\":\"finalizado\"}" EX 45
+SET cache:partido:P-E-4 "{\"golesLocal\":0,\"golesVisitante\":0,\"estado\":\"en_juego\"}" EX 45
+SET cache:partido:P-QF-2 "{\"golesLocal\":3,\"golesVisitante\":1,\"estado\":\"finalizado\"}" EX 45
+SET cache:partido:P-R16-3 "{\"golesLocal\":2,\"golesVisitante\":1,\"estado\":\"finalizado\"}" EX 45
+SET cache:partido:P-R32-6 "{\"golesLocal\":1,\"golesVisitante\":0,\"estado\":\"en_juego\"}" EX 45
+# 
+# ======================================================================
+# 3. CONTADOR DE VISITAS Y ENCUESTA DE FIGURA (RF8/RF9)
+# INCRBY simula visitas ya acumuladas antes de la demo en vivo.
+# ZADD precarga votos de la encuesta; en la demo se agregan mas
+# con ZINCRBY para mostrar la actualizacion atomica concurrente.
+# ======================================================================
+SET contador:partido:P-A-1:visitas 3383
+ZADD encuesta:P-A-1:figura 66 "ARG-10"
+ZADD encuesta:P-A-1:figura 43 "ARG-09"
+ZADD encuesta:P-A-1:figura 32 "ESP-07"
+ZADD encuesta:P-A-1:figura 57 "ESP-11"
+SET contador:partido:P-A-3:visitas 3136
+ZADD encuesta:P-A-3:figura 36 "ARG-10"
+ZADD encuesta:P-A-3:figura 22 "ARG-07"
+ZADD encuesta:P-A-3:figura 9 "ESP-09"
+ZADD encuesta:P-A-3:figura 15 "ESP-04"
+SET contador:partido:P-E-4:visitas 4258
+ZADD encuesta:P-E-4:figura 20 "JPN-07"
+ZADD encuesta:P-E-4:figura 25 "JPN-10"
+ZADD encuesta:P-E-4:figura 20 "SEN-09"
+ZADD encuesta:P-E-4:figura 71 "SEN-11"
+SET contador:partido:P-QF-2:visitas 1384
+ZADD encuesta:P-QF-2:figura 40 "JPN-10"
+ZADD encuesta:P-QF-2:figura 41 "JPN-22"
+ZADD encuesta:P-QF-2:figura 52 "BRA-09"
+ZADD encuesta:P-QF-2:figura 60 "BRA-10"
+SET contador:partido:P-R16-3:visitas 2044
+ZADD encuesta:P-R16-3:figura 11 "JPN-07"
+ZADD encuesta:P-R16-3:figura 69 "JPN-14"
+ZADD encuesta:P-R16-3:figura 71 "SEN-01"
+ZADD encuesta:P-R16-3:figura 79 "SEN-08"
+SET contador:partido:P-R32-6:visitas 926
+ZADD encuesta:P-R32-6:figura 56 "JPN-10"
+ZADD encuesta:P-R32-6:figura 14 "USA-19"
+ZADD encuesta:P-R32-6:figura 11 "USA-07"

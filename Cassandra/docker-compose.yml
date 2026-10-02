@@ -13,9 +13,16 @@ services:
       # Puerto nativo CQL para clientes y drivers.
       - "9042:9042"
     volumes:
-      # Datos persistentes en la notebook, según la convención de la materia.
-      - ~/docker/data/cassandra:/var/lib/cassandra
+      # Datos persistentes en un volumen NOMBRADO de Docker (RNF2), no en un
+      # bind mount: así los datos sobreviven a `docker compose down` sin
+      # depender de una carpeta del host ni de permisos del sistema de
+      # archivos local.
+      - cassandra_data:/var/lib/cassandra
       # Permite ejecutar scripts de práctica desde cqlsh sin copiarlos al contenedor.
       - ./scripts:/scripts:ro
       - ./data:/data
+
+volumes:
+  cassandra_data:
+    name: fixture2030_cassandra_data
 

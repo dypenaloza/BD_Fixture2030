@@ -1,0 +1,56 @@
+# =============================================================================
+# CONCURRENCIA (RF8) y RANKING (RF9) — actualizaciones simultáneas sin
+# resultados inconsistentes, sobre dos estructuras:
+#   a) contador:partido:{id}:visitas  (String, INCR)      -> RF8 simple
+#   b) encuesta:{id}:figura           (Sorted Set, ZINCRBY) -> RF8 + RF9
+#
+# Requiere haber corrido antes scripts/carga_muestra.redis.
+#
+# Uso:
+#   ./scripts/ejecutar.sh scripts/concurrencia.redis
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# 1. Contador de visitas — atomicidad nativa de INCR/INCRBY (RF8)
+#    INCR es una única operación en el servidor: aunque miles de usuarios
+#    pidan la ficha del partido al mismo tiempo, Redis serializa cada
+#    incremento. No hay un "leer valor -> sumar en la app -> guardar" que
+#    pueda perder un incremento si dos pedidos llegan a la vez.
+# -----------------------------------------------------------------------------
+GET contador:partido:P-A-1:visitas
+INCR contador:partido:P-A-1:visitas
+INCR contador:partido:P-A-1:visitas
+INCRBY contador:partido:P-A-1:visitas 10
+GET contador:partido:P-A-1:visitas
+
+# -----------------------------------------------------------------------------
+# 2. Encuesta de figura del partido — ZINCRBY (RF8) + ranking (RF9)
+#    Cada voto es una operación atómica sobre el Sorted Set: no hace falta
+#    traer el conteo actual al cliente, sumarle 1 y volver a guardarlo (eso
+#    sí podría perder votos si dos llegan al mismo tiempo). ZINCRBY suma
+#    directamente en el servidor.
+# -----------------------------------------------------------------------------
+ZSCORE encuesta:P-A-1:figura "ARG-10"
+
+# Simulación de votos concurrentes (en la práctica en vivo, lanzar estos
+# ZINCRBY desde pestañas/terminales distintas al mismo tiempo):
+ZINCRBY encuesta:P-A-1:figura 1 "ARG-10"
+ZINCRBY encuesta:P-A-1:figura 1 "ARG-10"
+ZINCRBY encuesta:P-A-1:figura 1 "ESP-07"
+ZINCRBY encuesta:P-A-1:figura 1 "ARG-10"
+
+ZSCORE encuesta:P-A-1:figura "ARG-10"
+# El valor refleja exactamente los 3 incrementos de ARG-10, sin importar
+# el orden ni la concurrencia real de llegada.
+
+# -----------------------------------------------------------------------------
+# 3. RF9 — Ranking: Top-N de la encuesta, directamente desde Redis
+#    (sin traer todos los votos al cliente para ordenarlos a mano)
+# -----------------------------------------------------------------------------
+ZREVRANGE encuesta:P-A-1:figura 0 4 WITHSCORES
+ZREVRANGE encuesta:P-QF-2:figura 0 2 WITHSCORES
+
+# El ranking devuelve IDs de jugador (formato EQUIPO-DORSAL, Hito 4); el
+# nombre para mostrar se resuelve contra MongoDB cuando la aplicación
+# arma la pantalla, no se duplica en Redis (ver
+# docs/ciclo_de_vida_e_invalidacion.md).

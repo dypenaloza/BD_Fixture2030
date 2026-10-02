@@ -1,0 +1,25 @@
+# =============================================================================
+# MÉTRICAS (RF12, RF13) — observabilidad de la caché y del uso de memoria.
+#
+# Uso:
+#   ./scripts/ejecutar.sh scripts/metricas.redis
+# =============================================================================
+
+# Tamaño total de la base (cantidad de claves) y uso de memoria real
+DBSIZE
+INFO memory
+
+# Hits/misses acumulados desde que arrancó el servidor (RNF10: se
+# interpretan junto a la fecha de arranque, no como una cifra absoluta)
+INFO stats
+
+# Claves efectivamente vencidas por TTL vs. removidas por presión de
+# memoria — distinción explícita que pide RF10/RNF6 (ver
+# docs/memoria_y_escalabilidad.md)
+INFO stats
+# (buscar expired_keys y evicted_keys en la salida de arriba)
+
+# Inspección segura del espacio de claves (RNF8): nunca KEYS *, siempre
+# SCAN con cursor y un patrón acotado.
+SCAN 0 MATCH sesion:* COUNT 50
+SCAN 0 MATCH cache:* COUNT 50

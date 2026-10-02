@@ -1,0 +1,17 @@
+=== Persistencia (RNF2): bind mount ~/docker/data/redis ===
+--- DBSIZE antes de detener ---
+209
+Background saving started
+total 40
+drwxr-xr-x 3 claude root             4096 Oct  2 05:17 .
+drwxr-xr-x 3 root   root             4096 Oct  2 05:14 ..
+drwx------ 2 claude systemd-journal  4096 Oct  2 05:14 appendonlydir
+-rw------- 1 claude systemd-journal 28640 Oct  2 05:17 dump.rdb
+--- docker compose stop / start ---
+ Container fixture2030-redis Stopping 
+ Container fixture2030-redis Stopped 
+ Container fixture2030-redis Starting 
+ Container fixture2030-redis Started 
+--- DBSIZE después de reiniciar el contenedor ---
+204
+

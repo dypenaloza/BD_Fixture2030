@@ -1,0 +1,10 @@
+{"golesLocal":1,"golesVisitante":2,"estado":"finalizado"}
+29
+
+OK
+{"golesLocal":1,"golesVisitante":1,"estado":"finalizado"}
+{"golesLocal":0,"golesVisitante":0,"estado":"en_juego"}
+1
+
+OK
+{"golesLocal":1,"golesVisitante":0,"estado":"en_juego"}

@@ -1,0 +1,35 @@
+# =============================================================================
+# Hito 7 — Módulo de Caché de Usuarios y Sesiones (Grupo 12)
+#
+# RNF1: imagen redis:latest (sin fijar versión) — ver README para la fecha
+#       y versión exactas con las que se validó este ambiente.
+# RNF2: persistencia en ~/docker/data/redis (bind mount), según la
+#       convención de la materia para este hito (a diferencia de los
+#       módulos de Mongo/Neo4j/Cassandra, que usan volúmenes nombrados).
+# RF10: maxmemory + maxmemory-policy fijados acá mismo; ver
+#       docs/memoria_y_escalabilidad.md para la justificación de por qué
+#       se eligió "noeviction" y no una política LRU/LFU.
+# =============================================================================
+
+services:
+  redis:
+    image: redis:latest
+    container_name: fixture2030-redis
+    restart: unless-stopped
+    command: >
+      redis-server
+      --appendonly yes
+      --save 60 1
+      --loglevel notice
+      --maxmemory 100mb
+      --maxmemory-policy noeviction
+    ports:
+      - "6379:6379"
+    volumes:
+      - ~/docker/data/redis:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 10s

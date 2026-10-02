@@ -1,0 +1,30 @@
+=== Demostración real de expiración por TTL (con espera real) ===
+--- recién cargada: TTL y EXISTS de sesion:U18727 ---
+5
+1
+--- esperando 6 segundos reales ---
+--- EXISTS sesion:U18727 después de 6s (TTL era 5s) ---
+0
+
+--- ciclo completo: crear, leer, renovar, cerrar sesión (RF3/RF4/RF7) ---
+0
+1
+usuario_id
+U99999
+nombre
+Demo
+rol
+fan
+ultimo_acceso
+2030-06-13T20:15:00Z
+partido_siguiendo
+P-A-1
+1800
+0
+1
+1800
+0
+0
+1
+0
+
