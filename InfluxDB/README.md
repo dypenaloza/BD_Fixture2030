@@ -1,0 +1,1 @@
+**Evidencia 01 — Creación de la base fixture2030 con retención de 30 días**

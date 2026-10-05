@@ -1,2 +1,5 @@
 Cassandra/data/*.csv
 Cassandra/data/*.csv
+
+# InfluxDB - token local
+.influxdb3-token
