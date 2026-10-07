@@ -3,3 +3,7 @@ Cassandra/data/*.csv
 
 # InfluxDB - token local
 .influxdb3-token
+
+# Datos generados por InfluxDB
+scripts/puntos_fixture2030.lp
+scripts/puntos_volumen.lp

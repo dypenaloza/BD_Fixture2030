@@ -78,3 +78,18 @@ SUM (suma).
 
 Justificación:
 Como cada observación registra nuevos tiros ocurridos durante ese intervalo, pueden sumarse para obtener el total.
+
+**Coherencia con el TPO**
+
+# Relación con partidos:
+Las estadísticas temporales se identifican mediante partido_id, permitiendo asociar cada observación con un partido del Fixture 2030.
+
+# Relación con equipos:
+Cada observación incluye equipo_id como dimensión, permitiendo consultar y comparar la evolución de las estadísticas de los equipos participantes.
+
+# Relación con otros módulos:
+InfluxDB se utiliza específicamente para almacenar estadísticas que cambian a lo largo del tiempo.
+
+Los datos descriptivos de partidos, equipos, jugadores y usuarios continúan perteneciendo a los modelos utilizados en los hitos anteriores según sus respectivos patrones de acceso.
+
+El módulo temporal no reemplaza esos modelos, sino que agrega el historial de evolución de las estadísticas en vivo.

@@ -86,3 +86,61 @@ El objetivo del diseño es soportar 10M+ puntos.
 La prueba realizada en el ambiente local utilizará un volumen acorde al hardware disponible.
 
 El volumen efectivamente probado, el método y los resultados están documentados sin suponer rendimientos no medidos.
+
+**Prueba local de carga**
+
+# Fecha de ejecución:
+06/10/2026
+
+# Ambiente utilizado:
+- InfluxDB 3 Core versión 3.12.0.
+- Procesador: 11th Gen Intel(R) Core(TM) i5-1135G7 @ 2.40GHz.
+- Memoria RAM: 7,75 GB.
+- Entorno ejecutado localmente mediante Docker Compose.
+
+# Volumen probado:
+Se generaron y cargaron 10.000 puntos temporales correspondientes al partido M002.
+
+Los puntos se distribuyeron de la siguiente manera:
+- ARG: 5.000 puntos.
+- POR: 5.000 puntos.
+
+# Método de prueba:
+Los 10.000 puntos fueron generados mediante el script generacion_volumen.ps1 y almacenados en un archivo de line protocol.
+
+La carga fue realizada mediante carga_lotes.ps1 utilizando influxdb3 write con precisión temporal en segundos.
+
+La cantidad y distribución de los puntos fueron verificadas posteriormente mediante validacion.ps1.
+
+# Resultados observados:
+El CLI de InfluxDB informó:
+
+- Tiempo de escritura: 320 ms.
+- Solicitudes realizadas: 1.
+- Velocidad informada: 31.174 líneas/s.
+- Datos procesados: 887,09 KiB.
+- Velocidad de transferencia informada: 2,70 MiB/s.
+
+El cronómetro externo del script carga_lotes.ps1 registró un tiempo total de 1,0744054 segundos.
+
+# Interpretación:
+Los 320 ms corresponden al tiempo informado por el comando de escritura de InfluxDB.
+
+Los 1,0744054 segundos corresponden al tiempo total observado por el script alrededor de la ejecución del comando.
+
+Por este motivo, ambas mediciones se registran por separado y no se consideran equivalentes.
+
+# Validación:
+Luego de la carga se verificó que M002 contuviera exactamente 10.000 puntos:
+
+- ARG: 5.000 puntos.
+- POR: 5.000 puntos.
+
+La cantidad y distribución coincidieron con los datos generados.
+
+# Limitaciones:
+Esta prueba corresponde únicamente al ambiente local disponible y a un volumen real de 10.000 puntos.
+
+No se afirma que este resultado represente el rendimiento con 10M+ puntos.
+
+El objetivo de 10M+ puntos se considera una meta de diseño y escalabilidad, mientras que la medición realizada corresponde únicamente al volumen efectivamente probado.
