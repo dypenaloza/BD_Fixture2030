@@ -1,0 +1,101 @@
+# Salida de: docker exec -i fixture2030-iris iris session IRIS -U USER < scripts/pruebas_hito9.mac
+# Fecha: 2026-10-09 18:27 | IRIS: versionid:    2026.2.0.221.0com
+# Durable: $HOME/docker/data/iris (WSL2 Ubuntu 24.04)
+
+Node: 5df3f18e0f53, Instance: IRIS
+Load of directory started on 10/09/2026 18:26:58
+Loading file /scripts/Fixture.Evento.cls as cls
+Imported class: Fixture.Evento
+Loading file /scripts/Fixture.Partido.cls as cls
+Imported class: Fixture.Partido
+Loading file /scripts/Fixture.Persona.cls as cls
+Imported class: Fixture.Persona
+Loading file /scripts/Fixture.CargaInicial.cls as cls
+Imported class: Fixture.CargaInicial
+Loading file /scripts/Fixture.Arbitro.cls as cls
+Imported class: Fixture.Arbitro
+Loading file /scripts/Fixture.Jugador.cls as cls
+Imported class: Fixture.Jugador
+Compiling 6 classes
+Compiling class Fixture.CargaInicial
+Compiling class Fixture.Persona
+Compiling class Fixture.Partido
+Compiling class Fixture.Arbitro
+Compiling class Fixture.Jugador
+Compiling class Fixture.Evento
+Compiling table Fixture.Arbitro
+Compiling table Fixture.Partido
+Compiling table Fixture.Persona
+Compiling table Fixture.Jugador
+Compiling table Fixture.Evento
+Compiling routine Fixture.CargaInicial.1
+Compiling routine Fixture.Persona.1
+Compiling routine Fixture.Partido.1
+Compiling routine Fixture.Jugador.1
+Compiling routine Fixture.Arbitro.1
+Compiling routine Fixture.Evento.1
+Load finished successfully.
+Errores de compilacion: 0
+Extensiones vaciadas: Partido/Evento y Persona/Jugador/Arbitro
+[1] Jugador guardado: 1 | ID: 1 | clase: Fixture.Jugador
+[1] Arbitro guardado: 1 | ID: 2 | clase: Fixture.Arbitro
+[1] Abiertos como Persona: Lionel Messi (Fixture.Jugador) / Facundo Tello (Fixture.Arbitro)
+[2] Antes del guardado -> Partido ID: '' | Evento ID: ''
+[2] Un solo partido.%Save(): 1
+[2] Despues -> Partido ID: 1 | Eventos: 1||1, 1||2, 1||3
+[3] Guardado del arbol con hijo invalido: RECHAZADO
+ERROR #5659: Property 'Fixture.Evento::Minuto(6@Fixture.Evento,ID=)' required
+ERROR #7207: Datatype value '' is not a valid number
+  > ERROR #5802: Datatype validation failed on property 'Fixture.Evento:Minuto', with value equal to ""
+[3] Existe el partido M002 en la base? 0 (0 = el padre tampoco se guardo)
+[4] Partido M001 (Programado) con 3 eventos:
+    - min 23: Gol
+    - min 41: Tarjeta amarilla
+    - min 78: Gol
+[4] Navegacion inversa: el evento 1||3 pertenece al partido M001
+[5] SQL Fixture.Partido
+ID	Codigo	Estado
+1	M001	Programado
+1 Rows(s) Affected
+[5] SQL Fixture.Evento (columna Partido = FK al padre)
+ID	Partido	CodigoPartido	Tipo	Minuto
+1||1	1	M001	Gol	23
+1||2	1	M001	Tarjeta amarilla	41
+1||3	1	M001	Gol	78
+3 Rows(s) Affected
+[5] SQL Fixture.Persona (incluye las filas de las subclases)
+ID	Nombre	Nacionalidad	Subclase
+1	Lionel Messi	ARG	~Fixture.Jugador~
+2	Facundo Tello	ARG	~Fixture.Arbitro~
+2 Rows(s) Affected
+[5] SQL Fixture.Jugador
+ID	Nombre	Numero	Posicion
+1	Lionel Messi	10	Delantero
+1 Rows(s) Affected
+[5] SQL Fixture.Arbitro
+ID	Nombre	Rol	LicenciaFIFA
+2	Facundo Tello	Principal	1
+1 Rows(s) Affected
+[5] UPDATE Fixture.Jugador SET Numero = 19 ... SQLCODE: 0
+[5] Numero leido como objeto tras UPDATE SQL: 19
+[6] Persona sin Nacionalidad: RECHAZADO
+ERROR #5659: Property 'Fixture.Persona::Nacionalidad(14@Fixture.Persona,ID=)' required
+[6] Jugador sin Posicion: RECHAZADO
+ERROR #5659: Property 'Fixture.Jugador::Posicion(13@Fixture.Jugador,ID=)' required
+[6] Partido sin Codigo: RECHAZADO
+ERROR #5659: Property 'Fixture.Partido::Codigo(20@Fixture.Partido,ID=)' required
+[6] Partido con Codigo duplicado: RECHAZADO
+ERROR #5808: Key not unique: Fixture.Partido:idxCodigo:^Fixture.PartidoI("idxCodigo"," M001")
+[7] Estado inicial: Programado
+[7] Programado -> Finalizado: 0 (0 = rechazada) | estado: Programado
+[7] Programado -> Jugando:    1 (1 = aceptada)  | estado: Jugando
+[7] Jugando -> Programado:    0 (0 = rechazada) | estado: Jugando
+[7] Jugando -> Finalizado:    1 (1 = aceptada)  | estado: Finalizado
+[7] Guardado: 1
+[8] Evento sin Partido: RECHAZADO
+ERROR #5659: Property 'Fixture.Evento::Partido(7@Fixture.Evento,ID=)' required
+[8] Eventos antes de borrar el partido: 3
+[8] %DeleteId del partido: 1
+[8] Eventos despues: 0
+[8] Existe el evento 1||1? 0 (0 = eliminado en cascada)
+=== FIN DE LAS PRUEBAS DEL HITO 9 ===

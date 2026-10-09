@@ -18,22 +18,23 @@ También demuestra las capacidades multimodelo de IRIS, que permiten consultar m
 - SQL.
 - Git y GitHub.
 
-El desarrollo se realizó en Windows, utilizando Docker Desktop.
+El desarrollo se realizó en Windows, utilizando Docker Desktop con backend WSL2 (Ubuntu).
 
 ## 3. Estructura del proyecto
 
 ```text
 IRIS/
 ├── docker-compose.yml
-├── .gitignore
 ├── README.md
+├── Diagrama_UML.jpg
 ├── scripts/
 │   ├── Fixture.Persona.cls
 │   ├── Fixture.Jugador.cls
 │   ├── Fixture.Arbitro.cls
 │   ├── Fixture.Partido.cls
 │   ├── Fixture.Evento.cls
-│   └── Fixture.CargaInicial.cls
+│   ├── Fixture.CargaInicial.cls
+│   └── pruebas_hito9.mac
 └── evidencias/
     ├── 01_persistencia.png
     ├── 02_navegacion.png
@@ -42,12 +43,18 @@ IRIS/
     ├── 05_validacion_required.png
     ├── 06_validacion_estado.png
     ├── 07_integridad.png
-    └── 08_carga_inicial.png
+    ├── 07.2_integridad.png
+    ├── 08_carga_inicial.png
+    └── 09_pruebas_hito9.txt
 ```
 
 Los archivos `.cls` contienen las definiciones de clases persistentes y el procedimiento de carga inicial.
 
-La carpeta `evidencias/` contiene capturas de las pruebas realizadas.
+`pruebas_hito9.mac` reúne la demostración completa como bloques de comandos del Terminal (ver sección 14).
+
+La carpeta `evidencias/` contiene capturas de las pruebas realizadas y la salida completa del script de pruebas.
+
+El `.gitignore` se encuentra en la raíz del repositorio.
 
 ## 4. Modelo de dominio
 
@@ -162,81 +169,80 @@ El puerto interno de IRIS permanece sin modificaciones.
 
 ### Persistencia
 
-Durante el desarrollo se utilizó un volumen administrado por Docker:
+El directorio durable de IRIS (`ISC_DATA_DIRECTORY=/durable`) se monta en la ruta exigida por la materia:
 
-`iris_durable`
+`${HOME}/docker/data/iris` → `/durable`
 
-Este volumen permite conservar los datos entre recreaciones del contenedor mientras no se elimine explícitamente.
+Allí IRIS guarda su configuración (Durable %SYS) y las bases de datos, por lo que los objetos sobreviven a `docker compose down` y a la recreación del contenedor.
 
-**Limitación pendiente:** el enunciado exige utilizar `~/docker/data/iris`. La configuración con volumen administrado permitió resolver un problema de permisos durante las pruebas en Windows, pero todavía debe adaptarse para cumplir exactamente esa ubicación obligatoria.
+#### Por qué debe ejecutarse desde WSL2 (Linux)
 
-No deben versionarse los datos persistentes del motor.
+Al arrancar, IRIS ejecuta `chown irisowner:irisowner /durable`. Esto genera dos problemas posibles:
+
+1. **Carpeta de Windows (NTFS).** Si `~` es `C:\Users\<usuario>` (PowerShell o CMD), el bind mount no admite cambiar el dueño a un usuario Linux. IRIS no arranca:
+   `ERROR #5001: Error executing chown irisowner:irisowner /durable/`
+2. **Carpeta Linux con otro dueño.** IRIS corre como `irisowner` (UID 51773), no como root, y solo root puede cambiar el dueño de un archivo. Si la carpeta pertenece al usuario de WSL, el `chown` falla aunque tenga permisos `777`.
+
+Por eso el entorno se levanta desde una distribución WSL2 (Ubuntu), con la carpeta creada previamente y asignada al UID de `irisowner`.
+
+No deben versionarse los datos persistentes del motor: viven fuera del repositorio.
 
 ## 9. Instalación y ejecución
 
-Los comandos siguientes se ejecutan desde la raíz del repositorio.
+Requisitos: Docker Desktop con backend WSL2 y una distribución Ubuntu con la integración activada (*Settings → Resources → WSL integration*).
 
-### 9.1. Iniciar Docker
+Todos los comandos se ejecutan **desde la terminal de Ubuntu (WSL)**, no desde PowerShell. El repositorio puede quedar en el disco de Windows y accederse por `/mnt/c/...`.
 
-```powershell
-docker compose -f .\IRIS\docker-compose.yml up -d
+### 9.1. Preparar el directorio durable (una sola vez)
+
+```bash
+mkdir -p ~/docker/data/iris
+sudo chown -R 51773:51773 ~/docker/data/iris   # 51773 = UID/GID de irisowner en la imagen
 ```
 
-### 9.2. Verificar el contenedor
+Si no se dispone de `sudo`, el mismo cambio puede hacerse con un contenedor efímero que corre como root:
 
-```powershell
-docker ps --filter "name=fixture2030-iris"
+```bash
+docker run --rm -u 0 --entrypoint chown -v "$HOME/docker/data/iris:/d" \
+  intersystems/iris-community:latest-cd -R 51773:51773 /d
 ```
 
-### 9.3. Ingresar al Terminal de IRIS
+No borrar los datos existentes para resolver un error de permisos: alcanza con repetir el `chown` y recrear el contenedor.
 
-```powershell
+### 9.2. Iniciar Docker
+
+```bash
+cd IRIS
+docker compose up -d
+```
+
+### 9.3. Verificar el contenedor
+
+```bash
+docker compose ps        # debe figurar (healthy)
+docker compose logs iris | grep -i durable
+```
+
+### 9.4. Ingresar al Terminal de IRIS
+
+```bash
 docker exec -it fixture2030-iris iris session IRIS
 ```
 
-Si el contenedor presenta errores de permisos sobre `/durable`, durante la preparación del entorno se utilizaron:
-
-```powershell
-docker exec -u 0 fixture2030-iris chown -R irisowner:irisowner /durable
-docker exec -u 0 fixture2030-iris chmod 770 /durable
-docker restart fixture2030-iris
-```
-
-Estos comandos corresponden al entorno de práctica y pueden requerir una revisión según la configuración del equipo.
+El Management Portal queda disponible en `http://localhost:52873/csp/sys/UtilHome.csp`.
 
 ## 10. Carga y compilación de clases
 
 Desde el Terminal de IRIS, en el namespace USER, ejecutar:
 
 ```objectscript
-Do $system.OBJ.Load("/scripts/Fixture.Persona.cls","ck")
-Do $system.OBJ.Load("/scripts/Fixture.Jugador.cls","ck")
-Do $system.OBJ.Load("/scripts/Fixture.Arbitro.cls","ck")
+Do $system.OBJ.LoadDir("/scripts","ck",.err)
+Write "Errores de compilacion: ",+$Get(err),!
 ```
 
-Las clases Partido y Evento poseen dependencias mutuas.
+`LoadDir` carga todos los `.cls` de la carpeta y los compila como un único lote. Esto resuelve la dependencia mutua entre Partido y Evento (cada una referencia a la otra en su `Relationship`) sin necesidad de cargarlas y compilarlas por separado.
 
-Por ese motivo, primero se cargan sus definiciones:
-
-```objectscript
-Do $system.OBJ.Load("/scripts/Fixture.Partido.cls","k")
-Do $system.OBJ.Load("/scripts/Fixture.Evento.cls","k")
-```
-
-Luego se compilan:
-
-```objectscript
-Do $system.OBJ.Compile("Fixture.Partido","ck")
-Do $system.OBJ.Compile("Fixture.Evento","ck")
-```
-
-Finalmente, se carga la clase auxiliar:
-
-```objectscript
-Do $system.OBJ.Load("/scripts/Fixture.CargaInicial.cls","ck")
-```
-
-Las clases fueron compiladas correctamente durante las pruebas.
+Las seis clases compilan con 0 errores (ver `evidencias/09_pruebas_hito9.txt`).
 
 ## 11. Carga inicial de objetos
 
@@ -325,7 +331,27 @@ No fue necesario crear tablas manualmente ni duplicar los datos.
 
 ## 14. Pruebas de integridad y validación
 
-Se realizaron las siguientes verificaciones.
+Todas las pruebas están reunidas en `scripts/pruebas_hito9.mac`. El archivo puede ejecutarse por bloques (copiando y pegando en el Terminal de IRIS) o completo, desde la carpeta `IRIS/` en la terminal de Ubuntu (WSL):
+
+```bash
+docker exec -i fixture2030-iris iris session IRIS -U USER < scripts/pruebas_hito9.mac
+```
+
+El bloque 0 compila las clases y vacía las extensiones, por lo que el script puede repetirse y produce siempre el mismo resultado. La salida completa está en `evidencias/09_pruebas_hito9.txt`.
+
+| Bloque | Requisito | Qué demuestra |
+|---|---|---|
+| 0 | RNF2 | Compilación de todas las clases sin errores. |
+| 1 | RF4 | Jugador y Arbitro se guardan como subclases y se abren polimórficamente como Persona. |
+| 2 | RF3, RF6 | Un Partido con tres Eventos se guarda con un único `%Save()` del padre. |
+| 3 | RF6 | Si un Evento hijo es inválido, el guardado se rechaza y el Partido padre tampoco queda almacenado (atomicidad). |
+| 4 | RF7 | Navegación Partido → Eventos y Evento → Partido sin SQL. |
+| 5 | RF8 | Las mismas instancias consultadas por SQL: Partido, Evento (con `Partido->Codigo`), Persona (incluye las subclases), Jugador y Arbitro. Un `UPDATE` SQL se refleja al abrir el objeto. |
+| 6 | RF5 | Rechazo controlado por propiedades `[Required]` omitidas y por código de Partido duplicado. |
+| 7 | RF9 | Transiciones rechazadas (Programado → Finalizado, Jugando → Programado) y aceptadas mediante `CambiarEstado()`. |
+| 8 | RF3 | Un Evento sin Partido es rechazado; borrar el Partido elimina sus Eventos en cascada. |
+
+A continuación se describen las verificaciones realizadas.
 
 ### 14.1. Persistencia de objetos relacionados
 
@@ -434,6 +460,12 @@ Demuestra la eliminación de un Evento dependiente al eliminar su Partido.
 
 Demuestra la ejecución de la carga mediante el método `Fixture.CargaInicial.Ejecutar()`.
 
+### 15.9. Script completo de pruebas
+
+[`evidencias/09_pruebas_hito9.txt`](evidencias/09_pruebas_hito9.txt)
+
+Salida completa de `scripts/pruebas_hito9.mac` (bloques 0 a 8 de la sección 14).
+
 ## 16. Escalabilidad y consideraciones técnicas
 
 El diseño incorpora un índice sobre la relación del lado hijo para optimizar la recuperación de Eventos por Partido.
@@ -448,7 +480,6 @@ Las principales limitaciones actuales son:
 
 - La validación de estados debe ejecutarse mediante el método correspondiente.
 - La carga inicial utiliza un código fijo y no es idempotente.
-- La persistencia debe adaptarse a la ruta obligatoria del enunciado.
 - No se implementó una política general de inmutabilidad para los Eventos.
 
 ## 17. Conclusión
@@ -461,4 +492,4 @@ Las pruebas demostraron el almacenamiento de objetos relacionados, su recuperaci
 
 La implementación permite representar una porción estructural compleja del Fixture Mundial 2030 mediante ObjectScript, sin utilizar un ORM externo.
 
-La adaptación de la persistencia a la ruta obligatoria del enunciado queda identificada como una tarea pendiente.
+Los datos persisten en `~/docker/data/iris`, según la convención de la materia, y se verificó que sobreviven a la recreación del contenedor.

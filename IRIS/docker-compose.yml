@@ -5,12 +5,13 @@ services:
     restart: unless-stopped
     ports:
       - "127.0.0.1:1972:1972"
+      # 52773 queda reservado por Windows en algunos equipos; se publica en 52873.
       - "127.0.0.1:52873:52773"
     environment:
       - ISC_DATA_DIRECTORY=/durable
     volumes:
-      - iris_durable:/durable
+      # Durable %SYS en ~/docker/data/iris (convención de la materia).
+      # Debe ejecutarse desde WSL2/Linux: en una carpeta de Windows (NTFS)
+      # IRIS no puede hacer chown irisowner sobre /durable y no arranca.
+      - ${HOME}/docker/data/iris:/durable
       - ./scripts:/scripts:ro
-
-volumes:
-  iris_durable:
