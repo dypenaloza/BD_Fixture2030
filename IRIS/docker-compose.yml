@@ -1,0 +1,16 @@
+services:
+  iris:
+    image: intersystems/iris-community:latest-cd
+    container_name: fixture2030-iris
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:1972:1972"
+      - "127.0.0.1:52873:52773"
+    environment:
+      - ISC_DATA_DIRECTORY=/durable
+    volumes:
+      - iris_durable:/durable
+      - ./scripts:/scripts:ro
+
+volumes:
+  iris_durable:

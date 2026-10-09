@@ -7,3 +7,18 @@ Cassandra/data/*.csv
 # Datos generados por InfluxDB
 scripts/puntos_fixture2030.lp
 scripts/puntos_volumen.lp
+
+# Datos persistentes de IRIS
+data/
+durable/
+
+# Variables y credenciales
+.env
+
+# Archivos temporales
+*.log
+*.tmp
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
