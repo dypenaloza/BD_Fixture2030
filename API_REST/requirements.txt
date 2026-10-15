@@ -1,0 +1,8 @@
+fastapi>=0.110,<1.0
+uvicorn>=0.25,<1.0
+pymongo>=4.6,<5.0
+python-dotenv>=1.0,<2.0
+neo4j>=5.20,<7.0
+cassandra-driver>=3.29,<4.0
+redis>=5.0,<7.0
+requests>=2.31,<3.0
