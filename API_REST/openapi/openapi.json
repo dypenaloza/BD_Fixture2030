@@ -1,0 +1,1006 @@
+{
+    "openapi": "3.1.0",
+    "info": {
+        "title": "Fixture 2030 API",
+        "description": "API REST integrada del Fixture Mundial 2030",
+        "version": "0.4.0"
+    },
+    "paths": {
+        "/selecciones/{codigo}": {
+            "get": {
+                "tags": [
+                    "MongoDB"
+                ],
+                "summary": "Consultar Seleccion",
+                "operationId": "consultar_seleccion_selecciones__codigo__get",
+                "parameters": [
+                    {
+                        "name": "codigo",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Codigo"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/SeleccionResponse"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorResponse"
+                                }
+                            }
+                        },
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorResponse"
+                                }
+                            }
+                        },
+                        "description": "Not Found"
+                    },
+                    "503": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorResponse"
+                                }
+                            }
+                        },
+                        "description": "Service Unavailable"
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/partidos/{partido_id}/eventos": {
+            "get": {
+                "tags": [
+                    "Neo4j"
+                ],
+                "summary": "Consultar Eventos",
+                "operationId": "consultar_eventos_partidos__partido_id__eventos_get",
+                "parameters": [
+                    {
+                        "name": "partido_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Partido Id"
+                        }
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "string",
+                            "description": "Cantidad m\u00e1xima: entero entre 1 y 50",
+                            "default": "20",
+                            "title": "Limit"
+                        },
+                        "description": "Cantidad m\u00e1xima: entero entre 1 y 50"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/EventosPartidoResponse"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorResponse"
+                                }
+                            }
+                        },
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorResponse"
+                                }
+                            }
+                        },
+                        "description": "Not Found"
+                    },
+                    "503": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorResponse"
+                                }
+                            }
+                        },
+                        "description": "Service Unavailable"
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/partidos/{partido_id}/comentarios": {
+            "get": {
+                "tags": [
+                    "Cassandra"
+                ],
+                "summary": "Consultar Comentarios",
+                "operationId": "consultar_comentarios_partidos__partido_id__comentarios_get",
+                "parameters": [
+                    {
+                        "name": "partido_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Partido Id"
+                        }
+                    },
+                    {
+                        "name": "bucket_temporal",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "anyOf": [
+                                {
+                                    "type": "string"
+                                },
+                                {
+                                    "type": "null"
+                                }
+                            ],
+                            "description": "Bucket de la particion, por ejemplo 20:00-20:05",
+                            "title": "Bucket Temporal"
+                        },
+                        "description": "Bucket de la particion, por ejemplo 20:00-20:05"
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "string",
+                            "description": "Cantidad m\u00e1xima: entero entre 1 y 50",
+                            "default": "20",
+                            "title": "Limit"
+                        },
+                        "description": "Cantidad m\u00e1xima: entero entre 1 y 50"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ComentariosPartidoResponse"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorResponse"
+                                }
+                            }
+                        },
+                        "description": "Bad Request"
+                    },
+                    "503": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorResponse"
+                                }
+                            }
+                        },
+                        "description": "Service Unavailable"
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/sesiones/{usuario_id}": {
+            "get": {
+                "tags": [
+                    "Redis"
+                ],
+                "summary": "Consultar Sesion",
+                "operationId": "consultar_sesion_sesiones__usuario_id__get",
+                "parameters": [
+                    {
+                        "name": "usuario_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Usuario Id"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/SesionResponse"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorResponse"
+                                }
+                            }
+                        },
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorResponse"
+                                }
+                            }
+                        },
+                        "description": "Not Found"
+                    },
+                    "503": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorResponse"
+                                }
+                            }
+                        },
+                        "description": "Service Unavailable"
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/partidos/{partido_id}/estadisticas": {
+            "get": {
+                "tags": [
+                    "InfluxDB"
+                ],
+                "summary": "Consultar Estadisticas",
+                "operationId": "consultar_estadisticas_partidos__partido_id__estadisticas_get",
+                "parameters": [
+                    {
+                        "name": "partido_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Partido Id"
+                        }
+                    },
+                    {
+                        "name": "equipo_id",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "anyOf": [
+                                {
+                                    "type": "string"
+                                },
+                                {
+                                    "type": "null"
+                                }
+                            ],
+                            "title": "Equipo Id"
+                        }
+                    },
+                    {
+                        "name": "desde",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "anyOf": [
+                                {
+                                    "type": "string"
+                                },
+                                {
+                                    "type": "null"
+                                }
+                            ],
+                            "title": "Desde"
+                        }
+                    },
+                    {
+                        "name": "hasta",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "anyOf": [
+                                {
+                                    "type": "string"
+                                },
+                                {
+                                    "type": "null"
+                                }
+                            ],
+                            "title": "Hasta"
+                        }
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "string",
+                            "default": "20",
+                            "title": "Limit"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/EstadisticasPartidoResponse"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorResponse"
+                                }
+                            }
+                        },
+                        "description": "Bad Request"
+                    },
+                    "502": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorResponse"
+                                }
+                            }
+                        },
+                        "description": "Bad Gateway"
+                    },
+                    "503": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorResponse"
+                                }
+                            }
+                        },
+                        "description": "Service Unavailable"
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/partidos/{codigo}/detalle": {
+            "get": {
+                "tags": [
+                    "IRIS"
+                ],
+                "summary": "Consultar Detalle Partido",
+                "operationId": "consultar_detalle_partido_partidos__codigo__detalle_get",
+                "parameters": [
+                    {
+                        "name": "codigo",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Codigo"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PartidoIRISResponse"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorResponse"
+                                }
+                            }
+                        },
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorResponse"
+                                }
+                            }
+                        },
+                        "description": "Not Found"
+                    },
+                    "500": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorResponse"
+                                }
+                            }
+                        },
+                        "description": "Internal Server Error"
+                    },
+                    "503": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorResponse"
+                                }
+                            }
+                        },
+                        "description": "Service Unavailable"
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "ComentarioResponse": {
+                "properties": {
+                    "comentarioId": {
+                        "type": "string",
+                        "title": "Comentarioid"
+                    },
+                    "usuarioId": {
+                        "type": "string",
+                        "title": "Usuarioid"
+                    },
+                    "contenido": {
+                        "type": "string",
+                        "title": "Contenido"
+                    },
+                    "creadoEn": {
+                        "type": "string",
+                        "format": "date-time",
+                        "title": "Creadoen"
+                    },
+                    "likes": {
+                        "type": "integer",
+                        "title": "Likes"
+                    },
+                    "estadoModeracion": {
+                        "type": "string",
+                        "title": "Estadomoderacion"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "comentarioId",
+                    "usuarioId",
+                    "contenido",
+                    "creadoEn",
+                    "likes",
+                    "estadoModeracion"
+                ],
+                "title": "ComentarioResponse"
+            },
+            "ComentariosPartidoResponse": {
+                "properties": {
+                    "partidoId": {
+                        "type": "string",
+                        "title": "Partidoid"
+                    },
+                    "bucketTemporal": {
+                        "type": "string",
+                        "title": "Buckettemporal"
+                    },
+                    "cantidad": {
+                        "type": "integer",
+                        "title": "Cantidad"
+                    },
+                    "comentarios": {
+                        "items": {
+                            "$ref": "#/components/schemas/ComentarioResponse"
+                        },
+                        "type": "array",
+                        "title": "Comentarios"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "partidoId",
+                    "bucketTemporal",
+                    "cantidad",
+                    "comentarios"
+                ],
+                "title": "ComentariosPartidoResponse"
+            },
+            "ErrorResponse": {
+                "properties": {
+                    "code": {
+                        "type": "string",
+                        "title": "Code"
+                    },
+                    "message": {
+                        "type": "string",
+                        "title": "Message"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "code",
+                    "message"
+                ],
+                "title": "ErrorResponse"
+            },
+            "EstadisticaResponse": {
+                "properties": {
+                    "time": {
+                        "type": "string",
+                        "format": "date-time",
+                        "title": "Time"
+                    },
+                    "equipo_id": {
+                        "type": "string",
+                        "title": "Equipo Id"
+                    },
+                    "posesion_pct": {
+                        "anyOf": [
+                            {
+                                "type": "number"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Posesion Pct"
+                    },
+                    "pases": {
+                        "anyOf": [
+                            {
+                                "type": "integer"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Pases"
+                    },
+                    "tiros": {
+                        "anyOf": [
+                            {
+                                "type": "integer"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Tiros"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "time",
+                    "equipo_id"
+                ],
+                "title": "EstadisticaResponse"
+            },
+            "EstadisticasPartidoResponse": {
+                "properties": {
+                    "partidoId": {
+                        "type": "string",
+                        "title": "Partidoid"
+                    },
+                    "equipoId": {
+                        "type": "string",
+                        "title": "Equipoid"
+                    },
+                    "cantidad": {
+                        "type": "integer",
+                        "title": "Cantidad"
+                    },
+                    "estadisticas": {
+                        "items": {
+                            "$ref": "#/components/schemas/EstadisticaResponse"
+                        },
+                        "type": "array",
+                        "title": "Estadisticas"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "partidoId",
+                    "equipoId",
+                    "cantidad",
+                    "estadisticas"
+                ],
+                "title": "EstadisticasPartidoResponse"
+            },
+            "EventoIRISResponse": {
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "title": "Id"
+                    },
+                    "tipo": {
+                        "type": "string",
+                        "title": "Tipo"
+                    },
+                    "minuto": {
+                        "type": "integer",
+                        "title": "Minuto"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "id",
+                    "tipo",
+                    "minuto"
+                ],
+                "title": "EventoIRISResponse"
+            },
+            "EventoResponse": {
+                "properties": {
+                    "eventoId": {
+                        "type": "string",
+                        "title": "Eventoid"
+                    },
+                    "tipo": {
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Tipo"
+                    },
+                    "minuto": {
+                        "anyOf": [
+                            {
+                                "type": "integer"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Minuto"
+                    },
+                    "descripcion": {
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Descripcion"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "eventoId"
+                ],
+                "title": "EventoResponse"
+            },
+            "EventosPartidoResponse": {
+                "properties": {
+                    "partidoId": {
+                        "type": "string",
+                        "title": "Partidoid"
+                    },
+                    "cantidad": {
+                        "type": "integer",
+                        "title": "Cantidad"
+                    },
+                    "eventos": {
+                        "items": {
+                            "$ref": "#/components/schemas/EventoResponse"
+                        },
+                        "type": "array",
+                        "title": "Eventos"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "partidoId",
+                    "cantidad",
+                    "eventos"
+                ],
+                "title": "EventosPartidoResponse"
+            },
+            "HTTPValidationError": {
+                "properties": {
+                    "detail": {
+                        "items": {
+                            "$ref": "#/components/schemas/ValidationError"
+                        },
+                        "type": "array",
+                        "title": "Detail"
+                    }
+                },
+                "type": "object",
+                "title": "HTTPValidationError"
+            },
+            "PartidoIRISResponse": {
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "title": "Id"
+                    },
+                    "codigo": {
+                        "type": "string",
+                        "title": "Codigo"
+                    },
+                    "estado": {
+                        "type": "string",
+                        "title": "Estado"
+                    },
+                    "cantidadEventos": {
+                        "type": "integer",
+                        "title": "Cantidadeventos"
+                    },
+                    "eventos": {
+                        "items": {
+                            "$ref": "#/components/schemas/EventoIRISResponse"
+                        },
+                        "type": "array",
+                        "title": "Eventos"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "id",
+                    "codigo",
+                    "estado",
+                    "cantidadEventos",
+                    "eventos"
+                ],
+                "title": "PartidoIRISResponse"
+            },
+            "SeleccionResponse": {
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "title": "Id"
+                    },
+                    "pais": {
+                        "type": "string",
+                        "title": "Pais"
+                    },
+                    "nombre": {
+                        "type": "string",
+                        "title": "Nombre"
+                    },
+                    "confederacion": {
+                        "type": "string",
+                        "title": "Confederacion"
+                    },
+                    "grupo": {
+                        "type": "string",
+                        "title": "Grupo"
+                    },
+                    "ranking": {
+                        "type": "integer",
+                        "title": "Ranking"
+                    },
+                    "anfitrion": {
+                        "type": "boolean",
+                        "title": "Anfitrion"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "id",
+                    "pais",
+                    "nombre",
+                    "confederacion",
+                    "grupo",
+                    "ranking",
+                    "anfitrion"
+                ],
+                "title": "SeleccionResponse"
+            },
+            "SesionResponse": {
+                "properties": {
+                    "usuarioId": {
+                        "type": "string",
+                        "title": "Usuarioid"
+                    },
+                    "nombre": {
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Nombre"
+                    },
+                    "rol": {
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Rol"
+                    },
+                    "ultimoAcceso": {
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Ultimoacceso"
+                    },
+                    "partidoSiguiendo": {
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Partidosiguiendo"
+                    },
+                    "ttlSegundos": {
+                        "type": "integer",
+                        "title": "Ttlsegundos"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "usuarioId",
+                    "ttlSegundos"
+                ],
+                "title": "SesionResponse"
+            },
+            "ValidationError": {
+                "properties": {
+                    "loc": {
+                        "items": {
+                            "anyOf": [
+                                {
+                                    "type": "string"
+                                },
+                                {
+                                    "type": "integer"
+                                }
+                            ]
+                        },
+                        "type": "array",
+                        "title": "Location"
+                    },
+                    "msg": {
+                        "type": "string",
+                        "title": "Message"
+                    },
+                    "type": {
+                        "type": "string",
+                        "title": "Error Type"
+                    },
+                    "input": {
+                        "title": "Input"
+                    },
+                    "ctx": {
+                        "type": "object",
+                        "title": "Context"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "loc",
+                    "msg",
+                    "type"
+                ],
+                "title": "ValidationError"
+            }
+        }
+    }
+}

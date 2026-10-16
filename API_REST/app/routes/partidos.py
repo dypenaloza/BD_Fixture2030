@@ -42,8 +42,22 @@ def error_http(estado, codigo, mensaje):
     )
 
 
-def validar_partido(partido_id):
+def validar_partido_neo4j(partido_id):
 
+    # Formato real de Partido.partidoId en Neo4j (Hito 5): "P-<grupo o
+    # fase>-<numero>", ej. "P-A-1" (fase de grupos), "P-R32-6", "P-QF-2",
+    # "P-SF-1", "P-3P-1" (eliminatorias). NO es el mismo esquema que usa
+    # Cassandra ("M001"): cada fuente tiene su propio formato de
+    # identificador y se valida por separado (RNF13).
+    return bool(
+        re.fullmatch(r"P-[A-Za-z0-9]{1,4}-[0-9]{1,2}", partido_id, re.IGNORECASE)
+    )
+
+
+def validar_partido_cassandra(partido_id):
+
+    # Formato real de partido_id en Cassandra (Hito 6): "M" + 3 digitos,
+    # ej. "M001".
     return bool(
         re.fullmatch(r"[A-Za-z][0-9]{3}", partido_id)
     )
@@ -88,7 +102,7 @@ def consultar_eventos(
 
     limite = validar_limite(limit)
 
-    if not validar_partido(partido_id) or limite is None:
+    if not validar_partido_neo4j(partido_id) or limite is None:
 
         return error_http(
             400,
@@ -160,7 +174,7 @@ def consultar_comentarios(
     limite = validar_limite(limit)
 
     if (
-        not validar_partido(partido_id)
+        not validar_partido_cassandra(partido_id)
         or not bucket_temporal
         or len(bucket_temporal) > 40
         or limite is None

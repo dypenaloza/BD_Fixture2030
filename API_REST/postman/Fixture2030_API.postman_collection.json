@@ -1,0 +1,169 @@
+{
+  "info": {
+    "name": "Fixture 2030 - API REST Integrada",
+    "description": "Coleccion con los 6 endpoints de lectura de la API REST del Fixture 2030 (MongoDB, Neo4j, Cassandra, Redis, InfluxDB e IRIS), con casos de exito y de error por cada fuente.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "base_url", "value": "http://127.0.0.1:8000" }
+  ],
+  "item": [
+    {
+      "name": "MongoDB - Selecciones",
+      "item": [
+        {
+          "name": "Consultar seleccion (200)",
+          "request": { "method": "GET", "url": "{{base_url}}/selecciones/ARG" }
+        },
+        {
+          "name": "Seleccion inexistente (404)",
+          "request": { "method": "GET", "url": "{{base_url}}/selecciones/ZZZ" }
+        },
+        {
+          "name": "Codigo invalido (400)",
+          "request": { "method": "GET", "url": "{{base_url}}/selecciones/1234" }
+        }
+      ]
+    },
+    {
+      "name": "Neo4j - Eventos",
+      "item": [
+        {
+          "name": "Consultar eventos (200)",
+          "request": { "method": "GET", "url": "{{base_url}}/partidos/P-A-1/eventos" }
+        },
+        {
+          "name": "Identificador invalido (400)",
+          "request": { "method": "GET", "url": "{{base_url}}/partidos/M001/eventos" }
+        }
+      ]
+    },
+    {
+      "name": "Cassandra - Comentarios",
+      "item": [
+        {
+          "name": "Consultar comentarios (200)",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{base_url}}/partidos/M001/comentarios?bucket_temporal=20:00-20:05&limit=10",
+              "host": ["{{base_url}}"],
+              "path": ["partidos", "M001", "comentarios"],
+              "query": [
+                { "key": "bucket_temporal", "value": "20:00-20:05" },
+                { "key": "limit", "value": "10" }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Particion sin comentarios (200, lista vacia)",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{base_url}}/partidos/M001/comentarios?bucket_temporal=00:00-00:05&limit=10",
+              "host": ["{{base_url}}"],
+              "path": ["partidos", "M001", "comentarios"],
+              "query": [
+                { "key": "bucket_temporal", "value": "00:00-00:05" },
+                { "key": "limit", "value": "10" }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Falta bucket_temporal (400)",
+          "request": { "method": "GET", "url": "{{base_url}}/partidos/M001/comentarios" }
+        }
+      ]
+    },
+    {
+      "name": "Redis - Sesiones",
+      "item": [
+        {
+          "name": "Consultar sesion (200)",
+          "request": { "method": "GET", "url": "{{base_url}}/sesiones/U27961" }
+        },
+        {
+          "name": "Identificador invalido (400)",
+          "request": { "method": "GET", "url": "{{base_url}}/sesiones/123" }
+        },
+        {
+          "name": "Sesion inexistente o expirada (404)",
+          "request": { "method": "GET", "url": "{{base_url}}/sesiones/U99999" }
+        }
+      ]
+    },
+    {
+      "name": "InfluxDB - Estadisticas",
+      "item": [
+        {
+          "name": "Consultar estadisticas (200)",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{base_url}}/partidos/M001/estadisticas?equipo_id=ARG&desde=2030-10-08T08:00:00Z&hasta=2030-10-08T08:30:00Z&limit=10",
+              "host": ["{{base_url}}"],
+              "path": ["partidos", "M001", "estadisticas"],
+              "query": [
+                { "key": "equipo_id", "value": "ARG" },
+                { "key": "desde", "value": "2030-10-08T08:00:00Z" },
+                { "key": "hasta", "value": "2030-10-08T08:30:00Z" },
+                { "key": "limit", "value": "10" }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Intervalo sin observaciones (200, lista vacia)",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{base_url}}/partidos/M001/estadisticas?equipo_id=ARG&desde=2030-01-01T00:00:00Z&hasta=2030-01-01T01:00:00Z&limit=10",
+              "host": ["{{base_url}}"],
+              "path": ["partidos", "M001", "estadisticas"],
+              "query": [
+                { "key": "equipo_id", "value": "ARG" },
+                { "key": "desde", "value": "2030-01-01T00:00:00Z" },
+                { "key": "hasta", "value": "2030-01-01T01:00:00Z" },
+                { "key": "limit", "value": "10" }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Falta equipo_id (400)",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{base_url}}/partidos/M001/estadisticas?desde=2030-10-08T08:00:00Z&hasta=2030-10-08T08:30:00Z",
+              "host": ["{{base_url}}"],
+              "path": ["partidos", "M001", "estadisticas"],
+              "query": [
+                { "key": "desde", "value": "2030-10-08T08:00:00Z" },
+                { "key": "hasta", "value": "2030-10-08T08:30:00Z" }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "IRIS - Detalle de partido",
+      "item": [
+        {
+          "name": "Consultar detalle (200)",
+          "request": { "method": "GET", "url": "{{base_url}}/partidos/M004/detalle" }
+        },
+        {
+          "name": "Partido inexistente (404)",
+          "request": { "method": "GET", "url": "{{base_url}}/partidos/Z999/detalle" }
+        },
+        {
+          "name": "Codigo invalido (400)",
+          "request": { "method": "GET", "url": "{{base_url}}/partidos/ABC-1/detalle" }
+        }
+      ]
+    }
+  ]
+}

@@ -114,3 +114,44 @@ Completar después de ejecutar las pruebas:
 Las capturas se almacenan en docs/evidencia/.
 
 Cada evidencia debe mostrar una respuesta real de la aplicación y su código HTTP correspondiente.
+
+## 12. Bug encontrado y corregido tras estas pruebas
+
+Después de esta primera ronda de pruebas se detectó que el router de
+Neo4j (`app/routes/partidos.py`) validaba `partido_id` con el mismo
+regex que Cassandra (`[A-Za-z][0-9]{3}`, ej. "M001"), que **no
+matchea** el formato real de los IDs de Neo4j (`P-<grupo|fase>-<numero>`,
+ej. "P-A-1"). El dato usado en la prueba 3 ("Neo4j - Eventos de
+partido", `/partidos/P001/eventos`) corresponde a un nodo de prueba
+manual (`P001`) que el script oficial de carga
+(`Neo4j/scripts/generar_fixture.py`) elimina al final del proceso; con
+los datos reales cargados por ese script, ningún `partidoId` real
+pasa la validación anterior y el endpoint devuelve 400 siempre.
+
+Se corrigió separando la validación en `validar_partido_neo4j()`
+(regex `P-[A-Za-z0-9]{1,4}-[0-9]{1,2}`) y `validar_partido_cassandra()`
+(regex original), cada una aplicada a su ruta. Verificado en vivo
+contra un `partidoId` real tras la corrección:
+
+```
+GET /partidos/P-A-1/eventos -> 200
+{"partidoId":"P-A-1","cantidad":4,"eventos":[...]}
+```
+
+## 13. Suite de tests automatizados (pytest)
+
+Además del script `tests/pruebas_integracion.ps1` (Windows/PowerShell),
+se agregó una suite multiplataforma con `pytest`:
+
+- `tests/unit/test_validaciones.py`: 33 tests de las funciones de
+  validación por expresión regular/parsing (`validar_partido_neo4j`,
+  `validar_partido_cassandra`, `validar_limite`, `validar_fecha`), sin
+  necesidad de ninguna base levantada.
+- `tests/integration/test_endpoints.py`: 18 tests end-to-end contra
+  los seis endpoints de una instancia real de la API (se saltean
+  automáticamente si la API no responde en `API_BASE_URL`), incluyendo
+  el caso de partición/intervalo válido sin datos (200 con lista
+  vacía) y la verificación de `X-Request-ID` en toda respuesta.
+
+Correr ambas con `bash scripts/ejecutar_pruebas.sh`, o por separado con
+`pytest tests/unit/ -v` y `pytest tests/integration/ -v`.
