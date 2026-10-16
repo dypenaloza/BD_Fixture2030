@@ -1,0 +1,127 @@
+// pruebas_hito9.mac
+// Hito 9 - Entidades complejas del Fixture 2030 (InterSystems IRIS)
+//
+// Secuencia de comandos para el Terminal de IRIS (namespace USER).
+// Puede ejecutarse por bloques (copiar y pegar) o completo desde WSL:
+//   docker exec -i fixture2030-iris iris session IRIS -U USER < scripts/pruebas_hito9.mac
+//
+// Las líneas no usan macros ($$$) porque el Terminal no las expande.
+// El bloque 0 vacía las extensiones, por lo que el script puede repetirse.
+
+// ============================================================
+// 0. COMPILACIÓN Y LIMPIEZA
+// ============================================================
+// LoadDir carga y compila todas las clases juntas, resolviendo la
+// dependencia mutua entre Partido y Evento.
+Do $system.OBJ.LoadDir("/scripts","ck",.err) Write !,"Errores de compilacion: ",+$Get(err),!
+Do ##class(Fixture.Partido).%KillExtent(), ##class(Fixture.Persona).%KillExtent()
+Write "Extensiones vaciadas: Partido/Evento y Persona/Jugador/Arbitro",!
+
+// ============================================================
+// 1. HERENCIA (RF4): Jugador y Arbitro extienden Persona
+// ============================================================
+Set j = ##class(Fixture.Jugador).%New()
+Set j.Nombre = "Lionel Messi", j.Nacionalidad = "ARG", j.FechaNacimiento = $ZDateH("1987-06-24",3)
+Set j.Numero = 10, j.Posicion = "Delantero"
+Set sc = j.%Save() Write !,"[1] Jugador guardado: ",sc," | ID: ",j.%Id()," | clase: ",j.%ClassName(1),!
+Set a = ##class(Fixture.Arbitro).%New()
+Set a.Nombre = "Facundo Tello", a.Nacionalidad = "ARG", a.Rol = "Principal", a.LicenciaFIFA = 1
+Set sc = a.%Save() Write "[1] Arbitro guardado: ",sc," | ID: ",a.%Id()," | clase: ",a.%ClassName(1),!
+// Polimorfismo: ambos se abren como Persona y conservan su clase concreta.
+Set p1 = ##class(Fixture.Persona).%OpenId(j.%Id()), p2 = ##class(Fixture.Persona).%OpenId(a.%Id())
+Write "[1] Abiertos como Persona: ",p1.Nombre," (",p1.%ClassName(1),") / ",p2.Nombre," (",p2.%ClassName(1),")",!
+
+// ============================================================
+// 2. ÁRBOL PADRE-HIJO CON UN SOLO %Save (RF3, RF6)
+// ============================================================
+// Se asigna estado al padre, luego a los hijos, y se guarda solo el padre.
+Set partido = ##class(Fixture.Partido).%New()
+Set partido.Codigo = "M001", partido.Estado = "Programado"
+Set e1 = ##class(Fixture.Evento).%New(), e1.Tipo = "Gol", e1.Minuto = 23
+Set e2 = ##class(Fixture.Evento).%New(), e2.Tipo = "Tarjeta amarilla", e2.Minuto = 41
+Set e3 = ##class(Fixture.Evento).%New(), e3.Tipo = "Gol", e3.Minuto = 78
+Do partido.Eventos.Insert(e1), partido.Eventos.Insert(e2), partido.Eventos.Insert(e3)
+Write !,"[2] Antes del guardado -> Partido ID: '",partido.%Id(),"' | Evento ID: '",e1.%Id(),"'",!
+Set sc = partido.%Save() Write "[2] Un solo partido.%Save(): ",sc,!
+Write "[2] Despues -> Partido ID: ",partido.%Id()," | Eventos: ",e1.%Id(),", ",e2.%Id(),", ",e3.%Id(),!
+
+// ============================================================
+// 3. ATOMICIDAD: si un hijo es inválido, no se guarda nada (RF6)
+// ============================================================
+Set pInv = ##class(Fixture.Partido).%New(), pInv.Codigo = "M002", pInv.Estado = "Programado"
+Set eInv = ##class(Fixture.Evento).%New(), eInv.Tipo = "Gol"
+// eInv.Minuto se omite intencionalmente ([Required]).
+Do pInv.Eventos.Insert(eInv)
+Set sc = pInv.%Save() Write !,"[3] Guardado del arbol con hijo invalido: ",$Select($System.Status.IsOK(sc):"ACEPTADO",1:"RECHAZADO"),!
+Do $System.Status.DisplayError(sc)
+Write !,"[3] Existe el partido M002 en la base? ",##class(Fixture.Partido).idxCodigoExists("M002")," (0 = el padre tampoco se guardo)",!
+Kill pInv, eInv
+
+// ============================================================
+// 4. NAVEGACIÓN POR REFERENCIAS, SIN SQL (RF7)
+// ============================================================
+Kill partido, e1, e2, e3
+Do ##class(Fixture.Partido).idxCodigoExists("M001",.idM001)
+Set partido = ##class(Fixture.Partido).%OpenId(idM001)
+Write !,"[4] Partido ",partido.Codigo," (",partido.Estado,") con ",partido.Eventos.Count()," eventos:",!
+For i=1:1:partido.Eventos.Count() { Set ev = partido.Eventos.GetAt(i) Write "    - min ",ev.Minuto,": ",ev.Tipo,! }
+// Navegación inversa (bidireccional): del hijo al padre.
+Write "[4] Navegacion inversa: el evento ",ev.%Id()," pertenece al partido ",ev.Partido.Codigo,!
+
+// ============================================================
+// 5. PROYECCIÓN SQL MULTIMODELO (RF8)
+// ============================================================
+// Las mismas instancias creadas como objetos se consultan como tablas.
+Write !,"[5] SQL Fixture.Partido",! Do ##class(%SQL.Statement).%ExecDirect(,"SELECT ID, Codigo, Estado FROM Fixture.Partido").%Display()
+Write !!,"[5] SQL Fixture.Evento (columna Partido = FK al padre)",! Do ##class(%SQL.Statement).%ExecDirect(,"SELECT ID, Partido, Partido->Codigo AS CodigoPartido, Tipo, Minuto FROM Fixture.Evento ORDER BY Minuto").%Display()
+Write !!,"[5] SQL Fixture.Persona (incluye las filas de las subclases)",! Do ##class(%SQL.Statement).%ExecDirect(,"SELECT ID, Nombre, Nacionalidad, x__classname AS Subclase FROM Fixture.Persona").%Display()
+Write !!,"[5] SQL Fixture.Jugador",! Do ##class(%SQL.Statement).%ExecDirect(,"SELECT ID, Nombre, Numero, Posicion FROM Fixture.Jugador").%Display()
+Write !!,"[5] SQL Fixture.Arbitro",! Do ##class(%SQL.Statement).%ExecDirect(,"SELECT ID, Nombre, Rol, LicenciaFIFA FROM Fixture.Arbitro").%Display()
+// Operable: un UPDATE por SQL se ve al abrir el objeto.
+// Se liberan antes todas las referencias en memoria: si el objeto sigue
+// abierto, %OpenId devuelve esa misma instancia y no relee la base.
+Set idJ = j.%Id() Kill j, a, p1, p2
+Write !!,"[5] UPDATE Fixture.Jugador SET Numero = 19 ... SQLCODE: ",##class(%SQL.Statement).%ExecDirect(,"UPDATE Fixture.Jugador SET Numero = 19 WHERE Nombre = 'Lionel Messi'").%SQLCODE,!
+Set j = ##class(Fixture.Jugador).%OpenId(idJ) Write "[5] Numero leido como objeto tras UPDATE SQL: ",j.Numero,! Kill j
+
+// ============================================================
+// 6. FALLO CONTROLADO POR PROPIEDAD REQUERIDA OMITIDA (RF5)
+// ============================================================
+Set pr = ##class(Fixture.Persona).%New(), pr.Nombre = "Sin Nacionalidad"
+Set sc = pr.%Save() Write !,"[6] Persona sin Nacionalidad: ",$Select($System.Status.IsOK(sc):"ACEPTADO",1:"RECHAZADO"),! Do $System.Status.DisplayError(sc)
+Set jr = ##class(Fixture.Jugador).%New(), jr.Nombre = "Sin Posicion", jr.Nacionalidad = "URU"
+Set sc = jr.%Save() Write !,"[6] Jugador sin Posicion: ",$Select($System.Status.IsOK(sc):"ACEPTADO",1:"RECHAZADO"),! Do $System.Status.DisplayError(sc)
+Set ps = ##class(Fixture.Partido).%New(), ps.Estado = "Programado"
+Set sc = ps.%Save() Write !,"[6] Partido sin Codigo: ",$Select($System.Status.IsOK(sc):"ACEPTADO",1:"RECHAZADO"),! Do $System.Status.DisplayError(sc)
+// Índice único: no puede haber dos partidos con el mismo código.
+Set pd = ##class(Fixture.Partido).%New(), pd.Codigo = "M001", pd.Estado = "Programado"
+Set sc = pd.%Save() Write !,"[6] Partido con Codigo duplicado: ",$Select($System.Status.IsOK(sc):"ACEPTADO",1:"RECHAZADO"),! Do $System.Status.DisplayError(sc)
+Kill pr, jr, ps, pd
+
+// ============================================================
+// 7. TRANSICIONES DE ESTADO ENCAPSULADAS (RF9)
+// ============================================================
+Write !!,"[7] Estado inicial: ",partido.Estado,!
+Write "[7] Programado -> Finalizado: ",partido.CambiarEstado("Finalizado")," (0 = rechazada) | estado: ",partido.Estado,!
+Write "[7] Programado -> Jugando:    ",partido.CambiarEstado("Jugando")," (1 = aceptada)  | estado: ",partido.Estado,!
+Write "[7] Jugando -> Programado:    ",partido.CambiarEstado("Programado")," (0 = rechazada) | estado: ",partido.Estado,!
+Write "[7] Jugando -> Finalizado:    ",partido.CambiarEstado("Finalizado")," (1 = aceptada)  | estado: ",partido.Estado,!
+Set sc = partido.%Save() Write "[7] Guardado: ",sc,!
+
+// ============================================================
+// 8. INTEGRIDAD REFERENCIAL PADRE-HIJO (RF3)
+// ============================================================
+// Un evento no puede existir sin su partido.
+Set huerfano = ##class(Fixture.Evento).%New(), huerfano.Tipo = "Gol", huerfano.Minuto = 10
+Set sc = huerfano.%Save() Write !,"[8] Evento sin Partido: ",$Select($System.Status.IsOK(sc):"ACEPTADO",1:"RECHAZADO"),! Do $System.Status.DisplayError(sc)
+Kill huerfano
+// Borrar el partido elimina en cascada sus eventos.
+Set idEv = partido.Eventos.GetAt(1).%Id()
+Set rs = ##class(%SQL.Statement).%ExecDirect(,"SELECT COUNT(*) FROM Fixture.Evento") Do rs.%Next() Write !!,"[8] Eventos antes de borrar el partido: ",rs.%GetData(1),!
+Kill partido, ev
+Set sc = ##class(Fixture.Partido).%DeleteId(idM001) Write "[8] %DeleteId del partido: ",sc,!
+Set rs = ##class(%SQL.Statement).%ExecDirect(,"SELECT COUNT(*) FROM Fixture.Evento") Do rs.%Next() Write "[8] Eventos despues: ",rs.%GetData(1),!
+Write "[8] Existe el evento ",idEv,"? ",##class(Fixture.Evento).%ExistsId(idEv)," (0 = eliminado en cascada)",!
+
+Write !,"=== FIN DE LAS PRUEBAS DEL HITO 9 ===",!
+Halt
