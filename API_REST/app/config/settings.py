@@ -65,3 +65,26 @@ INFLUX_TOKEN_FILE = os.getenv(
     "INFLUX_TOKEN_FILE",
     "../InfluxDB/.influxdb3-token"
 )
+
+# InterSystems IRIS
+
+IRIS_HOST = os.getenv(
+    "IRIS_HOST",
+    "127.0.0.1"
+)
+
+IRIS_PORT = int(
+    os.getenv("IRIS_PORT", "1972")
+)
+
+IRIS_NAMESPACE = os.getenv(
+    "IRIS_NAMESPACE",
+    "USER"
+)
+
+IRIS_USERNAME = os.getenv(
+    "IRIS_USERNAME",
+    "_SYSTEM"
+)
+
+IRIS_PASSWORD = os.getenv("IRIS_PASSWORD", "")

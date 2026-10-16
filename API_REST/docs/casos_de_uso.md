@@ -57,41 +57,65 @@ La aplicación utilizará rutas HTTP, servicios y adaptadores independientes par
 
 - Consumidor: aplicación Fixture 2030.
 - Fuente: Redis.
+- Estructura: Hash.
+- Nomenclatura de claves: sesion:{usuarioId}.
+- TTL: 1.800 segundos (30 minutos).
 - Método: GET.
-- Endpoint: /sesiones/{id}.
-- Entrada: identificador de sesión.
-- Respuesta: información permitida de una sesión activa.
-- Operación: lectura de una clave Redis mediante su estructura correspondiente.
+- Endpoint: /sesiones/{usuarioId}.
+- Entrada: identificador del usuario.
+- Respuesta: información de la sesión activa, incluyendo usuario, rol, último acceso, partido seguido y TTL restante.
+- Operación: lectura del Hash mediante HGETALL y consulta del tiempo de vida mediante TTL.
 - Sesión inexistente o expirada: HTTP 404.
+- Identificador inválido: HTTP 400.
 - Redis no disponible: HTTP 503.
 - Éxito: HTTP 200 con información de la sesión.
+- Consideración: la consulta es de solo lectura y no renueva automáticamente el TTL. Las sesiones expiran según el tiempo configurado.
+
 
 ### CU05 — Consultar estadísticas temporales
 
 - Consumidor: aplicación Fixture 2030.
 - Fuente: InfluxDB 3 Core.
+- Base de datos: fixture2030.
+- Tabla: estadisticas.
 - Método: GET.
 - Endpoint: /partidos/{partidoId}/estadisticas.
-- Entrada: identificador del partido, fecha desde y fecha hasta.
-- Respuesta: estadísticas registradas durante el intervalo solicitado.
-- Operación: consulta SQL acotada por partido y rango temporal.
-- Intervalo inválido: HTTP 400.
+- Entrada: identificador del partido, identificador del equipo, fecha desde, fecha hasta y límite de resultados.
+- Respuesta: estadísticas temporales del partido, incluyendo timestamp, equipo, porcentaje de posesión, pases y tiros.
+- Operación: consulta SQL parametrizada, filtrando por partido_id, equipo_id e intervalo temporal.
+- Intervalo máximo permitido: 24 horas.
+- Límite máximo: 100 observaciones por solicitud.
+- Validación: comprobar el formato de las fechas, su orden cronológico y los límites antes de consultar.
+- Intervalo inválido o parámetros incorrectos: HTTP 400.
 - Intervalo sin observaciones: HTTP 200 con lista vacía.
 - InfluxDB no disponible: HTTP 503.
+- Respuesta inválida de la dependencia: HTTP 502.
 - Éxito: HTTP 200 con las estadísticas encontradas.
+- Consideración: el endpoint es de solo lectura y utiliza consultas SQL acotadas para evitar recuperar un volumen ilimitado de datos.
 
 ### CU06 — Consultar el detalle de un partido
 
 - Consumidor: aplicación Fixture 2030.
-- Fuente: InterSystems IRIS.
+- Fuente: InterSystems IRIS Community Edition.
+- Namespace: USER.
+- Modelo: objetos persistentes.
+- Clase principal: Fixture.Partido.
+- Clase relacionada: Fixture.Evento.
+- Relación: padre-hijo entre Partido y Evento.
 - Método: GET.
-- Endpoint: /partidos/{id}/detalle.
-- Entrada: identificador de la entidad persistente.
-- Respuesta: información del partido obtenida del modelo de objetos.
-- Operación: consulta de un objeto persistente mediante el adaptador IRIS.
-- Entidad inexistente: HTTP 404.
+- Endpoint: /partidos/{codigo}/detalle.
+- Entrada: código del partido, por ejemplo M004.
+- Respuesta: identificador, código, estado y eventos relacionados.
+- Operación: consulta SQL parametrizada sobre la proyección de las clases persistentes.
+- Identificador inválido: HTTP 400.
+- Partido inexistente: HTTP 404.
 - IRIS no disponible: HTTP 503.
-- Éxito: HTTP 200 con el detalle solicitado.
+- Error interno de consulta: HTTP 500.
+- Éxito: HTTP 200 con la información del partido.
+- Consideración: el endpoint es de solo lectura y no modifica objetos persistentes.
+- Conectividad: cliente Python de InterSystems mediante DB-API.
+- Configuración: host, puerto, namespace y credenciales mediante variables de entorno.
+- Seguridad: las credenciales no se incluyen en el código ni en GitHub.
 
 ## 3. Arquitectura
 

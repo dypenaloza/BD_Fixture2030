@@ -1,0 +1,22 @@
+==================================
+PRUEBAS API REST - FIXTURE 2030
+==================================
+[OK] MongoDB - Seleccion existente - HTTP 200
+[OK] Neo4j - Eventos de partido - HTTP 200
+[OK] Cassandra - Comentarios - HTTP 200
+[OK] Redis - Sesion activa - HTTP 200
+[OK] InfluxDB - Estadisticas - HTTP 200
+[OK] IRIS - Partido existente - HTTP 200
+[OK] MongoDB - Codigo invalido - HTTP 400
+[OK] Neo4j - Partido invalido - HTTP 400
+[OK] Cassandra - Limite invalido - HTTP 400
+[OK] Redis - Sesion inexistente - HTTP 404
+[OK] InfluxDB - Intervalo invalido - HTTP 400
+[OK] IRIS - Partido inexistente - HTTP 404
+
+==================================
+RESULTADOS
+==================================
+Correctas: 12
+Incorrectas: 0
+Total: 12
