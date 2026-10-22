@@ -1,0 +1,21 @@
+
+Hito 11 — Evaluación de conectividad Fixture 2030
+Inicio: 2026-10-22T16:28:41-0300
+Modo: native | API: http://127.0.0.1:8000
+
+--- 2. HTTP / clientes nativos ---
+[OK]   Neo4j Browser HTTP             http://127.0.0.1:7474 respondió HTTP 200
+[SKIP] MongoDB nativo                 mongosh no está instalado
+[SKIP] Neo4j nativo                   cypher-shell no está instalado; probar desde Browser o driver
+[SKIP] Cassandra nativo               cqlsh no está instalado
+[SKIP] Redis nativo                   redis-cli no está instalado
+[WARN] InfluxDB health HTTP           http://127.0.0.1:8181/health respondió HTTP 401; el servicio es alcanzable
+[WARN] IRIS portal HTTP               http://localhost:52873 respondió HTTP 404; el servicio es alcanzable
+[SKIP] IRIS Superserver               nc no está instalado; no se prueba el puerto 1972
+
+--- Resumen ---
+Total: 8 | OK: 1 | WARN: 2 | FAIL: 0 | SKIP: 5
+Fin: 2026-10-22T16:28:42-0300
+
+Interpretación: OK no garantiza rendimiento masivo; indica que la prueba de esa capa fue exitosa.
+Las pruebas nativas y de API deben contrastarse con logs y contexto, sin exponer secretos.

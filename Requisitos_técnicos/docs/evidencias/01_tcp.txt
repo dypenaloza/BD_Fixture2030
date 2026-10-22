@@ -1,0 +1,18 @@
+
+Hito 11 — Evaluación de conectividad Fixture 2030
+Inicio: 2026-10-22T16:22:09-0300
+Modo: tcp | API: http://127.0.0.1:8000
+
+--- 1. TCP / puertos ---
+[OK]   MongoDB TCP 127.0.0.1:27017    listener alcanzable (bash TCP)
+[OK]   Neo4j-Bolt TCP 127.0.0.1:7687  listener alcanzable (bash TCP)
+[OK]   Cassandra TCP 127.0.0.1:9042   listener alcanzable (bash TCP)
+[OK]   Redis TCP 127.0.0.1:6379       listener alcanzable (bash TCP)
+[OK]   IRIS TCP 127.0.0.1:1972        listener alcanzable (bash TCP)
+
+--- Resumen ---
+Total: 5 | OK: 5 | WARN: 0 | FAIL: 0 | SKIP: 0
+Fin: 2026-10-22T16:22:09-0300
+
+Interpretación: OK no garantiza rendimiento masivo; indica que la prueba de esa capa fue exitosa.
+Las pruebas nativas y de API deben contrastarse con logs y contexto, sin exponer secretos.
