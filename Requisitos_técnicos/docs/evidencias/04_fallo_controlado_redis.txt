@@ -1,0 +1,66 @@
+Hito 11 — Prueba de fallo controlado (RF20/RF21, sección 5.7)
+Dependencia elegida: Redis (sesiones)
+Operación: docker stop / docker start (reversible, sin tocar volúmenes)
+
+--- 1. Condición inicial ---
+Hora: 2026-10-23T17:16:06Z
+Estado del contenedor: running
+Llamada: GET /sesiones/U27961
+Resultado: HTTP 200
+{"usuarioId":"U27961","nombre":"Bruno","rol":"fan","ultimoAcceso":"2030-06-13T19:48:00Z","partidoSiguiendo":"P-R32-6","ttlSegundos":1775}
+
+--- 2. Cambio aplicado ---
+Comando: docker stop fixture2030-redis
+Estado del contenedor tras el comando: exited
+No se eliminó el volumen ni se usó docker rm/down -v: los datos de Redis
+(incluida la sesión de prueba) permanecen intactos en el volumen.
+
+--- 3. Prueba ejecutada con la dependencia caída ---
+Llamada: GET /sesiones/U27961
+Resultado: HTTP 503
+{"code":"REDIS_UNAVAILABLE","message":"Redis no esta disponible"}
+Tiempo de espera medido: 14 ms (falla rápido; no se cuelga esperando
+indefinidamente — RNF5 "Timeouts", límite de socket_connect_timeout=3s
+configurado en app/adapters/redis_adapter.py).
+
+Log de la API (app/main.py, RequestLoggingMiddleware), sin secretos:
+2026-10-23 17:16:14,325 | INFO | RequestID=d7558413-30de-4605-a177-472fa12a0ab6 | Metodo=GET | Ruta=/sesiones/{usuario_id} | Fuente=Redis | Estado=503 | Duracion=1.4 ms
+
+Interpretación: la API no devolvió un 500 genérico ni colgó el request;
+tradujo la caída de la dependencia en un 503 con código identificable
+(REDIS_UNAVAILABLE), con request ID para correlacionar con el log.
+
+--- 4. Recuperación del servicio ---
+Comando: docker start fixture2030-redis
+Estado del contenedor: running
+
+--- 5. Resultado después de recuperar la dependencia ---
+Llamada: GET /sesiones/U27961 (SIN reiniciar el proceso de la API)
+Resultado: HTTP 200
+{"usuarioId":"U27961","nombre":"Bruno","rol":"fan","ultimoAcceso":"2030-06-13T19:48:00Z","partidoSiguiendo":"P-R32-6","ttlSegundos":1758}
+
+Log de la API:
+2026-10-23 17:16:23,397 | INFO | RequestID=816a3f58-8492-477b-8092-a9f009a1fd62 | Metodo=GET | Ruta=/sesiones/{usuario_id} | Fuente=Redis | Estado=200 | Duracion=4.54 ms
+
+Interpretación: el pool de conexiones de redis-py (cacheado con
+lru_cache en el adaptador, ver API_REST/docs/arquitectura_y_adaptadores.md
+sección 3) reconectó solo, sin ninguna intervención manual ni reinicio
+de la API. Esto es consistente con el comportamiento documentado para
+Mongo/Neo4j/Cassandra/Redis (a diferencia de IRIS, que no usa pool y
+abre una conexión nueva por consulta).
+
+--- 6. Datos conservados ---
+La sesión de prueba (sesion:U27961) siguió existiendo con el mismo
+contenido antes y después de la caída. El TTL bajó de forma continua
+(1775s -> 1758s, ~17s transcurridos entre ambas lecturas), confirmando
+que Redis no se reinició desde cero ni perdió el dato: solo el proceso
+estuvo detenido, nunca se tocó el volumen.
+
+--- Resumen ---
+Dependencia: Redis
+Condición inicial: up
+Cambio: contenedor detenido (docker stop, reversible)
+Durante la caída: HTTP 503 / REDIS_UNAVAILABLE en 14 ms
+Recuperación: docker start, sin reiniciar la API
+Después de recuperar: HTTP 200, mismos datos
+Volúmenes/datos: conservados, sin pérdida

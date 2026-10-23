@@ -26,9 +26,11 @@ CASSANDRA_KEYSPACE="${CASSANDRA_KEYSPACE:-fixture2030}"
 REDIS_HOST="${REDIS_HOST:-127.0.0.1}"
 REDIS_PORT="${REDIS_PORT:-6379}"
 INFLUX_URL="${INFLUX_URL:-http://127.0.0.1:8181}"
+INFLUX_HOST="${INFLUX_HOST:-127.0.0.1}"
+INFLUX_PORT="${INFLUX_PORT:-8181}"
 IRIS_HOST="${IRIS_HOST:-127.0.0.1}"
 IRIS_PORT="${IRIS_PORT:-1972}"
-IRIS_PORTAL_URL="${IRIS_PORTAL_URL:-http://localhost:52873}"
+IRIS_PORTAL_URL="${IRIS_PORTAL_URL:-http://localhost:52773}"
 CONNECT_TIMEOUT="${CONNECT_TIMEOUT:-3}"
 API_TIMEOUT="${API_TIMEOUT:-5}"
 
@@ -53,7 +55,7 @@ Variables útiles:
   CASSANDRA_HOST=127.0.0.1 CASSANDRA_PORT=9042
   REDIS_HOST=127.0.0.1 REDIS_PORT=6379
   INFLUX_URL=http://127.0.0.1:8181
-  IRIS_HOST=127.0.0.1 IRIS_PORT=1972 IRIS_PORTAL_URL=http://127.0.0.1:52873
+  IRIS_HOST=127.0.0.1 IRIS_PORT=1972 IRIS_PORTAL_URL=http://127.0.0.1:52773
 
 El script no recibe passwords por argumentos y no imprime secretos.
 USAGE
@@ -83,6 +85,29 @@ record() {
 }
 
 have() { command -v "$1" >/dev/null 2>&1; }
+
+PYTHON_FALLBACK="$(dirname "$0")/chequeo_nativo_python.py"
+
+# Cuando la CLI del producto no esta instalada (frecuente en Windows sin
+# WSL), usa los mismos drivers Python que ya requiere la API del Hito 10
+# en vez de dejar la capa nativa sin evaluar (RNF4: no se acepta un unico
+# chequeo HTTP generico como reemplazo de la verificacion nativa real).
+native_fallback_python() {
+  local nombre="$1" producto="$2"
+  if ! have python3 || [[ ! -f "$PYTHON_FALLBACK" ]]; then
+    record SKIP "$nombre nativo" "CLI no instalada y python3/$PYTHON_FALLBACK no disponible"
+    return
+  fi
+  local salida estado
+  salida="$(python3 "$PYTHON_FALLBACK" "$producto" 2>&1)"
+  estado="${salida%% *}"
+  case "$estado" in
+    OK) record OK "$nombre nativo (python)" "${salida#OK }" ;;
+    FAIL) record FAIL "$nombre nativo (python)" "${salida#FAIL }" ;;
+    SKIP) record SKIP "$nombre nativo (python)" "${salida#SKIP }" ;;
+    *) record SKIP "$nombre nativo (python)" "salida inesperada del chequeo python" ;;
+  esac
+}
 
 check_tcp() {
   local name="$1" host="$2" port="$3"
@@ -122,7 +147,7 @@ check_http() {
 
 native_mongodb() {
   if ! have mongosh; then
-    record SKIP "MongoDB nativo" "mongosh no está instalado"
+    native_fallback_python "MongoDB" "mongodb"
     return
   fi
   if [[ -z "${MONGO_PASSWORD:-}" ]]; then
@@ -142,7 +167,7 @@ native_mongodb() {
 
 native_neo4j() {
   if ! have cypher-shell; then
-    record SKIP "Neo4j nativo" "cypher-shell no está instalado; probar desde Browser o driver"
+    native_fallback_python "Neo4j" "neo4j"
     return
   fi
   local user="${NEO4J_USER:-neo4j}"
@@ -160,7 +185,7 @@ native_neo4j() {
 
 native_cassandra() {
   if ! have cqlsh; then
-    record SKIP "Cassandra nativo" "cqlsh no está instalado"
+    native_fallback_python "Cassandra" "cassandra"
     return
   fi
   if cqlsh "$CASSANDRA_HOST" "$CASSANDRA_PORT" -e "USE ${CASSANDRA_KEYSPACE}; SELECT comentario_id, usuario_id FROM comentarios_por_partido WHERE partido_id = 'M001' AND bucket_temporal = '20:00-20:05' LIMIT 1;" >/dev/null 2>&1; then
@@ -172,7 +197,7 @@ native_cassandra() {
 
 native_redis() {
   if ! have redis-cli; then
-    record SKIP "Redis nativo" "redis-cli no está instalado"
+    native_fallback_python "Redis" "redis"
     return
   fi
   local result
@@ -193,31 +218,57 @@ native_influx() {
 
 native_iris() {
   check_http "IRIS portal" "$IRIS_PORTAL_URL"
-  if have nc; then
-    check_tcp "IRIS Superserver" "$IRIS_HOST" "$IRIS_PORT"
-  else
-    record SKIP "IRIS Superserver" "nc no está instalado; no se prueba el puerto $IRIS_PORT"
-  fi
+  # check_tcp ya tiene su propio fallback por /dev/tcp de bash cuando no
+  # hay nc instalado: no hace falta (ni conviene) duplicar esa condicion
+  # aca, para no generar un SKIP evitable.
+  check_tcp "IRIS Superserver" "$IRIS_HOST" "$IRIS_PORT"
 }
 
 api_get() {
-  local name="$1" path="$2"
+  # $3 (opcional): codigo HTTP esperado para este caso (ej. "400" para
+  # un caso de validacion, "404" para un recurso que debe no existir).
+  # Si se pasa, un codigo distinto al esperado es FAIL, no WARN: estamos
+  # probando un escenario puntual, no "a ver que devuelve".
+  local name="$1" path="$2" esperado="${3:-}"
   if ! have curl; then
     record SKIP "API $name" "curl no está instalado"
     return
   fi
-  local code
-  code="$(curl -k -sS -o /tmp/fixture2030-api-response.$$ -w '%{http_code}' --connect-timeout "$CONNECT_TIMEOUT" --max-time "$API_TIMEOUT" "${API_URL%/}$path" 2>/dev/null || true)"
+  local body_file headers_file code duracion_ms request_id
+  body_file="/tmp/fixture2030-api-response.$$"
+  headers_file="/tmp/fixture2030-api-headers.$$"
+  local inicio_ms fin_ms
+  inicio_ms=$(($(date +%s%N) / 1000000))
+  code="$(curl -k -sS -D "$headers_file" -o "$body_file" -w '%{http_code}' --connect-timeout "$CONNECT_TIMEOUT" --max-time "$API_TIMEOUT" "${API_URL%/}$path" 2>/dev/null || true)"
+  fin_ms=$(($(date +%s%N) / 1000000))
+  duracion_ms=$((fin_ms - inicio_ms))
+  request_id="$(grep -i '^x-request-id:' "$headers_file" 2>/dev/null | tr -d '\r' | cut -d' ' -f2)"
+  rm -f "$body_file" "$headers_file"
+
+  local detalle="HTTP $code en $path, ${duracion_ms}ms, request_id=${request_id:-N/D}"
+
+  if [[ -n "$esperado" ]]; then
+    if [[ "$code" == "$esperado" ]]; then
+      record OK "API $name" "$detalle (resultado esperado)"
+    elif [[ "$code" == "000" || -z "$code" ]]; then
+      record FAIL "API $name" "API no alcanzable en ${API_URL%/}$path (se esperaba HTTP $esperado)"
+    else
+      record FAIL "API $name" "$detalle (se esperaba HTTP $esperado)"
+    fi
+    return
+  fi
+
   if [[ "$code" =~ ^2 ]]; then
-    record OK "API $name" "HTTP $code en $path"
+    record OK "API $name" "$detalle"
   elif [[ "$code" == "404" ]]; then
-    record WARN "API $name" "API alcanzable; recurso no encontrado (HTTP 404) en $path"
+    record WARN "API $name" "API alcanzable; recurso no encontrado. $detalle"
   elif [[ "$code" == "000" || -z "$code" ]]; then
     record FAIL "API $name" "API no alcanzable en ${API_URL%/}$path"
+  elif [[ "$code" == "503" || "$code" == "502" ]]; then
+    record WARN "API $name" "API alcanzable con dependencia fallida. $detalle"
   else
-    record WARN "API $name" "API alcanzable; respondió HTTP $code en $path"
+    record WARN "API $name" "API alcanzable; respondió HTTP $code. $detalle"
   fi
-  rm -f /tmp/fixture2030-api-response.$$
 }
 
 printf '\nHito 11 — Evaluación de conectividad Fixture 2030\n'
@@ -230,6 +281,7 @@ if [[ "$MODE" == "all" || "$MODE" == "tcp" ]]; then
   check_tcp Neo4j-Bolt "$NEO4J_HOST" "$NEO4J_BOLT_PORT"
   check_tcp Cassandra "$CASSANDRA_HOST" "$CASSANDRA_PORT"
   check_tcp Redis "$REDIS_HOST" "$REDIS_PORT"
+  check_tcp InfluxDB "$INFLUX_HOST" "$INFLUX_PORT"
   check_tcp IRIS "$IRIS_HOST" "$IRIS_PORT"
   printf '\n'
 fi
@@ -254,6 +306,21 @@ if [[ "$MODE" == "all" || "$MODE" == "api" ]]; then
   api_get 'Redis / sesión' '/sesiones/U27961'
   api_get 'InfluxDB / estadísticas' '/partidos/M001/estadisticas?equipo_id=ARG&desde=2030-10-08T08%3A00%3A00Z&hasta=2030-10-08T08%3A30%3A00Z&limit=5'
   api_get 'IRIS / detalle' '/partidos/M004/detalle'
+  printf '\n'
+
+  printf '%s\n' '--- 3b. API: casos de error y de borde (RF18) ---'
+  # Error de validacion (400): codigo con formato invalido, nunca llega
+  # a tocar la base (se verifica ANTES de la capa 6 "operacion").
+  api_get 'MongoDB / codigo invalido' '/selecciones/1234' '400'
+  # Error de validacion (400): formato de Cassandra usado donde se
+  # espera el de Neo4j (bug real encontrado y corregido en el Hito 10).
+  api_get 'Neo4j / id con formato de Cassandra' '/partidos/M001/eventos' '400'
+  # Respuesta vacia valida (200): particion real sin comentarios no es
+  # lo mismo que "Cassandra caida"; debe distinguirse del 503.
+  api_get 'Cassandra / particion sin comentarios' '/partidos/M001/comentarios?bucket_temporal=00%3A00-00%3A05&limit=5' '200'
+  # Recurso inexistente (404): codigo con formato valido que no existe
+  # en IRIS.
+  api_get 'IRIS / partido inexistente' '/partidos/Z999/detalle' '404'
   printf '\n'
 fi
 
