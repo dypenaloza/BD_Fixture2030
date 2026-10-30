@@ -1,0 +1,43 @@
+
+Hito 11 — Evaluación de conectividad Fixture 2030
+Inicio: 2026-10-23T17:15:55+0000
+Modo: all | API: http://127.0.0.1:8000
+
+--- 1. TCP / puertos ---
+[OK]   MongoDB TCP 127.0.0.1:27017    listener alcanzable
+[OK]   Neo4j-Bolt TCP 127.0.0.1:7687  listener alcanzable
+[OK]   Cassandra TCP 127.0.0.1:9042   listener alcanzable
+[OK]   Redis TCP 127.0.0.1:6379       listener alcanzable
+[OK]   InfluxDB TCP 127.0.0.1:8181    listener alcanzable
+[OK]   IRIS TCP 127.0.0.1:1972        listener alcanzable
+
+--- 2. HTTP / clientes nativos ---
+[OK]   Neo4j Browser HTTP             http://127.0.0.1:7474 respondió HTTP 200
+[OK]   MongoDB nativo (python)        autenticacion y ping correctos en fixture2030
+[OK]   Neo4j nativo (python)          sesion Bolt y lectura minima correctas en neo4j
+[OK]   Cassandra nativo (python)      keyspace fixture2030 y lectura limitada correctos
+[OK]   Redis nativo                   PING/PONG correctos
+[WARN] InfluxDB health HTTP           http://127.0.0.1:8181/health respondió HTTP 401; el servicio es alcanzable
+[WARN] IRIS portal HTTP               http://localhost:52773 respondió HTTP 404; el servicio es alcanzable
+[OK]   IRIS Superserver TCP 127.0.0.1:1972 listener alcanzable
+
+--- 3. API integrada del Hito 10 ---
+[OK]   API MongoDB / selección       HTTP 200 en /selecciones/ARG, 18ms, request_id=3f774288-fb7c-4f30-ae98-42be94d25a5a
+[OK]   API Neo4j / eventos            HTTP 200 en /partidos/P-A-1/eventos?limit=5, 34ms, request_id=49f1b6c0-1aac-4e81-b890-4efd461df00d
+[OK]   API Cassandra / comentarios    HTTP 200 en /partidos/M001/comentarios?bucket_temporal=20%3A00-20%3A05&limit=5, 21ms, request_id=b1e948fc-1b8f-49d5-ad46-e4337b630b86
+[OK]   API Redis / sesión            HTTP 200 en /sesiones/U27961, 20ms, request_id=dac26c7e-f7ef-4699-a2cd-10b243895c07
+[OK]   API InfluxDB / estadísticas   HTTP 200 en /partidos/M001/estadisticas?equipo_id=ARG&desde=2030-10-08T08%3A00%3A00Z&hasta=2030-10-08T08%3A30%3A00Z&limit=5, 29ms, request_id=9b9a6b2f-5e71-406e-9bdb-34b39caf2d65
+[OK]   API IRIS / detalle             HTTP 200 en /partidos/M004/detalle, 36ms, request_id=69593cae-adab-4179-b81b-dfcb520de1bf
+
+--- 3b. API: casos de error y de borde (RF18) ---
+[OK]   API MongoDB / codigo invalido  HTTP 400 en /selecciones/1234, 15ms, request_id=701fdc65-65a3-4f8c-9930-5ba42bd15197 (resultado esperado)
+[OK]   API Neo4j / id con formato de Cassandra HTTP 400 en /partidos/M001/eventos, 15ms, request_id=fb4ee3f5-71da-4ed4-8db1-770ffd8fe14e (resultado esperado)
+[OK]   API Cassandra / particion sin comentarios HTTP 200 en /partidos/M001/comentarios?bucket_temporal=00%3A00-00%3A05&limit=5, 17ms, request_id=93568b10-221f-480e-b9c0-54802540f56f (resultado esperado)
+[OK]   API IRIS / partido inexistente HTTP 404 en /partidos/Z999/detalle, 51ms, request_id=709ec697-cb3f-4782-9bd3-fa58520be259 (resultado esperado)
+
+--- Resumen ---
+Total: 24 | OK: 22 | WARN: 2 | FAIL: 0 | SKIP: 0
+Fin: 2026-10-23T17:15:57+0000
+
+Interpretación: OK no garantiza rendimiento masivo; indica que la prueba de esa capa fue exitosa.
+Las pruebas nativas y de API deben contrastarse con logs y contexto, sin exponer secretos.
