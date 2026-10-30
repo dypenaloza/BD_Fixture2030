@@ -1,0 +1,21 @@
+﻿HITO 12 - ENTORNO DE PRUEBAS
+Fecha: 2026-10-30T14:42:32.6883074-03:00
+Commit: b5e77a1fc0bff3b71556181e4299f8fbf6ddac9f
+Rama: hito12-mejoras
+
+SISTEMA
+SO: Microsoft Windows 10 Home Single Language
+CPU: 11th Gen Intel(R) Core(TM) i5-1135G7 @ 2.40GHz
+RAM total: 7.75 GB
+
+SOFTWARE
+Python: Python 3.11.9
+Docker: Docker version 29.7.2, build a7dcaa6
+
+CONTENEDORES
+fixture2030-iris | intersystems/iris-community:latest-cd | Up 2 hours (healthy)
+fixture2030-influxdb | influxdb:3-core | Up 2 hours
+fixture2030-cassandra | cassandra:latest | Up 2 hours
+fixture2030-redis | redis:latest | Up 2 hours
+fixture2030-neo4j | neo4j:latest | Up 2 hours
+fixture2030-mongodb | mongo:latest | Up 2 hours

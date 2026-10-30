@@ -1,0 +1,47 @@
+{
+    "fecha": "2026-10-30T14:35:16.619924-03:00",
+    "commit": "b5e77a1fc0bff3b71556181e4299f8fbf6ddac9f",
+    "endpoint": "http://127.0.0.1:8000/selecciones/ARG",
+    "metodo": "GET",
+    "timeout_s": 3,
+    "intervalo_por_usuario_s": 0.5,
+    "calentamiento_solicitudes": 5,
+    "fases": {
+        "rampa_2": {
+            "usuarios": 2,
+            "duracion_s": 5.0,
+            "solicitudes": 20,
+            "exitos": 20,
+            "errores": 0,
+            "latencia_promedio_ms": 16.22,
+            "p50_ms": 12.28,
+            "p95_ms": 31.14,
+            "p99_ms": 31.88,
+            "throughput_req_s": 4.0
+        },
+        "rampa_5": {
+            "usuarios": 5,
+            "duracion_s": 5.01,
+            "solicitudes": 50,
+            "exitos": 50,
+            "errores": 0,
+            "latencia_promedio_ms": 12.72,
+            "p50_ms": 11.04,
+            "p95_ms": 26.22,
+            "p99_ms": 30.36,
+            "throughput_req_s": 9.99
+        },
+        "sostenimiento": {
+            "usuarios": 10,
+            "duracion_s": 20.01,
+            "solicitudes": 400,
+            "exitos": 400,
+            "errores": 0,
+            "latencia_promedio_ms": 17.47,
+            "p50_ms": 14.6,
+            "p95_ms": 31.46,
+            "p99_ms": 42.92,
+            "throughput_req_s": 19.99
+        }
+    }
+}
