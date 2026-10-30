@@ -1,0 +1,17 @@
+{
+    "fecha": "2026-10-30T14:40:12.686729-03:00",
+    "endpoint": "http://127.0.0.1:8000/selecciones/ARG",
+    "codigo_http": 200,
+    "identificador_correcto": true,
+    "coincidencia_completa": true,
+    "campos_verificados": [
+        "anfitrion",
+        "confederacion",
+        "grupo",
+        "id",
+        "nombre",
+        "pais",
+        "ranking"
+    ],
+    "integridad_correcta": true
+}

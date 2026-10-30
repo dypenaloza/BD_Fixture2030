@@ -280,3 +280,12 @@ También se identificaron limitaciones relacionadas con el entorno, el patrón d
 Finalmente, se propuso una integración analítica mediante un Data Mart y se comparó conceptualmente la solución NoSQL con una alternativa relacional.
 
 La experiencia demuestra la importancia de medir antes de optimizar y de evaluar tanto las mejoras como sus costos y limitaciones.
+
+## Pruebas adicionales de refuerzo
+
+Se realizaron pruebas complementarias para mejorar la reproducibilidad,
+registrar el consumo de recursos y validar la integridad de los datos.
+
+Los resultados, las comparaciones y las limitaciones se documentan en:
+
+[Informe de pruebas de refuerzo](docs/refuerzo_pruebas.md)
