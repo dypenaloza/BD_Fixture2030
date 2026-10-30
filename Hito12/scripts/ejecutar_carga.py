@@ -20,8 +20,13 @@ TIMEOUT = 3
 
 TIPO = sys.argv[1] if len(sys.argv) > 1 else "linea_base"
 
-if TIPO not in ("linea_base", "optimizada"):
-    raise ValueError("Usar linea_base u optimizada")
+if TIPO not in (
+    "linea_base",
+    "optimizada",
+    "linea_base_refuerzo",
+    "optimizada_refuerzo"
+):
+    raise ValueError("Tipo de prueba no valido")
 
 
 def solicitar(fase):
