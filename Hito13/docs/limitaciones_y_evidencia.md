@@ -52,6 +52,17 @@ por qué importa la distinción.
 - **Sin exporter JMX para Cassandra ni plugin de métricas para Neo4j
   Community**: ambos requerirían agentes adicionales no incorporados
   en este laboratorio por motivos de tiempo (ver `inventario_de_componentes.md`).
+- **`host.docker.internal` puede resolver a una ruta IPv6 inalcanzable**:
+  en algunos hosts Docker Desktop (Windows con WSL2 entre ellos), el
+  `tcp_connect` del blackbox exporter resolvía `host.docker.internal` a
+  una dirección IPv6 sin salida desde el contenedor ("network is
+  unreachable"), marcando como caídas las 4 fuentes sin exporter
+  dedicado (Neo4j/Cassandra/InfluxDB/IRIS) aunque estuvieran arriba y
+  respondiendo por IPv4. Se corrigió fijando
+  `preferred_ip_protocol: ip4` en `blackbox/blackbox.yml`. Encontrado
+  al levantar el entorno completo en una máquina distinta a la
+  original, no durante el desarrollo original del Hito 13 — queda
+  anotado por si vuelve a aparecer en otro entorno.
 
 ## 4. Trazabilidad de la evidencia (RNF2/RNF18)
 

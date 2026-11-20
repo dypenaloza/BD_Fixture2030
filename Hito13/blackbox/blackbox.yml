@@ -7,3 +7,10 @@ modules:
   tcp_connect:
     prober: tcp
     timeout: 3s
+    tcp:
+      # host.docker.internal resuelve a IPv6 en algunos hosts Docker Desktop
+      # (Windows/WSL2 entre ellos), y esa ruta IPv6 puede ser inalcanzable
+      # desde el contenedor ("network is unreachable") aunque el servicio
+      # esté arriba y respondiendo por IPv4. Forzar IPv4 evita falsos
+      # "caído" en las 4 fuentes sin exporter dedicado.
+      preferred_ip_protocol: ip4
