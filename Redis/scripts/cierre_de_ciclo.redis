@@ -1,0 +1,48 @@
+# =============================================================================
+# CIERRE DE CICLO DE VIDA (RNF6) — contador de visitas y encuesta de figura.
+#
+# Decisión documentada en docs/ciclo_de_vida_e_invalidacion.md, sección 3:
+#   a) encuesta:{id}:figura           -> invalidación explícita por evento
+#                                        de dominio (fin de partido) + TTL
+#                                        de 24h como red de seguridad.
+#   b) contador:partido:{id}:visitas  -> sin TTL durante el torneo, DEL
+#                                        explícito al cierre del torneo
+#                                        (nunca por expiración).
+#
+# Requiere haber corrido antes scripts/carga_muestra.redis y, opcionalmente,
+# scripts/concurrencia.redis (para ver contadores con valores no iniciales).
+#
+# Uso:
+#   ./scripts/ejecutar.sh scripts/cierre_de_ciclo.redis
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# 1. Fin de partido (evento de dominio) — se cierra la ventana de la encuesta
+# -----------------------------------------------------------------------------
+TTL encuesta:P-A-1:figura
+# (-1) -> todavía sin TTL: el partido P-A-1 se trata como en curso.
+
+EXPIRE encuesta:P-A-1:figura 86400
+TTL encuesta:P-A-1:figura
+# Ahora positivo (~86400s / 24h): a partir de este momento, si nadie
+# vuelve a tocar la clave, Redis la borra sola. Los votos ya emitidos
+# siguen disponibles durante esa ventana (ZREVRANGE sigue funcionando
+# igual, ver scripts/concurrencia.redis, sección 3).
+ZREVRANGE encuesta:P-A-1:figura 0 2 WITHSCORES
+
+# -----------------------------------------------------------------------------
+# 2. Cierre de torneo (evento operativo, no automático) — se eliminan los
+#    contadores de visitas, nunca por timeout
+# -----------------------------------------------------------------------------
+GET contador:partido:P-A-1:visitas
+TTL contador:partido:P-A-1:visitas
+# (-1) -> correcto: nunca tuvo TTL, es la decisión documentada.
+
+# DEL explícito, uno por partido cerrado (en un torneo real, esta
+# operación recorrería todas las claves "contador:partido:*:visitas" con
+# SCAN antes de borrarlas; acá se muestra el DEL puntual para que quede
+# claro que es una acción deliberada, no background de Redis):
+DEL contador:partido:P-A-1:visitas
+GET contador:partido:P-A-1:visitas
+# (nil) -> el contador no existe más: se eliminó por decisión explícita
+# del cierre de torneo, no porque haya "vencido" nada.

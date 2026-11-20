@@ -89,7 +89,7 @@ no ser tomados por sorpresa si la FIFA pregunta justo por ahí.
    módulo. (Si lo preguntan: el comportamiento real demostrado está en
    el Hito 11 — la API devuelve 503 `NEO4J_UNAVAILABLE` con
    reconexión automática del pool al volver la base, ver
-   `Requisitos_técnicos/docs/arquitectura_y_adaptadores.md`.)
+   `API_REST/docs/arquitectura_y_adaptadores.md`.)
 9. **Trade-off reconocido**: se usa la etiqueta `neo4j:latest` (móvil,
    validada en una fecha concreta); el fixture es simulado, no un
    Mundial real; se descartó modelar `Confederacion`/`Grupo`/`Fase`
@@ -216,9 +216,11 @@ no ser tomados por sorpresa si la FIFA pregunta justo por ahí.
 4. **Estructura real**: `pases` se agrega con `MAX(pases) - MIN(pases)`
    por ser **contador acumulado** (no se puede sumar directamente);
    `tiros` se agrega con `SUM` por ser incrementos nuevos en cada
-   observación; `posesion_pct` con `AVG`. Cardinalidad estimada: ~254
-   series (127 partidos × 2 equipos). Retención configurada: 30 días.
-   — `InfluxDB/docs/modelo_multidimensional.md:44-80`
+   observación; `posesion_pct` con `AVG`. Cardinalidad estimada: ~256
+   series (128 partidos × 2 equipos). Retención: **política propuesta**
+   a 30 días, no implementada en este módulo (no hay script que la
+   configure). — `InfluxDB/docs/modelo_multidimensional.md:44-80`,
+   `InfluxDB/docs/retencion_y_granularidad.md:25-27`
 5. **Carga/recuperación**: Line Protocol vía `influxdb3 write`. No hay
    declaración explícita de idempotencia (a diferencia de Mongo/Neo4j/Redis).
    Token de admin guardado fuera del repo (`.influxdb3-token`, en `.gitignore`).
@@ -278,7 +280,7 @@ no ser tomados por sorpresa si la FIFA pregunta justo por ahí.
    particularidad real encontrada — el adaptador abre una conexión
    nueva por consulta (no un pool), evitando el problema de "socket
    cacheado que queda inválido" que si tendría con el patrón usado en
-   las otras 5 bases. Ver `Hito13/docs/arquitectura` (Hito 11) y
+   las otras 5 bases. Ver `Hito13/docs/decisiones_de_arquitectura.md` (Hito 11) y
    `API_REST/docs/arquitectura_y_adaptadores.md`.
 9. **Trade-off reconocido**: la validación de estados puede saltearse
    si algo escribe `Estado` directamente sin pasar por

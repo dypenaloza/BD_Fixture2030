@@ -17,11 +17,11 @@ estadisticas + M001 + ARG → una serie
 estadisticas + M001 + POR → otra serie
 
 # Estimación:
-El Fixture 2030 contempla 127 partidos.
+El Fixture 2030 contempla 128 partidos.
 
 Como cada partido contiene las estadísticas de sus dos equipos:
 
-127 partidos × 2 equipos = 254 series aproximadas.
+128 partidos × 2 equipos = 256 series aproximadas.
 
 # Conclusión:
 La cardinalidad se mantiene acotada porque partido_id y equipo_id poseen una cantidad limitada de valores y son dimensiones necesarias para las consultas definidas.
@@ -71,6 +71,37 @@ Para escalar se deben considerar:
 - manejo de errores;
 - reintentos;
 - validación de puntos cargados.
+
+**Implementado, no solo planteado** (`scripts/carga_lotes.ps1`): la
+versión anterior de este script escribía el archivo `.lp` completo en una
+sola llamada a `influxdb3 write`, sin ningún control real de los seis
+puntos de arriba — quedaban mencionados en este documento pero no se
+reflejaban en el código. La versión actual:
+
+- **Tamaño de lote**: parámetro `-TamanoLote` (default 2000 líneas por
+  lote); el archivo de entrada se particiona antes de escribir nada.
+- **Concurrencia**: parámetro `-Concurrencia` (default 2); los lotes se
+  envían como `Start-Job` de PowerShell, con un máximo de lotes en vuelo
+  a la vez — no espera a que termine un lote para lanzar el siguiente.
+- **Manejo de errores y reintentos**: parámetro `-MaxReintentos` (default
+  3); cada lote que falla (`influxdb3 write` con código de salida
+  distinto de 0) se reintenta con backoff exponencial (2s, 4s, 8s...)
+  antes de darlo por perdido. Si un lote agota los reintentos, el script
+  termina con error y reporta cuál.
+- **Validación de puntos cargados**: se cuenta `SELECT COUNT(*) FROM
+  estadisticas` antes y después de la carga; el script falla
+  explícitamente si el delta no coincide con la cantidad de puntos que se
+  intentó cargar (esto también detecta el caso real de que dos puntos
+  compartan serie y timestamp exacto, donde InfluxDB sobrescribe en vez
+  de duplicar — no es un bug del script, es el comportamiento del motor,
+  pero el script lo hace visible en vez de darlo por éxito silencioso).
+
+No se reimplementó como un sistema de colas persistente ni con
+reintentos distribuidos entre procesos distintos — para el volumen de
+prueba de este hito (10.000 puntos) alcanza con jobs de PowerShell en un
+mismo proceso; escalar a 10M+ puntos reales probablemente necesitaría
+mover esto a un proceso dedicado con una cola persistente, pero esa
+capa no se construyó y no se afirma que esté medida.
 
 # ¿Qué ayuda a mantener el modelo escalable?
 - Mantener baja la cardinalidad de series.

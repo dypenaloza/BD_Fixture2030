@@ -8,8 +8,8 @@ de lectura humana — Redis no crea jerarquías reales de carpetas con eso).
 |---|---|---|---|---|
 | `sesion:{usuarioId}` | Hash | 1800s (30 min), renovado en cada actividad | `usuario_id`, `nombre`, `rol`, `ultimo_acceso`, `partido_siguiendo` | PA1 |
 | `cache:partido:{partidoId}` | String (JSON serializado) | 45s | `golesLocal`, `golesVisitante`, `estado` | PA2 |
-| `contador:partido:{partidoId}:visitas` | String (entero) | sin TTL — se reinicia por torneo, no por tiempo | contador | PA3 |
-| `encuesta:{partidoId}:figura` | Sorted Set | sin TTL — vive mientras dure el análisis del partido | miembro = `jugador_id` (formato `EQUIPO-DORSAL` del Hito 4), score = votos | PA4 |
+| `contador:partido:{partidoId}:visitas` | String (entero) | sin TTL — conservación explícita durante todo el torneo, `DEL` explícito al cierre de torneo (RNF6, ver `docs/ciclo_de_vida_e_invalidacion.md` §3) | contador | PA3 |
+| `encuesta:{partidoId}:figura` | Sorted Set | sin TTL mientras el partido está en curso; `EXPIRE 86400` (24h) al pasar a `finalizado` (RNF6, ver `docs/ciclo_de_vida_e_invalidacion.md` §3) | miembro = `jugador_id` (formato `EQUIPO-DORSAL` del Hito 4), score = votos | PA4 |
 
 ## Por qué cada tipo de estructura
 

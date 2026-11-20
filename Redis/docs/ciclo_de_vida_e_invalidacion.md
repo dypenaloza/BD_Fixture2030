@@ -1,4 +1,4 @@
-# Ciclo de vida y caché/invalidación (RF3, RF4, RF6, RF7)
+# Ciclo de vida y caché/invalidación (RF3, RF4, RF6, RF7, RNF6)
 
 ## 1. Ciclo de vida de una sesión
 
@@ -105,3 +105,57 @@
   encuesta de figura (PA4) no se duplica en Redis — se resuelve contra
   MongoDB por `jugador_id` cuando la aplicación arma la pantalla. Evita
   mantener sincronizados dos lugares con el mismo nombre de jugador.
+
+## 3. Ciclo de vida de contadores y rankings (RNF6)
+
+`contador:partido:{id}:visitas` y `encuesta:{id}:figura` quedaban
+documentados como "sin TTL" sin que eso fuera una decisión explícita de
+expiración, invalidación o conservación — RNF6 exige decidir una de las
+tres para todo dato temporal. Se decide una política distinta para cada
+estructura, porque tienen ciclos de vida distintos:
+
+```
+   partido pasa a estado "finalizado" en Neo4j (evento de dominio)
+          │
+          ▼
+   EXPIRE encuesta:{id}:figura 86400   (ventana de 24h para consultar
+          │                             el resultado de la votación)
+          ▼
+   pasadas 24h sin más actividad ──► Redis la borra sola  (EXPIRACIÓN)
+
+   ...mientras tanto...
+
+   contador:partido:{id}:visitas sigue SIN TTL durante todo el torneo
+          │
+          ▼
+   cierre operativo del torneo ──► DEL explícito (ver
+          scripts/cierre_de_ciclo.redis)      (CONSERVACIÓN + CIERRE EXPLÍCITO)
+```
+
+- **`encuesta:{id}:figura` — invalidación explícita por evento, con TTL
+  como red de seguridad.** Mientras el partido está en curso, los votos
+  no pueden expirar (sería perder datos de un proceso todavía abierto),
+  así que no lleva TTL desde que se crea. Cuando la aplicación detecta
+  que el partido pasó a `estado: finalizado` (el mismo evento de dominio
+  que dispara la invalidación de `cache:partido:{id}`, sección 2), ejecuta
+  `EXPIRE encuesta:{id}:figura 86400`: dejar la encuesta consultable 24h
+  más es tiempo suficiente para mostrar el resultado final de "figura del
+  partido" sin mantenerla indefinidamente. Este es el mismo patrón ya
+  usado para el caché (acción explícita atada a un evento, con una
+  ventana de tiempo como respaldo), no un mecanismo nuevo.
+- **`contador:partido:{id}:visitas` — conservación explícita + cierre
+  explícito, sin TTL.** A diferencia de la encuesta, este contador tiene
+  valor como métrica acumulada durante *todo* el torneo (no solo durante
+  un partido), así que ponerle un TTL atado a un partido individual
+  borraría una serie que todavía se necesita. La decisión es conservarlo
+  sin expiración mientras el torneo esté activo, y borrarlo
+  explícitamente — nunca por timeout — en una operación de cierre de
+  torneo, demostrada en `scripts/cierre_de_ciclo.redis`.
+- **Por qué no usar el mismo TTL largo para ambas:** un TTL fijo (p.ej.
+  "30 días") sería más simple de escribir, pero no refleja la decisión
+  real: la encuesta debe sobrevivir *como mínimo* hasta que el partido
+  termine (duración variable, no se puede fijar de antemano) y el
+  contador debe sobrevivir *como mínimo* hasta que termine el torneo
+  completo (semanas, no un número fijo de segundos cómodo de declarar).
+  Ambos casos se resuelven mejor con una acción explícita atada al evento
+  real (fin de partido / fin de torneo) que con una expiración a ciegas.

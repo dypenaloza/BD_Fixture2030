@@ -244,12 +244,12 @@ partido_id
 equipo_id
 ```
 
-El Fixture 2030 contempla 127 partidos.
+El Fixture 2030 contempla 128 partidos.
 
 Considerando dos equipos por partido:
 
 ```text
-127 partidos × 2 equipos = 254 series aproximadas
+128 partidos × 2 equipos = 256 series aproximadas
 ```
 
 Esta cardinalidad permanece acotada porque las dimensiones tienen una cantidad limitada de valores.

@@ -72,7 +72,7 @@ Además, se implementó `Fixture.CargaInicial`, una clase auxiliar que ejecuta l
 
 ### 4.1. Diagrama de clases UML
 
-![Diagrama UML](/Diagrama_UML.jpg)
+![Diagrama UML](Diagrama_UML.jpg)
 
 El diagrama representa la herencia y la relación padre-hijo implementadas.
 

@@ -16,7 +16,7 @@ comprensión, no cobertura exhaustiva.
 |---|---|---|---|
 | 0:00–2:00 | Inicio | El problema de la FIFA, alcance del Fixture 2030, por qué una única base no alcanza | — |
 | 2:00–6:00 | Arquitectura | Recorrido por los 6 módulos: qué dato vive en cada uno y por qué, capas Router→Servicio→Adaptador→Base | — |
-| 6:00–12:00 | Decisiones | Justificación de modelos, patrones de acceso, particionamiento/réplica, consistencia (usar `docs/defensa_por_base.md`) | — |
+| 6:00–12:00 | Decisiones | Justificación de modelos, patrones de acceso, particionamiento/réplica, consistencia (usar `defensa_por_base.md`) | — |
 | 12:00–16:00 | Operación | Demostración de 1-2 flujos completos desde la API (ver `demo.md`) | — |
 | 16:00–18:30 | Evidencia | Grafana/Prometheus: disponibilidad, latencia, errores, prueba de falla controlada (Hito 13); resultados de carga (Hito 12) | — |
 | 18:30–20:00 | Cierre | Por qué esta combinación es adecuada para el Fixture 2030, qué trade-offs se aceptaron, qué se mejoraría | — |
@@ -63,14 +63,14 @@ Mongo Neo4j Cassandra Redis InfluxDB IRIS
 
 ## 3. Decisiones (≈6 min) — lo más importante de la defensa
 
-Usar la tabla de `docs/defensa_por_base.md` (una fila por base, con
+Usar la tabla de `defensa_por_base.md` (una fila por base, con
 los 10 puntos que pide la sección 6.4 del enunciado). No leerla
 completa: elegir 2-3 bases para desarrollar en profundidad (ideal:
 una con modelo claro tipo Mongo/Neo4j, y una con una decisión más
 sutil tipo Cassandra/Redis) y las otras 3-4 mencionarlas más breve.
 
 Preguntas que hay que poder responder sin mirar notas (sección 6.4 del
-enunciado, ya cubiertas en `docs/defensa_por_base.md` por base):
+enunciado, ya cubiertas en `defensa_por_base.md` por base):
 
 - Por qué no conviene tratar todos los datos con una única estructura.
 - Cómo se relacionan los módulos sin forzar una única base a resolver
@@ -125,6 +125,6 @@ Estructura sugerida de la respuesta:
    exporter, Neo4j Community sin métricas nativas — ver
    `Hito13/docs/limitaciones_y_evidencia.md`).
 4. Qué se mejoraría con más tiempo (ej: health/readiness consolidado,
-   propuesto pero no implementado — `API_REST/docs/health_readiness.md`;
+   propuesto pero no implementado — `Requisitos_técnicos/docs/health_readiness.md`;
    exporters dedicados para las 4 bases que hoy solo tienen chequeo
    TCP).

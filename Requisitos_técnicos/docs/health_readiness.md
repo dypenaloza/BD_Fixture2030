@@ -7,7 +7,7 @@ La API del Hito 10 **no tiene** endpoints `/health`, `/live` ni
 objetivo de este apartado, es que **cada uno de los 6 endpoints de
 negocio ya informa el estado de su propia dependencia** en cada
 respuesta (contrato documentado en `API_REST/docs/contratos_y_errores.md`):
-un 503 con `{"code": "MONGO_UNAVAILABLE"}` (o el equivalente de cada
+un 503 con `{"code": "DATABASE_UNAVAILABLE"}` (o el equivalente de cada
 fuente) es, de hecho, un diagnóstico puntual de esa dependencia en ese
 momento.
 

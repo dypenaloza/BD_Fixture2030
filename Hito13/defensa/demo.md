@@ -105,7 +105,7 @@ docker exec fixture2030-mongodb mongosh -u admin -p password123 \
 Esto conecta con la pregunta típica de la FIFA ("¿cómo distinguen que
 el problema está en la API y no en la base?"): si el cliente nativo
 funciona y la API falla, el problema es de la API/adaptador; si ambos
-fallan, es de la base o la red (ver `docs/defensa_por_base.md` y la
+fallan, es de la base o la red (ver `defensa_por_base.md` y la
 tabla de diagnóstico de la Clase 12).
 
 ## Grafana (para la sección "Evidencia" del guion)

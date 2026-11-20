@@ -115,10 +115,11 @@ A diferencia de `cypher-shell -f` (Neo4j) o `cqlsh -f` (Cassandra),
 (`ERR unknown command '#'`, confirmado al ejecutar un script sin filtrar).
 Para poder mantener los `.redis` comentados y legibles (RNF9) sin que eso
 rompa la ejecución automática, `ejecutar.sh` filtra las líneas de
-comentario y las vacías antes de pasarle el archivo a `redis-cli`. Es la
-misma necesidad que resolvieron `scripts/cargar.sh` en Neo4j o el uso de
-`cqlsh -f` en Cassandra, adaptada a una limitación real y puntual de
-`redis-cli`.
+comentario y las vacías antes de pasarle el archivo a `redis-cli`. Es una
+limitación puntual de `redis-cli`, no compartida por los otros clientes
+de línea de comandos del proyecto: `cqlsh -f` en Cassandra sí interpreta
+comentarios nativamente, y lo mismo pasa con `cypher-shell -f` en Neo4j
+(por eso ninguno de esos dos módulos necesitó un wrapper equivalente).
 
 ## 5. Pruebas y evidencia (RF12, RF13)
 
