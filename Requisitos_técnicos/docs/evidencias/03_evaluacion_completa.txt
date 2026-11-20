@@ -1,3 +1,8 @@
+[Nota agregada retroactivamente, RNF18: esta corrida es anterior a que
+el script capturara el commit automáticamente. El commit evaluado era
+3e459bb27cafd96b64e71daeb3552111ac5c1a1d (ver docs/matriz_conectividad.md,
+sección 2, para el razonamiento). Entorno: Linux, API en el host,
+bases en Docker Desktop.]
 
 Hito 11 — Evaluación de conectividad Fixture 2030
 Inicio: 2026-10-23T17:15:55+0000

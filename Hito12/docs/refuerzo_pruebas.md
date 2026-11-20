@@ -43,28 +43,53 @@ Las pruebas de refuerzo utilizaron el commit:
 
 El escenario de carga mantuvo los mismos parámetros y el mismo endpoint.
 
+**Nota sobre la pareja de corridas oficial**: en la misma sesión se
+ejecutaron dos corridas completas con este commit, separadas por
+pocos minutos (`linea_base_refuerzo_previo.json`/`optimizada_refuerzo_previo.json`
+a las 14:25-14:29, y `linea_base_refuerzo.json`/`optimizada_refuerzo.json`
+a las 14:33-14:35). Los resultados variaron entre ambas por el ruido
+propio de medir en una notebook sin aislar el entorno — con 400
+solicitudes por fase, el P99 en particular es sensible a una sola
+muestra lenta. Se adopta como **pareja oficial** la segunda
+(`linea_base_refuerzo.json` / `optimizada_refuerzo.json`), porque es
+la que tiene mediciones de recursos capturadas en simultáneo
+(`recursos_linea_base_refuerzo.csv` / `recursos_optimizada_refuerzo.csv`,
+sección 5) y porque es la que ya estaba citada en la sección de
+evidencias. La corrida previa se conserva en el repositorio solo por
+trazabilidad del proceso, no se usa para ninguna conclusión de este
+documento.
+
 ## 4. Resultados de rendimiento
 
-Se compararon las mediciones obtenidas en la fase de sostenimiento con 10 usuarios concurrentes.
+Se compararon las mediciones obtenidas en la fase de sostenimiento con
+10 usuarios concurrentes, tomadas de `linea_base_refuerzo.json` y
+`optimizada_refuerzo.json` (pareja oficial, ver nota anterior).
 
 | Métrica           |   Sin caché |   Con caché |
 | ----------------- | ----------: | ----------: |
 | Solicitudes       |         400 |         400 |
 | Exitosas          |         400 |         400 |
 | Errores           |           0 |           0 |
-| Latencia promedio |    21,96 ms |    18,28 ms |
-| P50               |    20,37 ms |    15,63 ms |
-| P95               |    35,89 ms |    32,22 ms |
-| P99               |    52,75 ms |    64,66 ms |
+| Latencia promedio |    21,41 ms |    17,47 ms |
+| P50               |    20,02 ms |    14,60 ms |
+| P95               |    31,03 ms |    31,46 ms |
+| P99               |    70,08 ms |    42,92 ms |
 | Throughput        | 19,99 req/s | 19,99 req/s |
 
-La latencia promedio disminuyó aproximadamente un 16,8% y el P95 se redujo un 10,2%.
+La latencia promedio disminuyó aproximadamente un 18,4%, el P50 un
+27,1% y el P99 un 38,8%.
 
-Sin embargo, el P99 aumentó aproximadamente un 22,6%, lo que representa una regresión en las solicitudes del extremo más lento.
+El P95 prácticamente no cambió (+1,4%, de 31,03 a 31,46 ms): con 400
+solicitudes por fase, una diferencia de ese tamaño está dentro del
+ruido de medición y no se interpreta como una regresión real.
 
-El throughput no aumentó porque la frecuencia de solicitudes estaba limitada por el generador de carga.
+El throughput no aumentó porque la frecuencia de solicitudes estaba
+limitada por el generador de carga.
 
-Estos resultados indican mejoras en algunas métricas, pero no permiten afirmar que todas las solicitudes respondieron más rápido.
+Estos resultados indican una mejora consistente en la latencia típica
+y en el extremo más lento (P99), con el P95 estable, pero igual no
+permiten afirmar que todas las solicitudes individuales respondieron
+más rápido: son estadísticas agregadas de una sola corrida.
 
 ## 5. Consumo de recursos
 
@@ -83,7 +108,7 @@ El consumo promedio observado de CPU disminuyó aproximadamente un 42,4%.
 
 La memoria utilizada por MongoDB también presentó una pequeña reducción.
 
-Las mediciones de recursos corresponden a ejecuciones adicionales realizadas después de los JSON de refuerzo inicialmente analizados. Por lo tanto, no deben interpretarse como métricas obtenidas simultáneamente con aquellas primeras mediciones de latencia.
+Las mediciones de recursos sí corresponden a la misma ventana temporal que la pareja oficial de corridas de latencia de la sección 4 (`recursos_linea_base_refuerzo.csv` se registró entre las 14:33:24 y 14:33:51, en paralelo con `linea_base_refuerzo.json`; `recursos_optimizada_refuerzo.csv` entre las 14:34:48 y 14:35:14, en paralelo con `optimizada_refuerzo.json`). No son simultáneas con la corrida previa descartada (sección 3).
 
 Además, los valores máximos corresponden solamente a las muestras registradas y no necesariamente a los picos reales.
 
@@ -122,7 +147,7 @@ Esta validación no demuestra que la caché se actualice automáticamente frente
 
 Los resultados se encuentran en `docs/evidencia/`.
 
-Se incorporaron:
+**Pareja oficial** (la que respalda las tablas y conclusiones de este documento):
 
 * `linea_base_refuerzo.json`
 * `optimizada_refuerzo.json`
@@ -131,7 +156,10 @@ Se incorporaron:
 * `validacion_integridad.json`
 * `entorno_refuerzo.txt`
 
-También se conservaron los resultados de las pruebas originales para mantener la trazabilidad del trabajo.
+**Conservados solo por trazabilidad** (corrida preliminar del mismo commit, ver nota de la sección 3 — no respaldan ninguna cifra de este documento):
+
+* `linea_base_refuerzo_previo.json`
+* `optimizada_refuerzo_previo.json`
 
 ## 8. Limitaciones
 
@@ -146,14 +174,15 @@ Las principales limitaciones fueron:
 * No se midió experimentalmente una alternativa relacional.
 * La caché no dispone de expiración temporal automática.
 * El entorno de laboratorio no reproduce la infraestructura del Mundial 2030.
+* Dos corridas consecutivas del mismo commit, separadas por pocos minutos, dieron resultados de P95/P99 distintos (ver sección 3): a esta escala (400 solicitudes), el ruido de un entorno de notebook sin aislar puede ser comparable a la mejora que se busca medir.
 
 ## 9. Conclusión
 
 Las pruebas adicionales permitieron reforzar la reproducibilidad y la trazabilidad del Hito 12.
 
-La optimización mediante caché estuvo asociada con menores latencias promedio y P95, además de un menor consumo de CPU observado en MongoDB.
+La optimización mediante caché estuvo asociada con menor latencia promedio, menor P50, menor P99 y menor consumo de CPU observado en MongoDB.
 
-Sin embargo, el aumento del P99 demuestra que no todas las métricas mejoraron.
+El P95 fue la excepción: se mantuvo prácticamente igual (+1,4%), una diferencia que a esta escala de muestra se interpreta como ruido y no como una regresión atribuible a la caché.
 
 La validación de integridad confirmó que los campos de la respuesta coincidían con MongoDB en el momento de la comprobación.
 

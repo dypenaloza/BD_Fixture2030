@@ -1,4 +1,5 @@
 Hito 11 — Prueba de fallo controlado (RF20/RF21, sección 5.7)
+Commit evaluado (RNF18, agregado retroactivamente): 3e459bb27cafd96b64e71daeb3552111ac5c1a1d
 Dependencia elegida: Redis (sesiones)
 Operación: docker stop / docker start (reversible, sin tocar volúmenes)
 

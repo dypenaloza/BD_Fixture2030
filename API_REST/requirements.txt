@@ -7,3 +7,4 @@ cassandra-driver>=3.29,<4.0
 redis>=5.0,<7.0
 requests>=2.31,<3.0
 intersystems-irispython>=5.4,<6.0
+prometheus-client>=0.20,<1.0

@@ -15,9 +15,9 @@ Un estado **up** en esta tabla significa "la prueba concreta que se describe fun
 ## 2. Entorno de la corrida
 
 - Fecha/hora: 2026-10-23T17:15:55Z (ver `docs/evidencias/03_evaluacion_completa.txt`, corrida completa).
-- Commit/rama: `hito11` (API del Hito 10 ya consolidada en `main`/`Day`).
-- Entorno: API ejecutándose directamente en el host (no containerizada), bases en contenedores Docker Desktop, acceso por `127.0.0.1` y puertos publicados (ver `docs/topologia_y_entornos.md`).
-- Script: `scripts/evaluar_conectividad_fixture2030.sh` (modo `all`).
+- **Commit evaluado**: `3e459bb27cafd96b64e71daeb3552111ac5c1a1d` ("Hito 10: fix validacion Neo4j, docs, tests, OpenAPI y Postman", 2026-10-16). Es el último commit que modificó `API_REST/` antes de esta corrida: ni `f15288b` (avances iniciales de Dayana en `hito11`) ni `a129e29` (commit final de este hito) tocan código de la API, así que el comportamiento evaluado es exactamente el de ese commit, reproducible haciendo `git checkout 3e459bb` sobre el repositorio.
+- Entorno: API ejecutándose directamente en el host (no containerizada), bases en contenedores Docker Desktop, acceso por `127.0.0.1` y puertos publicados (ver `docs/topologia_y_entornos.md`). Host: Linux (ver detalle de hardware/SO en `docs/evidencias/03_evaluacion_completa.txt` si se vuelve a ejecutar con la versión actual del script).
+- Script: `scripts/evaluar_conectividad_fixture2030.sh` (modo `all`). Desde esta corrección (RNF18), cada ejecución del script imprime automáticamente el commit evaluado (con aviso si hay cambios sin commitear), el sistema operativo y el host en el encabezado de su salida — no hace falta completarlo a mano en el futuro.
 
 ## 3. Matriz
 

@@ -1,0 +1,55 @@
+groups:
+  - name: fixture2030-api
+    rules:
+      # Alerta 1: tasa de error 5xx de la API, por fuente.
+      # Justificacion del umbral en docs/alertas_y_umbral.md #1.
+      - alert: APIErrorRateAlta
+        expr: sum(rate(fixture2030_http_requests_total{estado=~"5.."}[5m])) by (fuente) > 0
+        for: 1m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Errores 5xx sostenidos en la fuente {{ $labels.fuente }}"
+          descripcion: "La API devolvio al menos un error 5xx por segundo (promedio movil de 5m) desde la fuente {{ $labels.fuente }} durante mas de 1 minuto."
+
+      # Alerta 2: latencia P95 de la API, por fuente.
+      # Justificacion del umbral en docs/alertas_y_umbral.md #2.
+      - alert: APILatenciaP95Alta
+        expr: histogram_quantile(0.95, sum(rate(fixture2030_http_request_duration_seconds_bucket[5m])) by (le, fuente)) > 0.5
+        for: 2m
+        labels:
+          severity: warning
+        annotations:
+          summary: "P95 de latencia por encima de 500 ms en {{ $labels.fuente }}"
+          descripcion: "El percentil 95 de duracion de request (ventana de 5m) para la fuente {{ $labels.fuente }} supera los 500 ms durante mas de 2 minutos."
+
+  - name: fixture2030-dependencias
+    rules:
+      # Alerta 3: dependencia sin exporter dedicado (Neo4j/Cassandra/
+      # InfluxDB/IRIS) inalcanzable por TCP via blackbox_exporter.
+      # Justificacion del umbral en docs/alertas_y_umbral.md #3.
+      - alert: DependenciaTCPInalcanzable
+        expr: probe_success{job="blackbox_tcp"} == 0
+        for: 30s
+        labels:
+          severity: critical
+        annotations:
+          summary: "{{ $labels.componente }} no acepta conexiones TCP"
+          descripcion: "blackbox_exporter no pudo abrir una conexion TCP contra {{ $labels.instance }} ({{ $labels.componente }}) durante mas de 30 segundos."
+
+      # Alerta 4: Redis o MongoDB inalcanzables DESDE SU PROPIO EXPORTER.
+      # OJO: no es lo mismo que "up{job=...}==0" (eso solo dice que el
+      # PROCESO del exporter no respondio al scrape). redis_up/mongodb_up
+      # son metricas que el exporter reporta sobre si PUDO conectarse a la
+      # base -- confirmado en la practica (ver evidencia/prueba_de_falla):
+      # al detener el contenedor de Redis, el exporter siguio "up" para
+      # Prometheus (el proceso del exporter seguia vivo) pero redis_up
+      # paso a 0. Usar solo "up" hubiera dejado esta falla sin detectar.
+      - alert: BaseInalcanzableDesdeSuExporter
+        expr: redis_up == 0 or mongodb_up == 0
+        for: 30s
+        labels:
+          severity: critical
+        annotations:
+          summary: "La base detras del exporter no responde (no es el exporter el que esta caido)"
+          descripcion: "El exporter sigue respondiendo al scrape de Prometheus, pero no puede conectarse a la base durante mas de 30 segundos."

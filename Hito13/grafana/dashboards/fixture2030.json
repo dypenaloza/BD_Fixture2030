@@ -1,0 +1,124 @@
+{
+  "title": "Fixture 2030 — Observabilidad (Hito 13)",
+  "uid": "fixture2030-hito13",
+  "timezone": "browser",
+  "time": { "from": "now-30m", "to": "now" },
+  "refresh": "10s",
+  "schemaVersion": 39,
+  "panels": [
+    {
+      "id": 1,
+      "type": "row",
+      "title": "Disponibilidad (RF3/RF6) — medida directamente (exporters) o por TCP (blackbox)",
+      "gridPos": { "h": 1, "w": 24, "x": 0, "y": 0 }
+    },
+    {
+      "id": 2,
+      "type": "stat",
+      "title": "Disponibilidad por componente (1 = up, 0 = down)",
+      "description": "MongoDB/Redis: 'mongodb_up'/'redis_up', la metrica propia del exporter que dice si PUDO CONECTARSE a la base (no confundir con el 'up' generico de Prometheus, que solo dice si el proceso del exporter respondio al scrape -- un exporter puede estar 'up' y su base estar caida al mismo tiempo, ver docs/diagnostico de la prueba de fallo controlado). Neo4j/Cassandra/InfluxDB/IRIS: 'probe_success' de blackbox_exporter, un connect TCP, no una metrica interna del producto.",
+      "gridPos": { "h": 6, "w": 24, "x": 0, "y": 1 },
+      "fieldConfig": {
+        "defaults": {
+          "mappings": [
+            { "type": "value", "options": { "0": { "text": "DOWN", "color": "red" } } },
+            { "type": "value", "options": { "1": { "text": "UP", "color": "green" } } }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [ { "color": "red", "value": null }, { "color": "green", "value": 1 } ]
+          }
+        }
+      },
+      "targets": [
+        { "expr": "up{job=\"fixture2030_api\"}", "legendFormat": "API (FastAPI)", "refId": "A" },
+        { "expr": "mongodb_up", "legendFormat": "MongoDB (conexion real del exporter)", "refId": "B" },
+        { "expr": "redis_up", "legendFormat": "Redis (conexion real del exporter)", "refId": "C" },
+        { "expr": "probe_success{job=\"blackbox_tcp\",componente=~\"Neo4j.*\"}", "legendFormat": "Neo4j (TCP Bolt)", "refId": "D" },
+        { "expr": "probe_success{job=\"blackbox_tcp\",componente=~\"Cassandra.*\"}", "legendFormat": "Cassandra (TCP CQL)", "refId": "E" },
+        { "expr": "probe_success{job=\"blackbox_tcp\",componente=~\"InfluxDB.*\"}", "legendFormat": "InfluxDB (TCP HTTP)", "refId": "F" },
+        { "expr": "probe_success{job=\"blackbox_tcp\",componente=~\"IRIS.*\"}", "legendFormat": "IRIS (TCP Superserver)", "refId": "G" }
+      ]
+    },
+    {
+      "id": 3,
+      "type": "row",
+      "title": "API — latencia, volumen y errores (RF4/RF6)",
+      "gridPos": { "h": 1, "w": 24, "x": 0, "y": 7 }
+    },
+    {
+      "id": 4,
+      "type": "timeseries",
+      "title": "Latencia P50 y P95 por fuente (segundos, ventana movil de 5m)",
+      "description": "Medida directamente en la API (histograma fixture2030_http_request_duration_seconds). Consulta PromQL #1 de docs/metricas_y_consultas.md.",
+      "gridPos": { "h": 8, "w": 12, "x": 0, "y": 8 },
+      "fieldConfig": { "defaults": { "unit": "s" } },
+      "targets": [
+        { "expr": "histogram_quantile(0.50, sum(rate(fixture2030_http_request_duration_seconds_bucket[5m])) by (le, fuente))", "legendFormat": "P50 {{fuente}}", "refId": "A" },
+        { "expr": "histogram_quantile(0.95, sum(rate(fixture2030_http_request_duration_seconds_bucket[5m])) by (le, fuente))", "legendFormat": "P95 {{fuente}}", "refId": "B" }
+      ]
+    },
+    {
+      "id": 5,
+      "type": "timeseries",
+      "title": "Volumen de requests por fuente (req/s, ventana movil de 1m)",
+      "description": "Medida directamente en la API (contador fixture2030_http_requests_total).",
+      "gridPos": { "h": 8, "w": 12, "x": 12, "y": 8 },
+      "fieldConfig": { "defaults": { "unit": "reqps" } },
+      "targets": [
+        { "expr": "sum(rate(fixture2030_http_requests_total[1m])) by (fuente)", "legendFormat": "{{fuente}}", "refId": "A" }
+      ]
+    },
+    {
+      "id": 6,
+      "type": "timeseries",
+      "title": "Errores 5xx por fuente (errores/s, ventana movil de 5m)",
+      "description": "Medida directamente en la API. Consulta PromQL #2 de docs/metricas_y_consultas.md. En este flujo, cualquier valor > 0 ya es anomalo (ver docs/alertas_y_umbral.md).",
+      "gridPos": { "h": 8, "w": 12, "x": 0, "y": 16 },
+      "fieldConfig": { "defaults": { "unit": "short" } },
+      "targets": [
+        { "expr": "sum(rate(fixture2030_http_requests_total{estado=~\"5..\"}[5m])) by (fuente)", "legendFormat": "{{fuente}}", "refId": "A" }
+      ]
+    },
+    {
+      "id": 7,
+      "type": "timeseries",
+      "title": "Comparacion entre bases: latencia P95 Mongo vs Redis (RF7)",
+      "description": "Vista explicita de comparacion entre al menos dos fuentes (RF7): Redis (lectura de un Hash en memoria) frente a MongoDB (lectura documental en disco/cache del motor). Se espera que Redis sea mas rapido o igual de estable; una inversion sostenida es una senal a investigar.",
+      "gridPos": { "h": 8, "w": 12, "x": 12, "y": 16 },
+      "fieldConfig": { "defaults": { "unit": "s" } },
+      "targets": [
+        { "expr": "histogram_quantile(0.95, sum(rate(fixture2030_http_request_duration_seconds_bucket{fuente=\"MongoDB\"}[5m])) by (le))", "legendFormat": "MongoDB P95", "refId": "A" },
+        { "expr": "histogram_quantile(0.95, sum(rate(fixture2030_http_request_duration_seconds_bucket{fuente=\"Redis\"}[5m])) by (le))", "legendFormat": "Redis P95", "refId": "B" }
+      ]
+    },
+    {
+      "id": 8,
+      "type": "row",
+      "title": "Infraestructura — Redis y MongoDB (metricas de los exporters)",
+      "gridPos": { "h": 1, "w": 24, "x": 0, "y": 24 }
+    },
+    {
+      "id": 9,
+      "type": "timeseries",
+      "title": "Redis: clientes conectados y memoria usada",
+      "description": "Metricas de infraestructura (no de la API) obtenidas via redis_exporter.",
+      "gridPos": { "h": 8, "w": 12, "x": 0, "y": 25 },
+      "targets": [
+        { "expr": "redis_connected_clients", "legendFormat": "clientes conectados", "refId": "A" },
+        { "expr": "redis_memory_used_bytes", "legendFormat": "memoria usada (bytes)", "refId": "B" }
+      ]
+    },
+    {
+      "id": 10,
+      "type": "timeseries",
+      "title": "MongoDB: conexiones actuales",
+      "description": "Metrica de infraestructura obtenida via mongodb_exporter.",
+      "gridPos": { "h": 8, "w": 12, "x": 12, "y": 25 },
+      "targets": [
+        { "expr": "mongodb_ss_connections{conn_type=\"active\"}", "legendFormat": "conexiones activas", "refId": "A" },
+        { "expr": "mongodb_ss_connections{conn_type=\"available\"}", "legendFormat": "conexiones disponibles", "refId": "B" }
+      ]
+    }
+  ]
+}

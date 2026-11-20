@@ -73,6 +73,22 @@ SKIP=0
 
 now() { date '+%Y-%m-%dT%H:%M:%S%z'; }
 
+# RNF18 (trazabilidad): cada corrida debe poder asociarse a un commit
+# concreto, no solo a una rama. git -C encuentra el repo subiendo desde
+# la carpeta del script, sin importar la profundidad de anidamiento.
+git_commit() {
+  local sha
+  sha="$(git -C "$(dirname "$0")" rev-parse HEAD 2>/dev/null)" || {
+    echo "sin-git (no se pudo determinar el commit)"
+    return
+  }
+  if ! git -C "$(dirname "$0")" diff --quiet HEAD -- 2>/dev/null; then
+    printf '%s (+cambios sin commitear)\n' "$sha"
+  else
+    printf '%s\n' "$sha"
+  fi
+}
+
 record() {
   local status="$1" name="$2" detail="$3"
   TOTAL=$((TOTAL + 1))
@@ -273,6 +289,8 @@ api_get() {
 
 printf '\nHito 11 — Evaluación de conectividad Fixture 2030\n'
 printf 'Inicio: %s\n' "$(now)"
+printf 'Commit evaluado: %s\n' "$(git_commit)"
+printf 'Entorno: %s | %s\n' "$(uname -s 2>/dev/null || echo desconocido)" "${HOSTNAME:-$(hostname 2>/dev/null || echo desconocido)}"
 printf 'Modo: %s | API: %s\n\n' "$MODE" "$API_URL"
 
 if [[ "$MODE" == "all" || "$MODE" == "tcp" ]]; then

@@ -1,0 +1,9 @@
+# Un unico modulo TCP para las 4 fuentes sin exporter dedicado (Neo4j,
+# Cassandra, InfluxDB, IRIS): un connect-check uniforme y honesto, sin
+# el problema de que un 401 (InfluxDB /health sin token) o un 404 (IRIS
+# portal en la ruta raiz) se interprete como "caido" cuando el servicio
+# esta arriba — ver docs/limitaciones_y_evidencia.md.
+modules:
+  tcp_connect:
+    prober: tcp
+    timeout: 3s

@@ -1,0 +1,83 @@
+services:
+  prometheus:
+    image: prom/prometheus:v2.55.1
+    container_name: fixture2030-prometheus
+    restart: unless-stopped
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - ./prometheus/reglas-o-alertas.yml:/etc/prometheus/reglas-o-alertas.yml:ro
+      - prometheus_data:/prometheus
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    networks: [monitoreo]
+
+  grafana:
+    image: grafana/grafana:11.3.0
+    container_name: fixture2030-grafana
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=fixture2030
+      - GF_AUTH_ANONYMOUS_ENABLED=false
+    volumes:
+      - ./grafana/provisioning:/etc/grafana/provisioning:ro
+      - ./grafana/dashboards:/var/lib/grafana/dashboards:ro
+      - grafana_data:/var/lib/grafana
+    depends_on: [prometheus]
+    networks: [monitoreo]
+
+  redis_exporter:
+    image: oliver006/redis_exporter:v1.65.0
+    container_name: fixture2030-redis-exporter
+    restart: unless-stopped
+    environment:
+      - REDIS_ADDR=redis://host.docker.internal:6379
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    ports:
+      - "9121:9121"
+    networks: [monitoreo]
+
+  mongodb_exporter:
+    image: percona/mongodb_exporter:0.42
+    container_name: fixture2030-mongodb-exporter
+    restart: unless-stopped
+    environment:
+      # Mismo usuario/password por defecto que MongoDB/docker-compose.yml
+      # (convencion de este TPO para el entorno de laboratorio, no una
+      # credencial real). ${...} lo resuelve "docker compose" desde el
+      # entorno del HOST al levantar el stack -- exportar MONGO_USER/
+      # MONGO_PASSWORD antes de levantar este compose para usar otra
+      # contraseña sin editar este archivo.
+      - MONGODB_URI=mongodb://${MONGO_USER:-admin}:${MONGO_PASSWORD:-password123}@host.docker.internal:27017
+    command:
+      - --collect-all
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    ports:
+      - "9216:9216"
+    networks: [monitoreo]
+
+  blackbox_exporter:
+    image: prom/blackbox-exporter:v0.25.0
+    container_name: fixture2030-blackbox-exporter
+    restart: unless-stopped
+    volumes:
+      - ./blackbox/blackbox.yml:/etc/blackbox_exporter/config.yml:ro
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    ports:
+      - "9115:9115"
+    networks: [monitoreo]
+
+volumes:
+  prometheus_data:
+  grafana_data:
+
+networks:
+  monitoreo:
+    driver: bridge
